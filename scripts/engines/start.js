@@ -4,7 +4,7 @@
 process.env.NODE_PATH = process.env.NODE_PATH || './src';
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 process.env.PORT = process.env.PORT || 3000;
-process.env.HOST = process.env.HOST || 'murmuring-taiga-43207.herokuapp.com';
+process.env.HOST = process.env.HOST || 'pctcloud.azurewebsites.net';
 process.env.HTTPS = 'false';
 process.env.REACT_APP_DEV_MODE = process.env.REACT_APP_DEV_MODE || '';
 

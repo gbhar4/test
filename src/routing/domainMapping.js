@@ -364,7 +364,7 @@ export const domainMapping = {
     assetsHost: '://www.childrensplace.com/api/',
     apiKeys: apiKeysTable.dev
   },
-  'murmuring-taiga-43207.herokuapp.com': {
+  'pctcloud.azurewebsites.net': {
     apiDomain: '://www.childrensplace.com/api/',
     assetsHost: '://www.childrensplace.com/api/',
     apiKeys: apiKeysTable.dev

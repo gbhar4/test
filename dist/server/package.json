@@ -122,8 +122,7 @@
     "superagent": "3.3.2",
     "superagent-jsonp": "0.1.1",
     "uuid": "^3.1.0",
-    "warning": "3.0.0",
-   
+    "warning": "3.0.0"
   },
   "semistandard": {
     "parser": "babel-eslint"

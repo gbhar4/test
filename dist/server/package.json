@@ -3,6 +3,10 @@
   "version": "2.0.0",
   "description": "This repo holds all the nodejs and client side code for the childrens place desktop and mobile site",
   "main": "app.js",
+  "engines": {
+    "node": ">=8.7.0",
+    "npm": ">=5.4.2"
+  },
   "directories": {
     "doc": "documentation",
     "test": "tests"
@@ -85,7 +89,8 @@
     "webpack-config": "6.2.1",
     "webpack-dev-server": "2.4.5",
     "webpack-manifest-plugin": "1.1.0",
-    "whatwg-fetch": "2.0.3"
+    "whatwg-fetch": "2.0.3",
+    "gulp-sass": "^3.1.0"
   },
   "dependencies": {
     "appdynamics": "^4.3.5",
@@ -117,7 +122,8 @@
     "superagent": "3.3.2",
     "superagent-jsonp": "0.1.1",
     "uuid": "^3.1.0",
-    "warning": "3.0.0"
+    "warning": "3.0.0",
+    "gulp-sass": "^3.1.0"
   },
   "semistandard": {
     "parser": "babel-eslint"

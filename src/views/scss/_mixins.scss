@@ -1,0 +1,1272 @@
+/**
+ * The Children Place
+ * Mobile UI Style Guide
+ * SASS mixins
+ */
+
+ @import "compass/functions";
+ @import "compass/css3/animation";
+ @import "compass/css3/appearance";
+ @import "compass/css3/background-clip";
+ @import "compass/css3/box-shadow";
+ @import "compass/css3/transform";
+ @import "compass/css3/border-radius";
+ @import "compass/css3/user-interface";
+ @import "compass/css3/border-radius";
+ @import "./_variables.scss";
+ @import "./_icons.scss";
+
+/*********************
+* Typographys
+*********************/
+
+/* Avenir Book */
+@mixin font-global-regular() {
+	font-family: 'Avenir';
+	font-weight: normal;
+  font-style: normal;
+	font-stretch: normal;
+	text-decoration: none;
+}
+
+/* Avenir Medium */
+@mixin font-global-medium() {
+	font-family: 'Avenir';
+	font-weight: 500;
+  font-style: normal;
+	font-stretch: normal;
+	text-decoration: none;
+}
+
+/* Avenir Heavy */
+@mixin font-global-heavy() {
+	font-family: 'Avenir';
+	font-weight: 700;
+  font-style: normal;
+	font-stretch: normal;
+	text-decoration: none;
+}
+
+/* Avenir Black */
+@mixin font-global-black() {
+	font-family: 'Avenir';
+	font-weight: 900;
+	font-style: normal;
+	font-stretch: normal;
+	text-decoration: none;
+}
+
+/* Headings h1 */
+@mixin heading-level-1($color: $color-primary-one) {
+	@include font-global-regular();
+	font-size: 24px;
+	letter-spacing: 0;
+  line-height: 1.21;
+	text-transform: uppercase;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+@mixin heading-level-1-alt($color: $color-primary-one) {
+	@include font-global-heavy();
+	font-size: 24px;
+	letter-spacing: 0;
+  line-height: 1.21;
+	text-transform: uppercase;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+/* Headings h2 */
+@mixin heading-level-2($color: $color-primary-one) {
+	@include font-global-medium();
+	font-size: 20px;
+	letter-spacing: 0;
+  line-height: 1.25;
+	text-transform: none;
+	text-decoration: none;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+/* Headings h3 */
+@mixin heading-level-3($color: $color-primary-one) {
+	@include font-global-medium();
+	font-size: 18px;
+	letter-spacing: 0;
+  line-height: 1.28;
+	text-transform: none;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+/* Headings h4 */
+@mixin heading-level-4($color: $color-primary-one) {
+	@include font-global-black();
+	font-size: 15px;
+	letter-spacing: 0;
+  line-height: 1.53;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+/*****************
+* Common texts
+*****************/
+
+@mixin subheading-primary-text($color: $color-primary-one) {
+	@include font-global-medium();
+	font-size: 12px;
+	letter-spacing: 0;
+  line-height: 1.42;
+	text-transform: uppercase;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+@mixin subheading-secondary-text($color: $color-primary-one) {
+	@include font-global-black();
+	font-size: 12px;
+	letter-spacing: 0;
+  line-height: 1.67;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+@mixin subheading-tertiary-text($color: $color-primary-one) {
+	@include subheading-secondary-text();
+	line-height: 22px;
+}
+
+/* Primary Body */
+@mixin body-primary-text($color: $color-primary-one) {
+	@include font-global-medium();
+	font-size: 15px;
+	letter-spacing: 0;
+  line-height: 1.33;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+/* Secondary Body */
+@mixin body-secondary-text($color: $color-primary-one) {
+	@include font-global-regular();
+	font-size: 15px;
+	letter-spacing: 0;
+  line-height: 1.33;
+	text-transform: none;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+/* Primary Notification Text */
+@mixin notification-primary-text($color: $color-primary-one) {
+	@include font-global-medium();
+	font-size: 13px;
+	letter-spacing: 0.25px;
+  line-height: 1.38;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+/* Secondary Notification Text */
+@mixin notification-secondary-text($color: $color-primary-one) {
+	@include font-global-medium();
+	font-size: 11px;
+	letter-spacing: 0;
+  line-height: 1.45;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+/* Description Primary text */
+@mixin description-primary-text($color: $color-primary-one) {
+	@include font-global-regular();
+	font-size: 13px;
+	letter-spacing: 0;
+  line-height: 1.15;
+	text-decoration: none;
+	text-transform: none;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+/* Description Secondary text */
+@mixin description-secondary-text($color: $color-primary-two) {
+	@include font-global-regular();
+	font-size: 11px;
+	letter-spacing: 0;
+  line-height: 1.36;
+	text-decoration: none;
+	text-transform: none;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+/* Navigation level one */
+@mixin navigation-level-1($color: $color-primary-one) {
+	@include font-global-heavy();
+	font-size: 13px;
+	letter-spacing: 0;
+  line-height: 1.15;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+/* Navigation level one -> selected */
+@mixin navigation-level-1-selected() {
+	@include navigation-level-1();
+}
+
+/* Navigation level one -> not selected */
+@mixin navigation-level-1-not-selected() {
+	@include navigation-level-1($color-primary-three);
+}
+
+/* Navigation level two featured */
+@mixin navigation-level-2-featured($font: heavy, $color: $color-primary-one) {
+	@if $font == medium {
+		@include font-global-medium();
+	} @else {
+		@include font-global-heavy();
+	}
+
+	font-size: 13px;
+	letter-spacing: 0;
+  line-height: 1.15;
+	text-transform: none;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+/* Navigation level two standard */
+@mixin navigation-level-2-standard($color: $color-primary-one) {
+	@include navigation-level-2-featured(medium, $color);
+}
+
+/* Global Promo Notification */
+@mixin promo-notification-global($color: $color-primary-one) {
+	@include font-global-black();
+	font-size: 13px;
+	letter-spacing: 0;
+  line-height: 1.15;
+	text-transform: none;
+
+	@if $color != false {
+		color: $color;
+	}
+}
+
+/* Button Primary text */
+@mixin button-primary-text() {
+	@include font-global-black();
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 0;
+}
+
+/* Button Secondary text */
+@mixin button-secondary-text() {
+	@include font-global-black();
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0;
+  height: 22px;
+}
+
+/*************************
+ * Buttons
+*************************/
+
+/* Button, Inputs or Links such as [type="submit"] */
+@mixin button-common($text-button: primary, $width: 100%, $height: 48.3px) {
+	@if $text-button == primary {
+		@include button-primary-text();
+	}
+
+	@else if $text-button == secondary {
+		@include button-secondary-text();
+	}
+
+  display: inline-block;
+	color: $button-color-text-white;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	padding: 0 10px;
+	border: 0;
+	@include appearance(none);
+	@include background-clip(padding-box);
+
+	@if $width != false {
+		width: $width;
+	}
+
+	@if $height != false {
+		height: $height;
+		line-height: $height + 2px;
+	}
+
+}
+
+@mixin button-primary() {
+	@include button-common(primary);
+	background-color: $button-color-primary-active;
+
+	&.focused,
+	&:focus {
+		background-color: $button-color-primary-focused;
+	}
+
+	&.pressed,
+	&:active {
+		background-color: $button-color-primary-pressed;
+	}
+
+	&.disabled,
+	&:disabled {
+		background-color: $button-color-primary-disabled;
+	}
+
+  &.loading {
+    @include icon-tcp-loader();
+  }
+}
+
+@mixin button-primary-outline() {
+	@include button-primary();
+	color: $button-color-primary-active;
+	background-color: $color-primary-five; /* white */
+	@include box-shadow(inset 0 0 0 1px $button-color-primary-active); /* border inside box */
+}
+
+@mixin button-secondary() {
+	@include button-common(primary);
+	background-color: $button-color-secondary-active;
+
+	&.focused,
+	&:focus {
+		background-color: $button-color-secondary-focused;
+	}
+
+	&.pressed,
+	&:active {
+		background-color: $button-color-secondary-pressed;
+	}
+
+	&.disabled,
+	&:disabled {
+		background-color: $button-color-secondary-disabled;
+	}
+}
+
+@mixin button-secondary-outline() {
+	@include button-secondary();
+	color: $button-color-secondary-active;
+	background-color: $color-global-white; /* white */
+	@include box-shadow(inset 0 0 0 1px $button-color-secondary-active); /* border inside box */
+}
+
+@mixin button-tertiary($focus: true, $active: true) {
+	@include button-common($text-button: secondary, $width: auto, $height: 35px);
+	background-color: $button-color-tertiary-active;
+	@include box-shadow(inset 0 0 0 1px $button-color-text-white); /* border inside box */
+	border: 1px solid $button-color-tertiary-active; /* border outside box */
+	position: relative;
+	color: $button-color-text-black;
+
+  @if ($focus == true) {
+  	&.focused,
+  	&:focus {
+  		border-color: $button-color-tertiary-active; /* border outside box */
+  		background-color: $button-color-tertiary-focused;
+  	}
+  }
+
+  @if ($active == true) {
+  	&.pressed,
+  	&:active {
+  		border-color: $button-color-tertiary-active; /* border outside box */
+  		background-color: $button-color-tertiary-pressed;
+  	}
+  }
+
+	&.disabled,
+	&:disabled {
+		border-color: $button-color-tertiary-disabled; /* border outside box */
+		background-color: $button-color-tertiary-disabled;
+		color: $button-color-text-white;
+	}
+}
+
+@mixin button-quaternary($button-color: primary) {
+	@include button-common($text-button: secondary, $height: 34px);
+	position: relative;
+
+	@if $button-color != primary {
+		background-color: $button-color-quaternary-secondary-active;
+
+		&.focused,
+		&:focus {
+			background-color: $button-color-quaternary-secondary-focused;
+		}
+
+		&.pressed,
+		&:active {
+			background-color: $button-color-quaternary-secondary-pressed;
+		}
+
+		&.disabled,
+		&:disabled {
+			background-color: $button-color-quaternary-secondary-disabled;
+		}
+	} @else {
+		background-color: $button-color-quaternary-primary-active;
+
+		&.focused,
+		&:focus {
+			background-color: $button-color-quaternary-primary-focused;
+		}
+
+		&.pressed,
+		&:active {
+			background-color: $button-color-quaternary-primary-pressed;
+		}
+
+		&.disabled,
+		&:disabled {
+			background-color: $button-color-quaternary-primary-disabled;
+		}
+	}
+}
+
+@mixin button-default($background-color: $color-accent-one) {
+  @include button-common();
+  background-color: $background-color;
+
+  @if $background-color == $color-global-white {
+    color: $color-global-black;
+    border: 1px solid $color-global-black;
+  }
+
+	&.focused,
+	&:focus {
+		background-color: $background-color;
+	}
+
+	&.pressed,
+	&:active {
+		background-color: $background-color;
+	}
+
+	&.disabled,
+	&:disabled {
+		background-color: $button-color-primary-disabled;
+	}
+
+  &.loading {
+    @include icon-tcp-loader();
+  }
+}
+
+@mixin button-quaternary-outline() {
+	@include button-quaternary();
+	color: $button-color-quaternary-primary-active;
+	background-color: $color-primary-five; /* white */
+	@include box-shadow(inset 0 0 0 1px $button-color-quaternary-primary-active); /* border inside box */
+}
+
+@mixin button-semi-dropdown() {
+	@include input-common-text();
+  cursor: pointer;
+  position: relative;
+  display: block;
+  line-height: 1.25;
+  margin-top: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: left;
+  color: $input-color-font-value;
+
+  /* Icono chevron para Dropdown */
+  @include icon-manual-right-arrow();
+}
+
+
+/*********************
+* Select
+*********************/
+
+@mixin prices() {
+  /// should this value continue?  should set to 15? 17?
+	font-size: 16px;
+	@include font-global-black();
+}
+
+@mixin button-common-show-password() {
+	@include font-global-medium();
+	font-size: 13px;
+	text-transform: none;
+	text-decoration: underline;
+	color: $color-primary-two;
+  line-height: 26px;
+
+	border: 0;
+	background: none;
+	margin: 0;
+
+	width: 60px;
+  height: 25px;
+	position: absolute;
+	top: 17px;
+	bottom: 0;
+	right: 1px; // not 0 because of the border
+	left: auto;
+}
+
+@mixin button-common-forgot-password() {
+	@include font-global-medium();
+	font-size: 13px;
+	text-transform: none;
+	text-decoration: underline;
+	color: $color-primary-two;
+	line-height: 44px;
+	margin-bottom: 10px;
+	text-decoration: underline;
+
+}
+
+/*********************
+* Form Elements
+*********************/
+
+@mixin form-common-element($color: $color-primary-one) {
+  @include font-global-regular();
+
+  @if $color != false {
+		color: $color;
+	}
+
+  font-size: 15px;
+	letter-spacing: 0;
+	text-transform: none;
+
+  display: inline-block;
+  background-clip: padding-box;
+
+	padding: 3px 0 1px 0;
+  margin-top: 4px;
+	outline: 0;
+
+  height: 25px;
+	width: 100%;
+	border: 0px solid transparent;
+}
+
+@mixin label-common-text() {
+  @include font-global-regular();
+  font-size: 12px;
+  line-height: 1.42;
+}
+
+/* Inputs tag [type="text"] */
+@mixin input-common-text() {
+	@include form-common-element($input-color-font-value);
+  border-bottom: 1px solid $input-color-border;
+  background-color: transparent;
+
+	@include input-placeholder {
+		// color: $color-primary-two;
+    color: transparent;
+
+		&.focused,
+		&:focus {
+      // border-bottom: 1px solid $input-color-border-focused;
+		}
+	}
+
+	&.focused,
+	&:focus {
+    // border-bottom: 1px solid $input-color-border-focused;
+	}
+
+	&.disabled,
+	&:disabled {
+    // opacity: .5;
+		// color: $input-color-font-disabled;
+    // border-bottom: 1px dashed $color-primary-three;
+
+		@include input-placeholder {
+      // visibility: hidden;
+			// color: $input-color-border-focused;
+		}
+	}
+}
+
+@mixin input-common-placeholder() {
+  color: $color-primary-two;
+  font-size: 15px;
+  top: 21px;
+  opacity: .8;
+
+  &.disabled,
+	&:disabled {
+		color: $input-color-border-focused;
+	}
+}
+
+@mixin select-common-text() {
+  &.disabled,
+  &.disabled,
+  &[disabled] + .selection {
+    opacity: .5;
+
+    &.select-option-selected {
+      color: $input-color-font-disabled;
+
+      &:before,
+      &:after {
+        background: $input-color-font-disabled;
+      }
+    }
+  }
+}
+
+@mixin hint-text() {
+	@include body-secondary-text();
+	color: $color-primary-one;
+}
+
+/* Title inputs in Forms */
+@mixin input-title() {
+  @include description-secondary-text();
+  line-height: 1.45;
+	display: block;
+	text-transform: none;
+}
+
+/* Title of checkbox and radio in Forms */
+@mixin input-title-2() {
+  @include body-secondary-text();
+  line-height: 1.45;
+	display: inline-block;
+	text-transform: none;
+}
+
+/* Color params are $color-alert-one or $color-alert-two -> for error or warning input */
+@mixin input-error($color-input-border) {
+  border-bottom: 2px solid $color-input-border;
+	width: 100%;
+}
+
+/* Color params are $color-alert-one or $color-alert-two -> for error or warning input */
+@mixin input-common-error-message($color-message) {
+	@include notification-primary-text();
+	margin-top: 9px;
+	color: $color-message;
+	display: block;
+}
+
+@mixin error-message() {
+	@include notification-body-secundary-text();
+	margin-top: 8px;
+	color: $color-alert-one;
+	border: 2px solid $color-alert-one;
+	padding: 10px;
+	margin-bottom: 25px;
+}
+
+@mixin input-common-warning-message() {
+	@include notification-primary-text();
+	margin-top: 8px;
+	color: $color-alert-two;
+}
+
+@mixin warning-message() {
+	@include notification-body-secundary-text();
+	margin-top: 8px;
+	color: $color-alert-two;
+	border: 2px solid $color-alert-two;
+	padding: 10px;
+	margin-bottom: 25px;
+}
+
+@mixin box-error() {
+	@include body-primary-text();
+	border: solid 2px $color-alert-one;
+	color: $color-alert-one;
+	line-height: 21px;
+	padding: 10px;
+	display: table;
+}
+
+@mixin rotating-animation() {
+  -webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* GLOBAL Loading icon */
+@mixin tcp-loading() {
+	@include icon-tcp-loader();
+
+	&:before {
+		font-size: 16px;
+		@include animation(rotating 2s infinite linear);
+	}
+}
+
+/******************
+* Header
+******************/
+
+@mixin header($height: 80px) {
+	width: 100%;
+	height: $height;
+	position: relative;
+	display: block;
+}
+
+@mixin header-buttons() {
+	border: 0;
+	background: none;
+	@include appearance(normal);
+
+	position: absolute;
+	top: 0;
+	left: calc(100% - 54px);
+	line-height: 60px;
+}
+
+/*********************
+* Icons (with before and after)
+*********************/
+
+/* GLOBAL Plus icon */
+@mixin icon-global-plus($icon-color: $color-primary-one) {
+	&:before,
+	&:after {
+		content: '';
+		position: relative;
+		display: block;
+		background: $icon-color;
+		margin: auto;
+	}
+}
+
+/* GLOBAL Search icon */
+@mixin icon-tcp-search() {
+  width: 30px;
+
+  &:before {
+		content: '';
+    border: solid 2px $color-primary-one;
+    @include border-radius(50%);
+		width: 15px;
+		height: 15px;
+		display: inline-block;
+	}
+
+  &:after {
+		content:'';
+    background-color: $color-primary-one;
+		@include transform(rotate(45deg));
+		height: 2px;
+		width: 6px;
+		display: inline-block;
+    left: -3px;
+    position: relative;
+	}
+}
+
+/* GLOBAL Exit icon (for all modal) */
+@mixin common-button-exit-modal() {
+	@include icon-global-plus($color-global-white);
+	width: 34px;
+	height: 34px;
+	position: absolute;
+	right: 19px;
+	top: calc(50% - 14px);
+
+	&:before,
+	&:after {
+		@include transform(rotate(45deg));
+    @include border-radius(2px);
+	}
+
+	&:before {
+		width: 18px;
+		height: 2px;
+		top: 7px;
+		background-color: $color-primary-one;
+	}
+
+	&:after {
+		width: 2px;
+		height: 18px;
+		top: -3px;
+		background-color: $color-primary-one;
+	}
+}
+
+/* GLOBAL Delete icon (for item remove) */
+@mixin common-button-remove() {
+	@include icon-global-plus($color-primary-one);
+	position: relative;
+	vertical-align: middle;
+	height: 22px;
+	width: 22px;
+
+	&:before,
+	&:after {
+		@include transform(rotate(45deg));
+	}
+
+	&:before {
+		width: 18px;
+		height: 2px;
+		top: 8px;
+	}
+
+	&:after {
+		height: 18px;
+		width: 2px;
+		top: -2px;
+	}
+}
+
+/* More and Less icon (Example: accordion toggle or shopping cart (add product)*/
+@mixin remove-icon($color: $color-primary-one, $width: 14px) {
+  @include icon-global-plus($color-primary-one);
+  transform: rotate(-45deg);
+  overflow: hidden;
+
+  &:before {
+    position: absolute;
+    width: $width;
+    height: 2px;
+    background-color: $color;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+
+  &:after {
+    position: absolute;
+    height: $width;
+    width: 2px;
+    background-color: $color;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+}
+
+@mixin more-and-less-icon() {
+	@include icon-global-plus($color-primary-one);
+
+	&:before {
+		width: 10px;
+		height: 2px;
+		top: 5px;
+	}
+
+	&:after {
+		width: 2px;
+		height: 10px;
+		visibility: hidden;
+		top: -3px;
+	}
+
+	/* for plus icon, show this with visibility visible */
+	&.button-plus {
+		&:after {
+			visibility: visible;
+		}
+	}
+}
+
+@mixin global-arrow-tooltip () {
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    z-index: 1;
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0,0,0,0.10) transparent;
+  }
+
+  &:after {
+    z-index: 2;
+    border-color: transparent transparent $color-primary-background transparent;
+    margin-left: -8px;
+    border-width: 8px;
+    bottom: -16px;
+  }
+}
+
+/*********************
+* Various
+*********************/
+
+/* Se le pasa la cantidad de items
+que tiene el contenedor de los inputs
+que se quiere rediseñar */
+@mixin radio-button-for-checkout($buttonWidth: 1) {
+  position: relative;
+
+  .label-radio {
+    width: calc(100% / #{$buttonWidth});
+    margin: 0px 0px 5px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+
+    .input-radio-icon-unchecked {
+      top: auto;
+      width: calc(100% - 4px);
+      height: 100%;
+      display: inline-block;
+      left: 0px;
+      position: absolute;
+      background: $color-primary-four;
+      border-radius: 0;
+      margin-left: 0;
+
+      &:before {
+        height: calc(100% + 4px);
+        width: 100%;
+        left: 0px;
+        top: -2px;
+        border: 0;
+        display: inline-block;
+        border-radius: 0;
+        position: relative;
+        background-color: transparent;
+        position: relative;
+        z-index: 2;
+      }
+
+      &:after {
+        background: none;
+      }
+
+      &.focused,
+      &.pressed,
+      &:active,
+      &:focus {
+        &:after {
+          content: '';
+          display: inline-block;
+          background: $color-primary-four;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          position: absolute;
+          background: $color-primary-four;
+          border-radius: 0;
+          border: 0;
+          left: 0;
+          top: 0;
+        }
+      }
+
+    }
+
+    .input-radio-icon-checked {
+      @extend .input-radio-icon-unchecked;
+
+      border: transparent;
+      width: 100%;
+
+      &:before {
+        @include box-shadow(inset 0 0 0 2px $color-primary-one);
+      }
+    }
+  }
+
+  /* Título del button */
+  .input-radio-title {
+    margin-left: 0;
+    z-index: 1;
+    position: relative;
+    @include notification-primary-text();
+    padding: 12px 0;
+    width: 100%;
+    vertical-align: initial;
+  }
+
+  /* Subtítulo del button */
+  .input-subtitle {
+    @extend .input-radio-title;
+    @include font-global-regular();
+    color: $color-primary-two;
+    padding: 0 0 12px;
+    margin-top: -12px;
+  }
+}
+
+@mixin border-color-full-width() {
+	border: solid 1px $color-primary-four;
+	position: relative;
+	width: auto;
+	margin-left: -15px;
+	margin-right: -15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-left: 0;
+	border-right: 0;
+}
+
+@mixin loading-state($sizeIcon: 12px) {
+  @include tcp-loading();
+  &:before {
+		position: absolute;
+		animation-direction: reverse;
+    top: calc(50% - #{($sizeIcon / 2)});
+    left: calc(50% - #{($sizeIcon / 2)});
+    @include transform(translateY(-50%));
+    z-index: 1;
+
+    @if $sizeIcon != false {
+      font-size: $sizeIcon;
+  	}
+  }
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    left: 0px;
+    top: 0px;
+    background: $color-primary-five-opacity;
+  }
+}
+
+/**
+ * "responsive" calc
+ */
+@function responsive-width($num, $container: 1260px) {
+	@return percentage($num / $container) + 0%;
+}
+
+/**
+ * Logo escalable
+**/
+
+@mixin logo() {
+
+  /* @1x Images (Pixel Ratio 1.0) */
+  background-image:url(/wcsstore/static/images/TCP-Logo-1x.png);
+
+  /* @2x Images (Pixel Ratio of 1.25+) */
+  @media only screen and (-o-min-device-pixel-ratio: 5/4),
+         only screen and (-webkit-min-device-pixel-ratio: 1.25),
+         only screen and (min--moz-device-pixel-ratio: 1.25),
+         only screen and (min-device-pixel-ratio: 1.25),
+         only screen and (min-resolution: 1.25dppx) {
+
+    background-image:url(/wcsstore/static/images/TCP-Logo-2x.png);
+
+  }
+
+  /* @3x Images (Pixel Ratio of 2.25+) */
+  @media only screen and (-o-min-device-pixel-ratio: 9/4),
+         only screen and (-webkit-min-device-pixel-ratio: 2.25),
+         only screen and (min--moz-device-pixel-ratio: 2.25),
+         only screen and (min-device-pixel-ratio: 2.25),
+         only screen and (min-resolution: 2.25dppx) {
+
+    background-image:url(/wcsstore/static/images/TCP-Logo-3x.png);
+
+  }
+}
+
+/**
+ * Slider's buttons
+**/
+
+
+@mixin button-prev($height: 40px, $width: 30px, $border: 3px) {
+  position: absolute;
+  left: -25px;
+  color: $color-primary-three;
+  z-index: 1;
+  top: 50%;
+  @include transform(translateY(-50%));
+  height: $height;
+  width: $width;
+  overflow: hidden;
+  font-size: 0px;
+
+  &:disabled {
+    opacity: .4;
+  }
+
+  &:before {
+    content: '';
+    @include transform(rotate(-45deg));
+    display: inline-block;
+    border-left: solid $border $color-primary-three;
+    border-top: solid $border $color-primary-three;
+    height: $height - 16px;
+    width: $height - 16px;
+    position: relative;
+    @include border-radius(2px);
+    top: 1px;
+    right: -7px;
+  }
+}
+
+@mixin button-next($height: 40px, $width: 30px, $border: 3px) {
+  @include button-prev($height, $width, $border);
+  left: auto;
+  right: -25px;
+
+  &:disabled {
+    opacity: .4;
+  }
+
+  &:before {
+    @include transform(rotate(135deg));
+    top: 2px;
+    right: 7px;
+  }
+}
+
+/*
+* Shadow bottom (only)
+*/
+
+@mixin box-bottom-shadow() {
+  /* NOTE: hacky trick to support shadow only at bottom of div */
+  &:after,
+  &:before {
+    content: '';
+    width: 100%;
+    height: 15px;
+    background-color: $color-global-white;
+    position: absolute;
+    bottom: 0px;
+    z-index: 9;
+    left: 0px;
+  }
+
+  /* NOTE: hacky trick to support shadow only at bottom of div */
+  &:after {
+    height: 5px;
+    z-index: 8;
+    @include box-shadow(0px 0px 10px 2px $color-primary-one-opacity);
+  }
+}
+
+/*
+* Button Close to WIC or RTPS modals
+*/
+
+@mixin wic-button-close-modal() {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  padding: 8px;
+  @include transform(rotate(45deg));
+
+  &:before,
+  &:after {
+    content: '';
+    display: inline-block;
+    background: $color-primary-one;
+    position: absolute;
+    @include transform(translate(-50%, -50%));
+    top: 50%;
+    left: 50%;
+  }
+
+  &:before {
+    width: 2px;
+    height: 12px;
+  }
+
+  &:after {
+    width: 13px;
+    height: 2px;
+  }
+}
+
+/*
+ * Ellipsis for long words into a some box
+ */
+@mixin ellipsis () {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}

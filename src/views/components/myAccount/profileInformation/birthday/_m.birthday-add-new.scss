@@ -1,0 +1,92 @@
+/**
+* Birthdays Add new (Mobile)
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Form Container */
+.birthday-add-new-container {
+  .label-error {
+    .inline-error-message {
+      white-space: normal;
+    }
+  }
+
+  .add-a-child-title {
+    margin-top: 20px;
+  }
+
+  .field-container {
+    margin-top: 20px;
+  }
+
+  .digital-signature-title {
+    @include subheading-secondary-text($color-primary-two);
+    margin-bottom: 20px;
+  }
+
+  .input-child-name,
+  .input-first-name{
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+
+  .select-birthday-container {
+    margin-bottom: 25px;
+  }
+
+  .select-birthday-title {
+    @include label-common-text();
+    display: block;
+  }
+
+  .select-month {
+    width: 38%;
+    margin-right: 4%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .select-year {
+    @extend .select-month;
+    width: 58%;
+    margin-right: 0%;
+  }
+
+  .timestamp-container {
+    margin: 10px 0px 40px;
+    @include subheading-secondary-text($color-primary-two);
+  }
+
+  .timestamp-date {
+    @include font-global-black();
+  }
+
+  .term-and-conditions-link {
+    @include input-title();
+  	line-height: 21px;
+  	color: $color-primary-one;
+    vertical-align: middle;
+    text-decoration: underline;
+    display: inline-block;
+  }
+
+  .button-container {
+    width: 100%;
+    display: inline-block;
+    margin-top: 25px;
+  }
+
+  .button-add {
+    @include button-primary();
+    // width: 47%;
+  }
+
+  .button-cancel-information {
+    @include button-secondary();
+    margin-bottom: 20px;
+    // width: 47%;
+    // margin-right: 6%;
+  }
+}

@@ -1,0 +1,90 @@
+/* ==========================================================================
+	Review
+   ========================================================================== */
+@import "compass/utilities/general/clearfix";
+@import "_m.checkout-review.scss";
+
+/* General Sections of Review */
+.checkout-review-section {
+  > section {
+    display: inline-block;
+    width: calc(50% - 30px);
+    float: left;
+
+    .shipping-method-title,
+    .gift-wrapping-title {
+      @include subheading-secondary-text();
+      display: block;
+    }
+  }
+}
+
+section {
+  + .gift-cards-section,
+  + .checkout-review-shipping-method,
+  + .checkout-review-gift-wrapping,
+  + .checkout-review-pickup-alternate {
+    float: right;
+  }
+}
+
+section:empty {
+  + .gift-cards-section,
+  + .checkout-review-shipping-method,
+  + .checkout-review-gift-wrapping {
+    float: none;
+  }
+}
+
+/* Billing Section */
+.checkout-review-billing {
+  margin-top: 40px;
+}
+
+/* Shipping Section when under the Pick Up Section */
+.checkout-review-pickup + .checkout-review-shipping {
+  margin-top: 40px;
+}
+
+/* Gift Cards Section */
+.gift-cards-section {
+  margin-top: 0px;
+}
+
+/* Cart Item List Section */
+.checkout-cart-list {
+  margin-top: 52px;
+}
+
+/* Gift Wrapping container only in Express Checkout */
+.express {
+  .checkout-review-gift-wrapping {
+    margin: 0px;
+  }
+
+  .checkout-review-section {
+    .gift-wrapping-title {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 1190px) {
+      .payment-review-section {
+        float: none;
+        display: block;
+
+        .input-cvv-express-checkout {
+          .inline-error-message {
+            
+          }
+        }
+      }
+
+      .gift-cards-section {
+        float: none;
+        display: block;
+        margin-top: 20px;
+        width: 60%;
+      }
+    }
+  }
+}

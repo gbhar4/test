@@ -1,0 +1,21 @@
+/* 
+Outfit PDP - Outfit recommendations scroll arrow adjustment - DT-32222
+*/
+
+.outfit-recommendation-container-scroll-arrows{
+  ol{
+    display: inline;
+  }
+  
+  .button-prev{   
+    display: inline-block; 
+    position: relative;
+    margin-top: 125px;
+  }
+  
+  .button-next{
+    display: inline-block;   
+    position: relative;
+    margin-top: 125px;
+  }    
+}

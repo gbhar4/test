@@ -1,0 +1,79 @@
+/**
+*  Order Details (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.order-status-container {
+  .tracking-number {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+
+    .title-description {
+      @include subheading-primary-text();
+      @include font-global-heavy();
+      text-transform: none;
+      color: $color-primary-two;
+      display: inline-block;
+      padding-right: 10px;
+      vertical-align: top;
+    }
+
+    .button-tracking-number {
+      @include subheading-primary-text();
+      @include font-global-black();
+      text-decoration: underline;
+      width: 65%;
+      display: inline-block;
+      text-align: left;
+      vertical-align: top;
+    }
+  }
+}
+
+.order-details-section {
+  &.my-account-section-content {
+    padding-bottom: 0px;
+  }
+
+  .accordion-element {
+    margin-top: 0px;
+  }
+
+  .notification-list {
+    margin-top: 15px;
+    @include notification-primary-text();
+    text-transform: none;
+  }
+
+  .notification-list + .table-products {
+    margin-top: 5px;
+  }
+}
+
+.unavailable-order-details {
+  .general-loading {
+    &.order-details-loading {
+      width: 100%;
+      border: 0px;
+    }
+  }
+
+  h1 {
+    @include heading-level-1();
+    @include font-global-medium();
+    text-transform: lowercase;
+    text-align: center;
+    margin: 50px auto;
+
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+}
+
+.unavailable-reservation-details {
+  @extend .unavailable-order-details;
+}

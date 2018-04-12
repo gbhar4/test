@@ -1,0 +1,159 @@
+{
+  "global_header_banner_above_header": {
+      "nameOnServer": "GlobalHeaderBannerAboveHeader",
+      "guest": "1",
+      "registered": "2"
+  },
+  "global_sub_nav_banner": {
+    "nameOnServer": "DTGlobalSubNavBanner",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_banner_within_header": {
+    "nameOnServer": "GlobalHeaderBannerWithinHeader",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_logo": {
+    "nameOnServer": "GlobalHeaderLogo",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_navigation_girl_image": {
+    "nameOnServer": "topnav_girl_main",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_navigation_toddle_girl_image": {
+    "nameOnServer": "topnav_babygirl_main",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_navigation_boy_image": {
+    "nameOnServer": "topnav_boy_main",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_navigation_toddle_boy_image": {
+    "nameOnServer": "topnav_babyboy_main",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_navigation_baby_image": {
+    "nameOnServer": "topnav_newborn_main",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_navigation_shoes_image": {
+    "nameOnServer": "topnav_shoes_main",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_navigation_accesories_image": {
+    "nameOnServer": "topnav_accessories_main",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_navigation_girl_bottom": {
+    "nameOnServer": "topnav_girl_bottom",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_navigation_toddle_girl_bottom": {
+    "nameOnServer": "topnav_babygirl_bottom",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_navigation_boy_bottom": {
+    "nameOnServer": "topnav_boy_bottom",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_navigation_toddle_boy_bottom": {
+    "nameOnServer": "topnav_babyboy_bottom",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_navigation_baby_bottom": {
+      "nameOnServer": "topnav_newborn_bottom",
+      "guest": "1",
+      "registered": "1"
+  },
+  "global_header_navigation_shoes_bottom": {
+      "nameOnServer": "topnav_shoes_bottom",
+      "guest": "1",
+      "registered": "1"
+  },
+  "global_header_navigation_accesories_bottom": {
+    "nameOnServer": "topnav_accessories_bottom",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_plcc_more_info_modal": {
+    "nameOnServer": "GlobalHeaderPlccMoreInfoMdal",
+    "guest": "1",
+    "registered": "1"
+  },
+  "create_account_drawer": {
+    "nameOnServer": "create_account_drawer",
+    "guest": "1",
+    "registered": "1"
+  },
+  "minicart_login_banner": {
+   "nameOnServer": "MinicartLoginBanner",
+    "guest": "1",
+    "registered": "1"
+  },
+  "minicart_register_banner": {
+    "nameOnServer": "MinicartRegisterBanner",
+    "guest": "1",
+    "registered": "1"
+  },
+  "minicart_myaccount_overview_banner": {
+    "nameOnServer": "drawer_myaccount_overview_banner",
+    "guest": "1",
+    "registered": "1"
+  },
+  "drawer_empty_bag": {
+    "nameOnServer": "drawer_empty_bag",
+    "guest": "1",
+    "registered": "1"
+  },
+  "drawer_wishlist_login": {
+    "nameOnServer": "MinicartLoginFromFavoritesBanner",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_header_banner_below_rewards": {
+      "nameOnServer": "MobileNavHeaderLinks1",
+      "guest": "1",
+      "isMobileOnly": true
+  },
+  "global_header_banner_below_favorites": {
+      "nameOnServer": "MobileNavHeaderLinks2",
+      "guest": "1",
+      "registered": "1",
+      "isMobileOnly": true
+  },
+  "global_header_banner_below_find_in_store": {
+      "nameOnServer": "MobileNavHeaderLinks3",
+      "guest": "1",
+      "registered": "1",
+      "isMobileOnly": true
+  },
+  "global_header_navigation_bar_after_last_link": {
+      "nameOnServer": "HeaderNavEspotLinks",
+      "guest": "1",
+      "registered": "1"
+  },
+  "place_rewards_main_image": {
+    "nameOnServer": "DTMPRCCLanding",
+    "guest": "1",
+    "registered": "1"
+  },
+  "global_footer_signup_form_espot": {
+    "nameOnServer": "global_footer_signup_form_espot",
+    "guest": "1",
+    "registered": "1"
+  }
+}

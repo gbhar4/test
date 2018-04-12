@@ -1,0 +1,155 @@
+/**
+* My Account Section (Desktop)
+**/
+
+@import "_m.my-account-section.scss";
+@import "compass/css3/flexbox";
+
+/* My Account Header container */
+.my-account-header {
+  @include display-flex;
+  @include justify-content(space-between);
+  background: $color-primary-five;
+}
+
+/* My Account Section */
+.my-account-content {
+  padding: 20px 0px;
+  background-color: $color-global-white;
+
+  .breadcrum-container {
+    margin-top: 0px;
+  }
+}
+
+/* My Account Section when had the header above */
+.my-account-header + .my-account-content {
+  border-top: solid 1px $color-primary-four;
+}
+
+/* My Account */
+/* Container of Navigation */
+.my-account-navigation-container {
+  /* Reset styles */
+  padding: 0px;
+  margin: 0px;
+  background: transparent;
+
+  width: 20%;
+  vertical-align: top;
+  border-top: 0px;
+  margin-top: 10px;
+  padding-left: 9px;
+}
+
+.my-account-container {
+  background-color: $color-primary-five;
+
+  .my-account-section-content {
+    width: 80%;
+  }
+
+  .general-loading {
+    width: 80%;
+    display: inline-block;
+    min-height: 600px;
+    border: solid 1px $color-primary-one-opacity;
+    padding: 240px 0px;
+  }
+}
+
+.my-account-content > .my-account-section-content {
+  border: 0px;
+  padding: 0px;
+}
+
+.viewport-container {
+  &.my-account-content {
+    padding: 20px;
+  }
+}
+
+/* All internal sections of My Account */
+.my-account-section-content {
+  width: 100%;
+  margin: 0px;
+  vertical-align: top;
+  padding: 25px 72px 60px;
+  min-height: 600px;
+  border: solid 1px $color-primary-one-opacity;
+
+
+  /* For sections that do not allow rewards only the message "Hello Message" is displayed above the navigation */
+  &.my-account-section-no-rewards-content {
+    margin-top: -74px;
+  }
+}
+
+.guest-order-content,
+.guest-reservation-content,
+.my-account-section-content {
+  /* All header of tables */
+  th {
+    @include notification-secondary-text();
+    text-transform: uppercase;
+    @include font-global-black();
+  }
+
+  /* All item of tables */
+  td {
+    @include description-primary-text();
+  }
+
+  .internal-notification {
+    background: transparent;
+    padding: 0px;
+    @include heading-level-4();
+    margin-bottom: 10px;
+    display: inline-block;
+
+    .status {
+      @include font-global-regular();
+      display: inline-block;
+      width: auto;
+      vertical-align: top;
+      padding-right: 10px;
+    }
+
+    .message {
+      @extend .status;
+      @include font-global-black();
+    }
+
+    /* When the message is showed with your title */
+    .status + .message {
+      width: auto;
+    }
+  }
+
+  /* In Order and Reservation Section */
+  .header-status {
+    @include notification-primary-text();
+
+    strong {
+      @include font-global-black();
+    }
+  }
+}
+
+/* Section title */
+.my-account-title-section {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+/* Section title */
+.my-account-section-content {
+  .breadcrum-container {
+    padding: 3px 0px 7px;
+  }
+
+  .breadcrum-container + section,
+  .breadcrum-container + form {
+    margin-top: 28px;
+  }
+}

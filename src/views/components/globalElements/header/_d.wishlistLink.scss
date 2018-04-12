@@ -1,0 +1,45 @@
+/* ==========================================================================
+	Wishlist Link
+   ========================================================================== */
+@import "_mixins.scss";
+
+.wishlist-header {
+  display: inline-block;
+  line-height: 39px;
+  height: 39px;
+}
+
+.wishlist-link {
+  @include icon-tcp-heart-wire();
+  text-decoration: none;
+  color: $color-primary-one;
+  position: relative;
+  display: inline-block;
+  height: 39px;
+  line-height: 39px;
+  font-size: 0;
+
+  &:before {
+    line-height: 39px;
+    font-size: 31px;
+  }
+
+  &.active,
+  &:hover {
+    &:before {
+      color: $color-primary-one;
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      display: inline-block;
+      position: absolute;
+      background: $color-primary-one;
+      left: 0;
+      bottom: 0px;
+      z-index: 2;
+    }
+  }
+}

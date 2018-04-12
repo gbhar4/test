@@ -1,0 +1,28 @@
+/**
+* Contac Us Help Center (Desktop)
+**/
+
+@import "_m.contact-us.scss";
+
+.container-contact {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.phone-container,
+.email-container {
+  width: 22%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.email-icon,
+.celphone-icon {
+  &:before {
+    font-size: 24px;
+  }
+}
+
+.email-icon {
+  margin-bottom: 28px;
+}

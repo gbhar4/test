@@ -1,0 +1,152 @@
+@import "compass/css3/border-radius";
+
+/* Label contenedora para input Radio y su título + subtítulo */
+
+[type=radio] {
+  @include appearance(none);
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  opacity: 0;
+}
+
+.input-radio-icon-unchecked {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+  top: -4px;
+  left: 0;
+
+  /* Normal state in unchecked radio-button */
+  /* Box Container */
+  &:before {
+    content: '';
+    @include border-radius(50%);
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    height: 23px;
+    width: 23px;
+    border: solid 1px $border-container-normal;
+    background-color: $background-container-normal;
+  }
+
+  /* Checked state in origin version from radio-button */
+  &:checked {
+  }
+
+  /* Focused or pressed state in unchecked radio-button */
+  &.focused,
+  &.pressed,
+  &:active,
+  &:focus {
+    /* Box Container */
+    &:before {
+      border: solid 1px $border-container-focused;
+      background-color: $background-container-focused;
+    }
+
+    /* Checked state in Focused or pressed radio-button */
+    &:checked {
+      /* Box Container */
+      &:before {
+        border: solid 1px $border-container-check-focused;
+        background-color: $background-container-focused;
+      }
+
+      /* Check */
+      &:after {
+        background-color: $color-content-check-focused;
+      }
+    }
+  }
+
+  /* Disabled state in unchecked radio-button */
+  &.input-radio-disabled,
+  &:disabled {
+    &, & + .input-radio-title {
+      opacity: 0.4;
+    }
+
+    /* Box Container */
+    &:before {
+      border: solid 1px $border-container-check-normal;
+      background-color: $background-container-normal;
+    }
+
+    /*  Checked state in disabled radio-button  */
+    &:checked {
+      /* Check */
+      &:after {
+        background-color: $color-content-check-normal;
+      }
+    }
+  }
+}
+
+.input-radio-icon-checked {
+  @extend .input-radio-icon-unchecked;
+
+  /* Box Container */
+  &:before {
+    border: solid 1px $border-container-check-normal;
+  }
+
+  /* Check */
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    top: 6px;
+    left: 6px;
+    background-color: $color-content-check-normal;
+  }
+}
+
+.input-radio-focused {
+  /* Box Container */
+  &:before {
+    border: solid 1px $border-container-focused;
+    background-color: $background-container-focused;
+  }
+
+  /* Checked state in Focused or pressed radio-button */
+  &:checked {
+    /* Box Container */
+    &:before {
+      border: solid 1px $border-container-check-focused;
+      background-color: $background-container-focused;
+    }
+
+    /* Check */
+    &:after {
+      background-color: $color-content-check-focused;
+    }
+  }
+}
+
+/* Disabled-focused state in unchecked radio-button */
+.input-radio-disabled-focused {
+  opacity: 0.6;
+
+  /* Box Container */
+  &:before {
+    border: solid 1px $border-container-check-normal;
+    background-color: $background-container-focused;
+  }
+
+  /* Checked state in Disabled-focused radio-button */
+  &:checked {
+    /* Check */
+    &:after {
+      background-color: $color-content-check-normal;
+    }
+  }
+}

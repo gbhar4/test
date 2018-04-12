@@ -1,0 +1,33 @@
+@import "_mixins.scss";
+
+.textarea-common {
+  label {
+    line-height: 28px;
+  }
+
+  textarea {
+    width: 100%;
+    position: relative;
+    min-height: 125px;
+    margin: 4px 0px 0px;
+    border: 1px solid $color-primary-four;
+    padding: 20px;
+    resize: none;
+    @include body-primary-text();
+  }
+
+  &.label-error {
+		textarea {
+      border: 1px solid $color-alert-one;
+		}
+	}
+}
+
+.textarea-subtitle {
+	@extend .input-title;
+	font-size: 11px;
+	line-height: 13px;
+	color: $color-primary-one;
+	margin-left: 0;
+	width: 100%;
+}

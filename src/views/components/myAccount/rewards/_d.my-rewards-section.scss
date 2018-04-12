@@ -1,0 +1,178 @@
+/**
+* My Account Section: My Rewards (Desktop)
+**/
+
+@import "_m.my-rewards-section.scss";
+
+.my-rewards-section {
+  padding-bottom: 40px;
+
+  .uncondense-coupons-container {
+    margin: 10px 0px;
+  }
+
+  .button-cancel,
+  .button-submit-request {
+    width: 40%;
+    display: inline-block;
+  }
+
+  .button-cancel {
+    margin-right: 3%;
+  }
+
+  /* Form */
+  .input-store-number,
+  .input-register-number,
+  .input-transaction-date,
+  .input-transaction-number,
+  .input-order-date,
+  .input-order-number {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .form-content {
+    width: 100%;
+  }
+
+  .input-order-number,
+  .input-store-number,
+  .input-transaction-date {
+    margin-right: 4%;
+  }
+
+  .account-information {
+    margin-bottom: 0px;
+  }
+
+  .no-rewards-message {
+    min-height: 365px;
+  }
+}
+
+.rewards-navigation-item-link {
+  &:hover {
+    color: $color-primary-one;
+
+    &:after {
+      content: '';
+      background: $color-primary-one;
+      height: 2px;
+      width: 100%;
+      display: inline-block;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+    }
+  }
+}
+
+/* Section of Points Claim */
+.points-claim-container {
+  .points-claim-form-title {
+    margin: 20px 0px;
+  }
+
+  .select-transaction-type {
+    width: 20%;
+  }
+
+  .custom-select-common {
+    width: 25%;
+  }
+
+  .account-information {
+    width: calc(50% + 30px);
+    padding-right: 30px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .receipt-sample {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0px;
+    width: 265px;
+  }
+}
+
+/* Add or edit credit card */
+.my-account-content .credit-card-add-edit-form,
+.account-address-book-section {
+  .fieldset-address-editable {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+}
+
+.account-address-book-section {
+  .fieldset-address-editable {
+    padding-bottom: 0px;
+  }
+}
+
+/* FIXME and NOTE: this shouldn't be stay here, but both have the same styling */
+/* Add or edit address */
+.account-address-book-section .fieldset-address-editable,
+/* Add or edit credit card */
+.my-account-content .credit-card-add-edit-form,
+/* Section of Merge Accounts Request */
+.merge-accounts-request-container {
+  .fieldset-address-editable {
+    padding-bottom: 0px;
+  }
+
+  .input-first-name,
+  .input-last-name,
+  .input-address-line1,
+  .input-address-line2 {
+    width: 48%;
+    vertical-align: top;
+  }
+
+  .input-first-name,
+  .input-address-line1,
+   {
+    margin-right: 4%;
+  }
+
+  .input-city {
+    width: 48%;
+    margin-right: 4%;
+    vertical-align: top;
+  }
+
+  .select-state {
+    width: 22%;
+    padding: 0px;
+    margin-right: 4%;
+  }
+
+  .input-zip-code {
+    width: 22%;
+    padding: 0px;
+  }
+
+  .select-country {
+    vertical-align: top;
+    padding: 0px;
+    width: 48%;
+    margin-right: 4%;
+  }
+
+  .input-alternate-email,
+  .input-alternate-phone-number {
+    width: 47%;
+    display: inline-block;
+  }
+
+  .input-alternate-email {
+    margin-right: 4%;
+  }
+
+  .textarea-common textarea {
+    min-height: 230px;
+  }
+}

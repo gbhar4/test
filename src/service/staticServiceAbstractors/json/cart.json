@@ -1,0 +1,211 @@
+{
+    "items": [
+      {
+        "productInfo": {
+          "generalProductId": "g1",
+          "skuId": "07686Pink-Standard",
+          "name": "Quilted Purse",
+          "imagePath": "images/fpo-prod-1.jpg",
+          "upc": 1234567890,
+          "size": "Standard",
+          "color": {
+            "name": "Cedar",
+            "imagePath": "images/fpo-color-1.jpg"
+          }
+        },
+        "itemInfo": {
+          "quantity": 3,
+          "itemId": "1",
+          "listPrice": 1950,
+          "offerPrice": 1397
+        },
+        "miscInfo": {
+          "isOnlineOnly": false,
+          "clearanceItem": false,
+          "store": "Mechanicsburg Galleria",
+          "availability": "OK"
+        },
+        "itemStatus": {
+          "isDeleted": false,
+          "isWishlist": false,
+          "isUpdating": false,
+          "isEditable": false
+        }
+    },
+    {
+      "productInfo": {
+        "generalProductId": "g2",
+        "skuId": "0768fsd6Cedar-A",
+        "name": "Glitter Bow June Ballet Flat",
+        "imagePath": "images/fpo-prod-4.jpg",
+        "upc": 7434,
+        "size": "A",
+        "quantity": 1,
+        "color": {
+          "name": "Clay",
+          "imagePath": "images/fpo-color-2.jpg"
+        }
+      },
+      "itemInfo": {
+        "quantity": 5,
+        "itemId": "2",
+        "listPrice": 1120,
+        "offerPrice": 700
+      },
+      "miscInfo": {
+        "isOnlineOnly": true,
+        "clearanceItem": true,
+        "availability": "OK"
+      },
+      "itemStatus": {
+        "isDeleted": false,
+        "isWishlist": false,
+        "isUpdating": false,
+        "isEditable": false
+      }
+    },
+    {
+      "productInfo": {
+        "generalProductId": "g3",
+        "skuId": "07686Clay-husky-5H",
+        "name": "Boys Herringbone Skinny Pants",
+        "imagePath": "images/fpo-prod-5.jpg",
+        "upc": 6123458907,
+        "fit": "husky",
+        "size": "5H",
+        "quantity": 2,
+        "color": {
+          "name": "Clay",
+          "imagePath": "images/fpo-color-2.jpg"
+        }
+      },
+      "itemInfo": {
+        "quantity": 3,
+        "itemId": "3",
+        "listPrice": 1287,
+        "offerPrice": 1287
+      },
+      "miscInfo": {
+        "isOnlineOnly": false,
+        "clearanceItem": false,
+        "availability": "OK"
+      },
+      "itemStatus": {
+        "isDeleted": false,
+        "isWishlist": false,
+        "isUpdating": false,
+        "isEditable": false
+      }
+    }
+  ],
+
+  "swatchesAndSizesMap": [
+    {
+      "color": {
+        "name": "Cedar",
+        "imagePath": "images/fpo-color-1.jpg"
+      },
+      "maxAvailable": 20,
+      "hasFits": true,
+      "fits": [
+        {
+          "fitName": "Regular",
+          "maxAvailable": 15,
+          "sizes": [
+            {"sizeName": "4", "skuId": "07686Cedar-regular-4", "maxAvailable": 3},
+            {"sizeName": "5", "skuId": "07686Cedar-regular-5", "maxAvailable": 0},
+            {"sizeName": "6", "skuId": "07686Cedar-regular-6", "maxAvailable": 15},
+            {"sizeName": "7", "skuId": "07686Cedar-regular-7", "maxAvailable": 3},
+            {"sizeName": "8", "skuId": "07686Cedar-regular-8", "maxAvailable": 12}
+          ]
+        },
+        {
+          "fitName": "Slim",
+          "maxAvailable": 7,
+          "sizes": [
+            {"sizeName": "4S", "skuId": "07686Cedar-slim-4s", "maxAvailable": 5},
+            {"sizeName": "5S", "skuId": "07686Cedar-slim-5s", "maxAvailable": 7},
+            {"sizeName": "6S", "skuId": "07686Cedar-slim-6s", "maxAvailable": 5},
+            {"sizeName": "7S", "skuId": "07686Cedar-slim-7s", "maxAvailable": 0},
+            {"sizeName": "8S", "skuId": "07686Cedar-slim-8s", "maxAvailable": 0}
+          ]
+        },
+        {
+          "fitName": "husky",
+          "maxAvailable": 20,
+          "sizes": [
+            {"sizeName": "4H", "skuId": "07686Cedar-husky-4h", "maxAvailable": 5},
+            {"sizeName": "5H", "skuId": "07686Cedar-husky-5h", "maxAvailable": 7},
+            {"sizeName": "6H", "skuId": "07686Cedar-husky-6h", "maxAvailable": 5},
+            {"sizeName": "7H", "skuId": "07686Cedar-husky-7h", "maxAvailable": 20},
+            {"sizeName": "8H", "skuId": "07686Cedar-husky-8h", "maxAvailable": 12}
+          ]
+        }
+      ]
+    },
+    {
+      "color": {
+        "name": "Cedar no fits",
+        "imagePath": "images/fpo-color-2.jpg"
+      },
+      "maxAvailable": 20,
+      "hasFits": false,
+      "fits": [
+        {
+          "fitName": "Regular",
+          "maxAvailable": 15,
+          "sizes": [
+            {"sizeName": "4", "skuId": "07686Cedar-regular-4", "maxAvailable": 3},
+            {"sizeName": "5", "skuId": "07686Cedar-regular-5", "maxAvailable": 0},
+            {"sizeName": "6", "skuId": "07686Cedar-regular-6", "maxAvailable": 15},
+            {"sizeName": "7", "skuId": "07686Cedar-regular-7", "maxAvailable": 3},
+            {"sizeName": "8", "skuId": "07686Cedar-regular-8", "maxAvailable": 12}
+          ]
+        }
+      ]
+    },
+    {
+      "color": {
+        "name": "Clay",
+        "imagePath": "images/fpo-color-1.jpg"
+      },
+      "maxAvailable": 10,
+      "hasFits": true,
+      "fits": [
+        {
+          "fitName": "Regular",
+          "maxAvailable": 0,
+          "sizes": [
+            {"sizeName": "4", "skuId": "07686Cedar-regular-4", "maxAvailable": 0},
+            {"sizeName": "5", "skuId": "07686Cedar-regular-5", "maxAvailable": 0},
+            {"sizeName": "6", "skuId": "07686Cedar-regular-6", "maxAvailable": 0}
+          ]
+        },
+        {
+          "fitName": "Slim",
+          "maxAvailable": 7,
+          "sizes": [
+            {"sizeName": "4S", "skuId": "07686Cedar-slim-4s", "maxAvailable": 5},
+            {"sizeName": "5S", "skuId": "07686Cedar-slim-5s", "maxAvailable": 7},
+            {"sizeName": "6S", "skuId": "07686Cedar-slim-6s", "maxAvailable": 5},
+            {"sizeName": "7S", "skuId": "07686Cedar-slim-7s", "maxAvailable": 6},
+            {"sizeName": "8S", "skuId": "07686Cedar-slim-8s", "maxAvailable": 3}
+          ]
+        },
+        {
+          "fitName": "husky",
+          "maxAvailable": 20,
+          "sizes": [
+            {"sizeName": "4H", "skuId": "07686Cedar-husky-4h", "maxAvailable": 5},
+            {"sizeName": "5H", "skuId": "07686Cedar-husky-5h", "maxAvailable": 7},
+            {"sizeName": "6H", "skuId": "07686Cedar-husky-6h", "maxAvailable": 5},
+            {"sizeName": "7H", "skuId": "07686Cedar-husky-7h", "maxAvailable": 20},
+            {"sizeName": "8H", "skuId": "07686Cedar-husky-8h", "maxAvailable": 12}
+          ]
+        }
+      ]
+    }
+  ],
+
+    "productRecomendations": []
+}

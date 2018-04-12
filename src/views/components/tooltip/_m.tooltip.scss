@@ -1,0 +1,84 @@
+/**
+* Tooltip
+**/
+
+/* Tooltip Container */
+.tooltip-container {
+  @include body-primary-text();
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+  text-align: center;
+  display: none;
+
+  /* for open modal, show this with "display" */
+  &.open {
+    display: block;
+  }
+
+  /* Background */
+  &:before {
+    @include single-transition(opacity .15s linear);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.54);
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    opacity: 0.8;
+  }
+}
+
+/* container elements */
+.tooltip-content {
+  background-color: $color-global-white;
+  opacity: 1;
+  color: $color-primary-one;
+  width: 70%;
+  padding: 27px 21px 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%,-50%));
+  @include single-transition(transform .3s ease-out);
+
+  /* container box for close button */
+  div {
+    border-top: 1px solid $color-primary-five;
+    margin: -10px -21px;
+    line-height: 58px;
+  }
+
+  /* tooltip title */
+  h3 {
+    margin-bottom: 22px;
+    color: $color-primary-one;
+  }
+
+  /* tooltip text */
+  p {
+    margin-bottom: 24px;
+    @include body-primary-text();
+
+    &:last-child {
+      margin-bottom: 35px;
+    }
+  }
+
+  /* close button for tooltip box */
+  .button-tooltip-close {
+    @include common-button-remove();
+
+    &:after,
+    &:before {
+      background: $color-primary-two;
+    }
+  }
+}

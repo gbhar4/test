@@ -1,0 +1,143 @@
+/*
+* Check Out Desktop
+*/
+
+@import "_m.checkout-section.scss";
+@import "compass/utilities/general/clearfix";
+
+.checkout-wizard-container {
+  padding: 32px 0px;
+
+  .checkout-summary {
+    margin-bottom: 30px;
+  }
+}
+
+.checkout-container {
+  .checkout-summary {
+  	display: inline-block;
+  	width: 410px;
+  	margin-top: 21px;
+    float: right;
+  }
+
+  /* Box message */
+  .checkout-summary + .error-box,
+  /* Two box or more messages, one under the other */
+  .error-box + .error-box {
+    position: relative;
+    width: calc(100% - 500px);
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: 50px;
+    margin-top: 40px;
+  }
+
+  /* Two box or more messages, one under the other */
+  .error-box + .error-box {
+    margin-top: 20px;
+  }
+
+  /* Container of Button "Next Step" */
+  .container-button {
+    width: calc(100% - 410px);
+    display: inline-block;
+    padding: 14px 0px 20px;
+    // float: left;
+    padding-right: 50px;
+    padding-left: 40px;
+    position: relative;
+    margin-top: 40px;
+
+    &:before {
+			content: '';
+			position: absolute;
+			width: calc(100% - 90px);
+			height: 1px;
+			top: 0px;
+			left: 40px;
+	    opacity: .5;
+			background: $color-primary-one;
+		}
+  }
+
+  /* Botón siguiente en Checkout */
+	.button-next-step {
+		width: auto;
+    padding: 0px 35px;
+    float: right;
+    margin: 0px;
+	}
+
+  .term-and-conditions-checkout {
+    float: right;
+    margin: 0px;
+    width: 100%;
+    text-align: right;
+    margin: 0px 0px 10px;
+  }
+
+  .checkout-order-summary {
+    .term-and-conditions-checkout {
+      margin-bottom: 14px;
+    }
+  }
+
+  .button-previous-step {
+    padding-left: 16px;
+    position: absolute;
+    margin: 0px;
+    display: inline-block;
+    top: 50%;
+    @include transform(translateY(-50%));
+
+    &:before {
+      left: -12px;
+    }
+  }
+
+  .submit-order-next-spinner {    
+    margin: 0 37.5px;
+  }
+
+  .checkout-section-title {
+    margin-right: 30px;
+    margin-bottom: 10px;
+
+    /* NOTE: reset styles */
+    h3 {
+      margin: 0px;
+    }
+  }
+
+  .button-edit-address {
+    position: relative;
+    right: auto;
+    top: auto;
+    @include transform(none);
+  }
+}
+
+.checkout-content {
+  position: relative;
+  width: calc(100% - 410px);
+  display: inline-block;
+  padding-right: 50px;
+  padding-left: 40px;
+}
+
+.checkout-review-section {
+  @include pie-clearfix();
+}
+
+.checkout-container {
+  .checkout-summary {
+    .error-box,
+    .warning-box,
+    .success-box {
+      &:before {
+        background: $color-primary-five;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+/**
+* Hello Message from My Account (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "compass/css3/transform";
+@import "_variables.scss";
+
+.hello-message-container {
+  width: 100%;
+  display: inline-block;
+  padding: 10px 30px;
+  background: $color-global-white;
+  @include body-secondary-text();
+}
+
+.hello-title {
+  display: inline-block;
+  width: calc(100% - 8px);
+  @include heading-level-1();
+  @include font-global-medium();
+  text-transform: none;
+
+  @include font-global-black();
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+.hello-message-for-no-rewards {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+
+  .hello-title {
+    top: auto;
+    @include transform(translateY(0%));
+  }
+}

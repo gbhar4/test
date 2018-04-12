@@ -1,0 +1,65 @@
+/**
+* Email Us (Mobile)
+**/
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Email Us Header */
+.email-us-header {
+  background-color: $color-primary-five;
+}
+
+.email-title {
+  text-align: center;
+  display: block;
+  padding: 40px 15px;
+}
+
+.email-us-container {
+  .email-notice {
+    @include body-secondary-text($color-primary-two);
+    padding: 15px 15px 0;
+    text-align: left;
+  }
+
+  .policy-click {
+    @include body-secondary-text($color-primary-two);
+    text-decoration: underline;
+  }
+
+  .email-us-form {
+    padding: 0 15px 20px;
+  }
+
+  label,
+  .custom-select-common {
+    margin-bottom: 20px;
+    outline-style: none;
+  }
+
+  .custom-select-common {
+    .custom-select-button {
+      padding-right: 20px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  textarea {
+    height: 370px;
+  }
+
+  /* Success box */
+  .success-box {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  /* Error box */
+  .error-box {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}

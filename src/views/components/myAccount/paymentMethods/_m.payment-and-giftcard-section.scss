@@ -1,0 +1,380 @@
+/**
+* My Account Section: Payment & Gift Card (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* REVIEW: Address Book */
+.account-address-book-section,
+/* Payment & Gift Card container */
+.payment-and-giftcard-section {
+  position: relative;
+  padding-bottom: 25px;
+
+  .my-place-rewards-banner + .success-box {
+    margin-top: 20px;
+  }
+
+  /* Icon of button close for boxes */
+  .button-close {
+    @include common-button-remove();
+    position: absolute;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    top: 18px;
+
+    &:before {
+      width: 16px;
+      top: 7px;
+      right: 0px;
+    }
+
+    &:after {
+      height: 16px;
+      right: -1px;
+    }
+  }
+
+  .balance {
+    @include heading-level-1();
+    margin-bottom: 26px;
+    text-transform: none;
+
+    strong {
+      @include font-global-black();
+    }
+  }
+
+  .gift-card-add-submit {
+    padding-top: 20px;
+
+    .general-loading {
+      top: 0;
+      min-height: auto;
+      padding: 0;
+      border: 0;
+    }
+  }
+}
+
+/* REVIEW: Address Book */
+.address-item-container,
+/* Boxes of Credit and Debit Card */
+.credit-card-item-container {
+  background: $color-primary-five;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding: 16px 20px 22px;
+  margin-bottom: 20px;
+
+  /* Edit button of boxes (Credit and debit card) */
+  .button-edit,
+  /* REVIEW: Address Book */
+  .edit {
+    @include description-primary-text($color-primary-two);
+    text-decoration: underline;
+    position: absolute;
+    right: 20px;
+    top: 51px;
+    z-index: 2;
+  }
+
+  /* Ending in... */
+  .card-info {
+    @include heading-level-4();
+
+    img {
+      width: 44px;
+      height: 28.2px;
+      vertical-align: middle;
+    }
+  }
+
+  .ending-numbers {
+    margin-left: 17px;
+  }
+
+  /* Expiration date of credit card */
+  .expires-message {
+    @include description-primary-text();
+    margin-left: 60px;
+    display: block;
+  }
+
+  /* Tag of Default Payment Method (Display only) */
+  .default-payment-method,
+  /* REVIEW: Address Book */
+  .default-shipping-method {
+    margin-left: 60px;
+    @include heading-level-4();
+  }
+
+  /* REVIEW: Address Book */
+  .button-default-shipping-method,
+  /* "Make Default" Button */
+  .button-default-payment-method {
+    margin-left: 60px;
+    @include body-secondary-text();
+    text-decoration: underline;
+  }
+
+  /* REVIEW: Address Book */
+  .default-shipping-method,
+  .button-default-shipping-method {
+    margin-left: 0px;
+  }
+}
+
+/* Reset styles of Address Container */
+.my-account-section-content {
+  .address-item-container {
+    .address-container {
+      padding-right: 40px;
+    }
+  }
+
+  .credit-card-item-container {
+    /* Container of Address details */
+    .address-container {
+      width: calc(100% - 60px);
+      margin-left: 60px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+
+      /* Name of user */
+      .name {
+        display: block;
+      }
+    }
+
+    /* Contact Info Details */
+    .address-details,
+    .address-aditional {
+      @include description-primary-text($color-primary-two);
+      line-height: 22px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .address-container {
+    .aux-char {
+      display: inline-block;
+      margin-right: 4px;
+    }
+  }
+}
+
+/* Boxes of Merchandise and Credit Gift cards */
+.gift-card-item-container {
+  @extend .credit-card-item-container;
+
+  .remaining-balance-title {
+    @include description-secondary-text();
+    margin-top: 32px;
+    margin-bottom: 5px;
+    margin-left: 60px;
+    display: inline-block;
+    width: calc(100% - 60px);
+  }
+
+  .total-balance {
+    font-size: 42px; /* There isn't mixin for this */
+    display: inline-block;
+    margin-left: 60px;
+    @include font-global-black();
+  }
+}
+
+/* Container of title and button "Add New" */
+.payment-section-title-container {
+  margin-top: 28px;
+  padding: 4px 0px;
+  border-bottom: solid 1px $color-primary-four;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* Subtitles of section (Second level) */
+.payment-section-title {
+  @include heading-level-3();
+  @include font-global-black();
+  display: inline-block;
+}
+
+/* Button "Add New" */
+.payment-add-new-button {
+  @include button-quaternary(secondary);
+  width: 100px;
+  position: relative;
+  vertical-align: middle;
+  margin-left: 30px;
+}
+
+/* Titles of boxes */
+.payment-card-title {
+  @include subheading-secondary-text($color-primary-two);
+  display: inline-block;
+  margin-bottom: 11px;
+}
+
+/* Add new card Form */
+.credit-and-debit-cards-container {
+  .label-error {
+    .inline-error-message {
+      white-space: normal;
+    }
+  }
+
+  .address-billing {
+    margin-top: 20px;
+  }
+
+  .checkout-registered-shipping-section {
+    border-top: solid 1px $color-primary-one-opacity;
+    border-bottom: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-top: 30px;
+  }
+
+  .button-add-address {
+    margin: 10px 0px 20px;
+  }
+
+  .title-billing-address {
+    @include heading-level-3();
+    @include font-global-black();
+    display: inline-block;
+  }
+
+  .container-billing-section-title {
+    display: inline-block;
+    position: relative;
+  }
+
+  .container-billing-section-title {
+    display: inline-block;
+    position: relative;
+    float: right;
+    top: -23px;
+  }
+
+  .button-edit-address {
+    @include description-primary-text($color-primary-two);
+    text-decoration: underline;
+    position: relative;
+  }
+
+  .select-exp-mm {
+    width: 38%;
+  }
+
+  .select-exp-yy {
+    width: 58%;
+    margin-left: 4%;
+  }
+
+  .button-cancel {
+    @include button-secondary();
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 0px;
+  }
+
+  .button-add-new-card {
+    @include button-primary();
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .button-edit-card,
+  .button-save-changes {
+    @extend .button-add-new-card;
+  }
+}
+
+/* Empty credit card method */
+.cards-empty-container {
+  margin-bottom: 20px;
+}
+
+
+/* REVIEW: Address Book */
+.empty-address-book,
+/* Empty payment and giftacard */
+.cards-empty-container,
+.giftcard-empty-container {
+
+  .empty-content-and-button,
+  .empty-address-book-and-button {
+    padding: 20px;
+    background-color: $color-primary-five;
+  }
+
+  /* REVIEW: Address Book */
+  .address-empty-message,
+  .cards-empty-message,
+  .giftcard-empty-message {
+    @include body-secondary-text();
+    margin-bottom: 10px;
+  }
+
+  .cards-empty-title,
+  .giftcard-empty-title {
+    margin-bottom: 15px;
+    padding-left: 58px;
+    position: relative;
+  }
+
+  /* REVIEW: Address Book */
+  .address-empty-title {
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .giftcard-figure,
+  .card-figure {
+    margin-right: 15px;
+    max-width: 45.7px;
+    height: 28.2px;
+    position: absolute;
+    top: -5px;
+    left: 0;
+  }
+
+  /* REVIEW: Address Book */
+  .button-add-edit-address,
+  .button-new-method,
+  .button-add-new-giftcard {
+    margin: 0px auto;
+    display: block;
+  }
+}
+
+/* Reset styles of Address Container */
+.my-account-section-content {
+  /* Empty addresses */
+  .credit-card-add-edit-form > .title-billing-address {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .credit-card-add-edit-form {
+    .error-box {
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Add new card Form */
+  .fieldset-creditcard-editable {
+    margin-top: 0px;
+  }
+}

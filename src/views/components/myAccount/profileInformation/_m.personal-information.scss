@@ -1,0 +1,53 @@
+/**
+* Personal Information (Mobile)
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.personal-information-container {
+  /* Reset styles */
+  .address-container {
+    margin: 0px;
+    padding: 0px;
+    float: none;
+  }
+}
+
+.personal-information-form {
+  /* Reset Styles */
+  .user-name,
+  .address-details,
+  .address-additional {
+    @include font-global-medium();
+  }
+
+  /* All Label */
+  .input-first-name,
+  .input-last-name,
+  .email-address,
+  .phone-number,
+  .air-miles-card,
+  .checkbox-employee {
+    margin-bottom: 25px;
+
+    sup {
+      font-size: .8em;
+      margin: 0px;
+    }
+  }
+
+  .input-associated {
+    margin-bottom: 25px;
+  }
+
+  .label-error {
+  	.inline-error-message {
+      white-space: normal;
+  	}
+  }
+
+  .button-container {
+    padding-bottom: 50px;
+  }
+}

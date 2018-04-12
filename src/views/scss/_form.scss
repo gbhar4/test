@@ -1,0 +1,150 @@
+fieldset {
+	@include body-primary-text();
+	padding: 25px 0;
+}
+
+label {
+  @include label-common-text();
+  position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.input-common {
+	display: inline-block;
+	width: 100%;
+}
+
+.label-radio,
+.label-checkbox {
+  	padding-left: 35px;
+	display: inline-block;
+	width: auto;
+	line-height: 25px;
+}
+
+.label-checkbox {
+	display: inline-block;
+	position: relative;
+	
+	label {
+		position: static;
+		line-height: 25px;
+	}
+}
+
+.input-title {
+	@include input-title();
+	height: 15px;
+	vertical-align: middle;
+	position: relative;
+
+	&.input-title-placeholder {
+		@include input-common-placeholder();
+	}
+}
+
+.input-radio-title,
+.input-checkbox-title {
+  @include input-title-2();
+  vertical-align: middle;
+}
+
+.input-subtitle {
+	@include font-global-regular();
+	font-size: 13px;
+	line-height: 18px;
+  vertical-align: middle;
+  display: block;
+  position: relative;
+
+	&.address-book-chkbx {
+		font-size: 13px;
+	}
+}
+
+.input-checkbox-icon-unchecked,
+.input-checkbox-icon-checked {
+	+ .input-title {
+		position: relative;
+		margin-top: 3px;
+	}
+
+	+ .input-subtitle {
+		position: relative;
+		margin-top: 4px;
+		color: $color-primary-one;
+	}
+}
+
+.input-radio {
+	.input-subtitle {
+		@include notification-secondary-text($color-primary-two);
+		@include font-global-regular();
+	}
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	&.disabled ~ .input-title,
+	&.disabled ~ .input-subtitle,
+	&:disabled ~ .input-title,
+	&:disabled ~ .input-subtitle {
+		color: $color-primary-one;
+		opacity: .4;
+	}
+}
+
+.input-radio-disabled,
+.input-checkbox-disabled {
+	~ .input-title,
+	~ .input-subtitle,
+	~ .input-title,
+	~ .input-subtitle {
+		color: $color-primary-one;
+		opacity: .4;
+	}
+}
+
+/* Mimic native browser focus styles
+ * https://ghinda.net/article/mimic-native-focus-css/ */
+.select-focused,
+.input-radio-focused,
+.input-checkbox-focused {
+	outline-width: 5px;
+	outline-style: solid;
+	outline-color: Highlight;
+
+	/* WebKit gets its native focus styles. */
+	@media (-webkit-min-device-pixel-ratio:0) {
+		outline-color: -webkit-focus-ring-color;
+		outline-style: auto;
+	}
+}
+
+/* cambiar a .button-container */
+.group-button {
+	button:nth-child(even),
+	input[type="submit"]:nth-child(even),
+	a:nth-child(even) {
+		margin: 15.7px 0 0;
+	}
+}
+
+.form-link {
+	@include notification-primary-text();
+	text-decoration: underline;
+}
+
+/* .checkbox-container */
+.checkbox-combo {
+	margin-bottom: 0px;
+}
+
+@import "form/_input.scss";
+@import "form/_radio.scss";
+@import "form/_checkbox.scss";
+@import "form/_select.scss";
+@import "form/_custom-select.scss";
+@import "form/_dropdown-list.scss";
+@import "form/_textarea.scss";

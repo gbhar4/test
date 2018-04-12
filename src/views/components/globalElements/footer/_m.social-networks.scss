@@ -1,0 +1,68 @@
+/**
+** Social Networks
+*/
+@import "compass/functions";
+@import "compass/css3/border-radius";
+
+/* Componente de Social Networks (iconos) */
+.social-networks {
+     @extend .country-selector;
+     float: right;
+     text-align: right;
+     left: 2px;
+
+     .title-social-networks {
+          display: none;
+     }
+}
+
+.icon-twitter,
+.icon-fcbk,
+.icon-pinterest,
+.icon-instagram {
+     width: 37px;
+     height: 37px;
+     top: 10.5px;
+     position: relative;
+     display: inline-block;
+     text-decoration: none;
+     color: $icon-social-network-background; /* El ícono es calado */
+     margin-left: 10px;
+
+     &:before {
+          position: relative;
+          font-size: 37px;
+          top: -3px;
+          left: 0px;
+          z-index: 1;
+     }
+
+     &:after {
+          content: "";
+          background-color: $icon-social-network-color;
+          @include border-radius(50%);
+          position: absolute;
+          width: 29px;
+          height: 29px;
+          display: inline-block;
+          top: 3px;
+          left: 4px;
+     }
+}
+
+.icon-twitter {
+     @include icon-sc-twitter();
+     margin-left: 21px;
+}
+
+.icon-fcbk {
+     @include icon-sc-fcbk();
+}
+
+.icon-pinterest {
+     @include icon-sc-pinterest();
+}
+
+.icon-instagram {
+     @include icon-sc-instagram();
+}

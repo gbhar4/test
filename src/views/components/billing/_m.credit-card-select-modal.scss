@@ -1,0 +1,62 @@
+/**
+ * Checkout Credit Card  (Mobile)
+ **/
+
+ @import "_mixins.scss";
+ @import "_variables.scss";
+ @import "compass/css3/flexbox";
+
+ //Contaenerdor de la informacion de la tarjeta de credito
+ .credit-card-form-container {
+   margin-right: 58px; // 68 - 10 del padding interno
+   padding-right: 20px;
+   position: relative;
+
+   &:before {
+     content: '';
+     background-color: $color-primary-four;
+     height: 85%;
+     width: 1px;
+     top: 15%;
+     right: 0;
+     display: block;
+     position: absolute;
+
+   }
+
+   .payment-method-container {
+     margin-bottom: 20px;
+     padding-bottom: 14px;
+     border-bottom: 1px solid $color-primary-four;
+   }
+ }
+
+.card-details {
+  border: 0px;
+  width: 70%;
+  padding-right: 20px;
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+
+  .cardholder-name {
+    display: block;
+  }
+
+  .card-suffix {
+    position: relative;
+    top: -10px;
+    padding-left: 10px;
+  }
+
+  .card-img {
+    width: 45px;
+  }
+
+  strong {
+    margin-left: 5px;
+    vertical-align: initial;
+    position: relative;
+    @include description-secondary-text();
+  }
+}

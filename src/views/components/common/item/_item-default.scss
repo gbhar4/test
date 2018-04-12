@@ -1,0 +1,375 @@
+/**
+** Default items style
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+@import "compass/css3/transform";
+@import "compass/css3/opacity";
+@import "compass/css3/flexbox";
+@import "../_carrousel-button.scss";
+
+.item-container {
+  text-align: center;
+  list-style-type: none;
+  padding: 16px;
+  margin: 0 auto 30px;
+  background: $color-global-white;
+  width: 80%;
+  max-width: 290px;
+  position: relative;
+  @include box-shadow(0 0 10px 0 $color-primary-four);
+
+  /* Notification purchased */
+  .notification-item {
+    @include subheading-secondary-text($color-global-white);
+    line-height: 20px;
+    background-color: $color-primary-one;
+    margin: 0 auto;
+    width: 55%;
+    position: absolute;
+    top: 17px;
+    right: 50%;
+    @include transform(translateX(50%));
+    z-index: 2;
+
+    &:after,
+    &:before {
+      content: '';
+      background-color: $color-global-white;
+      width: 3px;
+      height: 3px;
+      display: block;
+      top: 50%;
+      position: absolute;
+      @include border-radius(50%);
+      @include transform(translateY(-50%));
+    }
+
+    &:after {
+      right: 16%;
+    }
+
+    &:before {
+      left: 16%;
+    }
+  }
+
+  /* Image item */
+  .product-image-container {
+    margin: 0 auto;
+    display: block;
+    width: calc(100% - 20px);
+    max-width: 244px;
+    height: 100%;
+    max-height: 244px;
+    position: relative;
+
+    /* Reset styles */
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* Reset styles */
+    img {
+      width: 100%;
+    }
+  }
+
+  .product-sku-info-container {
+    position: relative;
+  }
+
+  /* Img Color item */
+  .img-color {
+    margin: 0 auto 6px;
+    @include border-radius(50%);
+    width: 25px;
+    display: block;
+  }
+
+  /* Text size item */
+  .size-container,
+  .fit-container {
+    @include label-common-text();
+    text-transform: capitalize;
+    margin-bottom: 11px;
+  }
+
+  /* Separator line between fit and size if both are shown */
+  .separator-bar-icon {
+    font-size: 0px;
+    background-color: $color-primary-one;
+    margin: 0px 10px;
+    width: 1px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    top: 0px;
+    left: 0px;
+    position: relative;
+  }
+
+  .product-title-container {
+    margin: 30px auto 15px;
+    width: calc(100% - 20px);
+    max-width: 244px;
+    display: inline-block;
+
+    h3 + .badge-item-container {
+      margin-top: 10px;
+    }
+  }
+
+  /* Name of item */
+  .product-title-content {
+    @include heading-level-4();
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+
+  /* Price(s) */
+  .container-price {
+    margin-bottom: 13px;
+    @include display-flex;
+    @include flex-direction(column);
+  }
+
+  /* NOTE: as per DT-29548, list and offer price should be shown consistently across the site (at product item) */
+  .list-price {
+    @include subheading-secondary-text($color-primary-three);
+    position: relative;
+    display: block;
+  }
+
+  .offer-price {
+    /* NOTE: DT-27673 color should be specifically #990000 */
+    @include heading-level-4($color-actual-price);
+    display: block;
+
+    &.offer-price-only {
+      @include heading-level-4($color-primary-one);
+    }
+  }
+
+  .button-suggested {
+    @include notification-primary-text();
+    @include font-global-regular();
+    color: $color-primary-one;
+    text-decoration: underline;
+    text-transform: none;
+  }
+
+  .purchased-and-move-dropdown-container {
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .purchased-status-container {
+    @include description-secondary-text($color-primary-three);
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    width: 37%;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    top: 5px;
+  }
+
+  .move-item-container {
+    width: 100%;
+    position: relative;
+    vertical-align: top;
+    text-align: right;
+  }
+
+  /* Remove button to Soldout state */
+  .button-remove {
+    width: 230px;
+    margin-bottom: 10px;
+    @include button-quaternary(secondary);
+    background: $color-accent-two;
+  }
+
+  /* button move favorite list to other */
+  .button-move {
+    @include description-secondary-text($color-primary-three);
+    display: inline-block;
+    text-decoration: underline;
+    padding-right: 25px;
+    position: relative;
+    @include icon-manual-chevron();
+
+    &:before {
+      right: 8px;
+      bottom: 7px;
+    }
+
+    &:after {
+      right: 1.5px;
+      bottom: 7px;
+    }
+
+    &.active {
+      &:before {
+        @include transform(rotate(-45deg));
+      }
+
+      &:after {
+        @include transform(rotate(45deg));
+      }
+    }
+  }
+
+  // NOTE: ??
+  .move-item-content {
+    width: calc(100% + 32px);
+    left: -16px;
+    margin-top: 16px;
+  }
+
+  // NOTE: following class name is not using
+  .remove-background {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $color-global-white;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    @include opacity(0.9);
+
+    .message-remove,
+    .button-undo {
+      @include heading-level-1();
+      text-transform: none;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    .message-remove {
+      @include font-global-black();
+    }
+
+    .button-undo {
+      text-decoration: underline;
+    }
+  }
+
+  // NOTE: ??
+  .container-message {
+    top: 50%;
+    position: relative;
+    @include transform(translateY(-50%));
+  }
+
+  .edit-icon-spinner {
+    padding: 0;
+    z-index: 2;
+    font-size: 0px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  /* NOTE: ADD TO BAG button */
+  .bag-button-container {
+    @include button-quaternary();
+  }
+
+  /* NOTE: PICKUP button */
+  .pickup-button-container {
+    @include button-quaternary(secondary);
+    margin-top: 10px;
+  }
+
+  /* Badges */
+  .badge-item-container {
+    &.top-badge-container {
+      width: calc(100% - 72px);
+    }
+  }
+
+  .item-button-container,
+  .buttons-container {
+    .bag-button-icon-spinner,
+    .pickup-button-icon-spinner {
+      padding: 0px;
+      font-size: 0px;
+      text-indent: 15px;
+      width: 30px;
+      height: 30px;
+
+      &:after,
+      &:before {
+        font-size: 18px;
+        left: -8px;
+      }
+    }
+  }
+}
+
+/* Recommendation content */
+.item-product-recomendation {
+  @extend .item-container;
+
+  .department-name-link {
+    text-decoration: none;
+    color: $color-primary-one;
+  }
+
+  .product-list-price {
+    @include subheading-secondary-text($color-primary-three);
+    margin-right: 10px;
+    bottom: 1px;
+    position: relative;
+  }
+
+  .product-offer-price {
+    @include heading-level-4($color-actual-price);
+  }
+}
+
+/* Sold Out Item Container */
+.sold-out-item {
+  .product-image-container {
+    position: relative;
+
+    .product-image-content {
+      opacity: .4;
+    }
+  }
+}
+
+.badge-item-container {
+  @include heading-level-4();
+  font-size: 14px; // NOTE and REVIEW: confirm font-size. this is not in our style guide.
+  text-transform: uppercase;
+  color: $color-badge-typo;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+
+  &.top-badge-container {
+    // position: absolute;
+    // margin-bottom: 5px;
+  }
+
+  &.inline-badge-container {
+    @include subheading-primary-text();
+    @include font-global-black();
+    color: $color-badge-typo;
+    text-align: center;
+  }
+
+  &.merchant-badge-container {
+    @include body-secondary-text($color-actual-price);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

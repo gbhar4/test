@@ -1,0 +1,79 @@
+/**
+* Modal Header (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.modal-header {
+  /* Título del modal */
+  .modal-title {
+    @include font-global-heavy();
+  }
+
+  .modal-only-title {
+    line-height: 65px;
+    background-color: $color-global-white;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      background-color: $color-primary-one-opacity;
+      left: 0px;
+      position: absolute;
+      top: 65px;
+    }
+  }
+
+  /* Subtítulo / Descripción del modal */
+  .modal-subtitle {
+    @include description-primary-text($color: $color-primary-one);
+
+    padding: 30px 0px 30px;
+  }
+
+  .button-modal-close {
+    @include common-button-exit-modal();
+    margin: 0px;
+    width: 17px;
+    height: 17px;
+    right: 28px;
+    top: 24px;
+    z-index: 1;
+
+    /* Icon X */
+    &:after {
+      background: $color-primary-three;
+      width: 3px;
+    }
+
+    &:before {
+      background: $color-primary-three;
+      height: 3px;
+    }
+  }
+
+  &.modal-back-button {
+    .modal-title {
+      text-align: center;
+    }
+  }
+
+  .button-back {
+    @include description-primary-text();
+    position: absolute;
+    left: 17px;
+    top: 25px;
+    z-index: 2;
+
+    @include icon-tcp-chevron();
+    &:before {
+      @include transform(rotate(-90deg));
+      text-align: left;
+      font-size: 14px;
+      width: 26px;
+    }
+  }
+}

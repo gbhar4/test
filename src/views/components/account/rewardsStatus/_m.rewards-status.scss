@@ -1,0 +1,245 @@
+/*
+* Rewards Status (Mobile)
+*/
+
+@import "_mixins";
+@import "_variables";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/flexbox";
+
+.react-overlay {
+  .mobile-tabed-drawers-container {
+    &.overlay-container {
+      padding: 0px 15px;
+    }
+  }
+}
+
+.mobile-tabed-drawers-container {
+  &.tabed-drawers-my-account {
+    width: 90%;
+
+    .modal-header {
+      min-height: 65px; // NOTE: To fix hidden attribute, implemented for accessibility approach.
+    }
+
+    .modal-only-title {
+      display: none; // NOTE: component have an attribute to hide this (hidden), but some navigators doesn't support that.
+    }
+
+    .modal-header {
+      .button-modal-close {
+        right: auto;
+
+        border-right: solid 2px $color-primary-one;
+        border-top: solid 2px $color-primary-one;
+
+        margin-top: 2px;
+        width: 10px;
+        height: 10px;
+        @include transform(rotate(-135deg));
+
+        &:before,
+        &:after {
+          content: none;
+        }
+      }
+    }
+
+    .hello-message {
+      @include heading-level-4();
+      position: absolute;
+      top: 22px;
+      padding-left: 20px;
+      text-transform: capitalize;
+      width: calc(100% - 110px);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .view { // FIXME: change className, please
+      @include navigation-level-2-standard($color-primary-three);
+      margin-left: -15px;
+      margin-right: -15px;
+      padding: 10px 0px;
+      color: $color-primary-five;
+      background: $color-primary-one;
+      text-decoration: underline;
+      text-transform: uppercase;
+      text-align: center;
+      width: calc(100% + 30px);
+      display: inline-block;
+
+    }
+  }
+
+  .available-rewards {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .coupon-list-container + .coupon-list-container {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: solid 1px $color-primary-one-opacity;
+  }
+}
+
+.menu-expanded {
+  .ReactModalPortal + .ReactModalPortal .react-overlay {
+    &:before {
+      opacity: 0;
+    }
+  }
+}
+
+// FIXME
+.my-account-content-overlay {
+  // padding: 22px 17px;
+  padding-bottom: 22px;
+
+  h3 {
+    @include subheading-primary-text($color-primary-one);
+    @include font-global-black();
+    text-transform: capitalize;
+    line-height: 28px;
+    margin-bottom: 5px;
+  }
+}
+
+/* Mobile */
+.rewards-status {
+  position: relative;
+  background-color: $color-global-white;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px $color-primary-one-opacity;
+
+  .title {
+    @include subheading-primary-text();
+    @include font-global-black();
+    text-transform: capitalize;
+    display: block;
+
+    strong {
+      color: $color-accent-three;
+    }
+  }
+
+  .rewards-bar {
+    width: 100%;
+    margin-top: 27px;
+    position: relative;
+    border: 0;
+
+    .points {
+      @include notification-secondary-text($color-accent-three);
+      display: block;
+      text-align: right;
+      position: relative;
+
+      &:hover {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      strong {
+        @include heading-level-3($color-accent-three);
+      }
+    }
+  }
+
+  span {
+    &.title {
+      @include subheading-tertiary-text();
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    strong {
+      @include font-global-black();
+      font-size: 20px;
+    }
+  }
+
+  .container-number-progressbar {
+    width: 100%;
+    margin: 10px 0px 5px;
+    @include display-flex;
+    @include justify-content(space-between);
+
+    .number-progressbar {
+      @include description-primary-text($color-primary-three);
+    }
+  }
+
+  .progress-container {
+    width: 100%;
+    background: $color-global-white;
+    border: solid 1px $color-accent-three;
+    padding: 0;
+    padding-right: 8px;
+    margin-top: 3px;
+    margin-bottom: 0;
+    height: 15px;
+    @include pie-clearfix();
+  }
+
+  .progressbar-rewards {
+    width: 0%;
+    background: transparent url(/wcsstore/static/images/pt-orange-stripes.png) repeat 16px 0;
+    height: 100%;
+    position: relative;
+
+    &:after {
+      content: url("/wcsstore/static/images/MPR-PointsBar-SmileyFace.png");
+      display: inline-block;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      right: -15px;
+      top: 50%;
+      @include transform(translateY(-50%));
+    }
+  }
+
+  .rewards-points {
+    @include subheading-tertiary-text();
+    width: 100%;
+    margin-top: 30px;
+
+    p {
+      display: block;
+      margin-bottom: -3px;
+
+      span {
+        color: $color-accent-three;
+        margin-left: 4px;
+        float: none;
+      }
+    }
+  }
+
+  .button-reward {
+    margin: 25px auto 0;
+    max-width: 258px;
+    display: block;
+    @include button-quaternary();
+
+    &.points-left {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.order-status-notification-container {
+  .notification-ship-to-home {
+    border-top: solid 1px $color-primary-three;
+  }
+
+  /* NOTE: Could we have two notifications, and the first one should not have margin bottom */
+  > div:last-of-type {
+    margin-bottom: 20px;
+  }
+}

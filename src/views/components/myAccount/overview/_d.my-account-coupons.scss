@@ -1,0 +1,169 @@
+/**
+* My Account Coupons (Desktop)
+**/
+
+@import "_m.my-account-coupons.scss";
+@import "compass/css3/flexbox";
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Coupon section in global My Account */
+.uncondense-coupon-summary-container {
+  border-bottom: solid 1px $color-primary-one-opacity;
+  padding-top: 0px;
+  padding-bottom: 30px;
+
+  .link-view-all-rewards {
+    font-size: 16px; // NOTE: Harcoded size, DT-24872
+  }
+}
+
+/* Account Overview
+ * NOTE: border and padding are necessary when the notifications are displaying above the coupons.
+ */
+div + .uncondense-coupon-summary-container {
+  border-top: solid 1px $color-primary-one-opacity;
+  padding-top: 30px;
+}
+
+.my-account-section-for-canada-content {
+  .uncondense-coupon-summary-container {
+    border-top: none;
+    padding-top: 0px;
+  }
+}
+
+.earned-rewards {
+  .uncondense-coupons-container {
+    overflow-x: hidden;
+  }
+
+  .uncondense-list-coupons {
+    padding: 0px;
+    width: calc(100% + 40px);
+    left: -20px;
+  }
+}
+
+/* Title of section */
+.uncondense-coupon-summary-title {
+  @include subheading-secondary-text();
+  text-align: center;
+  margin-bottom: 13px;
+  border-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.uncondense-list-coupons {
+  margin: 10px 0px;
+  padding: 0px 40px;
+  width: 100%;
+  white-space: normal;
+  overflow-x: initial;
+}
+
+.uncondense-coupon {
+  width: calc(33.33% - 40px);
+  margin: 0px 20px 15px;
+  max-width: 213px;
+  vertical-align: top;
+}
+
+.uncondense-coupon-ineligible {
+  margin: 20px 0px;
+}
+
+.overlay-coupon-printable {
+  &:before {
+    z-index: 10;
+  }
+
+  svg {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .overlay-container {
+    padding: 30px;
+    z-index: 11;
+    overflow-y: auto;
+    margin-top: 30px;
+    height: calc(72vh);
+  }
+
+  img  {
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+  }
+
+  h1 {
+    font-size: 40px;
+    @include font-global-black();
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  p {
+    padding: 10px;
+    border: solid 1px $color-primary-three;
+    @include description-secondary-text($color-primary-two);
+  }
+
+  .print-coupon {
+    @include button-primary();
+    margin: 10px auto;
+  }
+
+  .cancel-print {
+    @include button-secondary();
+  }
+}
+
+@media print {
+  .ReactModal__Body--open {
+    overflow: visible;
+  }
+
+  .react-overlay {
+    position: static;
+  }
+
+  .overlay-container {
+    overflow: hidden;
+  }
+
+  .overlay-coupon-printable {
+    overflow: visible;
+
+    &:before {
+      display: none;
+    }
+
+    .overlay-container {
+      max-height: none;
+      height: auto;
+      overflow: visible;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      @include transform(translate(0,0));
+    }
+  }
+
+  .header-global, .my-account-container{
+    display: none;
+  }
+
+  .footer-global {
+    display: none;
+  }
+
+  .overlay-coupon-printable {
+    .button-coupon-print, .button-coupon-cancel {
+      display: none;
+    }
+  }
+}

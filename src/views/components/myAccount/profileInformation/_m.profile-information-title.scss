@@ -1,0 +1,64 @@
+/**
+* Profile Information Title (Mobile)
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.profile-information-header {
+  .profile-information-only-title {
+    @include heading-level-4();
+  }
+
+  .profile-information-title {
+    @include heading-level-3();
+    @include font-global-black();
+    display: inline-block;
+  }
+
+  .button-action {
+    @include heading-level-4();
+    @include font-global-medium();
+    text-decoration: underline;
+    line-height: 28px;
+    position: relative;
+  }
+
+  .button-edit,
+  .button-container {
+    float: right;
+  }
+}
+
+.profile-information-container {
+  position: relative;
+
+  .profile-information-title {
+    display: none;
+  }
+
+  .button-container,
+  .button-edit {
+    position: absolute;
+    right: 0px;
+    top: -64px;
+  }
+}
+
+.personal-information-container {
+  .button-cancel-information {
+    @include button-secondary();
+  }
+
+  .button-save {
+    @include button-primary();
+  }
+
+  .button-cancel-information,
+  .button-save {
+    height: 42px;
+    line-height: 46px;
+    margin: 20px 30px 0 0;
+    font-size: 14px;
+  }
+}

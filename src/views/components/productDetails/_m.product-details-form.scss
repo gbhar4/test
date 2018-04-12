@@ -1,0 +1,115 @@
+/**
+* PDP - Product Details Form (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/border-radius";
+@import "compass/css3/transform";
+
+.product-details-header-promo-text-area + .product-details-form-container {
+  + .product-details-form-container {
+    margin-top: 0px;
+
+    .error-box {
+      margin: 15px 0 20px;
+    }
+  }
+}
+
+
+/* Form of Product details */
+.product-details-form-container {
+  margin-top: 20px;
+  margin-bottom: 17px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+
+  .error-box,
+  .warning-box {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Button Add To Bag */
+  .button-add-to-bag {
+    @include button-primary();
+    display: inline-block;
+    width: calc(100% - 140px);
+    vertical-align: middle;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+  }
+}
+
+.product-details-form-content {
+  position: relative;
+
+  fieldset {
+    padding: 0px;
+  }
+
+  /* Color, Size and Fit Radio Button Group */
+  .color-chips-selector-container,
+  .size-and-fit-detail-container {
+    margin-bottom: 10px;
+  }
+
+  .inline-error-message {
+    @include input-common-error-message($color-alert-one);
+    white-space: nowrap;
+    width: auto;
+
+    .error-icon {
+      font-size: 0px;
+      width: auto;
+      display: inline-block;
+      margin-right: 7px;
+
+      @include icon-tcp-error();
+      &:before {
+        font-size: 15px;
+        color: $color-alert-one;
+      }
+    }
+  }
+
+  /* Quantity Labeled Select */
+  .select-qty {
+    width: 120px;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .qty-details-section-title {
+    font-size: 0;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .qty-details-title {
+    @include heading-level-4();
+    display: block;
+    white-space: nowrap;
+  }
+
+  .button-sold-out-online {
+    @include button-secondary();
+    display: inline-block;
+    width: calc(100% - 140px);
+    vertical-align: middle;
+    margin-top: 15px;
+
+    opacity: .6;
+  }
+
+  .color-chips-selector-item.item-disabled-option {
+    .input-radio-title {
+      outline: none;
+    }
+  }
+}

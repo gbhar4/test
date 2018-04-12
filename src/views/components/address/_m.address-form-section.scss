@@ -1,0 +1,50 @@
+/*
+* Address Form Section (Mobile)
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.fieldset-address-editable {
+  .input-common,
+  .select-common {
+    margin-bottom: 25px;
+  }
+  .input-zip-code {
+    .inline-error-message {
+      white-space: normal;
+    }
+  }
+}
+
+.checkbox-set-default {
+  margin-top: 10px;
+}
+
+.button-select-shipping-address {
+  @include button-primary();
+  margin-top: 20px;
+}
+
+.label-checkbox + .button-select-shipping-address {
+  margin-top: 30px;
+}
+
+
+/* Is My Account Section? */
+.address-book-section {
+  .input-first-name {
+    margin-top: 0px;
+  }
+
+  .button-select-shipping-address {
+    @include button-primary();
+    margin-top: 20px;
+
+    &.cancel {
+      @include button-secondary();
+      margin-top: 25px;
+      margin-bottom: 0px;
+    }
+  }
+}

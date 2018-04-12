@@ -1,0 +1,94 @@
+/**
+* Search Result Section (Desktop)
+**/
+
+@import "_m.product-listing-section.scss";
+
+/* Breadcrum and Inline Navigation */
+.search-header {
+  width: 20%;
+  display: inline-block;
+  float: left;
+
+  &.search-from-typeahead {
+    width: 100%;
+  }
+}
+
+.search-from-typeahead + .filters-container {
+  width: 100%;
+}
+
+.search-from-typeahead + .filters-container + .search-result-product-list {
+  width: 100%;
+}
+
+/* Number of found products */
+.qty-result-container {
+  position: absolute;
+  right: 0px;
+}
+
+/* Filter Section */
+.filters-section-container {
+  /* Reset Styles */
+  margin: 0px;
+  padding: 0px;
+  @include box-shadow(none);
+
+  width: 100%;
+  display: inline-block;
+}
+
+.filters-container {
+  width: 80%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+
+  // position: fixed;
+  // z-index: 3;
+}
+
+/* Filter Section: Added Category list */
+.categories-list {
+  padding-left: auto;
+  margin-left: auto;
+
+  padding-right: auto;
+  margin-right: auto;
+
+  margin-bottom: 0px;
+}
+
+.plp-section-container {
+  /* Filters and sorting section, container of available filters and added filters item */
+  .filter-and-sort-form-container {
+    .loading-more-product {
+      margin-bottom: 20px;
+    }
+  }
+
+  .item-button-container {
+    .bag-icon-container {
+      top: 16px;
+    }
+
+    .bag-icon-spinner {
+      // top: 20px;
+    }
+
+    .favorite-icon-container {
+      top: 50px;
+    }
+  }
+}
+
+.category-description {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.search-result-slot {
+  max-width: 1400px;
+}

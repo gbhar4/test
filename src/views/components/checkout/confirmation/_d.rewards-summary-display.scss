@@ -1,0 +1,46 @@
+/**
+* Rewards Summary Display (Desktop)
+**/
+
+@import "./_m.rewards-summary-display.scss";
+
+.points-container {
+  padding-left: 110px;
+  padding-right: 0;
+  margin: 0px;
+  margin-bottom: 6px;
+  width: 100%;
+
+  .confirmation-rewards-banner {
+    width: 210px;
+    height: 60px;
+  }
+
+  .points-earned {
+    width: auto;
+
+    span {
+      @include subheading-secondary-text();
+    }
+  }
+
+  .rewards-bar {
+    border-left: 1px solid $color-primary-three;
+    padding-left: 15px;
+    margin-left: 15px;
+    width: 240px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .container-number-progressbar {
+    .number-progressbar {
+      margin-left: 41px;
+    }
+  }
+
+  .points-message {
+    left: 53%;
+  }
+
+}

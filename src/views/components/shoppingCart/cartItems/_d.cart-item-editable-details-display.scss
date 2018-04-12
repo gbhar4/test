@@ -1,0 +1,88 @@
+@import "compass/css3/flexbox";
+@import "_m.cart-item-editable-details-display.scss";
+
+.item-shopping-cart {
+  /* Contenedor de los items de la descripción (en estado no editable) */
+  .container-description-view {
+    margin: 11px 0 0;
+
+    /* Button Edit */
+    .button-edit-product {
+      margin-top: 0;
+      margin-left: 20px;
+      display: inline-block;
+      @include description-primary-text($color-primary-two);
+      text-decoration: underline;
+    }
+
+    /* Information Items: Color, fit, size, qty */
+    span {
+      padding: 0;
+      display: inline-block;
+      font-size: inherit;
+      font-weight: inherit;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        position: relative;
+        @include subheading-secondary-text();
+        margin: 0px 10px;
+        width: 1px;
+        height: 10px;
+        top: 1px;
+        background: $color-primary-one;
+        padding-left: 0px;
+      }
+
+      /* Last divition line*/
+      &:last-of-type {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /* Container of description's item */
+  .container-description-item {
+    display: inline-block;
+  }
+}
+
+/* Only My Bag Drawer / Overlay */
+.overlay-my-bag {
+  /* Re-check level */
+  .item-shopping-cart {
+    /* details of product */
+    .container-description-view {
+      margin: 10px 0 7px;
+      position: relative;
+      @include notification-secondary-text();
+      @include display-flex;
+      @include align-items(center);
+    }
+
+    /* Container of description's item */
+    // .container-description-item {
+    //   display: inline-block;
+    //   max-width: 275px;
+    // }
+
+    /* Button "Edit" */
+    .button-edit-product {
+      @include notification-secondary-text($color-primary-three);
+      @include font-global-regular;
+      text-decoration: underline;
+      margin-left: 15px;
+    }
+  }
+}

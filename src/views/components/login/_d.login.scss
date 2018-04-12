@@ -1,0 +1,277 @@
+@import "_mixins.scss";
+
+.back-to-login-button {
+  @include description-primary-text();
+  text-decoration: underline;
+  position: absolute;
+  left: 25px;
+  top: 28px;
+  z-index: 1;
+}
+
+.login-drawer-container {
+  background: transparent url(/wcsstore/static/images/pt-orange-stripes.png) repeat 0 0;
+  padding: 10px;
+
+  .new-account {
+    padding-bottom: 8px;
+  }
+}
+
+.form-login {
+  background-color: $color-primary-background;
+  padding: 40px 20px;
+
+  img {
+    width: 100%;
+  }
+
+  form {
+    padding: 25px 80px 5px;
+  }
+
+  label {
+    width: 100%;
+  }
+
+  .tooltip-password {
+    .tooltip-container {
+      text-align: left;
+      right: calc(50% - 100px);
+      width: 440px;
+      padding: 12px 20px 12px;
+
+      &:after {
+        left: 77.5%;
+      }
+
+      &:before {
+        left: 77.5%;
+      }
+    }
+  }
+
+  .input-email,
+  .input-password {
+    margin-top: 20px;
+  }
+
+  .label-checkbox {
+    margin-top: 15px;
+    display: block;
+    
+    div {
+      margin-top: 5px;
+    }
+
+    .input-title {
+      @include description-secondary-text();
+      @include font-global-black();
+      position: relative;
+      margin-top: 3px;
+    }
+
+    .input-subtitle {
+      @include description-secondary-text();
+      margin-top: -3px;
+    }
+  }
+
+  .login-save-plcc {
+    margin-bottom: 20px;
+
+    + .link-forgot {
+      line-height: normal; // FIXME. It should not be necessary to do this.
+    }
+  }
+
+  .message {
+    margin-bottom: 10px;
+  }
+
+  .message,
+  .wishlist-message {
+    text-align: center;
+    margin: 0 -10px;
+  }
+
+  .login-form-subtitle {
+    @include description-primary-text($color-primary-one);
+
+    b {
+      @include font-global-black();
+    }
+  }
+
+  .reset-password-container {
+    margin-top: 10px;
+  }
+
+  .login-form-title {
+    @include font-global-medium;
+    line-height: 28px;
+  }
+
+  .reset-password-text {
+    @include description-primary-text($color-primary-one);
+    line-height: 20px;
+
+    @media (max-width: 800px) {
+      margin-top: 10px;
+    }
+  }
+
+  .reset-password-button {
+    @include description-primary-text($color-primary-one);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .link-forgot {
+    @include button-common-forgot-password();
+    @media (max-width: 800px) {
+      margin: 0;
+    }
+  }
+
+  .login-remember {
+    + .login-button {
+      margin-top: 25px;
+      margin-bottom: 0;
+    }
+  }
+
+  .new-account {
+    text-align: center;
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    @media (min-width: 800px) {
+      padding-top: 23px;
+    }
+
+    &:before {
+      content: '';
+      height: 1px;
+      background: #f1f1f1; // plese re check this line, the exa background should not be here
+      width: calc(86vw);
+      position: absolute;
+      top: 0;
+      left: 0;
+      @media (min-width: 800px) {
+        height: 2px;
+        width: 450px;
+        left: -65px;
+      }
+    }
+
+    > span {
+      @include description-primary-text($color: $color-primary-one);
+      font-weight: 500; // plese re check this line the font-weight should not be here
+    }
+  }
+
+  .button-create-account {
+    margin-top: 20px;
+  }
+
+  .error-box {
+    margin-top: 20px;
+  }
+
+  .parent-notification {
+    @include description-primary-text();
+    @include font-global-black();
+    position: relative;
+    text-align: center;
+    margin: 35px 0px 10px;
+    width: calc(100% + 70px);
+    left: -35px;
+  }
+
+  .button-guest-message {
+    @include description-primary-text();
+    margin: 13px 0px;
+    text-align: center;
+
+    button {
+      width: auto;
+      margin: 0;
+    }
+  }
+
+  .remembered-logout {
+    position: inherit;
+
+    span {
+      @include navigation-level-2-standard();
+    }
+
+    button {
+      text-transform: none;
+    }
+  }
+
+}
+
+.login-banner {
+  padding: 0 15px;
+
+  img {
+    min-width: 100%;
+  }
+}
+
+/* Centered overlay of Login, Reset Password and My Place Rewards Member */
+.overlay-login-and-reset-form {
+  .form-login {
+    form {
+      margin-bottom: 0px;
+      padding: 43px 86px;
+    }
+
+    .label-checkbox {
+      margin-top: 12px;
+      div {
+        margin-top: 5px;
+      }
+      .input-title {
+        @include description-secondary-text();
+        @include font-global-black();
+        position: relative;
+        margin-top: 3px;
+      }
+      .input-subtitle {
+        @include description-secondary-text();
+        margin-top: -3px;
+      }
+    }
+
+    .link-forgot {
+      line-height: normal;
+      margin-top: 6px;
+      margin-bottom: 14px;
+    }
+
+    .button-create-account {
+      text-decoration: underline;
+      margin: 0px;
+    }
+  }
+
+  .new-account {
+    @include description-primary-text();
+    padding: 20px 0 0;
+    border-top: 0px;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  button +
+  .continue-guest-container {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,66 @@
+/**
+* Contac Us Help Center (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.container-contact {
+  text-align: center;
+  padding: 30px 15px 53px;
+  background-color: $color-primary-five;
+
+  .main-message-contact {
+    @include body-secondary-text();
+    margin-bottom: 30px;
+  }
+
+  .email-message-contact {
+    @include body-secondary-text();
+  }
+
+  .title-contact {
+    margin-bottom: 20px;
+  }
+}
+
+.phone-container {
+  margin-bottom: 30px;
+}
+
+/* NOTE: We don't have the correct Icon yet. */
+.email-icon,
+.celphone-icon {
+  font-size: 0px;
+  display: inline-block;
+  margin-bottom: 20px;
+
+  &:before {
+    color: $color-primary-two;
+    font-size: 20px;
+  }
+}
+
+.celphone-icon {
+  @include icon-sc-phone();
+}
+
+.email-icon {
+  @include icon-sc-email();
+  max-height: 14px;
+}
+
+.email-link {
+  @include heading-level-4();
+  text-decoration: underline;
+}
+
+.us-number {
+  @include heading-level-4();
+  display: block;
+}
+
+.ca-number {
+  @include notification-primary-text();
+  display: block;
+}

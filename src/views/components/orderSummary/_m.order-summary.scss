@@ -1,0 +1,254 @@
+/**
+* Order Summary component
+**/
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/flexbox";
+
+.checkout-order-summary {
+  margin-bottom: 20px;
+  padding: 33px 25px 15px;
+  background: $color-global-white;
+  vertical-align: top;
+  @include box-shadow(inset 0px 0px 0px 1px $color-primary-one-opacity);
+
+  .button-container {
+    border-top: solid 1px $color-primary-one-opacity;
+    padding-top: 29px;
+    margin-top: 10px;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .button-primary {
+    margin-bottom: 14px;
+  }
+
+  /* When is Mobile the buttons are fixed */
+  .container-fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $color-global-white;
+    z-index: 4;
+    padding: 10px 40px;
+    @include display-flex;
+    @include flex-direction(row-reverse);
+
+    .error-box {
+      width: 204%;
+      margin-top: 10px;
+    }
+
+    .checkout-button-container,
+    .paypal-button-container {
+      width: 48%;
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      @include align-self(flex-end);
+    }
+
+    .paypal-button-container {
+      margin-right: 4%;
+    }
+
+    .button-pay-with-paypal {
+      margin-bottom: 14px;
+
+      span {
+        font-size: 0;
+      }
+    }
+
+    .checkout-button-container {
+      .error-box {
+        left: -104%;
+      }
+    }
+
+    .button-checkout {
+      @include align-self(flex-end);
+    }
+  }
+
+  .submit-order-spinner {
+    width: 45px;
+    height: 45px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Mensaje de Free Shipping, cerrando order summary */
+  .message-free-shipping {
+    @include subheading-tertiary-text();
+    color: $color-primary-one;
+    text-align: center;
+    padding: 20px 20px 18px;
+
+    img {
+      width: calc(100% + 40px);
+      left: -20px;
+      position: relative;
+    }
+
+    a {
+      @include subheading-tertiary-text();
+      color: $color-primary-one;
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Order summary: Listado de items a pagar */
+.order-summary {
+  /* purchase information, item list */
+  li {
+    @include body-primary-text();
+    color: $color-primary-two;
+    padding-bottom: 6px;
+
+    /* amount to add for order total and amount order total */
+    strong {
+      float: right;
+      @include body-primary-text();
+    }
+  }
+
+  .estimated-total,
+  .balance-total {
+    margin-top: 13px;
+    padding-top: 28px;
+    border-top: solid 1px $color-primary-one-opacity;
+  }
+
+  .estimated-total ~ .balance-total {
+    border: 0;
+    padding: 0;
+    margin-top: 5px;
+  }
+
+  /* Final Balance */
+  .balance-total {
+    @include heading-level-2($color-primary-one);
+    position: relative;
+    margin-bottom: 0;
+
+    strong {
+      @include heading-level-1($color-primary-one);
+      @include font-global-black();
+      line-height: 26px;
+    }
+  }
+}
+
+.checkout-summary {
+  position: relative;
+
+  .accordion {
+    .accordion-button-toggle,
+    .accordion-element {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  /* Notificación closseness quialifier */
+  .notification.closeness-quialifier-notification {
+    height: auto;
+    margin-bottom: -2px;
+  }
+
+  /* Notificación closseness qualifier */
+  .closeness-quialifier-notification {
+    @include box-shadow(inset 0px 0px 0px 1px $color-primary-two);
+    background-color: $color-primary-five;
+    position: relative;
+    margin-top: 23px;
+    padding: 25px 29px 24px;
+    color: green;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      background: $color-primary-one-opacity;
+      top: -26px;
+      left: 0;
+      position: absolute;
+    }
+
+    .notification-inline {
+      @include body-primary-text();
+      width: 100%;
+      line-height: 20px;
+      text-align: center;
+
+      .closeness-link-create-account  {
+        @include subheading-tertiary-text();
+        text-decoration: underline;
+      }
+
+      strong {
+        display: block;
+        @include font-global-black();
+      }
+    }
+  }
+
+  /* Elements of Summary checkout when is into an Accordion */
+  // .accordion {
+    /* Reset styles */
+    // .coupon-code label {
+    //   margin: 0;
+    // }
+
+    // /* Reset styles */
+    // .available-rewards {
+    //   border-bottom: 0px;
+    //   padding-bottom: 0px;
+    //   margin-bottom: 20px;
+    // }
+    //
+    // /* Reset styles */
+    // .list-coupons {
+    //   li:last-of-type {
+    //     .coupon-content {
+    //       margin-bottom: 0px;
+    //     }
+    //   }
+    // }
+
+    // /* Reset styles */
+    // .summary-message {
+    //   &:empty {
+    //     display: none;
+    //   }
+    // }
+  // } /* Accordion end */
+
+}/* Checkout summary end */
+
+.coupon-code-container {
+  margin-bottom: 30px;
+
+  .error-box {
+    margin-bottom: 20px;
+  }
+}
+
+.coupon-code-title {
+  @include description-primary-text();
+  display: block;
+
+  .coupon-help-link {
+    @include description-primary-text();
+    padding-left: 5px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

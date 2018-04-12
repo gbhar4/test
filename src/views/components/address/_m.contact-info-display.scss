@@ -1,0 +1,30 @@
+/*
+* Contact Info Display Mobile
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Título de Address */
+.address-title {
+  @include subheading-secondary-text();
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+/* Información del cliente */
+.address-details {
+  @include body-secondary-text();
+  @include font-global-regular();
+}
+
+.address-additional {
+  @extend .address-details;
+  margin-top: 15px;
+
+  span {
+    width: calc(100% - 40px);
+    word-wrap: break-word;
+    display: inline-block;
+  }
+}

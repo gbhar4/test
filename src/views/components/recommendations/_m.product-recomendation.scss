@@ -1,0 +1,228 @@
+/*
+* Product Recomendation (Mobile)
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+
+/* At Favorite's Section, Suggested item container */
+.wishlist-suggested-container {
+  .item-product-recomendation {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    @include box-shadow(none);
+  }
+}
+
+.product-recomendation-container {
+  background-color: $color-primary-five;
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+  clear: both;
+
+  /* Title list */
+  .heading-product-recomendation {
+    margin-top: 4px;
+    text-transform: uppercase;
+
+    &:after {
+      content: '';
+      width: 53px;
+      height: 2px;
+      position: relative;
+      display: block;
+      background: $color-primary-one;
+      margin: 18px auto 25px;
+    }
+  }
+
+  /* Prev & Next buttons and recommendation list */
+  .container-product-recomendation {
+    position: relative;
+  }
+
+  .button-next,
+  .button-prev {
+    &:before {
+      border-left-color: $color-primary-one;
+      border-top-color: $color-primary-one;
+    }
+  }
+}
+
+.content-product-recomendation {
+  padding-bottom: 15px;
+  margin: 0px auto;
+  position: relative;
+  width: calc(78% + 18px);
+  display: block;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+/* Product item */
+.product-rec-list-item {
+  text-align: center;
+  margin: 8px;
+  width: calc(100% - 16px);
+  height: 461px;
+  white-space: normal;
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+
+  /*  */
+  .item-product-recomendation {
+    position: relative;
+    max-width: 290px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 16px;
+    @include box-shadow(0px 0px 12px 0px rgba(51, 51, 51, 0.25));
+  }
+}
+
+/* Outfit item */
+.outfit-rec-list-item {
+  @extend .product-rec-list-item;
+  height: auto;
+
+  .item-product-recomendation {
+    &.outfit-container {
+      height: auto;
+      padding: 0px;
+
+      .container-image {
+        padding: 0
+      }
+    }
+  }
+}
+
+.container-item-recomendation {
+  .product-item-link {
+    display: block;
+    text-decoration: none;
+  }
+
+  .container-image {
+    width: calc(100% - 20px);
+    max-width: 244px;
+    height: 100%;
+    max-height: 244px;
+    display: block;
+    margin: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .department-name {
+    width: 70%;
+    margin: 0 auto;
+    text-transform: none;
+  }
+
+  .container-price {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .product-offer-price {
+    @include font-global-heavy();
+    display: block;
+    color: $color-actual-price;
+  }
+
+  .product-list-price {
+    @include subheading-primary-text($color-primary-three);
+    @include font-global-heavy();
+    text-decoration: line-through;
+    display: block;
+  }
+
+  .bag-button-container {
+    @include button-quaternary();
+  }
+
+  .pickup-button-container {
+    @include button-quaternary(secondary);
+    margin-top: 10px;
+  }
+}
+
+/* On PDP, recommendation and outfit section (container of both) */
+.recommendation-and-outfit-container {
+}
+
+.product-recomendation,
+.wishlist-suggested-container {
+  h3 {
+    @include subheading-secondary-text();
+  }
+
+  .error-box {
+    position: absolute;
+    background: $color-global-white;
+    width: 75%;
+  }
+}
+
+/* Each Section */
+.giftcard-result-container,
+.outfiting-section-container,
+.product-details-container,
+.search-result-container {
+  /* When Recommendation is into an Accordion */
+  .accordion-element {
+    .product-recomendation-container {
+      background-color: transparent;
+      padding: 0px 0 20px;
+    }
+
+    .product-recomendation {
+      margin: 0px;
+    }
+  }
+}
+
+/* PDP section, main container */
+.product-details-container {
+  .product-recomendation-container {
+    background: $color-global-white;
+    padding: 0px;
+  }
+
+  .product-recomendation {
+    margin: 0px;
+  }
+
+  .content-product-recomendation {
+    padding-bottom: 0px;
+
+    + .coupon-dots {
+      margin: 20px 0px;
+    }
+  }
+}
+
+/* When Slider is on accordion */
+.accordion-element {
+  .button-prev {
+    left: -10px;
+  }
+
+  .button-next {
+    right: -10px;
+  }
+}

@@ -1,0 +1,95 @@
+@import "_m.available-rewards.scss";
+
+.list-coupons {
+  .reward-value,
+  .coupon-value {
+    @include heading-level-4();
+    line-height: 1.2;
+    display: block;
+    margin-top: 0;
+    height: auto;
+  }
+
+  .apply-rewards-button,
+  .apply-coupons-button {
+    width: 128px;
+  }
+
+  .link-to-details,
+  .expire-information {
+    @include subheading-primary-text();
+    text-transform: capitalize;
+  }
+
+  .link-to-details {
+    text-decoration: underline;
+  }
+}
+
+.checkout-container {
+  .list-coupons {
+    .coupon {
+      margin-bottom: 15px;
+
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+    }
+
+    .information-reward,
+    .information-coupon {
+      width: 180px;
+    }
+
+    .button-view-all {
+      @include subheading-primary-text($color-primary-two);
+      text-transform: none;
+      text-decoration: underline;
+
+      u {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.coupon-list-container {
+  margin-bottom: 40px;
+
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+}
+
+.overlay-coupon-alert-message,
+.overlay-coupon-detail {
+  &.react-overlay {
+    .overlay-content {
+      padding: 40px 20px;
+      height: 350px;
+    }
+  }
+}
+
+
+/* "Need Help?" Modal */
+.overlay-coupon-information {
+	.react-overlay .overlay-content {
+    padding: 30px;
+	}
+}
+
+/* Account Drawer for Mobile version */
+.my-account-content-overlay {
+  .remembered-logout {
+    top: 9px;
+  }
+
+  .information-coupon {
+    width: calc(100% - 160px);
+  }
+
+  .apply-coupons-button {
+    margin-top: 0px;
+  }
+}

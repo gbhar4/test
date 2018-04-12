@@ -1,0 +1,49 @@
+/*
+ * Empty Wishlist (Mobile)
+ */
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Empty section (global container) */
+.empty-wishlist-section {
+
+  /* Spot */
+  .content-slot {
+    margin: 30px 0px;
+    max-width: 100vw;
+    width: 100%;
+
+    img {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  .content-slot + .product-recomendation {
+    margin-top: 0px;
+  }
+
+  .product-recomendation {
+    margin-top: 40px;
+  }
+}
+
+/* Message for empty wishlist state (container) */
+.empty-wishlist-message-container {
+  text-align: center;
+}
+
+/* Empty wishlist's title */
+.empty-wishlist-title {
+  @include heading-level-1();
+  @include font-global-regular();
+  text-transform: none;
+  margin-bottom: 20px;
+}
+
+/* Empty wishlist's message */
+.empty-wishlist-message {
+  @include body-primary-text();
+  @include font-global-regular();
+}

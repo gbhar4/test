@@ -1,0 +1,89 @@
+/**
+* Profile Information / Birthdays Information
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Add or delete Birthday */
+/* Birthday section */
+.birthday-savings-container,
+.birthday-information-container {
+  .add-birthday-message {
+    margin-bottom: 20px;
+    @include heading-level-4();
+    @include font-global-regular();
+  }
+
+  .title-container {
+    margin-bottom: 20px;
+  }
+
+  .birthdays-list-container {
+    display: inline-block;
+    width: calc(100% - 45px);
+    margin-top: 10px;
+
+    + .button-information {
+      margin-top: 0px;
+    }
+  }
+
+  .birthday-item {
+    background: $color-primary-five;
+    padding: 13px 20px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .child-name {
+    @include font-global-black();
+  }
+
+  .birthday-date {
+    float: right;
+  }
+
+  .button-add-new-child {
+    @include button-secondary();
+    margin-bottom: 10px;
+  }
+
+  .button-delete {
+    @include common-button-remove();
+    position: absolute;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+
+    &:before {
+      width: 16px;
+      top: 8px;
+
+    }
+
+    &:after {
+      height: 16px;
+      top: -1px;
+    }
+  }
+
+  .button-delete + .birthday-date {
+    margin-right: 30px;
+  }
+}
+
+.message-deleted-birthday {
+  .button-cancel-process {
+    @include button-secondary();
+    width: 47%;
+    vertical-align: top;
+    margin-right: 6%;
+  }
+
+  .button-remove {
+    @include button-primary();
+    width: 47%;
+    vertical-align: top;
+  }
+}

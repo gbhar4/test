@@ -1,0 +1,90 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.checkout-shipping-section {
+  position: relative;
+  border-bottom: 1px solid $color-primary-four;
+  padding-bottom: 30px;
+}
+
+.container-shipping-section-title {
+  h3 {
+    display: inline-block;
+    margin-right: 90px;
+  }
+
+  .button-save-address {
+    @include body-primary-text();
+    text-decoration: underline;
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .button-cancel-address {
+    @extend .button-save-address;
+  }
+}
+
+.button-add-address {
+  @include button-semi-dropdown();
+}
+
+.address-shipping {
+  margin-bottom: 20px;
+
+  &:empty {
+    margin: 0px;
+  }
+}
+
+/* Encerrado en checkout-shipping-section pues estaba afectando a review */
+.checkout-shipping-section {
+  .address-container {
+    margin-top: 20px;
+    margin-right: 50px;
+    border-right: 1px solid $color-primary-four;
+  }
+
+  .address-additional {
+    margin: 0;
+  }
+}
+
+.address-item {
+  border-bottom: 1px solid $color-primary-four;
+  padding: 25px 0px;
+
+  .address-container {
+    //float: left;
+    border: 0px;
+    width: 70%;
+    display: inline-block;
+    margin: 0px;
+  }
+
+  .button-container {
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    display: inline-block;
+  }
+
+  .button-edit {
+    z-index: 1;
+    position: relative;
+    @include body-primary-text();
+    text-decoration: underline;
+    margin-top: 10px;
+  }
+}
+
+/* Is NOT Shipping Section? */
+.checkout-pickup-container,
+.checkout-billing-container,
+.checkout-review-container {
+  .address-container {
+    margin-top: 0px;
+    margin-right: 0px;
+    border-right: 0px;
+  }
+}

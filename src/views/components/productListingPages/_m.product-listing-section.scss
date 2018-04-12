@@ -1,0 +1,90 @@
+/**
+* Search Result Section (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/transform";
+
+.plp-section-container {
+  padding: 22px 16px;
+
+  .content-slot-list-container {
+    margin-top: 20px;
+  }
+
+  .product-title-container {
+    a, h3 {
+      text-transform: capitalize;
+    }
+  }
+
+  .loading-more-product {
+    @include heading-level-4();
+    @include font-global-medium();
+    text-indent: 18px;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+
+    &:after,
+    &:before {
+      font-size: 20px;
+    }
+  }
+
+  .qty-result-container {
+    display: inline-block;
+    @include heading-level-4();
+    width: 80px;
+    text-align: right;
+    vertical-align: top;
+
+    strong {
+      margin-right: 5px;
+    }
+  }
+
+  .search-by-keywords-content {
+    @include heading-level-4();
+    @include font-global-regular();
+
+    strong {
+      @include font-global-black();
+    }
+  }
+}
+
+.inline-navigation-container {
+  position: relative;
+}
+
+.search-header {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.body-copy,
+.category-description {
+  h1 {
+    @include notification-primary-text();
+    @include font-global-regular();
+    margin-bottom: 5px;
+  }
+
+  p {
+    @include notification-secondary-text();
+    @include font-global-regular();
+    margin: 7px 0px;
+    line-height: 16px;
+  }
+}
+
+.search-result-slot {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+}

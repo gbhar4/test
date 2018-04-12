@@ -1,0 +1,56 @@
+/**
+*  Reservation List (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.table-reservation {
+  width: 100%;
+  display: inline-block;
+  margin: 16px 0px 20px;
+
+  thead,
+  tbody {
+    display: inline-block;
+    width: 100%;
+  }
+
+  tr {
+    display: inline-block;
+    width: 100%;
+  }
+
+  td {
+    @include notification-primary-text();
+    vertical-align: top;
+    width: 33.33%;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
+
+  .reservation-item {
+    border-top: solid 1px $color-primary-one-opacity;
+    padding: 21px 0px 17px;
+
+    &:last-of-type {
+      border-bottom: solid 1px $color-primary-one-opacity;
+    }
+  }
+
+  .status-reservation {
+    text-align: right;
+  }
+
+  .expiration-date-item {
+    margin-top: 7px;
+    width: 100%;
+  }
+
+  .reservation-number {
+    @include notification-primary-text();
+    text-decoration: underline;
+  }
+}

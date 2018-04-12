@@ -1,0 +1,33 @@
+/**
+ * Shipping Review Section
+ **/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Is Express Checkout? */
+.express {
+  /* Button Edit in Shipping section */
+  .checkout-review-shipping {
+    .checkout-summary-edit {
+      top: 120px;
+    }
+  }
+
+  .checkout-review-shipping-address {
+    position: relative;
+    width: calc(100% - 53px);
+
+    /* Right Line */
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0px;
+      width: 1px;
+      height: 100%;
+      top: 0px;
+      display: inline-block;
+      background-color: $color-primary-one-opacity;
+    }
+  }
+}

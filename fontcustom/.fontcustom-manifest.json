@@ -1,0 +1,174 @@
+{
+  "checksum": {
+    "previous": "16da5125acadfe6f3e44db8993bfa8c1b7b839055b3e6870a1ad81e842710396",
+    "current": "16da5125acadfe6f3e44db8993bfa8c1b7b839055b3e6870a1ad81e842710396"
+  },
+  "fonts": [
+    "../src/fonts/icons_16da5125acadfe6f3e44db8993bfa8c1.ttf",
+    "../src/fonts/icons_16da5125acadfe6f3e44db8993bfa8c1.svg",
+    "../src/fonts/icons_16da5125acadfe6f3e44db8993bfa8c1.woff",
+    "../src/fonts/icons_16da5125acadfe6f3e44db8993bfa8c1.eot"
+  ],
+  "glyphs": {
+    "sc-facebook": {
+      "codepoint": 61748,
+      "source": "./sc-facebook.svg"
+    },
+    "sc-instagram": {
+      "codepoint": 61749,
+      "source": "./sc-instagram.svg"
+    },
+    "sc-pinterest": {
+      "codepoint": 61750,
+      "source": "./sc-pinterest.svg"
+    },
+    "sc-twitter": {
+      "codepoint": 61751,
+      "source": "./sc-twitter.svg"
+    },
+    "tcp-bag": {
+      "codepoint": 61724,
+      "source": "./tcp-bag.svg"
+    },
+    "tcp-check-mark": {
+      "codepoint": 61719,
+      "source": "./tcp-check-mark.svg"
+    },
+    "tcp-chevron": {
+      "codepoint": 61708,
+      "source": "./tcp-chevron.svg"
+    },
+    "tcp-clear": {
+      "codepoint": 61734,
+      "source": "./tcp-clear.svg"
+    },
+    "tcp-dropdown": {
+      "codepoint": 61735,
+      "source": "./tcp-dropdown.svg"
+    },
+    "tcp-email": {
+      "codepoint": 61754,
+      "source": "./tcp-email.svg"
+    },
+    "tcp-error": {
+      "codepoint": 61727,
+      "source": "./tcp-error.svg"
+    },
+    "tcp-favorite": {
+      "codepoint": 61728,
+      "source": "./tcp-favorite.svg"
+    },
+    "tcp-favorite-dotted": {
+      "codepoint": 61733,
+      "source": "./tcp-favorite-dotted.svg"
+    },
+    "tcp-favorite-filled": {
+      "codepoint": 61752,
+      "source": "./tcp-favorite-filled.svg"
+    },
+    "tcp-gear": {
+      "codepoint": 61755,
+      "source": "./tcp-gear.svg"
+    },
+    "tcp-heart": {
+      "codepoint": 61712,
+      "source": "./tcp-heart.svg"
+    },
+    "tcp-heart-wire": {
+      "codepoint": 61736,
+      "source": "./tcp-heart-wire.svg"
+    },
+    "tcp-info": {
+      "codepoint": 61737,
+      "source": "./tcp-info.svg"
+    },
+    "tcp-info-wire": {
+      "codepoint": 61738,
+      "source": "./tcp-info-wire.svg"
+    },
+    "tcp-loader": {
+      "codepoint": 61723,
+      "source": "./tcp-loader.svg"
+    },
+    "tcp-location": {
+      "codepoint": 61753,
+      "source": "./tcp-location.svg"
+    },
+    "tcp-minus": {
+      "codepoint": 61739,
+      "source": "./tcp-minus.svg"
+    },
+    "tcp-phone": {
+      "codepoint": 61756,
+      "source": "./tcp-phone.svg"
+    },
+    "tcp-pin": {
+      "codepoint": 61740,
+      "source": "./tcp-pin.svg"
+    },
+    "tcp-plus": {
+      "codepoint": 61741,
+      "source": "./tcp-plus.svg"
+    },
+    "tcp-search": {
+      "codepoint": 61730,
+      "source": "./tcp-search.svg"
+    },
+    "tcp-star": {
+      "codepoint": 61726,
+      "source": "./tcp-star.svg"
+    },
+    "tcp-success": {
+      "codepoint": 61742,
+      "source": "./tcp-success.svg"
+    },
+    "tcp-suggested-store": {
+      "codepoint": 61714,
+      "source": "./tcp-suggested-store.svg"
+    },
+    "tcp-tooltip": {
+      "codepoint": 61731,
+      "source": "./tcp-tooltip.svg"
+    },
+    "tcp-warning": {
+      "codepoint": 61732,
+      "source": "./tcp-warning.svg"
+    },
+    "tcp-x": {
+      "codepoint": 61743,
+      "source": "./tcp-x.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "fontcustom.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "icons",
+    "force": false,
+    "input": {
+      "templates": "./",
+      "vectors": "./"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "../src/views/scss",
+      "fonts": "../src/fonts",
+      "preview": "../src/views/pages"
+    },
+    "preprocessor_path": "",
+    "quiet": false,
+    "templates": [
+      "scss",
+      "preview"
+    ]
+  },
+  "templates": [
+    "../src/views/scss/_icons.scss",
+    "../src/views/pages/icons-preview.html"
+  ]
+}

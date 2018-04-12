@@ -1,0 +1,67 @@
+/**
+ * Cart Item List for Review and Express Checkout Desktop
+ **/
+
+@import "./_m.checkout-cart-item-list.scss";
+
+.checkout-cart-list {
+  h3 {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  /* text for previous price */
+  .product-list-price {
+    color: $color-primary-three;
+    text-decoration: line-through;
+  }
+
+  .container-list-shopping-cart {
+    overflow: initial;
+    margin-top: 8px;
+    margin-bottom: 27px;
+    height: auto;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .item-shopping-cart {
+    padding: 10px 0 7px;
+    border-top: 1px solid $color-primary-four;
+
+    &:last-child {
+      border-bottom: 1px solid $color-primary-four;
+    }
+  }
+
+  .product-description {
+    margin-left: 10px;
+    width: calc(100% - 50px);
+  }
+
+  .department-name {
+    @include body-primary-text();
+    margin-top: 0px;
+    min-height: 14px;
+    padding-right: 135px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .container-description-view {
+    margin: 11px 0 0;
+    width: 100%;
+  }
+
+  .container-price {
+    @include heading-level-4();
+    // width: 20%;
+    top: 0;
+    margin-top: 0px;
+    @include transform(translateY(0));
+  }
+}

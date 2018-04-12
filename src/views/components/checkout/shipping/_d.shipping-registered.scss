@@ -1,0 +1,52 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.dropdown-address-book {
+  width: 47%;
+}
+
+.address-shipping-view,
+.address-shipping + .address-shipping,
+.container-form-add-new-address  {
+  //margin-top: 20px;
+  // margin-bottom: 40px;
+  // padding-bottom: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $color-primary-four;
+}
+
+.container-form-add-new-address {
+  .checkbox-address-book {
+    margin-top: 20px;
+  }
+}
+
+.container-shipping-section-title,
+.container-billing-section-title {
+  position: relative;
+  margin-bottom: 20px;
+
+  h3 {
+    display: inline-block;
+    margin-right: 40px;
+    margin-bottom: 25px;
+    line-height: 18px;
+  }
+
+  .button-edit-address {
+    @include body-secondary-text();
+    text-decoration: underline;
+  }
+}
+
+.checkbox-address-book {
+  margin-top: 20px;
+  margin-right: 30%;
+}
+
+/*
+.checkout-shipping-container .address-shipping {
+  width: 50%
+}
+*/

@@ -1,0 +1,22 @@
+/**
+*  Order Display (Mobile)
+**/
+
+@import '_m.order-display.scss';
+
+.actual-order-display {
+  .order-number,
+  .order-date,
+  .order-hour {
+    display: block;
+  }
+
+  .order-hour {
+    margin-left: 0px;
+  }
+
+  .order-number,
+  .order-hour {
+    margin-bottom: 20px;
+  }
+}

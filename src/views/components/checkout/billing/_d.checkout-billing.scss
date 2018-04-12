@@ -1,0 +1,201 @@
+/**
+ * Checkout Billing Section (Desktop)
+ **/
+
+@import "_m.checkout-billing.scss";
+@import "compass/css3/transform";
+
+/* General alignments of Billing Section */
+.checkout-billing-container {
+  .address-billing-container {
+    margin-top: 30px;
+
+    .same-as-shipping-checkbox {
+      margin: 10px 0px 20px;
+    }
+
+    .billing-address-section {
+      .dropdown-address-book {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  /* Giftcard only in Billing Section */
+  .gift-cards-section {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+  }
+
+  .save-to-account {
+    margin-top: 20px;
+
+    // FIXME
+    margin-right: 41%;
+  }
+
+  .set-as-default {
+    margin-top: 10px;
+    display: block;
+  }
+
+  /* Credit Card Form (View or Edit form) */
+  .credit-card-form-container {
+    width: calc(50% - 20px);
+    margin-top: 30px;
+
+    /* Billing Address display (if the user has one)*/
+    .address-container {
+      margin-top: 30px;
+    }
+  }
+
+  /* Payment Method Form only for Billing Section */
+  .payment-method-form-container {
+    @include display-flex;
+    @include justify-content(space-between);
+    margin-top: 7px;
+    // margin-bottom: 0;
+
+    /* Paypal box */
+    > div:last-of-type {
+      .input-radio-title {
+        @include transform(translateY(0));
+        position: relative;
+      }
+    }
+
+    /* Both */
+    .payment-box-radio-button {
+      position: relative;
+      width: calc(50% - 5px);
+      vertical-align: top;
+      border: solid 2px $color-primary-two;
+      background: $color-primary-four;
+      // padding: 18px 19px 8px;
+      padding: 19px;
+
+      img {
+        width: 105px;
+        vertical-align: middle;
+      }
+
+      .input-radio {
+        .input-title,
+        .input-subtitle {
+          padding-left: 20px;
+        }
+      }
+
+      .input-radio-icon-checked,
+      .input-radio-icon-unchecked {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+      }
+    }
+
+    .paypal-method {
+      .input-title {
+        position: relative;
+        top: auto;
+        transform: translateY(0%);
+      }
+    }
+
+    .credit-card-method {
+      .input-subtitle {
+        @include description-primary-text($color-primary-two);
+        padding: 0;
+      }
+    }
+  }
+
+  .payment-method-form-container + .message-paypal {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  .button-shipping-internationally {
+    margin-left: -169px;
+  }
+
+  .checkout-summary-edit {
+    position: relative;;
+    right: inherit;
+    top: inherit;
+    @include transform(none);
+  }
+
+  /* Credit card Input */
+  .input-cc {
+    /* Credit card image */
+    .credit-card-image {
+      margin-right: 20px;
+    }
+  }
+}
+
+/*Select Address in billing */
+.select-address-billing {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  .checkbox-same-shipping {
+    margin-bottom: 15px;
+    margin-right: 60%;
+  }
+
+  .title-billing-address {
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+}
+
+
+.payment-information-container {
+  &.billing-form-disabled {
+    pointer-events: none;
+    position: relative;
+    opacity: .4;
+  }
+
+  + .error-message-edit-form {
+    margin-top: 30px;
+  }
+}
+
+.checkout-billing-container {
+  .address-billing {
+    margin-bottom: 0;
+  }
+}
+
+.checkout-billing-section {
+  .checkout-section-title {
+    margin-top: 30px;
+
+    &.payment-method-section {
+      margin-top: 0px;
+    }
+  }
+
+  .add-new-card-and-address-container {
+    margin-top: 30px;
+  }
+}
+
+.paypal-button-container.service-error {
+  + .button-previous-step {
+    margin-top: 25px;
+  }
+}
+
+/* Custom Select: Select from card on file
+   ========================================================================== */
+/* Custom select container of Title and DropdownList: Close state */
+.address-billing {
+  .custom-select-common {
+    width: calc(50% - 20px);
+  }
+}

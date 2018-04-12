@@ -1,0 +1,98 @@
+/**
+* Mobile Store Locator Search Form
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/transform";
+
+/** Form of search the store */
+.search-store-form {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  &:after {
+    content: '';
+    height: 1px;
+    display: inline-block;
+    width: calc(100% + 30px);
+    background-color: $color-primary-four;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: -15px;
+  }
+
+  .error-box,
+  .warning-box {
+    margin-bottom: 35px;
+  }
+
+  .toggle-list-map {
+    display: inline-block;
+  }
+
+  .display-list {
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid $color-primary-two;
+  }
+
+  .display-list,
+  .display-map {
+    &.disabled {
+      color: $color-primary-three;
+    }
+  }
+
+  /** Span toggle expanded filters (Only Mobile) */
+  .filter-store {
+    float: right;
+    position: relative;
+    right: 10px;
+  }
+
+  /** Container filters */
+  .content-filters {
+    position: relative;
+    margin-top: 10px;
+  }
+
+  /** The options of the filters */
+  .in-store-pick-up-option,
+  .outlet-stores-option {
+    display: block;
+    padding: 10px 0 10px 35px;
+  }
+}
+
+.search-store-input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 10px;
+
+  /** Button of search icon lupa */
+  .button-search-store {
+    @include icon-tcp-search();
+    z-index: 10;
+    right: 8px;
+    position: absolute;
+    top: 12px;
+  }
+
+  /** search bar entry */
+  input {
+    padding-right: 48px;
+  }
+
+  .label-error {
+    .inline-error-message {
+      white-space: normal;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+/**
+* Search Result Non Empty (Desktop)
+**/
+
+@import "_m.product-listing-non-empty.scss";
+
+/*
+ * Inline Navigation
+ */
+
+ .inline-navigation-container {
+   width: 193px;
+   margin-right: 10px;
+   display: inline-block;
+   vertical-align: top;
+
+   a,
+   button {
+     @include notification-primary-text();
+     @include font-global-regular();
+     line-height: 20px;
+     display: block;
+     text-transform: capitalize;
+   }
+
+   > ol {
+     margin-bottom: 25px;
+   }
+
+   .navigation-level-one-item {
+     .navigation-level-two-container {
+       display: none;
+     }
+
+     &:hover,
+     &.inline-navigation-active {
+       .navigation-level-two-container {
+         display: inline-block;
+       }
+     }
+   }
+
+   .navigation-level-one-item-selected,
+   .inline-navigation-active,
+   .inline-subnavigation-active {
+     > a,
+     > button {
+       @include font-global-black();
+     }
+   }
+ }
+
+.navigation-level-two-container {
+  vertical-align: top;
+  padding-left: 30px;
+}
+
+.open-navigation-level-two {
+  display: inline-block;
+}
+
+.search-result-product-list {
+  width: 80%;
+  display: inline-block;
+  float: right;
+  padding: 25px 0px;
+
+  max-height: 800px;
+  overflow-y: auto;
+}

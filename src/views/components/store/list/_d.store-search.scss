@@ -1,0 +1,103 @@
+/*
+* Store Search (Desktop)
+*/
+
+@import "./_m.store-search.scss";
+
+.store-search-container {
+  min-height: 500px;
+  display: block;
+}
+
+.search-store-form {
+  .error-box,
+  .warning-box {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.store-search-section {
+  .search-container {
+    margin-top: 20px;
+  }
+
+  /** Container of header search */
+  .container-header-search {
+    background-color: $color-primary-five;
+    text-align: center;
+    padding: 20px 0 25px;
+    position: relative;
+    width: 100%;
+  }
+
+  /** Button return */
+  .button-return {
+    position: absolute;
+    left: 2px;
+    top: 15px;
+  }
+
+  /** Title of header */
+  .store-search-title {
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  /** Container of store information */
+  .store-info-data-condensed {
+    width: 20%;
+    padding-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .select-store {
+    vertical-align: middle;
+    width: 230px;
+    display: inline-block;
+  }
+
+  .country-or-state-list-container {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+  }
+
+  /** Container of stores info */
+  .country-or-state-list {
+    border: none;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 0;
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+  .country-or-state-name {
+    @include heading-level-2();
+    margin-bottom: 20px;
+  }
+
+  .store-list {
+    margin: 0;
+  }
+
+  .store-address,
+  .store-phone-number {
+    text-transform: capitalize;
+  }
+}
+
+.search-store-input {
+  margin-top: 30px;
+}
+
+.warning-box + .search-store-input,
+.error-box + .search-store-input {
+  margin-top: 0px;
+}

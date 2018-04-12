@@ -1,0 +1,43 @@
+/**
+* Shipping Methods Section (Desktop)
+**/
+
+@import "./_m.shipping-methods.scss";
+
+.shipping-methods {
+  margin-top: 0px;
+  width: calc(50% - 30px);
+  display: inline-block;
+  padding-left: 60px;
+
+  fieldset {
+    left: -2px;
+    position: relative;
+    padding-top: 0;
+  }
+
+  label {
+      margin-bottom: 24px;
+  }
+}
+
+section + .shipping-methods {
+  margin-top: 0px;
+}
+
+// section shipping
+.checkout-shipping-container {
+  .shipping-methods {
+    padding: 0;
+    margin-top: 20px;
+    width: 50%;
+
+    .shipping-method-title {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.radio-method {
+  padding-left: 35px;
+}

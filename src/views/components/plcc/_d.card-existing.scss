@@ -1,0 +1,63 @@
+/*
+* Credit Card Existing Modal Desktop
+*/
+
+@import '_m.card-existing.scss';
+
+.overlay-card-existing {
+  .overlay-container {
+    width: 780px;
+    overflow: auto;
+  }
+
+  .card-existing-container {
+    height: 100vh;
+
+    .text-card-existing {
+      width: 80%;
+      margin: 30px auto 10px;
+    }
+  }
+}
+
+.card-existing-content {
+  width: 780px;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+
+  .first-text,
+  .credit-card-existing-title {
+    @include heading-level-2();
+    @include font-global-regular();
+    margin-top: 10px;
+  }
+
+  .button-checkout,
+  .button-continue-shopping {
+    width: 350px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .text-card-existing {
+    width: 78%;
+    padding: 0px;
+    margin: 23px auto 40px;
+  }
+
+  .button-continue-shopping {
+    margin-bottom: 30px;
+  }
+
+  .notification-added-card {
+    .view-account {
+      display: inline-block;
+    }
+  }
+
+  &.notification-space {
+    padding-top: 75px;
+  }
+}

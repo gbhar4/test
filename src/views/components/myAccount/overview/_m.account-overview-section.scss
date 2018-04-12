@@ -1,0 +1,193 @@
+/**
+* My Account Section: Account Overview (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/transform";
+
+/* Welcome message inline (out of header) */
+.welcome-message-inline-section {
+  text-align: center;
+  border: solid 1px $color-primary-one-opacity;
+  margin-top: 30px;
+  padding: 20px 10px;
+
+  .welcome-message-title {
+    @include heading-level-4();
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  .welcome-message-text {
+    padding: 0px 30px;
+    line-height: 20px;
+  }
+}
+
+.default-information-summary {
+  position: relative;
+  text-align: center;
+  padding: 30px 0px;
+  margin-bottom: 30px;
+  border-bottom: solid 1px $color-primary-one-opacity;
+
+  .button-update {
+    @include button-quaternary(secondary);
+    margin: 0 auto;
+    width: 78%; // 188px
+    display: inline-block;
+    float: none;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    left: 50%;
+    @include transform(translateX(-50%));
+  }
+
+  .button-add-address,
+  .button-add-payment-method,
+  .button-find-store {
+    @extend .button-update;
+  }
+}
+
+.default-payment-method-container,
+.default-shipping-address-container,
+.default-store-container {
+  position: relative;
+  min-height: 180px;
+  display: inline-block;
+  vertical-align: top;
+
+  .card-info,
+  .address-information,
+  .address-additional,
+  .address-details,
+  .store-address,
+  .store-phone-number {
+    @include description-primary-text();
+  }
+}
+
+.default-payment-method-title,
+.default-shipping-address-title,
+.default-store-title {
+  @include subheading-secondary-text();
+  line-height: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.default-payment-method-container {
+  .type-card-name {
+    @include heading-level-4();
+    text-transform: capitalize;
+    display: block;
+    line-height: 18px;
+  }
+}
+
+.default-shipping-address-container {
+  .user-name {
+    @include heading-level-4();
+    text-transform: capitalize;
+    display: block;
+    line-height: 18px;
+  }
+
+  .address-additional {
+    display: block;
+    margin-top: 0;
+    line-height: 18px;
+  }
+}
+
+.default-store-container {
+  .store-name,
+  .store-name a {
+    @include heading-level-4();
+    text-transform: capitalize;
+    line-height: 18px;
+    display: block;
+  }
+
+  .store-address {
+    text-transform: capitalize;
+  }
+}
+
+/* Title of empty method default */
+.empty-shipping-address-title {
+  @include heading-level-4();
+  display: block;
+  width: calc(100% + 80px);
+  left: -40px;
+  position: relative;
+}
+
+.empty-payment-method-title {
+  @extend .empty-shipping-address-title;
+}
+
+.empty-favorite-store-title {
+  @extend .empty-shipping-address-title;
+}
+
+/* Message of empty method default */
+.empty-shipping-address-message {
+  @include description-primary-text();
+}
+
+.empty-favorite-store-message {
+  @extend .empty-shipping-address-message;
+}
+
+.empty-payment-method-message {
+  @extend .empty-shipping-address-message;
+}
+
+/* Account Overview Section */
+.my-account-overview-section {
+  .uncondense-coupons-container {
+    margin-top: 40px;
+  }
+}
+
+.personal-information-container {
+  .birthday-information-container {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid $color-primary-four;
+  }
+
+  /** My favorite store */
+
+  .default-store-title {
+    @include heading-level-4();
+  }
+
+  /** Empty store favorite */
+  .empty-favorite-store-title {
+    left: 0;
+    margin-bottom: 10px;
+  }
+
+  /** store name*/
+  .store-name {
+    margin-bottom: 10px;
+  }
+
+  /** Button update */
+  .button-update {
+    @include notification-secondary-text($color-global-white);
+    background-color: $color-primary-one;
+    margin-top: 16px;
+    width: 200px;
+    height: 35px;
+    line-height: 37px;
+    text-transform: uppercase;
+
+    margin-top: 20px;
+  }
+}

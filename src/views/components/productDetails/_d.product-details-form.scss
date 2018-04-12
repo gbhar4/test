@@ -1,0 +1,47 @@
+/**
+* PDP - Product Details Form (Desktop)
+**/
+
+@import "_m.product-details-form.scss";
+
+.product-details-container {
+  .button-add-to-bag {
+    width: 100%;
+    margin-top: 0px;
+    position: relative;
+    bottom: auto;
+    margin-top: 15px;
+  }
+
+  .button-sold-out-online {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+
+  .content-slot-list-container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Color, Size and Fit Radio Button Group */
+  .color-chips-selector-container,
+  .size-and-fit-detail-container {
+    margin-bottom: 20px;
+  }
+}
+
+.product-details-form-content {
+  margin-bottom: 20px;
+
+  > fieldset {
+    padding: 0px;
+  }
+}
+
+.overlay-size-chart {
+  .overlay-container {
+    padding: 25px;
+  }
+}

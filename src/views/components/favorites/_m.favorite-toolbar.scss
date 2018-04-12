@@ -1,0 +1,87 @@
+/*
+ * Favorite Toolbar (Mobile)
+ */
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.favorite-toolbar-container {
+  text-align: center;
+  padding: 20px 0px;
+  position: relative;
+
+  .toolbar-header-container {
+    &.shared-toolbar-header-container {
+      margin-bottom: 25px;
+    }
+  }
+
+  .favorite-shared-owner {
+    @include notification-primary-text($color-primary-three);
+  }
+}
+
+.favorite-social-container {
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-share-options {
+  width: 40%;
+  display: inline-block;
+  float: right;
+  clear: both;
+}
+
+.share-list {
+  &.custom-select-common {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/*
+ * Favorite section into My Account
+ */
+
+
+.favorite-toolbar-container {
+  width: 100%;
+  display: inline-block;
+  padding: 20px 0px 11px;
+}
+
+.favorite-social-container {
+  width: calc(100% - 100px);
+  float: right;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.setting-edit-section {
+  width: auto;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+  vertical-align: middle;
+
+  button {
+    font-size: 0px;
+    width: 30px;
+    height: 30px;
+    border: solid 1px $color-primary-one-opacity;
+    @include icon-sc-gear();
+    padding: 6px;
+
+    &:before {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}
+
+.dropdown-share-options {
+  text-align: left;
+  float: none;
+  vertical-align: middle;
+}

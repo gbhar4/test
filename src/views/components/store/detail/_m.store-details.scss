@@ -1,0 +1,316 @@
+/**
+* Mobile Store Details
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/border-radius";
+@import "compass/css3/transform";
+
+.container-store-info {
+  margin-top: 20px;
+}
+
+.store-location {
+  @include font-global-regular();
+  padding: 0px 16px;
+
+  /** Title - name of Store */
+  .store-name {
+    @include heading-level-2();
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  /** Information about address store */
+  .store-address {
+    text-transform: capitalize;
+  }
+
+  /** Button calculate distance*/
+  .calculate-distance-button {
+    @include body-secondary-text();
+    margin-bottom: 5px;
+    text-decoration: underline;
+    display: inline-block;
+    width: 100%;
+  }
+
+  /** Text indicate distance of store */
+  .distance-and-open-information {
+    margin-top: 20px;
+    display: block;
+  }
+
+  /** text Open until*/
+  .today-schedule {
+    color: $color-alert-three;
+  }
+
+  /** container of store information icons */
+  .store-information {
+    margin-top: 20px;
+  }
+
+  /** retail store */
+  .retail-store,
+  .store-store {
+    @include body-secondary-text($color: $color-primary-one);
+    text-transform: uppercase;
+    display: block;
+
+    @include icon-tcp-pin();
+    &:before {
+      font-size: 32px;
+      position: relative;
+      color: $color-accent-two;
+      width: auto;
+      height: auto;
+      line-height: 32px;
+      vertical-align: middle;
+      top: -2px;
+      text-indent: -7px;
+    }
+  }
+
+  /** Outlet store */
+  .outlet-store {
+    @extend .retail-store;
+  }
+
+  /** in-store-pick-up-availability */
+  .in-store-pick-up-availability {
+    display: block;
+    line-height: 32px;
+
+    .check-icon {
+      font-size: 0px;
+      display: inline-block;
+      width: 19px;
+      height: 20px;
+      margin-right: 5px;
+      position: relative;
+      top: 5px;
+      float: left;
+
+      @include icon-tcp-success();
+      &:before {
+        font-size: 20px;
+        color: $color-global-white;
+        position: relative;
+        top: -1px;
+        z-index: 2;
+      }
+
+      &:after {
+        content: '';
+        background: $color-alert-three;
+        display: inline-block;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        width: 15px;
+        height: 12px;
+        z-index: 1;
+        @include border-radius(50%);
+      }
+    }
+  }
+
+  /** Container list hours of store */
+  .time-schedules {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid $color-primary-four;
+  }
+
+  /** title store hours */
+  .store-schedule-title {
+    @include font-global-medium();
+    position: relative;
+    width: 100%;
+    text-transform: uppercase;
+
+    &:before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      display: inline-block;
+      right: 6px;
+      border-bottom: 1px solid black;
+      border-left: 1px solid black;
+      @include transform(rotate(-45deg));
+    }
+
+    &.expanded {
+      &:before {
+        top: 6px;
+        @include transform(rotate(135deg));
+      }
+    }
+  }
+
+  /** Store open Hours */
+  .store-day-and-time {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+
+    li {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+    }
+
+    .hoursRange,
+    .closed {
+      // float: right;
+      // text-align: right;
+    }
+
+    .hours-range-container,
+    .closed-notification {
+      text-align: right;
+      width: 40%;
+      display: inline-block;
+    }
+
+    .hours-date {
+      text-transform: capitalize;
+    }
+  }
+
+  .day-and-date-container {
+    width: 60%;
+    display: inline-block;
+  }
+
+  /** Button get directions */
+  .button-directions {
+    @include button-primary();
+    // NOTE DT-22786: Harcode font-size. I have to ask to be added to the style guidelines or ask to change the requirement.
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  // NOTE: DT-26768
+  .store-info-data-detailed-single {
+    .store-name {
+      text-transform: capitalize;
+    }
+  }
+}
+
+/** Store type */
+.store-type {
+  width: 100%;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid $color-primary-four;
+
+  .title-type {
+    width: 45%;
+    display: inline-block;
+  }
+}
+
+/* Google Map container */
+.google-map {
+  width: 100%;
+  display: block;
+  margin: 20px auto 0;
+  height: 230px;
+}
+
+.bottom-map {
+  background: $color-primary-four;
+  margin: 10px 0px;
+  display: inline-block;
+  width: 100%;
+  height: 146px;
+
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nearest-stores-from-selected-store {
+  width: 100%;
+  margin: 20px 0;
+  padding: 20px 0;
+  border-top: solid 1px $color-primary-four;
+  border-bottom: solid 1px $color-primary-four;
+  position: relative;
+
+  .near-stores-title {
+    @include font-global-medium();
+    text-transform: uppercase;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      display: inline-block;
+      right: 6px;
+      top: 8px;
+      border-top: 1px solid black;
+      border-right: 1px solid black;
+      @include transform(rotate(-45deg));
+    }
+
+    &.collapsed {
+      &:before {
+        top: 6px;
+        @include transform(rotate(135deg));
+      }
+    }
+  }
+
+  // REVIEW
+  .store-name,
+  .store-name a {
+    @include body-primary-text();
+    text-transform: capitalize;
+  }
+
+  .calculate-distance-button {
+    margin-bottom: 0px;
+  }
+
+  .store-info-data-condensed {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid $color-primary-four;
+
+    &:first-child {
+      border: none;
+      padding: 0;
+    }
+  }
+
+  .today-schedule {
+    color: $color-primary-one;
+    margin-bottom: 0px;
+    @include font-global-regular();
+  }
+
+  .button-see-store-details {
+    @include button-secondary();
+    margin-top: 20px;
+  }
+
+  .store-address {
+    text-transform: capitalize;
+  }
+}
+
+.content-store-info {
+  .time-schedules {
+    width: 100%;
+  }
+}

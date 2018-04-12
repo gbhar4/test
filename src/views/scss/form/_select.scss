@@ -1,0 +1,64 @@
+@import "compass/css3/box-shadow";
+@import "_mixins.scss";
+
+.select-common {
+	display: inline-block;
+	width: 100%;
+	
+	span {
+		text-transform: none;
+	}
+
+	label {
+		display: block;
+	}
+}
+
+label select {
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-appearance: none;
+	@include select-common-text();
+
+	+ .selection {
+		@include input-common-text();
+		cursor: pointer;
+		position: relative;
+		display: block;
+		line-height: 1.25;
+    margin-top: 1px;
+		white-space: nowrap;
+		overflow: hidden;
+		color: $input-color-font-placeholder;
+		text-overflow: ellipsis;
+    padding-right: 33px;
+
+		text-transform: none;
+		&::first-letter {
+			text-transform: uppercase;
+		}
+
+		/* Icono chevron para Dropdown */
+		@include icon-manual-chevron();
+
+		/* Clase para la opción seleccionada dentro en un Select, mostrada en el Span contenedor */
+		&.select-option-selected  {
+			color: $input-color-font-value;
+
+			/* Icono chevron para Dropdown */
+			@include icon-manual-chevron();
+		}
+	}
+}
+
+.label-error select + span.selection,
+.custom-select-common.label-error .custom-select-button  {
+  border-bottom: 2px solid $color-alert-one;
+}
+
+@import "./_dropdown.scss";

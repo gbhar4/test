@@ -1,0 +1,84 @@
+/**
+* Cart Alert Modal (Desktop)
+**/
+
+@import "_m.cart-alert-modal.scss";
+
+/* Oss Alert Modal */
+.overlay-oss-alert {
+  .modal-title {
+    @include heading-level-2();
+    @include font-global-heavy();
+  }
+
+  .overlay-container {
+    padding: 56px;
+    padding-bottom: 70px;
+    height: auto;
+    min-height: auto;
+  }
+
+  .message-cart-alert {
+    @include heading-level-4();
+    margin-bottom: 55px;
+    text-align: center;
+    line-height: 20px;
+  }
+
+  .button-container {
+    position: relative;
+    width: 100%;
+    bottom: initial;
+  }
+
+  .button-primary,
+  .button-secondary {
+    position: relative;
+    display: block;
+    width: 85%;
+    margin: 0px auto;
+    bottom: initial;
+  }
+
+  .back-to-cart-link {
+    @include body-primary-text();
+    text-decoration: underline;
+    text-align: center;
+    display: block;
+    margin-top: 12px;
+    text-transform: lowercase;
+  }
+}
+
+/* Unsaved Alert Modal */
+.overlay-unsaveded-alert {
+  @extend .overlay-oss-alert;
+}
+
+/* Abandon Paypal Modal */
+.overlay-abandon-paypal {
+  @extend .overlay-oss-alert;
+
+  .modal-subtitle {
+    margin-top: 20px;
+  }
+
+  .button-secondary {
+    margin-top: 20px;
+  }
+}
+
+/* Pay with Paypal Modal */
+.overlay-paypal-selected {
+  @extend .overlay-oss-alert;
+
+  .message-paypal {
+    @include description-primary-text();
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  button.button-primary {
+    bottom: 0px;
+  }
+}

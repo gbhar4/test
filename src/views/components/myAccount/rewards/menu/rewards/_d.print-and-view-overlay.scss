@@ -1,0 +1,15 @@
+/**
+* Modal: Print And View (Rewards) (Desktop)
+**/
+
+@import "_m.print-and-view-overlay.scss";
+
+.overlay-coupon-printable {
+  /* Reset styles for this case, only */
+  .overlay-center .overlay-container {
+    width: auto;
+    min-width: 500px;
+    max-width: 1024px;
+    overflow-x: auto;
+  }
+}

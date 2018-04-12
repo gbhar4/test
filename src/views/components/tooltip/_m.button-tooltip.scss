@@ -1,0 +1,175 @@
+/**
+* Button Tooltip Mobile
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.button-tooltip-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 10;
+
+  a {
+    @include body-primary-text();
+    text-decoration: underline;
+  }
+
+  > button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    color: $color-primary-three;
+  }
+}
+
+.tooltip-container {
+  width: 260px;
+
+  &:before {
+    left: 97%;
+  }
+
+  &:after {
+    left: 97%;
+  }
+}
+
+.tooltip-container {
+  @include notification-primary-text();
+  text-align: center;
+
+  position: absolute;
+  z-index: 3;
+
+  width: 260px;
+  height: auto;
+  padding: 22px 30px 22px;
+  background-color: $color-global-white;
+  @include box-shadow(0px 0px 12px 0px rgba(51, 51, 51, 0.25));
+
+  /* Title */
+  > h3 {
+    margin-bottom: 20px;
+  }
+
+}
+
+// iconos del tooltip
+.button-info {
+  @include icon-tcp-info();
+}
+
+.button-tooltip {
+  @include icon-tcp-tooltip();
+}
+
+.button-info-wire {
+  @include icon-tcp-info-wire();
+}
+
+.button-tooltip-wire {
+  @include icon-tcp-tooltip();
+}
+
+// * Direcciones de los botones
+/* Bottom */
+.arrow-direction-bottom {
+  @include global-arrow-tooltip();
+  right: 0;
+  bottom:  18px;
+
+  margin-bottom: 10px;
+
+  &:after,
+  &:before {
+    left: 96.5%;
+    bottom: -20px;
+    margin-left: -10px;
+    @include transform(rotate(180deg));
+  }
+
+  &:after {
+    margin-left: -8px;
+    bottom: -16px;
+  }
+
+}
+
+/* Top */
+.arrow-direction-top {
+  @include global-arrow-tooltip();
+  right: 0;
+  top: 18px;
+
+  margin-top: 10px;
+
+  &:before {
+    left: 93%;
+    top: -20px;
+    bottom: initial;
+    @include transform(rotate(0deg));
+  }
+
+  &:after {
+    left: 97%;
+    top: -16px;
+    bottom: initial;
+    @include transform(rotate(0deg));
+  }
+}
+
+/* Left */
+.arrow-direction-left {
+  @include global-arrow-tooltip();
+  left: 18px;
+  // top puede veriar segun el tamaño del tooltip en alto
+  top: calc(100% - 103px);
+
+  margin-left: 10px;
+
+  &:before,
+  &:after {
+    margin: 0px;
+    left: -20px;
+    top: calc(50% - 10px);
+    bottom: initial;
+    @include transform(rotate(-90deg));
+  }
+
+  &:after {
+    margin-top: 2px;
+    left: -16px;
+    bottom: 50%;
+  }
+}
+
+/* Right */
+.arrow-direction-right {
+  @include global-arrow-tooltip();
+  right: 18px;
+  // top puede veriar segun el tamaño del tooltip en alto
+  top: calc(100% - 103px);
+
+  margin-right: 10px;
+
+  &:before,
+  &:after {
+    right: -20px;
+    top: 45%;
+    @include transform(rotate(90deg));
+  }
+
+  &:after {
+    margin-top: 2px;
+    right: -16px;
+    bottom: inherit;
+  }
+}

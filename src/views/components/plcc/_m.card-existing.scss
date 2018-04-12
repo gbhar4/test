@@ -1,0 +1,86 @@
+/*
+* Credit Card Existing Modal (Mobile)
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.card-existing-container {
+  text-align: center;
+  padding: 25px;
+  background-color: white;
+  height: auto;
+  // height: 100vh;
+
+  .first-text,
+  .credit-card-existing-title {
+    margin-bottom: 23px;
+    @include font-global-regular();
+  }
+
+  strong {
+    @include font-global-black();
+  }
+
+  .text-card-existing {
+    @include body-secondary-text();
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .button-checkout,
+  .button-continue-shopping {
+    width: calc(100% - 20px);
+  }
+
+  .button-checkout {
+    background-color: $color-accent-two;
+  }
+
+  .button-continue-shopping {
+    background-color: $color-accent-two;
+    margin: 20px 0;
+
+    &.button-with-bag {
+      background-color: $color-global-white;
+      color: $color-primary-one;
+      border: 1px solid $color-primary-one;
+    }
+  }
+
+  .button-add-credit-card {
+    @include body-secondary-text($color-primary-one);
+    text-decoration: underline;
+  }
+
+  /* Notification */
+  .notification-added-card {
+    @include heading-level-4();
+    background-color: $color-primary-four; // three: rgb(153, 153, 153) - four: rgb(227, 227, 227), don't have rgb 187 187 187.
+    margin: 0 -25px;
+    margin-top: -25px;
+    padding: 20px 30px 20px 20px;
+    height: auto;
+    text-align: left;
+    z-index: 10;
+
+    > span {
+      width: calc(100% - 30px);
+      display: inline-block;
+    }
+
+    .view-account {
+      @include heading-level-4();
+      text-decoration: underline;
+      display: block;
+    }
+
+    .button-close {
+      @include common-button-exit-modal();
+    }
+  }
+}
+
+.modal-plcc {
+  padding: 15px;
+}

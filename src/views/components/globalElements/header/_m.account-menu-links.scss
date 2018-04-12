@@ -1,0 +1,593 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/border-radius";
+
+.global-header-mobile-container {
+  background-color: rgba(0, 0, 0, 0.54); // NOTE: Harcode opacity
+  z-index: 15;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  .global-navigation-container {
+    background-color: $color-global-white;
+    width: 90%;
+  }
+
+  .global-navigation-container {
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .close-menu {
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    right: 0;
+    font-size: 0px;
+    z-index: -2;
+  }
+
+  /* NOTE: when submenu is Close */
+  .sub-menu {
+    display: none;
+  }
+
+  /* NOTE: when submenu is Open */
+  .active {
+    display: block;
+    background: $color-global-white;
+    width: 100%;
+  }
+
+  /* Welcome message and reward details */
+  .reward-details-container {
+    color: $color-primary-three;
+  }
+
+  .logo-container,
+  .welcome-message,
+  .my-place-rewards-link,
+  .wishlist-link,
+  .button-find-store,
+  .view-account {
+    /* Reset Styles */
+    float: none;
+    height: initial;
+    margin: 0px;
+    width: 100%;
+    text-align: left;
+
+    @include navigation-level-1();
+    display: block;
+    padding: 15px 0px 13px;
+  }
+
+  .button-find-store {
+    span {
+      text-transform: capitalize;
+    }
+  }
+
+  .welcome-message {
+    padding-right: 10px;
+
+    &:hover {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .account-and-login {
+    @extend .welcome-message;
+    padding-right: 0px;
+
+    .access-acount,
+    .access-acount + span {
+      display: inline-block;
+    }
+
+    .access-acount + span {
+      margin: 0 5px;
+    }
+
+    .create-account-link,
+    .login-link {
+      @include navigation-level-1();
+      line-height: normal;
+      height: auto;
+      position: relative;
+
+      &.active,
+      &:hover {
+        &:after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          display: inline-block;
+          position: absolute;
+          background: $color-primary-one;
+          left: 0;
+          bottom: 0px;
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  /* Chevron icon */
+  .welcome-message {
+    &:before {
+      content: '';
+      position: absolute;
+      right: 15px;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-right: solid 2px $color-primary-one;
+      border-top: solid 2px $color-primary-one;
+      @include transform(rotate(45deg));
+      @include border-radius(2px);
+      margin-top: 3px;
+    }
+  }
+
+  .account-and-login {
+    position: relative;
+  }
+
+  /* First Level Box */
+  .welcome-menu {
+    padding: 20px 30px 10px;
+    background-color: $color-primary-five;
+    border-bottom: solid 1px $border-color-global-elements;
+  }
+
+  /* Second Level Box */
+  .header-global-navigation {
+    padding-left: 30px;
+    padding-bottom: 20px;
+  }
+
+  .navigation-level-one-link {
+    @include navigation-level-1();
+    text-transform: capitalize;
+    text-decoration: none;
+    display: block;
+    padding: 20px 0px;
+    border-bottom: solid 1px $color-primary-one-opacity;
+    position: relative;
+
+    i {
+      position: absolute;
+      right: 30px;
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-right: solid 2px $color-primary-one;
+      border-top: solid 2px $color-primary-one;
+      @include transform(rotate(45deg));
+      @include border-radius(2px);
+      margin-top: 4px;
+    }
+
+    .mobile-l1-description-submenu {
+      display: none;
+    }
+  }
+
+  // Note: Image icon (doggie sprite)
+  .navigation-level-one-image {
+    display: inline-block;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    @include transform(translateY(-50%));
+    text-indent: 0px;
+    left: 0px;
+  }
+
+  .subcategory-primary-menu {
+    padding: 20px 35px;
+    border-bottom: solid 1px $color-primary-one-opacity;
+
+    /* Category Item */
+    .navigation-level-two-link{
+      @include font-global-heavy();
+    }
+  }
+
+  .subcategory-secondary-menu {
+    padding: 0px 35px;
+  }
+
+  /* Category Item */
+  .navigation-level-two-link {
+    @include notification-primary-text();
+    display: block;
+    padding: 15px 0px;
+  }
+
+  .sub-menu {
+    background-color: $color-global-white;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 90%;
+    min-height: 100%;
+    height: 100%;
+  }
+
+  .header-sub-menu {
+    display: block;
+    padding: 25px 40px;
+    position: relative;
+    border-bottom: solid 1px $color-primary-one-opacity;
+  }
+
+  .title-submenu {
+    display: inline-block;
+    position: relative;
+  }
+
+  /* NOTE: chevron icon, like back button */
+  .sub-menu-chevron {
+    &:before {
+      content: '';
+      position: absolute;
+      left: -20px;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-right: solid 2px $color-primary-one;
+      border-top: solid 2px $color-primary-one;
+      @include transform(rotate(-135deg));
+      @include border-radius(2px);
+      top: 5px;
+    }
+  }
+
+  .description-submenu {
+    @include subheading-primary-text($color-primary-three);
+    right: 35px;
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+}
+
+.new-mobile-nav-variant-a,
+.new-mobile-nav-variant-b {
+  height: 100% !important;
+	z-index: 999 !important;
+	position: fixed !important;
+  background: #ffffff !important;
+  top: 0;
+
+  .new-global-header-mobile-container {
+      position: relative;
+      background-color: transparent;
+      z-index: 100;
+      overflow: scroll;
+      height: calc(100% - 40px);
+      max-height: calc(100% - 40px);
+      // Doing This due to weird css rule that i dont want to change in the gloabl navigation
+      left: -15px;
+      width: calc(100% + 28px) !important;
+      top: 15px;
+      overflow-x: hidden;
+
+    .global-navigation-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(245, 245, 245, 1);
+
+      .global-mobile-nav-top-action-container {
+        position: relative;
+        display: inline-flex;
+        width: 100%;
+        border-top: 2px solid rgba(216, 216, 216, 0.58);
+
+        .global-mobile-nav-top-action {
+          :first {
+            display: inline-block;
+          }
+
+          .logo-container {
+            margin: 0px;
+            padding: 14px;
+            color: black;
+            font-size: 13px;
+            font-weight: bold;
+            font-family: sans-serif;
+          }
+
+          .my-place-rewards-link,
+          .wishlist-link {
+            text-align: center;
+          }
+
+          .view-account,
+          .create-account-container {
+            position: absolute;
+            width: auto;
+            right: 107px;
+            height: 100%;
+
+            a {
+              color: black;
+              text-decoration: none;
+            }
+
+            button {
+              font-size: 13px;
+              height: 100%;
+              font-weight: bold;
+            }
+          }
+
+          .remembered-logout,
+          .login-link-container {
+            position: absolute;
+            right: 23px;
+            height: 100%;
+            top: 0px;
+
+            button {
+              color: black;
+              text-decoration: none;
+              font-size: 13px;
+              text-transform: capitalize;
+              font-weight: bold;
+              height: 100%;
+            }
+          }
+
+          .login-link-container {
+            right: 140px;
+          }
+
+          .create-account-container {
+            right: 15px;
+          }
+
+          .remembered-logout {
+            top: 1px;
+          }
+        }
+      }
+
+      .welcome-message {
+        background-color: rgba(204, 204, 204, 1);
+
+        .welcome-name {
+          padding: 14px;
+          color: black;
+        }
+
+        .reward-details-container {
+          float: right;
+          margin-right: 16px;
+          color: black;
+        }
+      }
+
+      .categories-accordion,
+      .myaccount-accordion {
+        text-align: center;
+        border-bottom: none;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+
+        .accordion-button-toggle {
+          padding: 15px;
+          position: relative;
+          box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-toggle {
+          right: 15px;
+        }
+
+        .accordion-element {
+          padding: 0px;
+          margin: 0px;
+          background-color: #d8d8d89c;
+
+          .header-global-navigation,
+          .global-mobile-nav-bottom-action-container {
+            padding: 10px;
+            text-align: left;
+
+            .navigation-level-one,
+            .wishlist-header,
+            .content-slot-container,
+            .my-place-rewards,
+            .track-order-container,
+            .button-find-store {
+              position: relative;
+              width: 30%;
+              min-height: 64px;
+              max-height: 64px;
+              display: inline-block;
+              vertical-align: top;
+              border: none;
+              border-radius: 2px;
+              text-decoration: none;
+              box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+              padding: 5px;
+              margin: 5px;
+              text-align: center;
+              background-color: #FFFFFF;
+
+              button {
+                text-align: center;
+              }
+
+              .navigation-level-one-link {
+                border: none;
+
+                .mobile-l1-description-submenu {
+                  display: block;
+                  position: absolute;
+                  width: 100%;
+                  text-align: center;
+                  font-size: 10px;
+                  bottom: 2px;
+                  font-weight: 100;
+                }
+              }
+
+            }
+            
+            .wishlist-header,
+            .content-slot-container,
+            .my-place-rewards,
+            .track-order-container,
+            .button-find-store {
+              span {
+                position: absolute;
+                padding: 0px;
+                margin: 0px;
+                width: 100%;
+                left: 0px;
+                top: 15px;
+                font-size: 13px;
+              }
+
+              button {
+                font-size: 13px;
+                margin-top: 7px;
+                font-weight: bold;
+              }
+            }
+            
+            .button-find-store {
+              position: relative;
+
+              span {
+                top: 26px;
+              }
+            }
+
+            .navigation-bar .sub-menu-visible {
+              text-align: left
+            }
+          }
+        }
+      }
+
+    }
+
+    .sub-menu {
+      width: 100%;
+      top: 123px;
+
+      .container-navigation-level-two {
+        height: calc(100% - 198px);
+        overflow: scroll;
+      }
+
+      .header-sub-menu {
+        position: sticky;
+        top: 0px;
+        background: white;
+      }
+    }
+
+    .is-guest-false {
+      .sub-menu {
+        top: 166px;
+
+        .container-navigation-level-two {
+          height: calc(100% - 240px);
+          overflow: scroll;
+        }
+      }
+    }
+  }
+}
+
+.new-mobile-nav-variant-a {
+  .navigation-bar {
+    padding-left: 5px;
+  }
+
+  .accordion-button-toggle {
+    text-transform: uppercase;
+  }
+
+  .navigation-level-one-link,
+  .my-place-rewards-link,
+  .wishlist-link,
+  .content-slot-container,
+	.my-place-rewards,
+	.track-order-container span button,
+	.button-find-store span {
+    text-transform: uppercase !important;
+  }
+}
+
+.new-mobile-nav-variant-b {
+	.new-global-header-mobile-container {
+		.header-global-navigation,
+		.global-mobile-nav-bottom-action-container {
+      padding: 2px !important;
+      text-align: center !important;
+
+      .navigation-level-one,
+      .wishlist-header,
+      .content-slot-container,
+      .my-place-rewards,
+      .track-order-container,
+      .button-find-store {
+        margin: 1px !important;
+        width: 49% !important;
+      }
+
+		}
+	}
+}
+
+.rearranged-mobile-navigation {
+  .welcome-menu:nth-child(1) {
+    .my-place-rewards,
+    .wishlist-header,
+    .button-find-store,
+    .my-place-rewards-link {
+      display: none;
+    }
+  }
+  .header-global-navigation {
+    padding-bottom: 0px;
+  }
+  .welcome-menu:nth-child(3) {
+    padding-top: 12px;
+    border-top: solid 1px #e3e3e3;
+
+    .account-and-login,
+    .logo-container,
+    .welcome-message,
+    .view-account {
+      display: none;
+    }
+  }
+}

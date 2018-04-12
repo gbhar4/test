@@ -1,0 +1,72 @@
+/*
+* Gift Cards Modal Desktop
+*/
+
+@import '_m.gift-cards-modal.scss';
+
+.overlay-gift-card-balance {
+  .overlay-container {
+    width: 850px;
+    overflow: auto;
+    padding: 10px 20px 20px;
+  }
+
+  .modal-header {
+    margin: 20px 0;
+  }
+
+
+  .images-container {
+    vertical-align: top;
+    width: 25%;
+    margin-bottom: 0px;
+
+    .img-gc {
+      width: 100%;
+    }
+  }
+
+  .steps-container {
+    width: 70%;
+    display: inline-block;
+    margin-bottom: 20px;
+    vertical-align: top;
+    padding-right: 20px;
+  }
+
+  .input-gift-card {
+    width: 40%;
+    margin-right: 20px;
+  }
+
+  .input-pin {
+    width: 15%;
+    margin-right: 20px;
+  }
+
+  .buttons-container {
+    width: 410px;
+    margin: 40px auto 10px;
+  }
+
+  .button-check,
+  .button-cancel {
+    width: 200px;
+  }
+
+  .button-check {
+    margin: 0;
+    float: right;
+  }
+
+  // .recaptcha {
+  //   margin-bottom: 30px;
+  // }
+
+  .current-balance {
+    display: inline-block;
+    width: auto;
+    padding: 0 55px;
+    margin: 0;
+  }
+}

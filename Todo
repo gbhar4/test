@@ -1,0 +1,6 @@
+- Pull all process.env variables into a single js file and use only thoes variables
+- Create Test Cases as per plan in ./tests/readme.
+- Use chrome's code coverage to clean up legacy code and clean up referances to legacy code in repo.
+- Optimize components with the help of whyDidYouRender or other package.
+- Create App.js for each page as opposed to app.js for the whole application.
+- Clean Up Git Repo, remove all unused branches.

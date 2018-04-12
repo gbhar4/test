@@ -1,0 +1,401 @@
+@mixin icon-font {
+  display: inline-block;
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+@mixin data-icon {
+  &:before {
+    @include icon-font;
+    content: attr(data-icon);
+  }
+}
+
+@mixin icon-sc-fcbk {
+  &:before {
+      @include icon-font;
+      content: "\f134";
+  }
+}
+
+@mixin icon-sc-facebook {
+  &:before {
+      @include icon-font;
+      content: "\f134";
+  }
+}
+
+@mixin icon-sc-instagram {
+  &:before {
+    @include icon-font;
+    content: "\f135";
+  }
+}
+
+@mixin icon-sc-pinterest {
+  &:before {
+    @include icon-font;
+    content: "\f136";
+  }
+}
+
+@mixin icon-sc-twitter {
+  &:before {
+    @include icon-font;
+    content: "\f137";
+  }
+}
+
+@mixin icon-tcp-bag {
+  &:before {
+    @include icon-font;
+    content: "\f11c";
+    color: $color-primary-one;
+  }
+}
+
+@mixin icon-sc-email {
+  &:before {
+      @include icon-font;
+      content: "\f13a";
+  }
+}
+
+@mixin icon-sc-gear {
+  &:before {
+      @include icon-font;
+      content: "\f13b";
+  }
+}
+
+@mixin icon-sc-phone {
+  &:before {
+      @include icon-font;
+      content: "\f13c";
+  }
+}
+
+@mixin icon-tcp-check-mark {
+  &:before {
+    @include icon-font;
+    content: "\f117";
+    color: $color-alert-three;
+  }
+}
+
+@mixin icon-tcp-chevron($position: before) {
+  @if $position == before {
+    &:before {
+      @include icon-font;
+      content: "\f10c";
+    }
+  } @else if $position == after {
+    &:after {
+      @include icon-font;
+      content: "\f10c";
+    }
+  }
+
+}
+
+@mixin icon-tcp-clear {
+  &:before {
+    @include icon-font;
+    content: "\f126";
+    color: $color-primary-two;
+  }
+}
+
+@mixin icon-tcp-dropdown {
+  &:before {
+    @include icon-font;
+    content: "\f127";
+    color: $color-alert-three;
+  }
+}
+
+@mixin icon-tcp-error {
+  &:before {
+    @include icon-font;
+    content: "\f11f";
+    color: $color-alert-one;
+  }
+}
+
+@mixin icon-tcp-favorite {
+  &:before {
+    @include icon-font;
+    content: "\f120";
+    color: $color-primary-two;
+  }
+}
+
+@mixin icon-tcp-favorite-dotted {
+  &:before {
+    @include icon-font;
+    content: "\f125";
+    color: $color-primary-two;
+  }
+}
+
+@mixin icon-tcp-favorite-filled {
+  &:before {
+    @include icon-font;
+    content: "\f138";
+    color: $color-primary-one;
+  }
+}
+
+@mixin icon-tcp-heart($position: before) {
+  @if $position == before {
+    &:before {
+      @include icon-font;
+      content: "\f110";
+      color: $color-primary-two;
+    }
+  } @else if $position == after {
+    &:after {
+      @include icon-font;
+      content: "\f110";
+      color: $color-primary-two;
+    }
+  }
+}
+
+@mixin icon-tcp-heart-wire {
+  &:before {
+    @include icon-font;
+    content: "\f128";
+    color: $color-primary-one;
+  }
+}
+
+@mixin icon-tcp-info {
+  &:before {
+    @include icon-font;
+    content: "\f129";
+    color: $color-primary-three;
+  }
+}
+
+@mixin icon-tcp-info-wire {
+  &:before {
+    @include icon-font;
+    content: "\f12a";
+    color: $color-primary-two;
+  }
+}
+
+@mixin icon-tcp-loader {
+   @keyframes rotate{
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes rotate {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  &:before {
+    @include icon-font;
+    content: "\f11b";
+    -webkit-animation: 2s rotate linear infinite;
+    animation: 2s rotate linear infinite;
+  }
+}
+
+@mixin icon-tcp-location {
+  &:before {
+    @include icon-font;
+    content: "\f139";
+    color: $color-primary-two;
+  }
+}
+
+@mixin icon-tcp-minus {
+  &:before {
+    @include icon-font;
+    content: "\f12b";
+  }
+}
+
+@mixin icon-tcp-pin {
+  &:before {
+    @include icon-font;
+    content: "\f12c";
+  }
+}
+
+@mixin icon-tcp-plus {
+  &:before {
+    @include icon-font;
+    content: "\f12d";
+  }
+}
+
+@mixin icon-tcp-search {
+  &:before {
+    @include icon-font;
+    content: "\f122";
+  }
+}
+
+@mixin icon-tcp-star {
+  &:before {
+    @include icon-font;
+    content: "\f11e";
+  }
+}
+
+@mixin icon-tcp-success {
+  &:before {
+    @include icon-font;
+    content: "\f12e";
+  }
+}
+
+@mixin icon-tcp-suggested-store {
+  &:before {
+    @include icon-font;
+    content: "\f112";
+  }
+}
+
+@mixin icon-tcp-tooltip {
+  &:before {
+    @include icon-font;
+    content: "\f123";
+  }
+}
+
+@mixin icon-tcp-warning {
+  &:before {
+    @include icon-font;
+    content: "\f124";
+    color: $color-alert-two;
+  }
+}
+
+@mixin icon-tcp-x {
+  &:before {
+    @include icon-font;
+    content: "\f12f";
+  }
+}
+
+$font-icons-sc-fcbk: "\f134";
+$font-icons-sc-facebook: "\f134";
+$font-icons-sc-instagram: "\f135";
+$font-icons-sc-pinterest: "\f136";
+$font-icons-sc-twitter: "\f137";
+$font-icons-tcp-bag: "\f11c";
+$font-icons-tcp-check-mark: "\f117";
+$font-icons-tcp-chevron: "\f10c";
+$font-icons-tcp-clear: "\f126";
+$font-icons-tcp-dropdown: "\f127";
+$font-icons-tcp-email: "\f13a";
+$font-icons-tcp-error: "\f11f";
+$font-icons-tcp-favorite: "\f120";
+$font-icons-tcp-favorite-dotted: "\f125";
+$font-icons-tcp-favorite-filled: "\f138";
+$font-icons-tcp-gear: "\f13b";
+$font-icons-tcp-heart: "\f110";
+$font-icons-tcp-heart-wire: "\f128";
+$font-icons-tcp-info: "\f129";
+$font-icons-tcp-info-wire: "\f12a";
+$font-icons-tcp-loader: "\f11b";
+$font-icons-tcp-location: "\f139";
+$font-icons-tcp-minus: "\f12b";
+$font-icons-tcp-phone: "\f13c";
+$font-icons-tcp-pin: "\f12c";
+$font-icons-tcp-plus: "\f12d";
+$font-icons-tcp-search: "\f122";
+$font-icons-tcp-star: "\f11e";
+$font-icons-tcp-success: "\f12e";
+$font-icons-tcp-suggested-store: "\f112";
+$font-icons-tcp-tooltip: "\f123";
+$font-icons-tcp-warning: "\f124";
+$font-icons-tcp-x: "\f12f";
+
+/* Manual Chevron Icon  */
+@mixin icon-manual-chevron {
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    border-radius: 15px;
+    background: $input-color-font-value;
+    display: inline-block;
+    @include transform(rotate(45deg));
+    right: 6px;
+    bottom: 16px;
+  }
+
+  &:after {
+    @include transform(rotate(-45deg));
+    right: 0.5px;
+  }
+}
+@mixin icon-manual-right-arrow {
+  &:after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid $input-color-font-value;
+    border-top: 2px solid $input-color-font-value;
+    display: inline-block;
+    @include transform(rotate(45deg));
+    right: 20px;
+    bottom: 8px;
+  }
+}
+
+/* Manual Clock Icon  */
+@mixin icon-manual-clock {
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    position: relative;
+    vertical-align: middle;
+    background: $color-global-white;
+    top: -1px;
+    left: -6px;
+    border-radius: 50%;
+  }
+
+  &:after {
+    content: '';
+    width: 3px;
+    height: 5px;
+    position: absolute;
+    left: 108px;
+    top: 7px;
+    border-left: solid 2px $color-primary-one;
+    border-bottom: solid 2px $color-primary-one;
+    @include transform(rotate(-45deg));
+  }
+}

@@ -1,0 +1,135 @@
+/*
+* Promo Modal Plcc Desktop
+*/
+
+@import '_m.promo-modal-plcc.scss';
+
+.overlay-promo-plcc {
+  .overlay-container {
+    overflow: auto;
+    width: 800px;
+  }
+
+  .modal-header {
+    .button-modal-close {
+      right: 10px;
+      top: 10px;
+    }
+  }
+}
+
+.promo-modal-container {
+  .img-promo-plcc {
+    width: 310px;
+  }
+
+  .text-congratulations {
+    @include heading-level-1();
+    text-transform: none;
+  }
+
+  .promo-message {
+    width: 550px;
+    margin: 0 auto 20px;
+
+    span {
+      &:nth-child(1) {
+        display: inline-block;
+        font-size: 90px;
+        height: 75px;
+        margin-right: 10px;
+      }
+      &:nth-child(2) {
+        display: inline-block;
+        font-size: 90px;
+        height: 75px;
+      }
+      &:nth-child(3) {
+        font-size: 120px;
+        height: 90px;
+        line-height: 113px;
+      }
+    }
+  }
+
+  .button-apply {
+    width: 350px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .learn-more {
+    @include notification-primary-text();
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  .benefits-title,
+  .list-benefits {
+    display: inline-block;
+  }
+
+  .benefits-title {
+    width: 490px;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+
+  .list-benefits {
+    li {
+      @include heading-level-3;
+
+      &:before {
+        top: 0;
+      }
+    }
+  }
+
+  .button-thanks {
+    @include description-primary-text();
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  .text-info {
+    margin: 20px -15px;
+    padding: 10px 30px;
+  }
+
+  .img-save-discount {
+    width: 549px;
+  }
+
+  .img-info-points {
+    width: 490px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .img-rewards-info {
+    width: 500px;
+    position: relative;
+    left: -3px;
+  }
+
+  .title-promo {
+    b {
+      display: inline-block;
+    }
+  }
+
+  .text-terms {
+    @include subheading-secondary-text();
+  }
+}
+
+/* NOTE: RTPS (checkout) -> PRE-approved modal */
+.pre-approved-modal-container {
+  .text-terms {
+    sup {
+      font-size: 80%;
+      top: -2px;
+      margin: 0px;
+    }
+  }
+}

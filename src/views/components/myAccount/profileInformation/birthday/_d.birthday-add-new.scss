@@ -1,0 +1,55 @@
+/**
+* Birthdays Add new (Desktop)
+*/
+
+@import "_m.birthday-add-new.scss";
+@import "compass/css3/flexbox";
+
+.birthday-add-new-container {
+  margin-top: 30px;
+  border-top: solid 1px $color-primary-one-opacity;
+
+  .add-a-child-title {
+    margin-top: 28px;
+    margin-bottom: 20px;
+  }
+
+  .field-container {
+    width: 47%;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 37px;
+    margin-right: 6%;
+
+    &.field-container-with-signature {
+      margin-top: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  .select-year {
+    width: 25%;
+  }
+
+  .input-gender {
+    width: 38%;
+    margin-right: 4%;
+  }
+
+  .button-add {
+    width: 23%;
+  }
+
+  .button-cancel-information {
+    margin-bottom: 0px;
+    width: 23%;
+    margin-right: 1%;
+  }
+
+  .button-container {
+    // width: 47%;
+    // float: right;
+    @include display-flex;
+    @include justify-content(flex-end);
+  }
+}

@@ -1,0 +1,51 @@
+/**
+* Rewards Overview Section (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/flexbox";
+
+.my-account-section-content {
+  &.my-rewards-section {
+    padding-bottom: 0px;
+  }
+}
+
+.monthly-coupons-container,
+.month-rewards-container {
+  min-height: 290px;
+}
+
+/* Montly Rewards */
+.monthly-coupons-container {
+  .uncondense-list-coupons {
+    margin: 16px auto;
+    width: 65%;
+  }
+}
+
+.month-rewards-container {
+  display: inline-block;
+  width: 100%;
+
+  &.next-month-rewards {
+    margin-top: 9px;
+  }
+}
+
+.month-rewards-title {
+  @include heading-level-4();
+}
+
+.month-rewards-message {
+  // @include description-primary-text($color-primary-two);
+  @include notification-primary-text($color-primary-two);
+  @include font-global-regular();
+  opacity: 0.9;
+
+  .rewards-points {
+    color: $color-primary-one;
+    @include font-global-heavy();
+  }
+}

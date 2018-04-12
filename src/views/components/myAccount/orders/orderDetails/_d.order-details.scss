@@ -1,0 +1,59 @@
+/**
+*  Order Details (Desktop)
+**/
+
+@import "_m.order-details.scss";
+
+.notification-container + .actual-order-display {
+  border-top: 1px solid $color-primary-one-opacity;
+  padding-top: 30px;
+}
+
+.order-details-section {
+  .notification-list + .table-products {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+}
+
+.my-account-section-content {
+   &.order-details-section th {
+    text-transform: none;
+  }
+}
+
+.order-status-container {
+  .tracking-number {
+    width: auto;
+    text-align: left;
+    float: right;
+    @include heading-level-4();
+
+    .title-description {
+      @include heading-level-4();
+      @include font-global-regular();
+      display: inline-block;
+      width: auto;
+      vertical-align: top;
+      padding-right: 10px;
+    }
+
+    .button-tracking-number {
+      @extend .title-description;
+      @include font-global-black();
+      text-decoration: underline;
+      vertical-align: top;
+      padding-right: 0px;
+    }
+  }
+}
+
+.unavailable-order-details {
+  h1 {
+    margin: 150px auto;
+  }
+}
+
+.unavailable-reservation-details {
+  @extend .unavailable-order-details;
+}

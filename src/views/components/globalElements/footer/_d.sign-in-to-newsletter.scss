@@ -1,0 +1,81 @@
+/**
+** Sign In To Newsletter
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.sign-in-to-newsletter {
+  float: right;
+  width: 25%;
+  clear: none;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+
+  input[type="text"] + .button-quaternary,
+  .button-submit-newsletter {
+    @include button-quaternary(secondary);
+    display: block;
+    right: auto;
+    top: auto;
+    margin-top: 10px;
+  }
+
+  .input-title {
+    &:empty {
+      display: none;
+    }
+  }
+
+  .input-with-button > span {
+    @include input-title();
+    @include font-global-heavy();
+    color: $color-primary-one;
+  }
+
+  .newsletter-input {
+    margin-bottom: 0;
+
+    .button-quaternary.button-check:after {
+      top: 25%;
+    }
+
+    .input-error + .button-submit-newsletter {
+      margin-top: 35px;
+    }
+  }
+
+  .text-notification {
+    @include notification-secondary-text($color-primary-two);
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    line-height: 15.5px;
+    left: 1px;
+
+    a {
+      @include notification-secondary-text($color-primary-two);
+      display: inline-block;
+      text-decoration: underline;
+    }
+  }
+
+  // .button-submit-newsletter,
+  // input[type="text"] + .button-quaternary {
+  //   @include button-tertiary();
+  //   margin-top: 10px;
+  //   top: 0;
+  //   right: 0px;
+  // }
+
+  .label-error {
+    .inline-error-message {
+      position: relative;
+    }
+  }
+
+  .newsletter-input {
+    display: inline-block;
+  }
+}

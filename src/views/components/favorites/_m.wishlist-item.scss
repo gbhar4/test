@@ -1,0 +1,86 @@
+/*
+ * Wishlist Item (Mobile)
+ */
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+@import "compass/css3/transform";
+@import "compass/css3/opacity";
+
+// ** Favorites section Only ** //
+.wishlist-list-container {
+  /* pop up inforrmation remove item wishlist */
+  .information-remove {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    width: 145px;
+    padding: 30px 10px;
+    background-color: $color-global-white;
+    right: 0;
+    border: 1px solid $color-primary-four;
+    @include global-arrow-tooltip();
+
+    @include description-secondary-text($color-primary-one);
+
+    strong {
+      @include font-global-black();
+    }
+
+    &:after,
+    &:before {
+      top: -15px;
+      right: 0;
+      bottom: inherit;
+    }
+
+    &:after {
+      right: 2px;
+    }
+
+    &:before {
+      top: -21px;
+    }
+  }
+
+  .item-container {
+    .button-edit {
+      @include description-secondary-text();
+      text-decoration: underline;
+      z-index: 1;
+    }
+  }
+}
+
+.wishlist-suggested-container {
+  background-color: $color-global-white;
+  padding: 16px;
+
+  .item-product-recomendation {
+    height: auto;
+  }
+
+  .button-add-to-favorites {
+    @include button-quaternary();
+  }
+
+  .button-dismiss-suggestion {
+    margin-top: 10px;
+    color: $color-primary-three;
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
+}
+
+/*
+ * Read Only (Favorite Shared List)
+ */
+
+.item-read-only-container {
+ &.item-container .purchased-status-container {
+   text-align: center;
+   width: 100%;
+ }
+}

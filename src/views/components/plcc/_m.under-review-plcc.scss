@@ -1,0 +1,42 @@
+/*
+* Under Review Plcc Mobile
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.under-review-container {
+  padding: 25px;
+  text-align: center;
+  background-color: $color-global-white;
+
+  .title-under-review {
+    @include font-global-regular();
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .message-under-review {
+    @include body-secondary-text();
+    margin-bottom: 30px;
+  }
+
+  .button-checkout {
+    @include button-default($color-accent-two);
+    margin-bottom: 20px;
+  }
+
+  .button-continue-shopping {
+    @include button-default($color-accent-two);
+
+    &.button-with-bag {
+      @include button-secondary-outline();
+    }
+  }
+}
+
+.overlay-form-plcc {
+  .under-review-container {
+    min-height: calc(100vh - 20px);
+  }
+}

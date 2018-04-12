@@ -1,0 +1,221 @@
+/*
+* Promo Modal Plcc Mobile
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.promo-modal-container {
+  text-align: center;
+  padding: 25px;
+  background-color: $color-global-white;
+
+  strong {
+    @include font-global-black();
+    text-transform: uppercase;
+  }
+
+  sup {
+    font-size: .7rem;
+    top: -5px;
+  }
+
+  .img-promo-plcc {
+    width: 200px;
+  }
+
+  .text-congratulations {
+    @include heading-level-2();
+  }
+
+  /* Need Change the font by promo-message */
+  .promo-message {
+    width: 217px;
+    margin: 20px auto;
+
+    span {
+      display: block;
+      line-height: normal;
+      text-transform: uppercase;
+      @include font-global-black();
+
+      &:nth-child(1) {
+        font-size: 63px;
+        height: 51px;
+        line-height: 63px;
+      }
+
+      &:nth-child(2) {
+        font-size: 100px;
+        height: 81px;
+        line-height: 100px;
+      }
+
+      &:nth-child(3) {
+        font-size: 45px;
+        height: 35px;
+        line-height: 45px;
+      }
+    }
+  }
+
+  .title-promo {
+    @include button-primary-text(); // font-size: 16px, we don't have in mixins 17px
+    margin-bottom: 20px;
+
+    b {
+      color: $color-accent-four;
+      display: block;
+    }
+  }
+
+  .button-apply {
+    background-color: $color-accent-two;
+  }
+
+  .learn-more {
+    @include body-secondary-text();
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin: 15px 0;
+    display: inline-block;
+  }
+
+  .button-thanks {
+    @include button-primary-text(); // font-size: 16px, Need other name of mixin, this not appropied
+    @include font-global-regular();
+    color: $color-primary-one;
+    text-decoration: underline;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .text-info {
+    @include heading-level-3();
+    border: 1px solid $color-primary-three;
+    margin-bottom: 20px;
+
+    strong {
+      text-transform: none;
+    }
+
+    a {
+      color: $color-primary-one;
+    }
+  }
+
+  .list-benefits {
+    text-align: left;
+    padding-left: 10px;
+
+    li {
+      margin-bottom: 10px;
+      position: relative;
+
+      &:before {
+        content: '';
+        background: url('/wcsstore/static/images/check-list.png') no-repeat;
+        width: 20px;
+        height: 22px;
+        position: absolute;
+        left: -24px;
+        top: -5px;
+      }
+    }
+  }
+
+  .links-container {
+    margin: 20px 0 10px;
+
+    a {
+      @include body-primary-text();
+      @include font-global-regular();
+      text-transform: uppercase;
+      text-decoration: underline;
+      margin-right: 20px;
+    }
+
+    sup {
+      text-decoration: none;
+    }
+  }
+
+  /* Information rewards */
+
+  .info-rewards{
+    width: 490px;
+    margin: 0 auto 20px;
+
+    .first-info,
+    .second-info {
+      width: 50%;
+      display: inline-block;
+      @include font-global-heavy();
+      position: relative;
+
+      .number {
+        width: 30%;
+        display: inline-block;
+        height: 30px;
+        font-size: 36px;
+        line-height: 36px;
+      }
+
+      .word {
+        width: 50%;
+        display: inline-block;
+      }
+
+      i {
+        font-size: 20px;
+        position: relative;
+        top: -10px;
+      }
+    }
+    .iqual {
+      margin-left: 10px;
+    }
+  }
+
+  /* images */
+
+  .img-save-discount {
+    width: 91%;
+  }
+
+  .img-info-points {
+    width: 100%;
+  }
+
+  .img-rewards-info {
+    width: 100%;
+  }
+
+  .text-terms {
+    font-size: 8px; // this is bad, we don't have a mixin with font-size 8px
+    @include font-global-black();
+
+    a {
+      margin-left: 5px;
+      color: $color-primary-one;
+    }
+  }
+}
+
+/* NOTE: RTPS (checkout) -> PRE-approved modal */
+.pre-approved-modal-container {
+  .text-congratulations {
+    sup {
+      font-size: 60%;
+    }
+  }
+
+  .text-terms {
+    sup {
+      font-size: inherit;
+      top: -2px;
+      margin: 0px;
+    }
+  }
+
+}

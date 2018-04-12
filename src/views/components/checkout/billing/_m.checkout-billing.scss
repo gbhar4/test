@@ -1,0 +1,386 @@
+/**
+ * Checkout Billing Section (Mobile)
+ **/
+
+ @import "_mixins.scss";
+ @import "_variables.scss";
+ @import "compass/css3/flexbox";
+
+ /* General alignments of Billing Section */
+.checkout-billing-container {
+  /* Mini Section inside Billing */
+  .checkout-billing-section {
+    .address-shipping-view {
+      padding-bottom: 0px;
+      border-bottom: 0px;
+      margin-bottom: 0px;
+    }
+
+    .address-container {
+      margin-bottom: 20px;
+    }
+
+    .fieldset-address-editable {
+      // margin-top: 10px;
+      padding: 0px;
+    }
+
+    .checkbox-same-shipping + .address-container {
+      margin-top: 20px;
+    }
+  }
+
+  /* Button internationally shipping */
+  .button-shipping-internationally {
+    float: right;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+
+  /* Giftcard only in Billing Section */
+  .gift-cards-section {
+    border-bottom: 1px solid $color-primary-four;
+    padding-bottom: 30px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+
+    .checkout-section-title {
+      display: block;
+    }
+
+    + .error-box {
+      margin-bottom: 20px;
+    }
+
+    .gift-card-add-submit .general-loading {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  /* Payment only in Billing Section */
+  .payment-review-section {
+    margin-top: 20px;
+  }
+
+  .same-as-shipping-container,
+  .checkbox-set-default-container {
+    display: block;
+    margin: 15px 0px 20px;
+  }
+
+  /* Billing Address: Checkbox input of "Same as Shipping" */
+  // .same-as-shipping-checkbox {
+  //   margin-right: 69%; // REVIEW
+  // }
+
+  /* Billing Address: Checkbox input of "Set as Default" */
+  // .checkbox-set-default {
+  //   @extend .same-as-shipping-checkbox;
+  //   margin-bottom: 0px;
+  // }
+
+  /* Custom Select: Select from card on file */
+  .address-billing {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .address-billing-container {
+    margin-top: 20px;
+  }
+
+  .message-paypal {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  // Boton para editar o seleccionar la tarjeta de credito
+  .checkout-summary-edit {
+    @include body-primary-text();
+    text-decoration: underline;
+    position: absolute;
+    right: -50px;
+    top: calc(50% + 5px);
+    @include transform(translateY(-50%));
+  }
+}
+
+.button-add-card {
+  @include button-semi-dropdown();
+}
+
+.service-error {
+  margin-top: 20px;
+}
+
+/* Select Address in billing */
+.select-address-billing {
+  margin-top: 20px;
+
+  &:empty {
+    display: none;
+  }
+
+  .checkbox-same-shipping {
+    margin-bottom: 20px;
+  }
+}
+
+/* Payment Method Form for Billing Section
+  ========================================================================== */
+/* Payment Method Form only for Billing Section */
+.payment-method-form-container {
+  margin: 10px 0px;
+  @include display-flex;
+  @include justify-content(space-between);
+
+  .payment-box {
+    width: 50%;
+    @include radio-button-for-checkout();
+    @include display-flex;
+
+    .label-radio {
+      padding-left: 0;
+    }
+  }
+
+  /* Paypal box */
+  > div:last-of-type {
+    .input-radio-title {
+      top: 49%;
+      @include transform(translateY(-50%));
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  img {
+    width: 105px;
+    vertical-align: middle;
+  }
+
+  .credit-card-method {
+    .input-subtitle {
+      @include description-secondary-text();
+      padding: 0 10px 10px;
+    }
+  }
+
+}
+
+/* Custom Select: Select from card on file
+   ========================================================================== */
+/* Custom select container of Title and DropdownList: Close state */
+.address-billing {
+  .custom-select-common {
+    width: 100%;
+    margin-top: 10px;
+    vertical-align: top;
+  }
+}
+
+/* Item selected */
+.selected-card {
+  > strong {
+    margin-left: 7px;
+    @include subheading-primary-text($color-primary-three);
+    @include font-global-regular();
+    text-transform: none;
+  }
+}
+
+/* Item */
+.dropdown-address-book-item {
+  img {
+    width: 45px;
+    position: relative;
+    margin-right: 15px;
+    vertical-align: middle;
+  }
+
+  .cardholder-name {
+    display: block;
+    line-height: normal;
+    margin-bottom: 7px;
+  }
+
+  /* Tarjeta expirada */
+  strong,
+  .expired-card {
+    @include subheading-primary-text($color-primary-three);
+    @include font-global-regular();
+    text-transform: none;
+    margin-left: 7px;
+  }
+}
+
+.dropdown-address-book-items-list {
+  li {
+    border-bottom: solid 1px $color-primary-one-opacity;
+  }
+}
+
+.dropdown-address-book-highlighted {
+  border-bottom: 0px;
+
+  /* Tarjeta expirada */
+  strong,
+  .expired-card {
+    color: $color-global-white;
+  }
+}
+
+/* FormSection name="billing" (Guest)
+   ========================================================================== */
+ .form-adding-card {
+   margin-top: 25px;
+
+   .input-cc {
+     width: 100%;
+     margin-bottom: 25px;
+   }
+
+   .select-exp-mm,
+   .select-exp-yy {
+     width: calc(30%);
+     padding: 0px;
+     margin: 0px;
+     padding-right: 5px;
+     vertical-align: top;
+   }
+
+   .select-exp-yy {
+     padding-right: 5px;
+     padding-left: 5px;
+   }
+
+   .input-cvv {
+     width: calc(40%);
+     padding: 0px;
+     padding-left: 5px;
+     margin: 0px;
+     vertical-align: top;
+   }
+ }
+
+/* FormSection name="editCard"
+   ========================================================================== */
+.form-editing-card {
+  @extend .form-adding-card;
+
+  .set-as-default {
+    margin: 25px 0px;
+  }
+}
+
+.new-credit-card-container {
+  .set-as-default {
+    margin-top: 25px;
+  }
+}
+
+
+/* Edit and Add's Modals */
+.address-book-select-overlay,
+.payment-method-select-overlay {
+  .modal-title {
+    text-align: center;
+  }
+
+  .title-billing-address {
+    margin-bottom: 20px;
+  }
+
+  .address-billing-view {
+    position: relative;
+  }
+
+  .button-edit-address {
+    @include body-primary-text();
+    text-decoration: underline;
+    position: relative;
+  }
+
+  .button-add-address {
+    margin-top: 0px;
+  }
+
+  .container-billing-section-title {
+    position: absolute;
+    right: 10px;
+    top: calc(50% + 30px);
+    @include transform(translateY(-50%));
+  }
+
+  .save-to-account {
+    margin-bottom: 15px;
+
+    + .set-as-default {
+      margin-top: 0px;
+    }
+  }
+}
+
+/* Payment Method Overlay (only) */
+.payment-method-select-overlay {
+  .fieldset-creditcard-editable {
+    margin-bottom: 30px;
+  }
+}
+
+/* Address Book Overlay (Edit Address Form) (only) */
+.address-book-select-overlay {
+  .input-zip-code {
+    float: left;
+  }
+
+  .select-state + .input-zip-code {
+    float: right;
+  }
+}
+
+.address-container {
+  .aux-char {
+    display: none;
+  }
+}
+
+/* Checkout billing container
+   ========================================================================== */
+.checkout-billing-container {
+  .checkout-shipping-section {
+    margin-top: 20px;
+  }
+
+  .title-billing-address {
+    margin-bottom: 10px;
+  }
+
+  .credit-card-form-container {
+    margin-bottom: 20px;
+  }
+
+  // when the user don't have credit card save
+  button +
+  .address-container {
+    margin-top: 20px;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 1px;
+      background-color: $color-primary-four;
+      height: 100%;
+      right: 20%;
+      position: absolute;
+    }
+  }
+
+  .button-edit-address {
+    z-index: 99;
+  }
+}

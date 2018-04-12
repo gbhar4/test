@@ -1,0 +1,17 @@
+{
+  "bag_n_checkout_coupon_help": {
+    "nameOnServer": "coupon_help",
+    "guest": "1",
+    "registered": "1"
+  },
+  "bag_empty_banner": {
+    "nameOnServer": "bag_empty_banner",
+    "guest": "1",
+    "registered": "1"
+  },
+  "bag_ledger_banner": {
+    "nameOnServer": "bag_ledger_promo_banner",
+    "guest": "1",
+    "registered": "1"
+  }
+}

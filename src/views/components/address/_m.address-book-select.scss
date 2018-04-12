@@ -1,0 +1,30 @@
+/*
+* Address Book Select Mobile
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.dropdown-address-book {
+  .list-container {
+    // padding-bottom: 2px;
+    padding-bottom: 56px;
+  }
+
+  .item-list-common {
+    position: static;
+    max-height: 246px;
+    // margin-top: 2px;
+  }
+
+  /* Button Add New */
+  li:last-of-type {
+    position: absolute;
+    z-index: 900;
+    // bottom: 2px;
+    bottom: 0px;
+    width: calc(100%/* - 4px */);
+    // left: 2px;
+    background: $color-primary-five;
+  }
+}

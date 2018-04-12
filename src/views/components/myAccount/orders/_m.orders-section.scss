@@ -1,0 +1,27 @@
+/**
+* Orders Section (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.show-orders-container {
+  background-color: $color-primary-five;
+  padding: 10px 15px;
+  margin-top: 6px;
+  position: relative;
+
+  .button-show-order {
+    @include description-secondary-text();
+    text-decoration: underline;
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+    padding-right: 6px;
+  }
+
+  .button-show-international-order {
+    @extend .button-show-order;
+    padding-right: 1px;
+  }
+}

@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Wishlist - Create List Desktop
+   ========================================================================== */
+
+@import '_m.create-list.scss';
+@import "compass/css3/transform";
+
+.overlay-create-list {
+  .overlay-container {
+    width: 600px;
+  }
+
+  /* Header Modal */
+  .modal-header {
+    border-bottom: 1px solid $color-primary-four;
+    padding: 25px;
+    text-align: left;
+    position: relative;
+
+    .modal-title {
+      @include font-global-medium();
+    }
+  }
+
+  /* Header Modal  Button Close*/
+  .button-modal-close {
+    margin: 23px 23px 0 0;
+  }
+
+  .create-wishlist-form {
+    padding: 20px 30px 0;
+
+    .error-box {
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Content of Create List */
+  .create-list-container {
+    margin: 0 -30px;
+    padding: 0px 30px 10px;
+  }
+
+  /* Input name of List */
+  .list-name {
+    width: calc(100% - 100px);
+
+    /* move the text beside of input */
+    .input-title {
+      display: block;
+      position: absolute;
+      top: 2px;
+      @include heading-level-4(); // please verify
+
+      + input {
+        margin-left: 100px;
+        margin-top: 0px;
+      }
+    }
+
+    .inline-error-message {
+      margin-left: 100px;
+    }
+  }
+
+  /* checkbox by default */
+  .by-default {
+    margin: 0 0 30px 101px;
+  }
+
+  /* buttons container */
+  .buttons-container {
+    padding: 25px 0px;
+  }
+
+  /* button save */
+  .button-save {
+    float: right;
+    width: 120px;
+  }
+
+  /* button cancel */
+  .button-cancel {
+    margin: 8px 0 0 0;
+  }
+}

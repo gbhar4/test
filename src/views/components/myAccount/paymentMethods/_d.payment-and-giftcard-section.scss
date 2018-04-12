@@ -1,0 +1,136 @@
+/**
+* My Account Section: Payment & Gift Card (Desktop)
+**/
+
+@import "_m.payment-and-giftcard-section.scss";
+@import "compass/css3/flexbox";
+
+/* REVIEW: Address Book */
+.address-item-container,
+/* Boxes of payments or giftcards */
+.credit-card-item-container,
+.gift-card-item-container {
+  // background: $color-primary-five;
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+
+  &:nth-child(even) {
+    margin-left: 2%;
+  }
+
+  .my-place-rewards-banner {
+    a {
+      display: inline-block;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/* Reset styles of Address Container */
+.my-account-section-content {
+  .select-or-new-billing-address {
+    /* Container of Address details */
+    .address-container {
+      margin-bottom: 20px;
+    }
+
+    .custom-select-common {
+      .address-container {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+/* Add new card Form */
+.credit-and-debit-cards-container {
+  .address-billing {
+    .custom-select-common {
+      width: calc(50% - 20px);
+    }
+  }
+
+  .title-billing-address {
+    display: block;
+  }
+
+  .fieldset-creditcard-editable {
+    width: 80%;
+  }
+
+  .input-cc {
+    width: 48%;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+
+  .select-exp-mm {
+    width: 20%;
+    margin-left: 2%;
+    padding-right: 0px;
+  }
+
+  .select-exp-yy {
+    width: 20%;
+    margin-left: 2%;
+    padding-right: 0px;
+  }
+
+  .button-cancel {
+    width: 38%;
+  }
+
+  .button-add-new-card {
+    width: 38%;
+    margin-left: 4%;
+    margin-top: 0px;
+  }
+
+  .button-edit-card {
+    @extend .button-add-new-card;
+  }
+}
+
+/* REVIEW: Address Book */
+.empty-address-book,
+/* Empty payment and giftacard */
+.cards-empty-container,
+.giftcard-empty-container {
+
+  .empty-content-and-button,
+  .empty-address-book-and-button {
+    padding: 0px;
+    background-color: transparent;
+  }
+
+  /* REVIEW: Address Book */
+  .address-empty-content,
+  .cards-empty-message,
+  .giftcard-empty-message {
+    padding: 20px;
+    background-color: $color-primary-five;
+  }
+
+  .cards-empty-message,
+  .giftcard-empty-message {
+    margin-bottom: 0px;
+  }
+
+  /* REVIEW: Address Book */
+  .address-empty-title {
+    margin-bottom: 0px;
+  }
+
+  /* REVIEW: Address Book */
+  .button-add-edit-address,
+  .button-new-method,
+  .button-add-new-giftcard {
+    margin-top: 20px;
+    display: inline-block;
+    width: 45%;
+  }
+}

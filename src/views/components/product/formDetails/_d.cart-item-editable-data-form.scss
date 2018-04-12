@@ -1,0 +1,224 @@
+@import "_m.cart-item-editable-data-form.scss";
+
+.item-shopping-cart {
+  /* Contenedor de los select del producto en estado editable */
+  .container-selects {
+    max-width: 60%;
+    width: auto;
+    vertical-align: top;
+    display: inline-block;
+    @include description-secondary-text($color: $color-primary-one)
+    @include font-global-regular();
+    // text-transform: uppercase;
+
+    .select-fit,
+    .select-size {
+      width: 75px;
+      margin-right: 6px;
+      vertical-align: top;
+      margin-bottom: 0px;
+    }
+
+    .select-quantity {
+      width: 40px;
+      vertical-align: top;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+/* Only Global section My Bag */
+.global-my-bag {
+  /* Botón de cambio de tienda */
+  .buttons-editables {
+    margin-top: 0;
+    margin-bottom: 0;
+    bottom: 0;
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    width: 36%;
+
+    /* Botón Update y Cancelar en My Bag Global */
+    .button-global-update {
+      display: inline-block;
+      float: right;
+    }
+
+    /* Botón Update en My Bag Global */
+    .button-global-update {
+      padding: 0 34px;
+      margin-bottom: 0;
+    }
+
+    /* Bag Global update button*/
+    .button-update {
+      @include button-secondary();
+      width: calc(56% + 5px);
+      height: 39px;
+      float: left;
+      line-height: 20px;
+    }
+
+    /* My Bag Global Cancel Button */
+    .button-cancel {
+      @include button-tertiary();
+      @include notification-primary-text($color-primary-two);
+      text-decoration: underline;
+      margin: 0px 22px;
+      width: auto;
+      padding: 0px;
+      position: relative;
+      background: none;
+      float: left;
+      box-shadow: none;
+      border: none;
+    }
+  }
+}
+
+/* Only My Bag Drawer / Overlay */
+.overlay-my-bag {
+  /* Re-check level */
+  .item-shopping-cart {
+
+    /* Mini select para edición de producto SOLO en My Bag Overlay */
+    .bag-item-color-select-button-closed,
+    .mini-dropdown select + span.selection {
+      background: $color-global-white;
+      height: 30px;
+      @include description-secondary-text($color: $color-primary-two);
+      line-height: 4px;
+      padding: 15px 18px 13px 6px;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &:after,
+      &:before {
+        width: 7px;
+        bottom: 13px;
+        right: 10px;
+      }
+
+      &:after {
+        right: 5px;
+      }
+
+      .note {
+        height: 10px;
+        width: 10px;
+        right: 28px;
+      }
+    }
+
+    /* Custom select container: Close state */
+    .bag-item-color-select-button-closed {
+      line-height: normal;
+      margin-top: 0px;
+      padding: 0;
+
+      span {
+        padding-left: 21px;
+        padding-top: 4px;
+        line-height: 25px;
+
+        img {
+          width: 9px;
+          height: 9px;
+          right: 20px;
+          @include border-radius(50%);
+          top: 50%;
+          @include transform(translateY(-50%));
+        }
+      }
+    }
+
+    /* Custom select container: Open state */
+    .bag-item-color-select-closed,
+    .bag-item-color-select {
+      width: 100px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      vertical-align: top;
+      display: inline-block;
+    }
+
+    .bag-item-color-select-button {
+      @extend .bag-item-color-select-button-closed;
+    }
+
+    /* Item List */
+    .bag-item-color-select-items-list {
+      background-color: $color-global-white;
+      font-size: 11px;
+
+      li {
+        span {
+          line-height: 30px;
+          display: block;
+        }
+
+        img {
+          width: 9px;
+          right: 7px;
+          position: absolute;
+          @include border-radius(50%);
+          top: 50%;
+          @include transform(translateY(-50%));
+        }
+
+        &:after,
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    .container-selects {
+      .select-fit,
+      .select-size,
+      .select-qty {
+        width: 68px;
+      }
+    }
+
+    .buttons-editables {
+      margin-top: 0;
+      position: absolute;
+      // bottom: -10px;
+      right: 0;
+      top: 50px;
+
+      .button-update {
+        @include notification-secondary-text();
+        text-decoration: underline;
+        text-align: right;
+        display: block;
+        margin-bottom: 17px;
+      }
+
+      .button-cancel {
+        @extend .button-update;
+        margin-left: 0px;
+        margin-bottom: 0;
+        color: $color-primary-three;
+      }
+    }
+  }
+
+  .product-description {
+    form {
+      .error-box {
+        padding: 0;
+        text-align: left;
+        border: 0;
+        margin: 5px 0;
+
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+}

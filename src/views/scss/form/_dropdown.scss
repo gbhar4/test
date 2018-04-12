@@ -1,0 +1,73 @@
+/* Dropdown Label */
+.dropdown-menu {
+	select {
+		z-index: 0;
+
+		/* Span con estilos de Select */
+		+ .selection {
+			@include box-shadow(inset 0 -1px 0 0 $input-color-border); /* border inside box */
+
+			/* Icono */
+			@include icon-tcp-dropdown();
+			&:before,
+			&:after {
+				@include transform(rotate(0deg));
+				color: $color-primary-three;
+				right: 31px;
+				bottom: 31px;
+				font-size: 20px;
+				width: 0;
+				height: 0;
+			}
+		}
+	}
+
+}
+
+/* Caja contenedora de opciones */
+.dropdown-menu-options {
+	@include box-shadow(inset 0 0 0 2px $input-color-border);
+	margin-top: 8px;
+	background-color: $color-primary-five; /* white */
+	padding: 20px;
+
+	/* Título de las opciones */
+	h3 {
+		@include notification-secondary-text($color: $color-primary-two);
+		text-transform: uppercase;
+		margin-bottom: 16px;
+	}
+
+	/* Opciones */
+	li {
+		@include heading-level-2();
+		@include font-global-regular();
+		padding: 7px 0;
+
+		&:first-of-type {
+			padding-top: 0;
+		}
+
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+
+		/* Valor de cada opción */
+		> span {
+			@include notification-secondary-text();
+			text-transform: uppercase;
+			float: right;
+			top: 11px;
+		}
+	}
+
+	/* Botón "+ New Wishlist" por ejemplo */
+	.button-quaternary {
+		margin-top: 58px;
+	}
+
+	/* Opción seleccionada */
+	.menu-option-selected {
+		@include font-global-black();
+	}
+}

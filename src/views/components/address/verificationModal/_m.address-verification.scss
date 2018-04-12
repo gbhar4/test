@@ -1,0 +1,155 @@
+/**
+ * Address Verification Mobile
+ **/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.overlay-address-verification {
+  .verification-header {
+    @include header(65px);
+    border: 0;
+    background-color: $color-global-white;
+    text-align: center;
+
+    &:after {
+      content: '';
+      width: 100%;
+      left: 0;
+      bottom: 0px;
+      height: 1px;
+      background-color: $color-primary-four;
+      display: inline-block;
+      position: absolute;
+      z-index: 1;
+    }
+
+    /* Título de Modal */
+    > h3 {
+      position: relative;
+      top: 50%;
+      @include transform(translateY(-50%));
+      @include font-global-black();
+    }
+  }
+}
+
+.address-verification-container {
+  background-color: $color-global-white;
+  padding: 0 30px 20px;
+  min-height: calc(100vh - 85px);
+}
+
+/* style for "Verify Your Address" modal */
+.address-verification {
+
+  .verify-notification {
+    h3 {
+      display: none;
+    }
+
+    p {
+      @include description-primary-text($color-primary-one);
+      font-size: 12px;/* ??? */
+    }
+
+    .red-text {
+      color: red;
+    }
+  }
+
+  .address-we-suggest {
+    .title-we-suggest {
+      margin-bottom: 10px;
+    }
+
+    .address-option {
+      margin-top: 7px;
+    }
+  }
+
+  .verify-notification,
+  .address-you-entered,
+  .address-we-suggest {
+    position: relative;
+    padding: 20px 0;
+
+    &:after {
+      content: '';
+      width: calc(100% + 60px);
+      left: -30px;
+      bottom: 0px;
+      height: 1px;
+      background-color: $color-primary-four;
+      display: inline-block;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+  .address-we-suggest,
+  .address-you-entered {
+    .input-radio {
+      margin-top: 10px;
+    }
+  }
+
+  .address-container {
+    margin-left: 10px;
+  }
+
+  /* previous message to address entered */
+  p {
+    @include body-secondary-text();
+
+    /* box container for title of the address entered */
+    &.title {
+      @include subheading-secondary-text($color: $color-global-black);
+      text-transform: uppercase;
+      line-height: 19px;
+    }
+
+    &.input-title {
+      @include body-secondary-text();
+    }
+  }
+
+  /* button in group-button */
+  .group-button {
+    button {
+      @include font-global-black();
+      margin: 0 0 10px;
+    }
+  }
+
+  .button-continue {
+    @include button-default($color-accent-two);
+  }
+
+  .button-edit {
+    @include button-default($color-global-white);
+  }
+
+  /* Address verification Apartment (Address Line 2) */
+  .address-entered-only {
+    @include border-color-full-width();
+    border-top: 0;
+    margin: 0 -26px 104px;
+    padding: 31px 27px 40px;
+
+    label {
+      margin-top: 0;
+    }
+
+    p:not(.title) {
+      margin-top: 8px;
+      margin-bottom: 24px;
+      line-height: 20px;
+    }
+  }
+
+  .title-you-entered {
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+}

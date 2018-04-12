@@ -1,0 +1,24 @@
+/**
+* Added Filter List (Desktop)
+**/
+
+@import "_m.added-filter-list.scss";
+
+/* Only applied filters */
+.applied-filters-sorting-container {
+  width: 100%;
+  padding: 20px 0px 15px;
+  left: auto;
+  border-top: 0px;
+  border-bottom: solid 1px $color-primary-four;
+  margin: 0px;
+  @include display-flex;
+
+  /* Applied Filter Container */
+  .applied-filter-list {
+    position: relative;
+    width: calc(100% - 70px);
+    padding: 0px;
+    border-bottom: 0px;
+  }
+}

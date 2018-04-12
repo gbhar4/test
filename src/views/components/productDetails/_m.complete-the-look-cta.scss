@@ -1,0 +1,35 @@
+/**
+* CompleteTheLookCTA (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.complete-the-look-cta {
+    position: absolute;
+    bottom: 0;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border: 2px solid $color-primary-one-opacity;
+
+    img,
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    span {
+        @include font-global-medium();
+        padding: 12px 6px;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $color-primary-two;
+    }
+
+    img {
+        opacity: 0.3;
+    }
+}

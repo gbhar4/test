@@ -1,0 +1,78 @@
+/*
+** Header Desktop for Legacy support
+* this file (and all references to it) should be removed after R5, once all FE code is on react.
+*/
+.header-global {
+
+}
+
+@media screen and (min-width: 1400px) {
+  .viewport-container {
+    max-width: 1400px;
+    padding: 0 5px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .header-global {
+    .header-global-messages {
+      .header-global-message {
+        margin-left: calc(33% - 235px);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1399px) {
+  .viewport-container {
+    min-width: 970px;
+    max-width: 970px;
+    padding: 0;
+  }
+
+  .header-global {
+    .header-global-navigation {
+      max-width: 620px;
+      width: 69%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .viewport-container {
+    min-width: 748px;
+    max-width: 748px;
+    padding: 0;
+  }
+
+  .header-global {
+    .header-global-banner {
+      max-width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .header-global-messages {
+      .header-global-message {
+        display: none;
+      }
+    }
+
+    .header-global-navigation {
+      max-width: 450px;
+
+      .navigation-bar {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      li {
+        a {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

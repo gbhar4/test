@@ -1,0 +1,80 @@
+/**
+* Added Filter List (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/box-shadow";
+@import "compass/css3/transform";
+@import "compass/css3/flexbox";
+@import "compass/css3/border-radius";
+
+/* Only applied filters */
+.applied-filters-sorting-container {
+  width: calc(100% + 32px);
+  left: -16px;
+  position: relative;
+
+  .applied-filter-list {
+    padding: 16px 16px 14px;
+    border-bottom: solid 1px $color-primary-one-opacity;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  /* Applied Filter Item */
+  .applied-filter-item {
+    padding: 5px 10px;
+    background: $color-primary-one;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+
+  /* Remove Button (Icon) */
+  .applied-filter-remove-button {
+    font-size: 0px;
+    position: relative;
+    padding: 10px;
+    background: $color-primary-three;
+    @include border-radius(50%);
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+
+    @include remove-icon($width: 10px);
+    &:after,
+    &:before {
+      background: $color-global-white;
+    }
+  }
+
+  /* Filter's Name */
+  .applied-filter-title {
+    display: inline-block;
+    margin-left: 10px;
+    @include subheading-primary-text($color-global-white);
+    text-transform: none;
+  }
+
+  .applied-filter-color-chip {
+    width: 20px;
+    height: 20px;
+    @include border-radius(50%);
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-left: 10px;
+  }
+
+  + .department-filter-title {
+    margin-top: 20px;
+  }
+}

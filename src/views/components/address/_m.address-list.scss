@@ -1,0 +1,50 @@
+/**
+* AddressBook (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/flexbox";
+
+.my-account-section-content {
+  .address-book-content {
+    .address-container .aux-char {
+      display: none;
+    }
+  }
+}
+
+.address-book-section {
+  .address-book-content {
+    position: relative;
+  }
+
+  .name {
+    @include font-global-black();
+  }
+
+  /* FIXME */
+  .payment-add-new-button {
+    position: absolute;
+    top: -72px;
+    left: 118px;
+    width: auto;
+  }
+
+  .default-shipping-method,
+  .button-default-shipping-method {
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.overlay-confirmation {
+  .address-book-confirm-address-delete {
+    .credit-card-associated-warning {
+      text-align: center;
+      color: $color-alert-one;
+    }
+  }
+}

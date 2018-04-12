@@ -1,0 +1,54 @@
+/**
+*  Reservation Details (Desktop)
+**/
+
+@import "_m.reservation-details.scss";
+
+.reservation-display {
+  margin-bottom: 20px;
+  border-bottom: solid 1px $color-primary-one-opacity;
+
+  .item-information {
+    display: inline-block;
+    width: 35%;
+    vertical-align: top;
+  }
+
+  .reservation-item,
+  .pickup-information-container {
+    padding: 0px
+  }
+
+  .title-description {
+    width: auto;
+    text-align: left;
+    display: block;
+    margin-bottom: 0px;
+  }
+
+  .reservation-item,
+  .pickup-information-container {
+    width: auto;
+  }
+}
+
+/* Style reset */
+.reservation-details-section {
+  .table-products-list {
+    .container-titles th {
+      text-align: right;
+
+      &:nth-child(1) {
+        text-align: left;
+      }
+    }
+
+    .item-shopping-cart td {
+      text-align: right;
+
+      &:nth-child(1) {
+        text-align: left;
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+/*
+* Product Recomendation (Desktop)
+*/
+
+@import "_m.product-recomendation.scss";
+
+.product-recomendation-container {
+  text-align: center;
+  padding: 40px 0 60px;
+  background-color: $color-primary-five;
+  display: block;
+  clear: both;
+}
+
+/* Product recomendations dentro de sección My Bag (global) */
+.product-recomendation {
+  @media screen and (max-width: 1200px){
+    padding: 0 25px;
+  }
+
+  /* Contenedor de productos dentro de Recomendations */
+  .content-product-recomendation {
+    width: 100%;
+    overflow-x: visible;
+    padding: 0px;
+  }
+
+  .button-next {
+    right: 0;
+    display: block;
+  }
+
+  .button-prev {
+    left: 0;
+    display: block;
+  }
+}
+
+/* Product item */
+.product-rec-list-item {
+  margin-left: 12px;
+  margin-right: 11px;
+  width: calc(24.2% - 23px);
+  height: 416px;
+
+  .item-container {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+/* Outfit item */
+.outfit-rec-list-item {
+  @extend .product-rec-list-item;
+  height: auto;
+}
+
+.product-rec-list-item,
+.wishlist-suggested-container {
+  .favorite-icon-container,
+  .bag-icon-container,
+  .pickup-icon-container,
+  .color-chips-container,
+  .button-prev,
+  .button-next {
+    display: none;
+  }
+
+  &:hover {
+    .favorite-icon-container,
+    .bag-icon-container,
+    .pickup-icon-container,
+    .color-chips-container,
+    .button-prev,
+    .button-next {
+      display: block;
+    }
+  }
+}
+
+.giftcard-result-container,
+.outfiting-section-container,
+.product-details-container,
+.search-result-container {
+  /* Product recommendations Section */
+  .product-recomendation {
+    padding: 0px;
+  }
+}
+
+/* PDP section, main container */
+.product-details-container {
+  .product-recomendation {
+    margin: 40px 0px;
+  }
+
+  .button-prev {
+    left: -10px;
+  }
+
+  .button-next {
+    right: -10px;
+  }
+}
+
+/* Recomendations PLP */
+.products-grid-container {
+  /* Product item */
+  .product-rec-list-item {
+    height: 361px;
+  }
+}

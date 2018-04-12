@@ -1,0 +1,71 @@
+/**
+ * Modals / Overlays
+*/
+@import "compass/css3/transition";
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.ReactModal__Body--open {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.react-overlay {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1002;
+
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.54);
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    opacity: 0.8;
+  }
+}
+
+.overlay-container {
+  background-color: $color-global-white;
+  padding: 0px 27px;
+  padding-bottom: 40px;
+  min-height: 100%;
+  position: relative;
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: 0px;
+  }
+}
+
+/* NOTE: Border decoration */
+.overlay-border-decoration {
+  .overlay-container {
+    background: $color-global-white url("/wcsstore/static/images/pt-blue-stripes.png") repeat 0 0;
+    padding: 10px;
+  }
+}
+
+/*
+* Reset
+*/
+.ReactModalPortal {
+  ul, ol {
+    padding: 0px;
+  }
+}

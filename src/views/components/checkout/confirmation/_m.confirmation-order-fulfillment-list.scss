@@ -1,0 +1,32 @@
+/**
+* Confirmation Order Numbers By Fullfillment List (Mobile)
+**/
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.confirmation-next-steps {
+  margin-top: 20px;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+
+  /* Paragraph */
+  p {
+    @include notification-primary-text();
+
+    > strong {
+      @include font-global-black();
+    }
+  }
+
+  /* Title of paragraph after paragraph */
+  p + h3 {
+    margin-top: 30px;
+  }
+}
+
+.confirmation-steps-title {
+  @include navigation-level-1();
+  margin-bottom: 15px;
+}

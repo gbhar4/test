@@ -1,0 +1,308 @@
+/**
+* My Account Coupons (Mobile)
+**/
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+
+.uncondense-empty-coupons-summary {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Coupon section in global My Account */
+.uncondense-coupon-summary-container {
+  display: inline-block;
+  width: 100%;
+  padding-top: 30px;
+  position: relative;
+
+  .link-view-all-rewards {
+    @include subheading-primary-text();
+    text-align: center;
+    display: block;
+    text-transform: none;
+    text-decoration: underline;
+    color: $color-primary-two;
+  }
+}
+
+/* Title of section */
+.uncondense-coupon-summary-title {
+  border-bottom: 1px solid $color-primary-four;
+  padding-bottom: 5px;
+  text-align: left;
+  @include heading-level-3();
+  width: 100%;
+  display: block;
+}
+
+/* List of Coupons */
+.uncondense-list-coupons {
+  margin: 10px auto;
+  position: relative;
+  width: calc(62% + 16px);
+  display: block;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+/* Coupon or reward Item */
+.uncondense-coupon {
+  background: $color-primary-five;
+  width: calc(100% - 16px);
+  white-space: normal;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  margin-left: 8px;
+
+  svg {
+    width: 100%;
+    margin-top: 0;
+    max-height: 75px;
+    margin-left: -4px;
+    background: none;
+
+    text {
+      display: none;
+    }
+  }
+
+  .web-code-container {
+    @include notification-secondary-text()
+    @include font-global-regular();
+    display: block;
+    font-size: 10px;
+    position: relative;
+    top: -0.7em;
+  }
+
+  .web-code-disabled {
+    .web-code-container {
+      display: none;
+    }
+  }
+}
+
+/* Image of coupon */
+.uncondense-image-coupon {
+  position: relative;
+
+  img {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+
+  .coupon-value {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: normal;
+  }
+}
+
+/* Expiration Information */
+.uncondense-information-coupon {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 50px);
+  left: 25px;
+}
+
+.uncondense-expire-information {
+  @include notification-secondary-text($color-primary-one);
+  margin: 15px 0px 10px;
+  display: block;
+  text-align: center;
+}
+
+/* Button Apply */
+.uncondense-apply-coupons-button {
+  @include button-quaternary(secondary);
+  margin-top: 5px;
+}
+
+/* Button View and Print */
+.uncondense-view-and-print-button {
+  @extend .uncondense-apply-coupons-button;
+}
+
+/* Button Remove */
+.uncondense-applied-coupons-button {
+  @extend .uncondense-apply-coupons-button;
+}
+
+/* Button of View All */
+.uncondense-button-view-all {
+  @include subheading-primary-text();
+  text-transform: none;
+  display: block;
+  margin: 0 auto;
+  text-decoration: underline;
+  margin-top: 13px;
+}
+
+.coupon-dots {
+  text-align: center;
+
+  .button-pagination-dot {
+    font-size: 0;
+    border: 1px solid $color-global-black;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    margin-right: 5px;
+
+    &.active {
+      margin-top: 1px;
+      width: 6px;
+      height: 6px;
+      background-color: $color-global-black;
+    }
+  }
+}
+
+.coupon-barcode {
+  height: 65px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* NOTE: just for coupon's print */
+@media print {
+  .my-account-container {
+    display: none;
+  }
+
+  .overlay-coupon-printable {
+    width: 50%;
+    overflow: hidden;
+
+    .overlay-container {
+      overflow-y: hidden;
+    }
+
+    .button-coupon-cancel,
+    .button-coupon-print {
+      display: none;
+    }
+  }
+
+  .footer-global {
+    display: none;
+  }
+}
+
+
+/*
+* Re-design Coupon Icon
+*/
+
+// TODO: add comments to clarify styles.
+.uncondense-image-coupon {
+  position: relative;
+
+  &.reward-type {
+    &:before {
+      background: $reward-coupon-background;
+    }
+
+    .uncondense-information-coupon {
+      background: $reward-coupon-background;
+    }
+  }
+
+  &.place-type {
+    &:before {
+      background: $place-cash-coupon-background;
+    }
+
+    .uncondense-information-coupon {
+      background: $place-cash-coupon-background;
+    }
+  }
+
+  &.saving-type {
+    &:before {
+      background: $saving-coupon-background;
+    }
+
+    .uncondense-information-coupon {
+      background: $saving-coupon-background;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:after {
+    content: '';
+    background: transparent url("/wcsstore/static/images/pt-white-stripes.png") repeat 0 0;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .uncondense-icon-container {
+    padding: 9px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .uncondense-information-coupon {
+    position: relative;
+    @include border-radius(4px);
+    width: auto;
+    left: auto;
+    padding: 12px 12px 5px;
+
+    img {
+      width: 85%;
+      max-width: 90px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &.uncondense-image-coupon {
+    .coupon-value {
+      margin-top: 10px;
+      display: block;
+    }
+  }
+
+  .uncondense-expire-information {
+    line-height: 11px;
+    display: block;
+  }
+
+  .coupon-value {
+    @include heading-level-4();
+    @include font-global-black();
+    color: $color-global-white;
+    text-transform: uppercase;
+
+    line-height: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+  }
+}

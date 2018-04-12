@@ -1,0 +1,49 @@
+/**
+ * Pick Up Section (Desktop)
+ **/
+
+@import "_mixins.scss";
+@import "_m.checkout-pick-up.scss";
+
+/* Pick Up Section Container */
+
+.checkout-pickup-container {
+  .pick-up-form {
+    position: static;
+  }
+
+  .address-container {
+    width: 100%;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .pick-up-contact {
+    .checkout-summary-edit {
+      top: auto;
+      position: relative;
+    }
+  }
+
+  .checkout-button-container {
+    position: absolute;
+    right: 50px;
+    bottom: 0px;
+  }
+
+  .pick-up-alternate-form-aux {
+    margin-bottom: 80px;
+  }
+}
+
+.checkout-pickup-container {
+  .checkout-review-pickup-person {
+    .address-container {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

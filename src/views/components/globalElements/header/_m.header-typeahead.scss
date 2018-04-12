@@ -1,0 +1,159 @@
+/**
+ * Typeahead Section (Mobile only)
+ **/
+
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "compass/css3/box-shadow";
+@import "compass/css3/transform";
+
+.display-search-suggested-keywords,
+.display-search-suggested-keywords-closed {
+  input[type="text"] {
+    @include input-placeholder {
+      color: $color-primary-two;
+
+      &.focused,
+      &:focus {
+        border-bottom: 1px solid $input-color-border-focused;
+      }
+    }
+
+    &.focused,
+    &:focus {
+      border-bottom: 1px solid $input-color-border-focused;
+    }
+
+    &.disabled,
+    &:disabled {
+      border-bottom: 1px dashed $color-primary-three;
+
+      @include input-placeholder {
+        color: $input-color-border-focused;
+      }
+    }
+  }
+}
+
+/* Global Typeahead */
+.display-search-suggested-keywords {
+  text-align: left;
+
+  input[type="text"] + button.disabled,
+  input[type="text"] + button:disabled {
+    background: transparent;
+    border: 0;
+    color: transparent;
+    @include box-shadow(none);
+  }
+
+  .display-search-suggested-keywords-items-list {
+    .display-search-suggested-keywords-item {
+      padding: 4px 25px 15px 25px;
+
+      &.display-search-suggested-keywords-highlighted {
+        background: $color-accent-one;
+        color: $color-global-white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .display-search-suggested-keywords-closed,
+  .display-search-suggested-keywords {
+    border-bottom: solid 1px $color-primary-two;
+  }
+
+  .display-search-suggested-keywords .typeahead-content {
+    @include box-shadow(0 0 0 1px $color-primary-four);
+    text-align: left;
+    position: relative;
+  }
+
+  .list-container {
+    border: 0px;
+  }
+
+  .display-search-suggested-keywords-items-list {
+    text-align: left;
+    padding: 0 0px 10px;
+    width: 100%;
+    top: 2px;
+    position: inherit;
+    z-index: 10;
+    background-color: $color-global-white;
+    border: solid 1px $color-primary-four;
+    border-top: 0px;
+
+    li {
+      a {
+        color: $color-primary-one;
+        text-decoration: none;
+        @include font-global-black();
+        @include navigation-level-1();
+
+        span {
+          @include font-global-regular();
+        }
+      }
+    }
+  }
+
+  h4 {
+    margin-top: 19px;
+    color: $color-primary-two;
+    @include font-global-heavy();
+  }
+}
+
+/* Typeahead's Section */
+.react-overlay {
+  &.typeahead-overlay {
+    .overlay-container {
+      padding: 0;
+      background: $color-primary-five;
+    }
+
+    .overlay-header {
+      position: absolute;
+    }
+
+    .button-overlay-close {
+      right: 22px;
+    }
+
+    .button-search {
+      @include icon-tcp-search();
+      position: absolute;
+      z-index: 1;
+      top: 20px;
+      left: 10px;
+
+      &:before {
+        font-size: 27px;
+      }
+    }
+
+    input {
+      @include font-global-regular();
+      padding: 15px 14px 13px 50px;
+      margin: 0;
+      background: $color-primary-five;
+      @include box-shadow(inset 0 0 0 1px $color-primary-five);
+      height: 64px;
+
+      &:focus {
+        @include box-shadow(inset 0 0 0 1px $color-primary-five);
+      }
+    }
+
+    .display-search-suggested-keywords-items-list {
+      background: $color-primary-five;
+      border: 0px;
+
+      &.item-list-common {
+        max-height: none;
+      }
+    }
+  }
+}

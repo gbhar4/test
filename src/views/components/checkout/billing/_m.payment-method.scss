@@ -1,0 +1,166 @@
+/**
+* Payment Method
+**/
+
+@import "compass/css3/transform";
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.payment-method-container {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+/* Payment Method Section */
+.checkout-review-payment-method {
+  width: 50%;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  .title-payment-method {
+    @include navigation-level-2-featured();
+    display: block;
+    margin-bottom: 10px;
+
+    strong {
+      @include description-secondary-text();
+      color: $color-primary-three;
+    }
+  }
+
+  .card-info-figure-and-title {
+    font-size: 0;
+    vertical-align: middle;
+  }
+
+  .card-info-figure {
+    width: 45px;
+    margin-right: 15px;
+    vertical-align: middle;
+    position: relative;
+    bottom: 2px;
+  }
+
+  + .checkout-review-billing-address {
+    margin-top: 30px;
+  }
+}
+
+/* Cvv Section */
+.express-cvv-container {
+  width: 30%;
+  float: right;
+  position: relative;
+  display: inline-block;
+
+  /* Title of section */
+  .title-cvv {
+    @include navigation-level-2-featured();
+    display: block;
+    position: relative;
+    margin-bottom: -10px;
+  }
+
+  .tooltip-cvv {
+    top: -4px;
+  }
+
+  /* Cvv containing */
+  .express-cvv {
+    padding: 0px;
+  }
+
+  /* Cvv Label */
+  .input-cvv-express-checkout {
+      margin-bottom: 0px;
+
+    input {
+      margin-top: 0px;
+    }
+
+    > span {
+      display: none;
+    }
+  }
+
+  .inline-error-message {
+    white-space: normal;
+    width: calc(100% + 14px);
+  }
+}
+
+/* Is Express Checkout? */
+.checkout-express-container,
+.express {
+  /* Button Edit in Billing section */
+  .checkout-review-billing {
+    .checkout-summary-edit {
+      top: 55px;
+    }
+  }
+
+  .card-info {
+    margin-top: 15px;
+  }
+
+  .checkout-review-payment-method {
+    width: auto;
+  }
+
+  .express-cvv-container {
+    width: calc(100% - 213px);
+    float: none;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    /* Right Line */
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0px;
+      width: 1px;
+      height: 110%;
+      top: -5%;
+      display: inline-block;
+      background-color: $color-primary-one-opacity;
+    }
+
+    + .checkout-review-billing-address {
+      margin-top: 30px;
+    }
+  }
+
+  .checkout-review-billing-address {
+    width: 100%;
+  }
+}
+
+/* Is Billing Section? */
+.checkout-billing-container {
+  .card-container {
+    @extend .checkout-review-payment-method;
+    width: 70%;
+
+    .card-suffix {
+      top: -12px;
+      position: relative;
+      margin-left: 10px;
+    }
+
+    img {
+      width: 40px;
+      position: relative;
+      top: -4px;
+    }
+  }
+
+  .payment-method-title {
+    margin-bottom: 15px;
+  }
+
+  .card-info {
+    margin-top: 15px;
+  }
+}

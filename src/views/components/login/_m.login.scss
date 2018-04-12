@@ -1,0 +1,232 @@
+@import "_mixins.scss";
+
+.back-to-login-button {
+  @include description-primary-text();
+  text-decoration: underline;
+  position: absolute;
+  left: 25px;
+  top: 28px;
+  z-index: 1;
+}
+
+.form-login {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: $color-global-white;
+  z-index: 9;
+  margin-bottom: 20px;
+
+  .login-form-title {
+    @include font-global-medium();
+  }
+
+  .login-form-subtitle {
+    @include description-primary-text($color-primary-one);
+
+    b {
+      @include font-global-black();
+    }
+  }
+
+  form {
+    padding: 20px 0px 0px;
+  }
+
+  .message {
+    position: relative;
+
+    p, a {
+      @include description-primary-text();
+      @include font-global-medium();
+      padding-top: 2px;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .input-email {
+    margin-bottom: 20px;
+  }
+
+  .label-checkbox {
+    margin-top: 29px;
+    margin-left: 2px;
+
+    input[type="checkbox"] + .input-subtitle {
+      @include notification-secondary-text(); // utilizada en Zeplin
+      letter-spacing: 0.3px;
+      margin-top: -3px;
+      padding-bottom: 5px;
+    }
+  }
+
+  .login-remember + .login-button {
+    margin-top: 10px;
+  }
+
+  .link-forgot {
+    @include notification-primary-text($color-primary-three);
+    float: right;
+    margin-top: 8px;
+    text-decoration: underline;
+  }
+
+  .login-button {
+    margin-top: 24px;
+    line-height: 55px;
+  }
+
+  .reset-password-text {
+    @include notification-secondary-text();
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+
+    button {
+      @include description-primary-text();
+      @include font-global-medium();
+      text-decoration: underline;
+    }
+  }
+
+  .new-account {
+    margin-top: 25px;
+    padding-top: 25px;
+    position: relative;
+
+    > span {
+      text-align: center;
+      display: block;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    &:before {
+      content: '';
+      height: 1px;
+      background: #f1f1f1; // plese re check this line, the exa background should not be here
+      width: calc(86vw);
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @media (min-width: 800px) { // FIXME: Why are we need it?
+        height: 2px;
+        width: 450px;
+        left: -65px;
+      }
+    }
+  }
+
+  .create-account-cart {
+    @include notification-primary-text($color-primary-three);
+    text-align: center;
+    margin-top: 16px;
+    margin-left: 28px;
+    color: $color-primary-three;
+
+    a {
+      color: $color-primary-three;
+    }
+  }
+
+  // mensaje de tooltip
+  .tooltip-container {
+    left: calc(100% - 260px);
+    width: 260px;
+    text-align: left;
+
+    &:before {
+      left: 93%;
+    }
+
+    &:after {
+      left: 97%;
+    }
+  }
+
+  .parent-notification {
+    @include description-primary-text();
+    @include font-global-black();
+    margin: 10px 0px;
+  }
+
+  .remembered-logout {
+    margin-top: 10px;
+    position: inherit;
+
+    button {
+      text-transform: none;
+    }
+  }
+}
+
+.login-banner {
+  padding: 17px 25px;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.overlay-login,
+.overlay-wishlist-login {
+  .login-banner {
+    padding: 0px;
+  }
+}
+
+.overlay-login-cart {
+  form {
+    padding: 5px 35px 0px 31px;
+  }
+}
+
+/* Centered overlay of Login, Reset Password and My Place Rewards Member */
+.overlay-login-and-reset-form {
+  .form-login {
+    .label-checkbox {
+      margin-top: 12px;
+
+      .input-subtitle {
+        top: 3px;
+      }
+    }
+
+    .link-forgot {
+      line-height: normal;
+      margin-top: 6px;
+      margin-bottom: 14px;
+    }
+
+    .login-button {
+      margin-bottom: 25px;
+    }
+
+    .button-create-account {
+      text-decoration: underline;
+      margin: 0px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .continue-guest {
+    margin-bottom: 25px;
+    display: inline-block;
+  }
+
+  .new-account {
+    padding: 0px;
+    margin: 0px;
+    @include description-primary-text();
+    border-top: 0px;
+
+    &:before {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+/**
+* PDP - Custom Information (Desktop)
+**/
+
+@import "_m.custom-information.scss";
+
+.product-details-container {
+  .ropis-section-container,
+  .bopis-section-container {
+    padding-bottom: 0px;
+    border-bottom: 0px;
+  }
+  .store-name {
+    text-transform: capitalize;
+  }
+}

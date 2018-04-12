@@ -1,0 +1,73 @@
+/**
+* PDP - Product description (Desktop)
+**/
+
+@import "_m.product-description.scss";
+
+.product-description-list {
+  padding: 31px 90px;
+  margin-bottom: 30px;
+  background: $color-primary-five;
+  border-top: solid 1px $color-primary-one-opacity;
+  border-bottom: solid 1px $color-primary-one-opacity;
+  position: relative;
+
+  .title-product-description {
+    @include font-global-black();
+    margin-bottom: 10px;
+  }
+
+  .introduction-text {
+    margin-bottom: 0px;
+  }
+
+  .description-item {
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    &:before {
+      width: 5px;
+      height: 5px;
+      left: 11px;
+      top: 6px;
+    }
+  }
+
+  .button-show-more {
+    display: block;
+    position: relative;
+    outline: 0px;
+    margin-top: 12px;
+    @include heading-level-4();
+    @include font-global-regular();
+    text-decoration: underline;
+
+    &:after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      position: relative;
+      display: inline-block;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      @include transform(rotate(-45deg));
+      left: 12px;
+      top: -2px;
+    }
+  }
+
+  .button-show-less {
+    @extend .button-show-more;
+
+    &:after {
+      border: 0px;
+      border-top: 2px solid black;
+      border-right: 2px solid black;
+      top: 2px;
+    }
+  }
+
+  .claim-message {
+    margin-bottom: 0px;
+  }
+}

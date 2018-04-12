@@ -1,0 +1,50 @@
+/**
+* Image Details Modal (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.overlay-image-details {
+  .color-detail-container {
+    margin-bottom: 30px;
+  }
+
+  .preview-and-slider-section-container {
+    position: relative;
+  }
+
+  .modal-title {
+    text-transform: capitalize;
+  }
+}
+
+.react-overlay .overlay-container {
+  &.overlay-simple-image-details {
+    padding: 65px 27px;
+
+    .image-zoom {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .active-zoom-in {
+      &.image-zoom {
+        margin: 0px -27px;
+        width: calc(100% + 54px);
+      }
+
+      img {
+        display: block;
+        position: relative;
+        left: 50%;
+        @include transform(translateX(-50%));
+        width: 150%;
+      }
+    }
+  }
+}

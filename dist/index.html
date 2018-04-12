@@ -1,0 +1,30 @@
+<!-- ONLY USED IN STATIC TESTING -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="/client/css/base-styles.min.css" />
+    <title>The Childrens Place</title>
+  </head>
+  <body>
+    <div id="tcp"></div>
+    <script>
+      (function(){
+        var css = document.createElement("link");
+        css.rel='stylesheet';
+
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          css.href='/client/css/m-page-checkout.min.css';
+          window.LOCAL_DEV_IS_MOBILE = true;
+        } else {
+          css.href='/client/css/d-page-checkout.min.css';
+          window.LOCAL_DEV_IS_MOBILE = false;
+        }
+        document.body.appendChild(css);
+      })()
+    </script>
+    <script type="text/javascript" src="/client/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+/**
+* Modal Confirmation Cart
+**/
+
+@import "_mixins.scss";
+@import "compass/css3/transition";
+@import "_variables.scss";
+
+/* All Confirmation Modals */
+.overlay-confirmation {
+  .modal-header {
+    .modal-subtitle {
+      @include heading-level-4();
+      @include font-global-medium();
+    }
+  }
+
+  .overlay-button-container {
+    margin-top: 20px;
+  }
+
+  .button-cancel {
+    @include button-secondary();
+  }
+
+  .button-confirm {
+    @include button-primary();
+    margin-top: 20px;
+  }
+
+  /* All Confirmation Modals: content */
+  .container-confirmation {
+    padding: 55px 0px 25px;
+  }
+}
+
+/*
+ * Cart Page
+ */
+.message-cart-alert-container {
+  .message-cart-alert {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+/*
+ * Payment Section
+ */
+.payment-method-confirm-card-delete {
+  .modal-only-title {
+    text-align: left;
+  }
+
+  /* Ending in... */
+  .card-info {
+    @include heading-level-4();
+
+    img {
+      width: 45.7px;
+      height: 28.2px;
+      vertical-align: middle;
+    }
+  }
+
+  .ending-numbers {
+    margin-left: 14px;
+  }
+
+  /* Expiration date of credit card */
+  .expires-message {
+    @include description-primary-text();
+    margin-left: 60px;
+    display: block;
+  }
+
+  .address-container {
+    display: inline-block;
+    margin-left: 60px;
+    width: calc(100% - 60px);
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}

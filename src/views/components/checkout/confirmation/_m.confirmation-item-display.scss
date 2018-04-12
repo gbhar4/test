@@ -1,0 +1,50 @@
+/**
+* Confirmation Item Display (Mobile)
+**/
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.confirmation-item-container {
+  display: block;
+  margin: 0 auto;
+}
+
+.confirmation-item {
+  @include body-primary-text();
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  padding: 0px 15px;
+
+  &:after {
+    content: '';
+    width: 1px;
+    height: 32px;
+    right: 0;
+    top: 50%;
+    position: absolute;
+    @include transform(translateY(-50%));
+    background: $color-primary-one;
+    display: inline-block;
+  }
+
+  &:last-of-type {
+    &:after {
+      display: none;
+    }
+  }
+
+  /* Order number y Order date */
+  strong {
+    @include subheading-tertiary-text();
+    text-transform: none;
+    display: block;
+  }
+
+  /* Número de orden de compra */
+  > a {
+    color: $color-primary-one;
+    text-decoration: underline;
+  }
+}

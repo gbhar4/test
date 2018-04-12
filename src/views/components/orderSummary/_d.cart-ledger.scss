@@ -1,0 +1,17 @@
+@import "_mixins.scss";
+
+.container-buttom-mybag {
+  .order-summary-overlay {
+    background-color: $color-primary-five;
+    text-align: center;
+    padding: 22px 0 22px;
+
+    .subtotal {
+      @include subheading-secondary-text();
+    }
+    .savings {
+      @include notification-secondary-text();
+    }
+
+  }
+}

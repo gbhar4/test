@@ -1,0 +1,268 @@
+@import "compass/css3/transform";
+@import "_mixins.scss";
+@import "_variables.scss";
+/*
+  * Notification Mobile
+*/
+
+.notification {
+	height: 60px;
+	display: block;
+	position: relative;
+}
+
+/* bopis // ship to home notification */
+.notification-ship-to-home {
+	text-align: center;
+	background-color: $color-primary-one;
+	padding: 20px 15px 15px;
+	margin-left: -15px;
+	width: calc(100% + 30px);
+	height: auto;
+
+	.order-status {
+		p {
+			@include notification-primary-text();
+			color: $color-primary-five;
+
+			a {
+				margin-left: 10px;
+			}
+
+			span {
+				float: right;
+			}
+		}
+
+		span {
+			//float: right;
+			width: 100%;
+			margin-top: 4px;
+			@include font-global-regular();
+			@include description-secondary-text($color: $color-primary-four);
+
+			&.date-order {
+				float: left;
+			}
+		}
+
+		a {
+			@include description-secondary-text($color: $color-primary-four);
+      text-decoration: underline;
+      line-height: 18px;
+      display: block;
+		}
+	}
+
+  .close-notification {
+    @include common-button-exit-modal();
+    width: 17px;
+    height: 17px;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    font-size: 0;
+
+    /* Icon X */
+    &:after {
+      background: $color-global-white;
+      top: 1px;
+      height: 10px;
+    }
+
+    &:before {
+      background: $color-global-white;
+      width: 10px;
+    }
+  }
+}
+
+.notification-text {
+	padding: 0 15px;
+	position: absolute;
+	vertical-align: middle;
+	display: block;
+	width: 100%;
+	top: 50%;
+	@include transform(translateY(-50%));
+
+	button {
+		@include notification-secondary-text($color: $color-primary-one);
+		@include font-global-black();
+		text-transform: capitalize;
+		text-decoration: underline;
+	}
+}
+
+.notification-text,
+.notification {
+  /* Icono de borrar "X" */
+	.button-close {
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		right: 15px;
+		top: 50%;
+		@include transform(translateY(-50%));
+
+		@include icon-global-plus($color-primary-one);
+		&:before,
+		&:after {
+			@include transform(rotate(-45deg));
+		}
+
+		&:before {
+			width: 12px;
+			height: 2px;
+			top: 5px;
+		}
+
+		&:after {
+			width: 2px;
+			height: 12px;
+			top: -2px;
+		}
+	}
+}
+
+.notification-primary {
+	background: $color-global-white;
+	@include notification-secondary-text($color-primary-one);
+	@include font-global-black();
+}
+
+.notification-secondary {
+	background-color: $color-primary-one;
+	@include notification-secondary-text($color-global-white);
+	@include font-global-black();
+
+	.button-close {
+		@include icon-global-plus($color-global-white);
+	}
+}
+
+/* Notificación inline */
+.notification-inline {
+	width: 100%;
+	display: inline-block;
+	@include notification-secondary-text($color-primary-two);
+
+	button, a {
+		@include notification-secondary-text($color-primary-two);
+		text-decoration: underline;
+	}
+}
+
+/* Contenido de la notificación */
+.notification-text {
+	text-align: center;
+	padding: 0 15px;
+	position: absolute;
+	vertical-align: middle;
+	display: block;
+	width: 100%;
+	top: 50%;
+	@include transform(translateY(-50%));
+
+  p {
+		padding: 0px 35px 0 20px;
+    margin-bottom: 10px;
+	}
+}
+
+/* Tipo de notificación Inline: Unavailable */
+.notification-unavailable p {
+	background-color: $color-primary-four;
+	display: inline;
+}
+
+/*****************
+ * Error box
+*****************/
+
+// FIXME: .error-box is repeated everywhere. there should be a single declaration based of style guidelines
+.error-box {
+	@include notification-secondary-text($color-alert-two);
+	border: 1px solid $color-alert-two;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	padding: 14px 30px;
+	position: relative;
+	margin-bottom: 20px;
+
+	.error-icon {
+		font-size: 0px;
+		display: inline-block;
+		width: auto;
+		position: absolute;
+		top: -12px;
+		left: calc(50% - 11px);
+		background: $color-global-white;
+		padding: 3px;
+
+		@include icon-tcp-error();
+		&:before {
+			font-size: 15px;
+		}
+	}
+
+	button,
+	a {
+		color: $color-alert-two;
+		text-decoration: underline;
+	}
+}
+
+.success-box {
+	@include notification-secondary-text($color-alert-three);
+	border: 1px solid $color-alert-three;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	padding: 14px 30px;
+	position: relative;
+	margin-bottom: 20px;
+
+	.success-icon {
+		font-size: 0px;
+		display: inline-block;
+		width: auto;
+		left: calc(50% - 11px);
+		padding: 3px;
+		top: -12px;
+		position: absolute;
+		background: $color-global-white;
+
+		@include icon-tcp-success();
+		&:before {
+			font-size: 15px;
+		}
+	}
+
+	button,
+	a {
+		color: $color-alert-three;
+		text-decoration: underline;
+	}
+
+	&.inline-success-message {
+		@include input-common-error-message($color-alert-three);
+		margin: 0px;
+    padding: 0px;
+    border: 0px;
+		text-align: left;
+		margin-top: 8px;
+		letter-spacing: 0.25px;
+    line-height: 18px;
+
+		.success-icon {
+			font-size: 0px;
+			position: relative;
+			left: 0px;
+			padding: 0px;
+			top: auto;
+			margin-right: 7px;
+		}
+	}
+}

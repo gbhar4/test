@@ -1,0 +1,63 @@
+/*
+** Footer Desktop for Legacy support
+* this file (and all references to it) should be removed after R5, once all FE code is on react.
+*/
+@import "./_mixins.scss";
+@import "_variables";
+
+@media screen and (min-width: 1400px) {
+  .footer-global {
+    width: 100%;
+    max-width: 1395px;
+    clear: both;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1399px) {
+  .footer-global {
+    min-width: 970px;
+    max-width: 970px;
+    width: 970px;
+    padding: 0 10px;
+    clear: both;
+
+    .footer-navigation .list-navigation .container-navigation img {
+      width: 140px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-global,
+  .footer-global-ca {
+    min-width: 748px;
+    max-width: 748px;
+    padding: 0;
+    clear: both;
+
+    .footer-navigation .list-navigation:nth-of-type(1),
+    .footer-navigation .list-navigation:nth-of-type(2),
+    .footer-navigation .list-navigation:nth-of-type(3),
+    .footer-navigation .list-navigation:nth-of-type(4),
+    .footer-navigation .list-navigation:nth-of-type(5),
+    .sign-in-to-newsletter {
+      width: 33%;
+      margin: 0;
+      float: none;
+      vertical-align: top;
+      padding-bottom: 20px;
+    }
+
+    .sign-in-to-newsletter {
+      input[type="text"] + .button-quaternary,
+      .button-submit-newsletter {
+        @include button-quaternary(secondary);
+        display: block;
+        width: 100%;
+        position: relative;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}

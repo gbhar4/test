@@ -1,0 +1,22 @@
+/**
+** Social Networks
+*/
+
+@import "compass/functions";
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "./_d.country-selector.scss";
+
+.social-networks {
+     .title-social-networks {
+          display: inline-block;
+     }
+}
+
+/* Social Networks */
+.icon-twitter,
+.icon-fcbk,
+.icon-pinterest,
+.icon-instagram {
+     margin-left: 20px;
+}

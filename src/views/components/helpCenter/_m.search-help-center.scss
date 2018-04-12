@@ -1,0 +1,16 @@
+// ** Search Help Center
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.search-help-center {
+  position: relative;
+}
+
+// Boton para el input serach help center
+.button-search {
+  position: absolute;
+  z-index: 99;
+  right: 15px;
+  top: 17px;
+  @include icon-tcp-search();
+}

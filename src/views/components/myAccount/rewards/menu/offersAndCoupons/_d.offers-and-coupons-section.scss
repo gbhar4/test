@@ -1,0 +1,17 @@
+/**
+* Offers And Coupons Section (Desktop)
+**/
+
+@import "_m.offers-and-coupons-section.scss";
+
+.offers-and-coupons-section {
+  .uncondense-list-coupons {
+    padding: 0px;
+    margin: 30px -20px 15px;
+  }
+
+  .welcome-message-text {
+    text-align: left;
+    padding: 20px 0px 25% 0px;
+  }
+}

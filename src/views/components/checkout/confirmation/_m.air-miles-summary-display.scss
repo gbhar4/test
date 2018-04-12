@@ -1,0 +1,53 @@
+/**
+* Air Miles Summary Display (Mobile)
+**/
+
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "compass/css3/border-radius";
+
+.airmiles-thanks-container {
+  width: calc(100% + 32px);
+  margin: 0px -16px;
+  text-align: center;
+  padding: 20px 16px 30px;
+  background-color: $color-global-white;
+  margin-bottom: 30px;
+
+  h1 {
+    text-transform: none;
+  }
+}
+
+/* Delete this class after getting the airmiles logo */
+.logo-airmiles-fpo {
+  background: $color-primary-three;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  @include border-radius(50%);
+
+  img {
+    display: none;
+  }
+}
+
+.airmiles-logo-container {
+  margin: 10px auto 20px;
+  width: 50px;
+  height: 50px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.airmiles-thanks-note {
+  @include body-primary-text();
+  margin: 15px auto 29px;
+  text-transform: none;
+
+  > strong {
+    display: block;
+  }
+}

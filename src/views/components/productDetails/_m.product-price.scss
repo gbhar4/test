@@ -1,0 +1,69 @@
+/**
+* PDP - Product Price (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/flexbox";
+
+.outfiting-section-container,
+.product-details-container {
+  /* Product Price */
+  .product-price-container {
+    border-top: solid 1px $color-primary-one-opacity;
+    border-bottom: solid 1px $color-primary-one-opacity;
+    padding: 10px 0px 6px;
+    margin-top: 10px;
+
+    .number-item {
+      float: right;
+      position: relative;
+      top: 4px;
+      @include heading-level-4();
+      @include font-global-regular();
+      color: $color-primary-two;
+    }
+  }
+
+  .actual-price {
+    @include heading-level-2();
+    vertical-align: middle;
+    /* Color requested in ticket DT-27673  #990000 */
+    color: $color-actual-price;
+  }
+
+  .original-price {
+    @include heading-level-4();
+    @include font-global-regular();
+    color: $color-primary-two;
+    vertical-align: middle;
+    margin-left: 25px;
+  }
+}
+
+.outfiting-section-container {
+  .product-price-container {
+    border: 0px;
+    padding-top: 0px;
+    margin-top: 20px;
+    width: calc(100% - 45px);
+    float: left;
+    @include display-flex;
+    @include flex-direction(column-reverse);
+
+    .number-item {
+      display: none;
+    }
+  }
+
+  .actual-price {
+    display: block;
+    padding: 0px;
+  }
+
+  .original-price {
+    display: block;
+    margin: 0px;
+    @include notification-primary-text($color-primary-two);
+  }
+}

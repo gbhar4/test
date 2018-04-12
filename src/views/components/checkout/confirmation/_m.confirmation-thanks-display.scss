@@ -1,0 +1,51 @@
+/**
+* Confirmation Thanks Display (Mobile)
+**/
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/* Componente de Thanks que contiene Numero y Fecha de Orden */
+.confirmation-thanks {
+  background-color: $color-global-white;
+  position: relative;
+  text-align: center;
+  padding: 16px 16px 21px;
+  width: calc(100% + 32px);
+  margin: 0px -16px;
+  border: 0;
+  margin-bottom: 6px;
+
+  /* Título del componente Thanks */
+  h1 {
+    text-transform: none;
+  }
+
+  h3 {
+    text-transform: none;
+  }
+}
+
+.pending-notification {
+  padding-bottom: 10px;
+}
+
+.confirmation-title {
+  .pending-notification {
+    margin: 20px 0px;
+  }
+}
+
+.confirmation-email {
+  @include body-primary-text();
+  margin: 15px auto 29px;
+  text-transform: none;
+
+  > strong {
+    display: block;
+
+    &.mixed-order-message {
+      display: inline-block;
+    }
+  }
+}

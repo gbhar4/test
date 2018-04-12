@@ -1,0 +1,68 @@
+/**
+* Place Cash Spot (Mobile and Desktop)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.place-cash-spot-container {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  padding: 20px 0px;
+  // NOTE: set the margin where necessary.
+
+  img {
+    max-width: 80px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .place-cash-message {
+    text-align: center;
+    position: relative;
+    @include font-global-regular();
+
+    strong {
+      @include font-global-black();
+    }
+
+    .button-tooltip-container {
+      position: relative;
+
+      /* Reset Styles */
+      .arrow-direction-right {
+        top: calc(100% - 130px);
+      }
+
+      /* Reset Styles */
+      .tooltip-container {
+        &:after,
+        &:before {
+          left: auto;
+        }
+      }
+    }
+
+    /* Reset Styles */
+    .tooltip-content > div {
+      display: none;
+    }
+  }
+}
+
+// Is confirmation's page?
+.confirmation-section,
+.confirmation {
+  .place-cash-spot-container {
+    display: block;
+    padding: 16px 16px 21px;
+    width: calc(100% + 32px);
+    margin: 20px -16px 0px;
+  }
+
+  .place-cash-spot-container + .confirmation-banner {
+    margin-top: 20px;
+  }
+}

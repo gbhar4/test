@@ -1,0 +1,45 @@
+/**
+* Order Summary (Desktop)
+**/
+
+@import "./_m.order-summary.scss";
+@import "compass/css3/box-shadow";
+
+.checkout-summary {
+  margin-top: 30px;
+}
+
+.button-submit-order-review {
+  width: 100%;
+  position: relative;
+  margin-top: 32px;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: $color-primary-four;
+    position: absolute;
+    top: -30px;
+    left: 0;
+  }
+}
+
+.coupon-code-container {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+.checkout-order-summary {
+  .button-container {
+    .error-box {
+      margin-bottom: 20px;
+    }
+  }
+
+  .checkout-button-container {
+    display: block;
+  }
+}

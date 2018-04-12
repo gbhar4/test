@@ -1,0 +1,77 @@
+/**
+*  Actual Order Display (Desktop)
+**/
+
+@import "_m.actual-order-display.scss";
+
+.actual-order-display {
+  border-bottom: 1px solid $color-primary-one-opacity;
+  width: 100%;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  position: relative;
+
+  .title-description,
+  .address-title {
+    margin-bottom: 10px;
+  }
+
+  .order-display,
+  .shipping-section,
+  .billing-section {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0px;
+    @include subheading-secondary-text($color-primary-two);
+    text-transform: none;
+    padding-right: 15px;
+
+    &.ledger-section {
+      padding-right: 0px;
+    }
+  }
+
+  .title-description,
+  .address-title,
+  .title-gift-card-applied {
+    width: 100%;
+    display: block;
+    padding-right: 0px;
+    text-align: left;
+
+    &.title-order-summary {
+      margin-top: 0px;
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+    }
+  }
+
+  /* Reset styles */
+  .checkout-review-payment-method {
+    width: 100%;
+  }
+
+  .shipping-section .pickup-person-container,
+  .checkout-review-shipping-address,
+  .giftcard-list-display,
+  .order-number,
+  .card-info,
+  .store-info-data,
+  .billing-section .address-container {
+    width: 100%;
+    float: none;
+  }
+
+  .order-date {
+    width: 100%;
+    float: none;
+    height: 54px;
+  }
+
+  .order-summary {
+    width: 100%;
+  }
+}

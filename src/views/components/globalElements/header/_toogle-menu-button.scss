@@ -1,0 +1,43 @@
+/**
+* ToggleMenuButton (Desktop)
+**/
+
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "compass/functions";
+@import "compass/css3/transform";
+
+.toggle-menu-button {
+  font-size: 0px;
+  min-width: 85px;
+  background: $color-global-white;
+  z-index: 2;
+
+  &:focus {
+    @include notification-primary-text($color-primary-one);
+  }
+}
+
+.sub-menu-visible {
+  .toggle-menu-button {
+    @include notification-primary-text($color-primary-one);
+
+    + .sub-menu {
+      margin-top: 26px;
+    }
+  }
+}
+
+.navigation-level-one {
+  .toggle-menu-button {
+    position: absolute;
+    left: calc(50% - 65px);
+    bottom: -3px;
+
+    &:focus {
+      + .sub-menu {
+        margin-top: 26px;
+      }
+    }
+  }
+}

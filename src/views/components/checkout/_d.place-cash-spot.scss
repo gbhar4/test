@@ -1,0 +1,30 @@
+/**
+* Place Cash Spot (Desktop)
+**/
+
+@import "./_m.place-cash-spot.scss";
+
+// Is confirmation's page?
+.confirmation-section,
+.confirmation {
+  .place-cash-spot-container {
+    margin: 0 auto;
+    padding: 20px 120px 25px;
+    width: 100%;
+    background: $color-global-white;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0px;
+    }
+
+    .place-cash-message {
+      width: calc(100% - 80px);
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 20px;
+      text-align: left;
+    }
+  }
+}

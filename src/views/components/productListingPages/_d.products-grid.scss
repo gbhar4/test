@@ -1,0 +1,79 @@
+/**
+* Product Grid (Desktop)
+**/
+
+@import "_m.products-grid.scss";
+@import "../common/item/_d.item-default.scss";
+@import "compass/css3/transform";
+
+.plp-section-container {
+  &.search-from-navigation {
+    .grid-container {
+    // .products-grid-container {
+      width: calc(100% - 206px);
+    }
+  }
+}
+
+.grid-container,
+.products-grid-container {
+  width: 100%;
+  position: relative;
+}
+
+/* Wishlist, Bag and Pickup Icon (buttons) */
+/* Only for DESKTOP version */
+.item-button-container {
+  float: right;
+}
+
+.products-listing-grid {
+  .icon-wishlist {
+    span {
+      display: none;
+    }
+
+    &.wishlist-icon-active {
+      border-radius: 50%;
+      background-color: $color-primary-three;
+      @include icon-tcp-heart();
+
+      &:before {
+        font-size: 20px;
+        padding-left: 1.5px;
+        padding-top: 1.5px;
+        color: $color-global-white;
+      }
+    }
+  }
+}
+
+// ** Color chips ** //
+.color-chips-container {
+  .content-colors {
+    button {
+      @media screen and (max-width: 1200px) {
+        margin: 0 2px;
+      }
+    }
+  }
+}
+
+.outfit-container,
+.products-listing-grid {
+  .item-title {
+    border-bottom: 1px solid $color-primary-three;
+    width: calc(100% - 25px);
+    padding: 0px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.products-listing-grid-without-white-space {
+  &.products-listing-grid {
+    .product-grid-block-container {
+      display: inline;
+    }
+  }
+}

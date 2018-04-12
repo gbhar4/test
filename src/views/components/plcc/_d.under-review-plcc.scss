@@ -1,0 +1,41 @@
+/*
+* Under Review Plcc Desktop
+*/
+
+@import '_m.under-review-plcc.scss';
+
+.under-review-container {
+  width: 780px;
+  display: block;
+  margin: 0 auto;
+
+  .title-under-review {
+    @include heading-level-2();
+    margin-top: 6px;
+  }
+
+  .button-checkout {
+    width: 350px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .button-continue-shopping {
+    @extend .button-checkout;
+
+    &.button-with-bag {
+      width: 350px;
+    }
+  }
+}
+
+/* Modal */
+.overlay-form-plcc {
+  .under-review-container {
+    min-height: auto;
+
+    .title-under-review {
+      margin-top: 0px;
+    }
+  }
+}

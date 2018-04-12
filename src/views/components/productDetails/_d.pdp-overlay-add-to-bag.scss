@@ -1,0 +1,95 @@
+/**
+* PDP - Overlay Add To Bag (Desktop)
+**/
+
+@import "_m.pdp-overlay-add-to-bag.scss";
+@import "compass/css3/transform";
+
+.overlay {
+  background: $color-global-white;
+
+  /* Reset styles only for this modal */
+  &.overlay-add-to-bag {
+    max-height: 200px;
+    top: 163px;
+
+    .overlay-container {
+      padding: 30px 16px;
+    }
+
+    .modal-header {
+      .button-modal-close {
+        top: 26px;
+      }
+    }
+  }
+}
+
+.overlay-add-to-bag {
+  position: relative;
+
+  .title-checkout-modal {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20%;
+  }
+
+  /* Reset Styles */
+  .item-shopping-cart {
+    display: inline-block;
+    border-bottom: 0px;
+    vertical-align: middle;
+    width: 40%;
+    margin: 0px;
+
+    .container-description-view {
+      span {
+        display: inline-block;
+        padding-right: 10px;
+        margin-right: 10px;
+        position: relative;
+        @include font-global-regular();
+
+        &:after {
+          content: '';
+          width: 1px;
+          height: 10px;
+          background: $color-primary-two;
+          display: inline-block;
+          position: absolute;
+          right: 0px;
+          top: 3px;
+        }
+
+        &:last-of-type {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .button-container {
+    display: inline-block;
+    float: right;
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    margin-bottom: 0px;
+    padding-right: 20px;
+  }
+
+  .button-view-bag,
+  .button-checkout {
+    width: 48%;
+    padding: 0 50px;
+  }
+
+  .button-checkout {
+    margin-top: 0px;
+    margin-left: 20px;
+  }
+}

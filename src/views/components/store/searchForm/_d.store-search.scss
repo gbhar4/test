@@ -1,0 +1,55 @@
+/**
+* Desktop Store Locator Search Form
+**/
+
+@import "_m.store-search.scss";
+
+/** Form of search stores */
+.search-store-form {
+  padding-bottom: 0px;
+
+  .search-store-input {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  &:after {
+    display: none;
+  }
+
+  /** Button search */
+  .button-search {
+    @include icon-tcp-search();
+    z-index: 99;
+    top: 11px;
+    right: 10px;
+    position: absolute;
+  }
+
+  /** span container tetxt "show only" */
+  .show-only {
+    @include subheading-primary-text($color-primary-three);
+    text-transform: capitalize;
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  /** The options of the filters */
+  .in-store-pick-up-option,
+  .outlet-stores-option {
+    display: inline-block;
+    margin-right: 20px;
+
+    span {
+      @include notification-primary-text();
+    }
+
+    &:after {
+      content: none;
+    }
+  }
+
+  .content-filters {
+    display: inline-block;
+  }
+}

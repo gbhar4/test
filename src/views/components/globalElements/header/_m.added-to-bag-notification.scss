@@ -1,0 +1,157 @@
+/**
+* Added to Bag Notification (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/box-shadow";
+
+.overlay-add-to-bag-confirmation-container {
+  &.react-overlay {
+    background: transparent;
+    width: auto;
+    height: auto;
+
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.overlay-add-to-bag-confirmation-content {
+  &.overlay-container {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    background: $color-global-white;
+    left: 0px;
+    top: 81px;
+    padding: 15px;
+    padding-top: 0px;
+    z-index: 20;
+    min-height: auto;
+  }
+
+  /* NOTE: hacky trick to support shadow only at bottom of div */
+  @include box-bottom-shadow();
+
+  .title-checkout-modal {
+    padding: 15px 0px;
+    border-bottom: solid 1px $color-primary-one-opacity;
+    margin-bottom: 15px;
+  }
+
+  .button-close {
+    @include common-button-exit-modal();
+    font-size: 0px;
+    width: 27px;
+    height: 31px;
+    right: 15px;
+    top: 8px;
+
+    &:before {
+      width: 24px;
+      height: 2px;
+      top: 14px;
+      background-color: $color-primary-one;
+    }
+
+    &:after {
+      width: 2px;
+      height: 24px;
+      left: -1px;
+      top: 1px;
+      background-color: $color-primary-one;
+    }
+  }
+
+  .container-image {
+    width: 45px;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+
+    img  {
+      width: 100%;
+    }
+  }
+
+  .product-description {
+    width: calc(100% - 45px);
+    padding-left: 23px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .container-description-view {
+    span {
+      display: inline-block;
+      padding-right: 10px;
+      margin-right: 10px;
+      position: relative;
+      @include font-global-regular();
+
+      &:after {
+        content: '';
+        width: 1px;
+        height: 10px;
+        background: $color-primary-two;
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 3px;
+      }
+
+      &:last-of-type {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .button-container {
+    display: inline-block;
+    position: static;
+    width: 100%;
+
+    .mobile-payment-buttons {
+      display: flex;
+      justify-content: space-between;
+
+      .paypal-button-container {
+        display: inline-block;
+        text-align: center;
+        margin-top: 20px;
+        width: 49%;
+
+        .paypal-button-mobile {
+          padding: 8px;
+          width: 100%;
+          border: 1px solid #aaa;
+        }
+        .ghost-error-container {
+          width: 204%;
+          margin-top: 25px;
+        }
+      }
+      button.button-checkout {
+        width: 49%;
+      }
+    }
+  }
+
+  .button-view-bag {
+    @include button-secondary();
+  }
+
+  .button-checkout {
+    @include button-primary();
+    margin-top: 20px;
+  }
+}
+
+.add-to-bag-confirmation {
+  @extend .overlay-add-to-bag-confirmation-content;
+}

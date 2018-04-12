@@ -1,0 +1,33 @@
+/**
+* Confirmation Thanks Display (Desktop)
+**/
+
+@import "./_m.confirmation-thanks-display.scss";
+
+/* Componente de Thanks que contiene Numero y Fecha de Orden */
+.confirmation-thanks {
+  padding: 0px 110px 0px;
+  width: 100%;
+  margin: 0px;
+  border: 0;
+
+  /* Título del componente Thanks */
+  h1 {
+    margin: 0px 0 16px;
+    text-transform: none;
+  }
+}
+
+.confirmation-title {
+  padding-top: 88px;
+}
+
+.pending-notification {
+  padding-bottom: 10px;
+}
+
+/* Subheading de Thanks */
+.confirmation-email {
+  width: 100%;
+  margin: 8px auto 31px;
+}

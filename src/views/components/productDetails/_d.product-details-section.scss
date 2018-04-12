@@ -1,0 +1,40 @@
+/**
+* PDP - Product Details Section (Desktop)
+**/
+
+@import "_m.product-details-section.scss";
+@import "compass/css3/transform";
+@import "compass/css3/flexbox";
+
+.outfiting-container,
+.giftcard-images-content,
+.product-details-container {
+
+  /* Breadcrum */
+  .breadcrum-container {
+    margin-top: -23px;
+    border: 0px;
+
+    + .product-details-header-promo-text-area {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.product-details-content {
+  @include display-flex;
+}
+
+/* NOTE: PDP spot - name: pdp_header_promo_text_area */
+.product-details-header-promo-text-area {
+  // margin: 15px 0px;
+}
+
+.custom-imformation-container {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  border: solid 1px $color-primary-four;
+  border-left: 0px;
+  padding: 20px;
+}

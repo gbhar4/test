@@ -1,0 +1,54 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Track Order */
+.track-order {
+  .container-popup {
+    padding: 0;
+
+    label {
+      margin-bottom: 25px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .subheading-trackorder {
+    margin: 5px 0 25px;
+  }
+
+  .container-shortcuts {
+    text-align: center;
+
+    p {
+      @include description-primary-text($color: $color-primary-one);
+      line-height: 18px;
+
+      &.international-order {
+        margin-top: 31px;
+      }
+    }
+  }
+
+  a,
+  a.need-help {
+    text-decoration: underline;
+    color: $color-primary-one;
+  }
+
+  .need-help {
+    @include description-primary-text($color: $color-primary-one);
+    margin-top: 13px;
+    display: block;
+  }
+
+  .button-submit {
+    margin: 41px 0 36px;
+  }
+
+  .button-login {
+    text-decoration: underline;
+  }
+}

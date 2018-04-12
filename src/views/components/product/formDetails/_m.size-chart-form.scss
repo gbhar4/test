@@ -1,0 +1,19 @@
+/**
+* PDP - Size Chart (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Size Chart Component */
+.size-chart-form-container {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.button-size-chart {
+  @include description-primary-text();
+  text-transform: none;
+  text-decoration: underline;
+}

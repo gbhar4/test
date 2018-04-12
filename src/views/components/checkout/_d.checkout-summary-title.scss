@@ -1,0 +1,27 @@
+/**
+* Checkout Summary Title Desktop
+**/
+
+@import "./_m.checkout-summary-title.scss";
+
+.checkout-summary-title {
+  margin-bottom: 20px;
+}
+
+.checkout-summary-edit {
+  margin-left: 25px;
+  float: none;
+  top: auto;
+  position: initial;
+}
+
+/* Is Express Checkout? */
+.express {
+  .checkout-summary-title {
+    position: initial;
+  }
+
+  .checkout-summary-edit {
+    position: initial;
+  }
+}

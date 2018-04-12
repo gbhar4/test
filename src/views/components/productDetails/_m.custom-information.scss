@@ -1,0 +1,53 @@
+/**
+* PDP - Product Price (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.product-details-container {
+  .ropis-section-container,
+  .bopis-section-container {
+    border-top: solid 1px $color-primary-one-opacity;
+    border-bottom: solid 1px $color-primary-one-opacity;
+    margin-top: 6px;
+    padding: 13px 0 26px;
+    display: inline-block;
+    width: 100%;
+
+    .title-ropis-section,
+    .title-bopis-section {
+      @include heading-level-2();
+      @include font-global-medium();
+    }
+
+    .subtitle-ropis-section,
+    .subtitle-bopis-section {
+      @include heading-level-4();
+      @include font-global-regular();
+      display: inline-block;
+    }
+
+    .button-change-store {
+      @include description-primary-text();
+      text-transform: none;
+      text-decoration: underline;
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .button-reserve,
+    .button-find-in-store {
+      margin-top: 20px;
+      @include button-secondary();
+    }
+    .store-name {
+      text-transform: capitalize;
+    }
+
+    .product-details-bopis-promo {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}

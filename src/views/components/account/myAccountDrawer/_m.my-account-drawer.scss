@@ -1,0 +1,101 @@
+@import "_mixins";
+@import "_variables";
+@import "compass/utilities/general/clearfix";
+
+.react-overlay {
+  .overlay-my-account {
+    width: 89%;
+
+    .overlay-container {
+      padding: 0;
+    }
+
+    .overlay-header {
+      padding: 0px 27px;
+
+      button {
+        display: none;
+      }
+    }
+  }
+}
+
+.overlay-my-account {
+  .my-account {
+    padding: 0;
+    background: $color-global-white;
+  }
+
+  /* Header para My Account */
+  .my-account-options {
+    .view {
+      display: none;
+    }
+  }
+
+  .returnMenu {
+    display: inline-block;
+
+    a {
+      @include heading-level-4();
+    }
+  }
+
+  /* Button / Link Logout */
+  .log-out {
+    @include subheading-primary-text($color-primary-three);
+    margin-top: 0;
+    margin-right: 0;
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    text-decoration: underline;
+  }
+
+  .order-status {
+    padding: 14px 31px 19px;
+    background: $color-primary-one;
+    width: 100%;
+    overflow: hidden;
+
+    p {
+      @include body-primary-text($color-global-white);
+      display: block;
+    }
+
+    a {
+      @include font-global-heavy();
+      color: $color-primary-four;
+      text-decoration: underline;
+      margin-right: 5px;
+    }
+
+    h3 {
+      color: $color-primary-three;
+    }
+
+    span {
+      @include description-secondary-text($color-primary-four);
+      display: block;
+      float: left;
+      margin-top: 2px;
+      display: inline-block;
+      padding-top: 14px;
+    }
+  }
+
+  .available-rewards {
+    background: $color-global-white;
+    border: none;
+  }
+
+  .menu-my-account-banner {
+    width: 100%;
+    padding: 0px 31px;
+    margin-top: 10px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}

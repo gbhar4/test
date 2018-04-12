@@ -1,0 +1,130 @@
+/**
+* Coupon
+**/
+
+/*** Coupons Component ***/
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.apply-coupons {
+	position: relative;
+	border-bottom: 1px solid $color-primary-four;
+	padding: 30px 0 10px 0;
+	margin: 5px 0 27px 0;
+
+	h4 {
+		@include subheading-primary-text();
+		color: $color-primary-two;
+
+		button {
+			@include icon-tcp-tooltip();
+			color: $color-primary-one;
+			float: right;
+			width: 15px;
+			height: 15px;
+			font-size: 17px;
+		}
+	}
+
+	fieldset {
+		padding:0;
+		border: none;
+
+		label {
+			@include description-primary-text();
+			margin: 0;
+		}
+
+		input {
+			box-shadow: inset 0 0 0 1px $color-primary-five;
+		}
+	}
+
+	p {
+		@include description-primary-text();
+		margin: 15px 0 14px;
+
+		a {
+			border-bottom: 2px solid;
+			padding-bottom: 2px;
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+
+	.list-coupons {
+		margin: 26px 0 0 0;
+
+		li {
+			position: relative;
+
+			label {
+				margin: 0;
+			}
+
+			.input-subtitle,
+			strong {
+				@include body-primary-text();
+				color: $color-primary-two;
+				position: absolute;
+				top: 5px;
+			}
+
+			.input-subtitle {
+				left: 0;
+			}
+
+			strong {
+				right: 0;
+			}
+		}
+	}
+
+	&.apply-rewards {
+		padding-bottom: 0;
+		margin-bottom: 27px;
+
+		.accordion {
+			border: 0;
+			margin:13px 0 4px 0;
+			padding: 20px 0 5px 0;
+
+			.accordion-toggle {
+				right: 0;
+			}
+		}
+	}
+
+	.my-rewards {
+		h4 {
+			position: relative;
+		}
+
+		&.accordion-expanded {
+			margin-top: 25px;
+			margin-bottom: 14px;
+
+			.accordion-element {
+				margin-top: 0;
+
+				.list-coupons {
+					margin-top:7px;
+
+					li {
+						margin-bottom: 25px;
+
+						&:last-of-type {
+							margin-bottom: 18px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.shopping-cart-container {
+	.apply-coupons {
+		padding-top: 0;
+	}
+}

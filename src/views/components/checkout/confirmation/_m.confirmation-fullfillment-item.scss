@@ -1,0 +1,46 @@
+/**
+* Confirmation Fullfillment Center Item Display (Mobile)
+**/
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.confirmation-fullfillmentlist-item {
+  margin: 0px auto 20px;
+}
+
+.confirmation-fullfillment-type {
+  @include notification-primary-text($color-primary-two);
+  @include font-global-heavy();
+  line-height: 28px;
+}
+
+.confirmation-fullfillment-details {
+  margin-bottom: 10px;
+}
+
+.confirmation-fullfillment-store {
+  margin-bottom: 10px;
+  color: $color-primary-one;
+}
+
+.tooltip-store {
+  margin-left: 10px;
+  position: relative;
+
+  .tooltip-container {
+    :before {
+      left: 49%;
+    }
+  }
+
+  h3 {
+    @include navigation-level-1();
+    margin-bottom: 10px;
+  }
+
+  p {
+    @include notification-primary-text();
+    text-transform: none;
+  }
+}

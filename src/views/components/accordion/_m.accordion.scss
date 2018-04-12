@@ -1,0 +1,104 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/transform";
+
+/* styles for box accordion group */
+.accordion-group {
+  margin-top: 30px;
+
+  + .order-sumary {
+    border-top: 0;
+  }
+}
+
+/* style for unexpanded Accordion */
+.accordion {
+  background: $color-global-white;
+  cursor: pointer;
+  text-align: left;
+  // padding: 20px;
+  @include border-color-full-width();
+  border-top: 0;
+  border-bottom: 7px solid $color-primary-five;
+  width: calc(100% + 30px);
+
+  .accordion-button-toggle {
+    padding: 20px;
+    position: relative;
+  }
+
+  // /* Título del accordion */
+  // > h4 {
+  //   position: relative;
+  // }
+
+  /* button toggle "+" or "-" for Accordion (expanded and unexpanded) */
+  .accordion-toggle {
+    position: absolute;
+    right: 5px;
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    @include transform(translateY(-50%));
+
+    &:before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      position: relative;
+      display: inline-block;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      @include transform(rotate(-45deg));
+      left: 3px;
+    }
+  }
+
+  /* styles for elements accordion box content (unexpanded state) */
+  .accordion-element {
+    padding: 0px 20px;
+    display: none;
+  }
+
+  &.accordion-expanded {
+    .accordion-element {
+      display: block;
+    }
+  }
+}
+
+/*  style for expanded Accordion  */
+.accordion-expanded {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+
+  .accordion-toggle {
+    &:before {
+      border: 0px;
+      border-top: 2px solid $color-primary-one;
+      border-right: 2px solid $color-primary-one;
+    }
+  }
+
+  /* styles for elements accordion box content (expanded state) */
+  .accordion-element {
+    display: block;
+    margin-top: 20px;
+
+    // /* content box for Checkbox List only in accordion (Example: Gift Wrapping Option) */
+    // .checkbox-combo {
+    //   label {
+    //     margin: 0 0 23px;
+    //     /* the margin bottom should be 25px, but the real view is different with that size */
+    //   }
+    // }
+    // /* .checkbox-combo end */
+  }
+
+  // /* complementary note for actual section */
+  // p.note {
+  //   margin: 20px 0;
+  //   @include font-global-regular();
+  //   @include body-secondary-text();
+  // }
+}

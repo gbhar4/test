@@ -1,0 +1,126 @@
+/**
+* Modal Login (Login In To My Account)
+**/
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/* container elements in login section */
+.login {
+	fieldset {
+		padding: 16px 0;
+		border-bottom: none;
+	}
+
+	label {
+		margin-bottom: 13px; //please put the condition at desktop css file >> //desactive for forgot password in desktop
+	}
+
+	/* buttons (login, continue as guest) */
+	.group-button {
+		margin-top: 37px;
+	}
+
+	.error-box {
+		margin-top: 30px;
+		margin-bottom: 10px;
+	}
+}
+
+/* Heading text (* My Place Rewards Members *)*/
+.heading-login {
+	margin-top: 12px;
+
+	h3 {
+		line-height: 40px;
+		text-align: center;
+	}
+
+	.sub-heading {
+		@include subheading-primary-text();
+
+		font-weight: normal;
+		letter-spacing: .2px;
+
+		text-transform: none;
+		text-align: center;
+		width: 82%;
+		margin: -3px auto 26px auto;
+	}
+}
+
+/* Text of forgot password */
+.forgot {
+	@include description-primary-text();
+
+	a {
+		text-decoration: underline;
+	}
+}
+
+/* text of footer (Don't have an account)*/
+.note-footer {
+	text-align: center;
+	margin-top: 23px;
+
+	.link-register {
+		@include description-primary-text();
+	}
+}
+
+/* Alert text over page */
+.error-box {
+	@include notification-secondary-text();
+	color: $color-alert-two;
+	border: 1px solid $color-alert-two;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	padding: 14px 3px;
+	position: relative;
+	margin-bottom: 6px;
+	@include icon-tcp-error();
+
+	// FIXME: .error-box is repeated everywhere. there should be a single declaration based of style guidelines
+	button {
+		color: inherit;
+		text-decoration: underline;
+	}
+
+	&:before {
+		font-size: 15px;
+		position: absolute;
+		top: -12px;
+		left: calc(50% - 11px);
+		background: $color-global-white;
+		padding: 3px;
+	}
+}
+
+.success-box {
+	@include notification-secondary-text();
+	color: $color-alert-three;
+	border: 1px solid $color-alert-three;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	padding: 14px 3px;
+	position: relative;
+	margin-bottom: 6px;
+	@include icon-tcp-success();
+
+	&:before {
+		font-size: 15px;
+		position: absolute;
+		top: -12px;
+		left: calc(50% - 11px);
+		background: $color-global-white;
+		padding: 3px;
+	}
+}
+
+.label-error {
+	.inline-error-message {
+		text-transform: none;
+		font-size: 14px;
+	}
+}

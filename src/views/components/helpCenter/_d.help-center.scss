@@ -1,0 +1,82 @@
+/**
+* Help Center Section (Desktop)
+**/
+
+@import "_m.help-center.scss";
+
+.help-center-section {
+  /* Help Center's Navigation - Content Slot */
+  .content-slot-list-container {
+    padding: 15px;
+  }
+}
+
+.help-center-header {
+  padding: 20px 0px;
+  position: relative;
+}
+
+.title-help-center {
+  margin-bottom: 30px;
+}
+
+.container-info-topic {
+  width: 70%;
+  vertical-align: top;
+  display: none;
+
+  &.container-info-topic-active {
+    display: inline-block;
+  }
+}
+
+.container-info-topic {
+  .accordion {
+    border-bottom: solid 1px $color-primary-four;
+    padding: 0px;
+
+    h4 {
+      @include heading-level-3();
+      padding: 30px 0px;
+      padding-right: 40px;
+      position: relative;
+    }
+
+    .accordion-toggle {
+      @include more-and-less-icon();
+
+      &:before {
+        border: none;
+        transform: rotate(0);
+        left: inherit;
+        top: 5px;
+        width: 14px;
+      }
+
+      &::after {
+        visibility: visible;
+        height: 14px;
+      }
+    }
+
+    .accordion-element {
+      display: none;
+      width: 100%;
+      margin-top: 0px;
+      margin-bottom: 20px;
+      padding: 0px;
+    }
+  }
+
+  .accordion-expanded {
+    .accordion-element {
+      display: inline-block;
+    }
+
+    .accordion-toggle {
+      &::after {
+        visibility: hidden;
+      }
+    }
+  }
+}

@@ -1,0 +1,367 @@
+/*
+* Plcc Form Mobile
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/box-shadow";
+
+.plcc-form {
+  &.border-form {
+    background: transparent url("/wcsstore/static/images/pt-blue-stripes.png") repeat 0 0;
+    padding: 10px;
+  }
+
+  > div {
+    background-color: $color-global-white;
+    padding: 10px;
+  }
+
+  .plcc-terms-notice-container {
+    padding-top: 13px;
+  }
+
+  .plcc-agreements-container {
+    + .inline-error-message {
+      margin-top: 20px;
+    }
+  }
+
+  .title-first {
+    @include font-global-regular();
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .message,
+  .list-apply,
+  .title-list-apply {
+    @include description-primary-text();
+
+    b {
+      @include font-global-black();
+      color: $color-accent-four;
+    }
+  }
+
+  .message {
+    margin-bottom: 10px;
+  }
+
+  .title-list-apply {
+    @include font-global-black();
+  }
+
+  .list-apply {
+    padding-left: 10px;
+    list-style-type: initial; // need change? 15/05
+    margin-bottom: 25px;
+
+    li {
+      margin-bottom: 4px;
+    }
+  }
+
+  .message-review {
+    margin-bottom: 40px;
+
+    /* Inline Pre-screen code (Input) NOTE: enhancement DT-27573 */
+    + .inline-pre-screen-code-container {
+      margin-top: -20px;
+    }
+
+    + .input-pre-screen-code-container {
+      margin-top: -20px;
+    }
+  }
+
+  /* Inline Pre-screen code (Input) NOTE: enhancement DT-27573 */
+  .inline-pre-screen-code-container {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px $color-primary-one-opacity;
+
+    button,
+    a {
+      @include description-primary-text();
+      text-decoration: underline;
+    }
+  }
+
+  .input-pre-screen-code-container {
+    .input-title {
+      &:empty {
+    		display: none;
+
+    		+ input[type=text],
+    		+ input[type=email],
+    		+ input[type=tel],
+    		+ input[type=number],
+    		+ input[type=password] {
+    			margin-top: 0px;
+    		}
+    	}
+    }
+  }
+
+  .input-pre-screen {
+    + .label-error {
+      margin-top: -20px;
+      margin-bottom: 20px;
+
+      button,
+      a {
+        @include notification-primary-text($color-alert-two);
+        text-decoration: underline;
+      }
+    }
+
+    + .error-box {
+      margin-bottom: 20px;
+
+      button,
+      a {
+        @include notification-secondary-text($color-alert-two);
+        @include font-global-medium();
+        text-decoration: underline;
+      }
+    }
+
+    + .label-error {
+      padding-left: 24px;
+
+      .inline-error-message {
+        text-indent: -12px;
+      }
+    }
+
+  }
+
+  /* Inline Pre-screen code (Input) NOTE: enhancement DT-27573 */
+  .pre-screen-code-message {
+    margin-top: 8px;
+
+    + .inline-error-message {
+      margin-top: 5px;
+    }
+  }
+
+  /* Form */
+
+  .input-common {
+    margin-bottom: 20px;
+    position: relative;
+    vertical-align: top;
+  }
+
+  .label-error {
+    .inline-error-message {
+      white-space: normal;
+    }
+  }
+
+  .input-first-name {
+    width: calc(80% - 8px);
+    display: inline-block;
+    margin-top: 0px;
+    margin-right: 16px;
+  }
+
+  .input-m-i {
+    width: calc(20% - 8px);
+    position: relative;
+    right: 0;
+  }
+
+  .input-phone-number{
+    margin-bottom: 0;
+  }
+
+  .message-required {
+    @include label-common-text();
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+  }
+
+  /* Text */
+  .message-information {
+    @include label-common-text();
+    padding: 20px 15px;
+    margin: 0 -10px 20px;
+    background-color: $color-primary-five;
+
+    strong {
+      @include font-global-black();
+    }
+
+    a {
+      color: $color-primary-one;
+    }
+  }
+
+  .title-data-birth {
+    @include label-common-text();
+    margin-top: 10px;
+    display: block;
+  }
+
+  .input-phone-number {
+    margin-bottom: 20px;
+  }
+
+  .title-electronic {
+    margin-bottom: 10px;
+  }
+
+  /*Form Personal Info */
+  .select-day,
+  .select-month,
+  .select-year {
+    margin-right: 10px;
+    vertical-align: top;
+  }
+
+  .select-year {
+    width: 30%;
+  }
+
+  .select-month {
+    width: 30%;
+  }
+
+  .select-day {
+    width: 30%;
+  }
+
+  .input-digits-ssn {
+    width: 80%;
+
+    .inline-error-message {
+      white-space: normal;
+      overflow: hidden;
+    }
+  }
+
+  .checkbox-term-and-conditions {
+    margin-bottom: 11px;
+
+    .input-checkbox-title {
+      @include description-secondary-text(); // font-size: 11px, we don't have mixin with font-size: 10px
+    }
+
+    /* @FIXME: DT-2276 Validar este cambio*/
+    .input-checkbox-icon-unchecked,
+    .input-checkbox-icon-checked {
+      &:before {
+        @include box-shadow(inset 0 0 0 2px $color-primary-one);
+      }
+    }
+  }
+
+  .button-disagree {
+    @include body-secondary-text($color-primary-two);
+    text-decoration: underline;
+    margin: 22px auto;
+    display: block;
+  }
+
+  .financial-tems-container {
+    margin: 8px -10px 17px;
+    width: calc(100% + 20px);
+    height: 750px;
+    border: 1px solid $color-primary-three;
+    -webkit-overflow-scrolling: touch;
+  	overflow-y: scroll;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .button-print {
+    text-decoration: underline;
+  }
+
+  .open-an-account-button {
+    @include button-secondary();
+    background-color: $wic-button-color;
+    width: calc(100% - 30px);
+    margin-left: 16px;
+  }
+
+  .open-an-account-spinner-container {
+    @extend .open-an-account-button;
+  }
+
+  .open-an-account-spinner {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .label-error.select-month .inline-error-message {
+    white-space: nowrap;
+  }
+
+  .label-error + .select-day .selection,
+  .label-error + .select-day + .select-year .selection {
+    border-bottom: 2px solid $color-alert-one;
+  }
+}
+
+/* This section deals with setting the view on click of the print button */
+@media print {
+  html, body {
+    width: 800px;
+  }
+
+  .ReactModal__Body--open {
+    overflow: visible;
+    position: static;
+    height: auto;
+    width: auto;
+  }
+
+  #tcp[aria-hidden=true] {
+    display: none;
+  }
+
+  .desktop-tabed-drawers-container {
+    display: none;
+  }
+
+  .overlay-form-plcc {
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    position: static;
+
+    .overlay-container {
+      padding: 0;
+      max-height: none;
+      height: 12600px;
+      overflow: visible !important;
+      position: relative;
+      top: 0;
+      left: 0;
+      @include transform(translate(0, 0));
+    }
+  }
+
+  .financial-tems-container {
+    height: 20000px !important; // This controles how many pages print
+    width: 796px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    background-color: $color-global-white;
+  }
+
+  #sk_tcp_mobileFooter {
+    display: none;
+  }
+}

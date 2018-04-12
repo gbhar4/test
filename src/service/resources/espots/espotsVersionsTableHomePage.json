@@ -1,0 +1,37 @@
+{
+  "email_signup": {
+    "nameOnServer": "EmailSignupModal",
+    "guest": "1",
+    "registered": "1"
+  },
+  "limited_promotion": {
+      "nameOnServer": "DTHomepageEspot1",
+      "guest": "1",
+      "registered": "1"
+  },
+  "promo_spot_1": {
+      "nameOnServer": "DTHomepageEspot2",
+      "guest": "1",
+      "registered": "1"
+  },
+  "promo_spot_2": {
+      "nameOnServer": "DTHomepageEspot3",
+      "guest": "1",
+      "registered": "1"
+  },
+  "social_shopping": {
+      "nameOnServer": "DTHomepageEspot4",
+      "guest": "1",
+      "registered": "1"
+  },
+  "registered_popular_products": {
+      "nameOnServer": "DTHomepageEspot5",
+      "guest": "1",
+      "registered": "2"
+  },
+  "promo_spot_3": {
+      "nameOnServer": "DTHomepageEspot6",
+      "guest": "1",
+      "registered": "1"
+  }
+}

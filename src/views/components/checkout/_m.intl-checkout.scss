@@ -1,0 +1,11 @@
+.borders-free-container {
+  position: relative;
+
+  #__frame {
+    position: absolute;
+  }
+
+  iframe {
+    width: 100%;
+  }
+}

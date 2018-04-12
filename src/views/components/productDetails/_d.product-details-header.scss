@@ -1,0 +1,18 @@
+/**
+* PDP - Product Details Header (Desktop)
+**/
+
+@import "_m.product-details-header.scss";
+@import "compass/css3/flexbox";
+
+.product-details-header-container {
+  margin-top: 0px;
+
+  .information-container {
+    padding-right: 20px;
+  }
+}
+
+.breadcrum-container + .go-back-container {
+  margin-top: 0px;
+}

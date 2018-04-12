@@ -1,0 +1,41 @@
+/**
+* Adress Book Select Modal - Edit - Add
+**/
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.button-back {
+  @include description-primary-text();
+  //text-decoration: underline;
+  position: absolute;
+  left: 17px;
+  top: 25px;
+  z-index: 2;
+
+  @include icon-tcp-chevron();
+  &:before {
+    @include transform(rotate(-90deg));
+    text-align: left;
+    font-size: 14px;
+    width: 26px;
+  }
+}
+
+.address-book-select-overlay {
+  .button-modal-close {
+    display: none;
+  } // NOTE: is correct using display: none under buttons?
+
+  .fieldset-address-editable {
+    margin-top: 20px;
+  }
+
+  .address-container {
+    padding: 0px;
+  }
+
+  .modal-header {
+    text-align: center;
+  }
+}

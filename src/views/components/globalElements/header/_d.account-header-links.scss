@@ -1,0 +1,55 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/utilities/general/clearfix";
+
+.welcome {
+  float: right;
+  line-height: normal;
+  height: 39px;
+  display: inline-block;
+  left: 5px;
+  position: relative;
+  margin-right: 10px;
+  height: 39px;
+
+  > div {
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+
+  > div,
+  .welcome-message {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 14px;
+
+    &.my-place-rewards {
+      margin-right: 10px;
+    }
+
+    &.wishlist-header {
+      margin-right: 14px;
+    }
+
+    /* When the name is long, we are using "..." to hide part of it */
+    .welcome-name {
+      max-width: 145px;
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: middle;
+      margin-right: 5px;
+      text-align: right;
+    }
+  }
+
+  .button-wishlist {
+    margin-right: -4px;
+    margin-left: 15px;
+    color: $color-primary-one;
+  }
+}

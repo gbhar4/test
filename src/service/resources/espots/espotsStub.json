@@ -1,0 +1,28 @@
+{
+  "result": {
+    "header-global-banner": "",
+    "header-global-message": "<p>Free Shipping on every order, <a>See Details</a></p>",
+    "header-global-logo": "<a class='logo' href='#'><img src='images/tcp-logo.svg' alt='The Children's Place'></a>",
+    "header-global-navigation-girl-image": "",
+    "header-global-navigation-toddle-girl-image": "",
+    "header-global-navigation-boy-image": "",
+    "header-global-navigation-toddle-boy-image": "",
+    "header-global-navigation-baby-image": "",
+    "header-global-navigation-shoes-image": "",
+    "header-global-navigation-accesories-image": "",
+    "header-global-navigation-girl-bottom": "",
+    "header-global-navigation-toddle-girl-bottom": "",
+    "header-global-navigation-boy-bottom": "",
+    "header-global-navigation-toddle-boy-bottom": "",
+    "header-global-navigation-baby-bottom": "",
+    "header-global-navigation-shoes-bottom": "",
+    "header-global-navigation-accesories-bottom": "",
+    "empty-cart-banner": "<img className=fpo-banner-rewards-slot' src='/wcsstore/static/images/fpo-rewards-banner.jpg' />",
+    "login-banner": "",
+    "plcc-more-info-modal": "",
+    "order-summary-banner": "",
+    "login-banner": "<img alt='imagen FPO' src='/wcsstore/static/images/fpo-rewards-2.png' />",
+    "create-account-banner": "",
+    "order-summary-espot": ""
+  }
+}

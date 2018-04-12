@@ -1,0 +1,17 @@
+@import "_m.sticky-notification.scss";
+
+.generic-sticky-notification {
+  margin-top: -31px;
+  padding: 0px;
+
+  &.notification-fixed {
+    margin: 0px;
+    top: 130px;
+  }
+
+  .notification-inline {
+    width: auto;
+    padding: 13px 43px;
+    @include notification-secondary-text($color-primary-two);
+  }
+}

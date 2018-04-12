@@ -1,0 +1,89 @@
+/**
+** Footer Navigation
+**/
+@import "compass/utilities/general/clearfix";
+
+/* Contenedor de la Navegación del footer e input My Place Rewards (email) */
+.navigation-and-newsletter {
+  padding: 0px 15px;
+  display: block;
+  width: auto;
+  height: auto;
+  position: relative;
+
+  @include pie-clearfix();
+
+  .title-item-category {
+    @include font-global-black();
+    display: block;
+    padding: 14px 0px;
+  }
+}
+
+/* Navigation from footer (all the links) */
+.footer-navigation {
+  display: block;
+
+  .list-navigation {
+    display: block;
+    position: relative;
+    width: 100%;
+    // padding: 14px 0px;
+    border-bottom: solid 1px $color-primary-four;
+
+    &:last-of-type {
+      border-bottom: 0;
+      margin-bottom: 6px;
+    }
+  }
+
+  /* Contenedor de listado (solo links) de navegación */
+  .container-navigation {
+    display: none;
+  }
+
+  .title-item-category {
+    /* Icono chevron para desplegar Dropdown */
+    @include icon-manual-chevron();
+    &:before,
+    &:after {
+      top: 24px;
+      bottom: auto;
+      right: 8px;
+    }
+
+    &:after {
+      right: 2.5px;
+    }
+
+    /* Cuando el dropdown de la lista de navegación está desplegado, mostrando los links */
+    &.list-navigation-open {
+      /* Icono chevron */
+      &:before {
+        @include transform(rotate(-45deg));
+      }
+
+      /* Icono chevron */
+      &:after {
+        @include transform(rotate(45deg));
+      }
+
+      /* Contenedor de listado (solo links) de navegación */
+      + .container-navigation {
+        display: block;
+      }
+    }
+  }
+
+  /* Items Links de la navegación */
+  .item-navigation-link {
+    @include notification-secondary-text($color-primary-two);
+    margin: 18px 0px 17px;
+    display: block;
+    line-height: normal;
+  }
+
+  .navigation-with-promo-image {
+    position: relative;
+  }
+}

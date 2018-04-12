@@ -1,0 +1,15 @@
+/**
+* My Account Section: Gift Card Balance (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.check-giftcard-balance-container {
+    margin-top: 20px;
+
+  .gift-card-balance {
+    background-color: $color-global-white;
+    padding: 0 35px;
+  }
+}

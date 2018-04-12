@@ -1,0 +1,71 @@
+@import "./_m.my-account-drawer.scss";
+
+.my-account-content-overlay {
+
+  /* Header para My Account */
+  .my-account-options {
+    text-align: center;
+    padding: 11px 0 7px;
+    background-color: $color-primary-five;
+    position: relative;
+    height: auto;
+  }
+
+  .view {
+    @include navigation-level-2-featured();
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  .log-out {
+    @include subheading-primary-text($color-primary-three);
+    text-decoration: underline;
+    margin-top: 0;
+    top: 50%;
+    @include transform(translateY(-50%));
+    right: 30px;
+    position: absolute;
+  }
+
+  .order-status {
+    background: $color-primary-one;
+    padding: 10px 17px 15px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0;
+
+    p {
+      @include body-primary-text($color-global-white);
+      display: block;
+    }
+
+    a {
+      @include font-global-heavy();
+      color: $color-primary-four;
+      text-decoration: underline;
+      margin-right: 5px;
+    }
+
+    h3 {
+      color: $color-primary-three;
+    }
+
+    span {
+      @include description-secondary-text($color-primary-four);
+      //display: block;
+      //float: left;
+      display: inline-block;
+      width: auto;
+      margin-top: 2px;
+      padding-top: 0;
+    }
+  }
+}
+
+.menu-my-account-banner {
+  padding: 0 15px;
+
+  img {
+    width: 100%;
+  }
+}

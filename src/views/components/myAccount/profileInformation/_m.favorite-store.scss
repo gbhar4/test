@@ -1,0 +1,14 @@
+/**
+* Profile Information / Favorite Sotore
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Favorite Store section */
+.favorite-store-container {
+  .message-store {
+    @include notification-primary-text();
+    @include font-global-regular();
+  }
+}

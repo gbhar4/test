@@ -1,0 +1,84 @@
+/**
+* PDP - Product Details Header (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.product-details-header-container {
+  margin-top: 31px;
+
+  .information-container {
+    width: calc(100% - 35px);
+    display: inline-block;
+  }
+
+  .product-link-title {
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .product-title {
+    @include heading-level-2();
+    @include font-global-medium();
+    text-transform: capitalize;
+  }
+
+  /* BV controls this component
+  .ranking-container {
+    margin-top: -2px;
+    overflow: visible;
+    height: 23px;
+    width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background-color: $color-primary-four;
+  }
+  */
+
+  .icons-image {
+    width: calc(100% + 2px);
+    z-index: 1;
+    position: relative;
+    left: -1px;
+    top: -1px;
+    margin-right: 1px;
+  }
+
+  .ranking-bar {
+    background-color: $color-accent-two;
+    left: 0px;
+    top: 2px;
+    height: 18px;
+    position: absolute;
+    display: inline-block;
+  }
+
+  .qty-reviews {
+    @include notification-primary-text()
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+}
+
+.breadcrum-container + .go-back-container {
+  margin-top: 20px;
+}
+
+.giftcard-details-container {
+  > .product-details-header-promo-text-area {
+    margin-top: 0px;
+  }
+}
+
+.product-details-header-promo-text-area {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 100vw;
+
+  img {
+    width: 100%;
+  }
+}

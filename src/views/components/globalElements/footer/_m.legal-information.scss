@@ -1,0 +1,66 @@
+/**
+** Legal Information
+**/
+.copyright-and-legal-information {
+     border-bottom: 0;
+}
+
+/* Legal Information */
+.legal-information {
+     position: relative;
+     display: block;
+
+     /* En Legal Information, imagen logotipo de TCP */
+     .logo-tcp-children-footer {
+          display: none;
+     }
+
+     /* Contenedor de copyright y site map / 3er nivel de footer */
+     .copyright-and-navigation {
+          display: block;
+          width: 100%;
+          left: 0;
+     }
+
+     /* Navegación del Site Map */
+     .copyright-and-navigation {
+          @include notification-secondary-text($color-primary-two);
+     }
+
+     .item-navigation {
+          @include notification-secondary-text($color-primary-two);
+          float: none;
+          position: relative;
+          text-align: left;
+          width: 100%;
+          border-bottom: solid 1px $color-primary-four;
+          border-top: solid 1px $color-primary-four;
+          padding: 10px 15px;
+
+          /* Cada Item de la navegación del Site Map */
+          .item-navigation-link {
+               @include notification-secondary-text($color-primary-two);
+               display: block;
+               padding: 14px 0px;
+          }
+     }
+
+     .item-navigation-link {
+          @include notification-secondary-text($color-primary-two);
+          display: inline-block;
+     }
+
+     /* Texto de Copyright y Slogan */
+     .copyright-information {
+          text-align: center;
+          display: block;
+          width: 100%;
+          padding: 25px 0px;
+
+          /* Texto Copyright */
+          .item-navigation-link {
+               margin-right: 25px;
+          }
+     }
+
+}

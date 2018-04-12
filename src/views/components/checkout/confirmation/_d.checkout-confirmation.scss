@@ -1,0 +1,22 @@
+/**
+* Confirmation Page (Desktop)
+**/
+
+@import "./_m.checkout-confirmation.scss";
+
+/* Confirmation step from Checkout */
+.confirmation-section,
+.confirmation {
+  padding: 42px 36px 10px;
+
+  .checkout-order-summary {
+    display: inline-block;
+    width: 410px;
+    float: right;
+  }
+
+  /* Contenedor de componentes Thanks y Order Summary */
+  .checkout-content {
+    padding: 0px;
+  }
+}

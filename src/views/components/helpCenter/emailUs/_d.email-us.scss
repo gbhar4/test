@@ -1,0 +1,45 @@
+/**
+* Email Us (Desktop)
+**/
+
+@import "_m.email-us.scss";
+
+/* Email Us Header */
+.email-us-header {
+  border-bottom: 2px solid $color-primary-four;
+}
+
+.email-title {
+  padding: 80px 0px;
+}
+
+.email-us-container {
+  .email-notice {
+    padding: 15px 100px 0;
+  }
+
+  .email-us-form {
+    width: 42%;
+    margin: 60px auto 10px;
+
+    .list-container {
+      z-index: 110;
+    }
+  }
+
+  /* Success box */
+  .success-box {
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+
+  /* Error box */
+  .error-box {
+    margin-top: -45px;
+    margin-bottom: 25px;
+
+    &.credit-card-notice {
+      margin-top: 0;
+    }
+  }
+}

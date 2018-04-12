@@ -1,0 +1,219 @@
+@import "_mixins.scss";
+
+.create_account_drawer-container {
+  background: transparent url("/wcsstore/static/images/pt-orange-stripes.png") repeat 0 0;
+  padding: 10px;
+
+  .inline-error-message {
+    white-space: normal;
+  }
+}
+
+.form-create-account {
+  background-color: $color-primary-background;
+  padding: 20px;
+
+  .message {
+    text-align: center;
+
+    p {
+      @include subheading-primary-text();
+      text-transform: none;
+    }
+
+    .second-message-create-account {
+      margin-top: 15px;
+    }
+
+    strong {
+      @include font-global-black();
+    }
+
+    span {
+      color: $color-accent-three;
+      margin: 0 5px;
+    }
+
+    button {
+      text-decoration: underline;
+
+      &.button-click-reset-password{
+        @include subheading-primary-text();
+        text-decoration: underline;
+        text-transform: none;
+      }
+    }
+  }
+
+  .error-box,
+  .success-box {
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+
+  .inputs-create-account {
+    margin-top: 20px;
+  }
+
+  .first-name-input,
+  .email-input,
+  .password-input,
+  .input-zipcode {
+    width: calc(50% - 10px);
+    margin-bottom: 15px;
+    margin-top: 0;
+    vertical-align: top;
+    margin-right: 20px;
+  }
+
+  .last-name-input,
+  .confirm-email-input,
+  .input-phone-number,
+  .confirm-password-input {
+    @extend .first-name-input;
+    margin-right: 0px;
+  }
+
+  .input-with-button {
+    display: inline-block;
+  }
+
+  .login-save-plcc {
+    .input-title {
+      @include description-secondary-text();
+    }
+  }
+
+  .remember-me,
+  .terms-and-conditions {
+    margin: 10px 0;
+  }
+
+  .terms-and-conditions {
+    margin: 25px 0;
+
+    .input-checkbox-title {
+      @include description-secondary-text();
+      float: none;
+    }
+
+    .input-checkbox-icon-unchecked,
+    .input-checkbox-icon-checked {
+      vertical-align: top;
+      margin-top: 5px;
+    }
+
+    a {
+      color: $color-primary-one;
+
+      &:hover {
+        text-decoration: none;
+        border-bottom: none;
+      }
+    }
+  }
+
+  .remember-me {
+    margin-top: 0;
+
+    .input-checkbox-icon-unchecked,
+    .input-checkbox-icon-checked {
+      margin-top: 5px;
+    }
+
+    .input-checkbox-title {
+      @include description-secondary-text();
+      @include font-global-black();
+    }
+
+    a,
+    span {
+      &:hover {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+
+    .input-subtitle {
+      @include description-secondary-text();
+    }
+  }
+
+  .button-create-account {
+    @include button-secondary();
+    width: 68%;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .tooltip-password {
+    .tooltip-container {
+      text-align: left;
+    }
+  }
+}
+
+.create-account-banner {
+  padding: 0 15px;
+  margin-bottom: 20px;
+
+  &:empty {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.react-overlay {
+  &.overlay-login-and-reset-form {
+    .overlay-container {
+      background: transparent url("/wcsstore/static/images/pt-orange-stripes.png") repeat 0 0;
+      padding: 10px;
+    }
+
+    .form-login {
+      overflow-y: auto;
+      max-height: calc(90vh - 20px);
+    }
+
+    .modal-header {
+      .button-modal-close {
+        right: 20px;
+        top: 20px;
+      }
+    }
+
+    .form-create-account {
+      padding-top: 18px;
+      height: 84vh;
+      overflow-y: auto;
+
+      .inline-error-message {
+        white-space: normal;
+      }
+
+      .terms-and-conditions {
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+
+      .remember-me {
+        margin-bottom: 0px;
+      }
+
+      .input-zipcode,
+      .input-phone-number {
+        margin: 0px;
+      }
+    }
+  }
+}
+
+.overlay-login-and-reset-form {
+  .input-country,
+  .input-zipcode {
+    float: right;
+  }
+}

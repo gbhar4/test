@@ -1,0 +1,35 @@
+/**
+** Product PLP Mobile
+**/
+
+.plp-section-container {
+  .item-container {
+    padding: 8px 16px 16px;
+
+    // NOTE: DT-29875
+    &.outfit-container {
+      margin-bottom: 60px;
+    }
+  }
+
+  .item-product-recomendation {
+    width: 100%;
+    height: auto;
+    max-width: none;
+  }
+}
+
+/* ONLY ON SEARCH AND CATEGORY SECTION */
+.products-listing-grid {
+  .item-container {
+    /* NOTE: visually, margin-top should be 37px (from card's top to image's top). Enhancement DT-29755 */
+    .product-image-container {
+      margin-top: 27px;
+    }
+
+    /* NOTE: visually, margin-top should be 37px (from card's top to image's top). Enhancement DT-29755 */
+    .badge-item-container + .product-image-container {
+      margin-top: 6px;
+    }
+  }
+}

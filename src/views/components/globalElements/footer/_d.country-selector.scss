@@ -1,0 +1,22 @@
+/**
+** Country Selector
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Componente que controla el cambio de divisas y lenguaje, primer nivel de footer */
+.country-selector {
+     position: relative;
+     display: inline-block;
+
+     .title-country-selector {
+          display: inline-block;
+          position: relative;
+          top: -2px;
+     }
+
+     .flag-coutry-selector {
+          margin-left: 20px;
+     }
+}

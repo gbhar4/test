@@ -1,0 +1,19 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.overlay-paypal-payment {
+  .modal-header {
+    display: none;
+  }
+
+  iframe {
+    width: 100%;
+    height: 540px;
+    display: block;
+  }
+}
+
+#paypayContainer {
+  height: 0;
+  overflow: hidden;
+}

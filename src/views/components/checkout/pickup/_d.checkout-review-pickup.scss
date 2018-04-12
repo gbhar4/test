@@ -1,0 +1,23 @@
+/**
+* Pickup Review Section (Desktop)
+**/
+
+@import "./_m.checkout-review-pickup.scss";
+
+.checkout-review-pickup {
+  .checkout-review-pickup-person {
+    margin-bottom: 0px;
+  }
+
+  .checkout-review-pickup-alternate {
+    margin-top: 0px;
+  }
+}
+
+/*  Is Pick Up Section? */
+.checkout-pickup-container {
+  .pick-up-alternate-form {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}

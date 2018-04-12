@@ -1,0 +1,50 @@
+@import "compass/css3/transition";
+@import "_mixins.scss";
+@import "_mixins.scss";
+
+.minicart-container {
+  float: right;
+  position: relative;
+  display: inline-block;
+  top: 2px;
+
+  /* bag icon */
+  .button-cart {
+    @include font-global-black();
+    color: $color-primary-one;
+    @include appearance(normal);
+    position: relative;
+    width: 34px;
+    font-size: 10px;
+    /* not mixin for this, individual icon */
+    line-height: 36px;
+    padding-top: 3px;
+    display: inline-block;
+
+    @include icon-tcp-bag();
+    &:before {
+      position: absolute;
+      top: -3px;
+      left: 5px;
+      font-size: 24px;
+      line-height: 42px;
+      /* not mixin for this, individual icon */
+    }
+
+    &.active,
+    &:hover {
+      &:after {
+        content: '';
+        width: calc(100% - 4px);
+        height: 2px;
+        display: inline-block;
+        position: absolute;
+        background: $color-primary-one;
+        left: 2px;
+        bottom: 0px;
+        z-index: 2;
+      }
+    }
+  }
+  /* bag icon + items end */
+}

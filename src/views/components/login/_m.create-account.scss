@@ -1,0 +1,57 @@
+/* create account form in Confirmation section */
+.create-account {
+  @include border-color-full-width();
+  @include body-primary-text();
+  text-align: center;
+  padding: 33px 15px;
+
+  /* form title */
+  h3 {
+    margin-bottom: 14px;
+    text-transform: none;
+  }
+
+  /* explanatory text form */
+  p {
+    @include body-primary-text();
+    width: 90%;
+    margin: 0 auto 45px;
+
+    &.note-footer {
+      @include notification-secondary-text();
+      @include font-global-regular();
+      line-height: 13px;
+      /*the style guide there isn't line height 13px*/
+      margin-bottom: 0;
+      margin-top: 30px;
+    }
+  }
+
+  /* container for input on "create account" section */
+  label {
+    text-align: left;
+    margin-bottom: 28px;
+    width: 100%;
+
+    &.checkbox-terms-and-conditions {
+      margin-top: 6px;
+
+      .input-title {
+        @include input-title();
+        @include notification-primary-text();
+        @include font-global-regular();
+        text-transform: none;
+        width: calc(100% - 23px - 9px - 6px);
+        margin-left: calc(23px + 9px + 6px);
+        margin-top: 6px;
+        letter-spacing: 0.3px;
+      }
+    }
+
+    .link-terms {
+      color: $color-primary-one;
+    }
+  }
+}
+
+@import "_m.modal-login.scss";

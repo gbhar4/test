@@ -1,0 +1,46 @@
+/**
+* Legal Information From Rewards (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/flexbox";
+
+/* Information */
+.rewards-information-container {
+  border-bottom: solid 1px $color-primary-one-opacity;
+  margin-top: 20px;
+
+  /* Reset position to button tooltip */
+  .accordion h4 {
+    position: relative;
+  }
+
+  /* Button tooltip */
+  .button-info,
+  .button-info-wire {
+    position: relative;
+    margin-left: 10px;
+  }
+}
+
+.rewards-information-text {
+  @include body-primary-text();
+  margin: 15px 0px;
+}
+
+.rewards-information-text-title {
+  display: block;
+  @include font-global-black();
+  opacity: .8;
+}
+
+.button-submit-point-claim,
+.button-merge-account-request {
+  @include body-primary-text();
+  text-decoration: underline;
+}
+
+.rewards-questions-list {
+  list-style: disc inside;
+}

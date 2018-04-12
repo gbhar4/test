@@ -1,0 +1,31 @@
+/**
+* My Account Section: Add Gift Card (Desktop)
+**/
+
+@import "_m.add-giftcard.scss";
+
+.add-giftcard-or-merchandise-container {
+  .gift-card-number {
+    width: 48%;
+  }
+
+  .gift-card-pin {
+    width: 48%;
+    margin-left: 4%;
+  }
+
+  .gift-card-balance {
+    width: 38%;
+  }
+
+  .gift-card-save {
+    width: 38%;
+    // margin-left: 4%;
+  }
+
+  .button-cancel {
+    width: 38%;
+    margin-left: 0;
+    // padding-left: 22%;
+  }
+}

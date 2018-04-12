@@ -1,0 +1,22 @@
+/**
+* Checkout: Save and Cancel Buttons (Desktop)
+**/
+
+@import "./_m.save-and-cancel-buttons.scss";
+@import "compass/css3/flexbox";
+
+.checkout-button-container {
+  @include display-flex;
+  @include flex-direction(row-reverse);
+
+  .button-save-address {
+    @include button-primary();
+    width: auto;
+    padding: 0px 25px;
+    margin-left: 15px;
+  }
+
+  .button-cancel-address {
+    @include body-secondary-text();
+  }
+}

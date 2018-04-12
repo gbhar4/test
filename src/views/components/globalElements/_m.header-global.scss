@@ -1,0 +1,204 @@
+/**
+ * Header Mobile
+ **/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Header */
+.menu-expanded #tcp {
+	position: relative;
+	left: 90%;
+	width: 10%;
+	overflow-x: hidden;
+
+	> div {
+		width: 1000%;
+	}
+}
+
+.no-overflow {
+	overflow: hidden;
+}
+
+.header-global {
+	@include header(auto);
+	border-bottom: 1px solid $border-color-global-elements;
+  padding: 20px 13px 15px 15px;
+
+	/* styles only for checkout pages */
+	&.header-checkout {
+    border: none;
+		background: $color-global-white;
+    position: relative;
+    padding: 0;
+
+    /* Logo en Checkout Header */
+    .logo {
+      margin-top: 20px;
+      margin-left: 35px;
+    }
+	}
+
+	/* image logo container (link) */
+	.logo {
+    margin-left: 59px;
+    display: inline-block;
+		position: relative;
+
+		/* image logo */
+	    img {
+			display: block;
+			height: 38px;
+		}
+	}
+
+	/* menu button in mobile version */
+	.button-menu {
+		border: 0;
+		background: none;
+		@include appearance(normal);
+		
+		position: absolute;
+		left: 15px;
+		height: 40px;
+
+		&:focus {
+			outline: 0;
+		}
+
+		div {
+			width: 24px;
+			display: inline-block;
+    	position: relative;
+
+			/* lines of menu button */
+			hr {
+				width: 100%;
+				height: 2px;
+				display: block;
+				background: $color-primary-one;
+				border: 0;
+				margin-bottom: 7px;
+				transition: all 0.5s;
+
+				&:last-of-type {
+					margin: 0;
+				}
+			}
+		}
+	}/* button menu mobile */
+
+	.button-menu-open {
+		transition: all 0.5s;
+		
+		hr {
+			position: absolute;
+			transition: all 0.5s;
+			width: 30px !important;
+		}
+
+		hr:nth-child(1) {
+			transform: rotate(-0.13turn);
+		}
+
+		hr:nth-child(3) {
+			transform: rotate(0.13turn);
+		}
+
+		hr:nth-child(2) {
+			display: none;
+		}
+	}
+
+	/* Typeahead's container */
+	.typeahead-section {
+		float: right;
+		display: inline-block;
+	}
+
+  /* Typeahead button */
+  .typeahead-icon {
+    @include icon-tcp-search();
+    position: relative;
+    height: 40px;
+    margin-right: 21px;
+		font-size: 0px;
+
+		&:after {
+	    left: -6px;
+		}
+  }
+
+	/* close checkout button */
+	.button-exit-checkout {
+    margin-left: 16px;
+    margin-top: 33px;
+    vertical-align: top;
+		color: $color-primary-one;
+		text-decoration: none;
+    display: inline-block;
+
+		@include icon-tcp-chevron();
+    &:before {
+      font-size: 9px;
+      @include transform(rotate(-90deg));
+      position: relative;
+    }
+	}
+
+	.menu-inactive {
+    display: none;
+	}
+}
+
+.header-sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1111;
+  background: $color-global-white;
+  width: 100%;
+
+	.menu-expanded & {
+		left: 90%;
+		z-index: 1;
+	}
+}
+
+.header-ghost-element {
+  height: 81px;
+}
+
+.container-checkout {
+  padding: 0px 16px;
+}
+
+.title-checkout {
+  @include body-secondary-text();
+  text-transform: uppercase;
+  text-align: center;
+  line-height: normal;
+  background: $color-global-white;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid $color-primary-four;
+}
+
+/*
+ * All Tabs for Account's Links
+ */
+
+.tabed-drawers-login,
+.tabed-drawers-wishlist {
+	.login-banner {
+		max-width: 100vw;
+	}
+}
+
+.tabed-drawers-create-account {
+	.create-account-banner {
+		max-width: 100vw;
+		margin-bottom: 20px;
+	}
+}
+

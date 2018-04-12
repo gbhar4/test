@@ -1,0 +1,46 @@
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+@import "./_variables";
+@import "./_mixins";
+
+* {
+	@include box-sizing(border-box);
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	color: $color-primary-one;
+	@include body-primary-text();
+	line-height: 1.4;
+	letter-spacing: 1;
+}
+
+button {
+	-webkit-appearance: none;
+	border: 0;
+	background: transparent;
+}
+
+.hidden {
+	display: none;
+}
+
+button,
+input[type="submit"],
+a {
+	cursor: pointer;
+	@include border-radius(0px);
+}
+
+.clearfix {
+	clear: both;
+	overflow: auto;
+}
+
+.viewport-container {
+	min-width: 1024px;
+	max-width: 1280px;
+	padding: 0 10px;
+	margin: 0 auto;
+}

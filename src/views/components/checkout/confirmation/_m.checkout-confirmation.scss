@@ -1,0 +1,110 @@
+/**
+* Confirmation
+**/
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.confirmation-section,
+.confirmation {
+  background-color: $color-primary-five;
+  padding: 22px 16px;
+
+  /* Contenedor de componentes Thanks y Order Summary */
+  .checkout-content {
+    margin-bottom: 21px;
+    position: relative;
+  }
+
+  .confirmation-mini-banner,
+  .points-earned,
+  .progress-points {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .mini-espot-confirmation {
+    background: $color-primary-three;
+    display: inline-block;
+    width: 210px;
+    height: 60px;
+  }
+}
+
+/*
+.confirmation-thanks {
+  background: $color-global-white;
+  border: 4px solid $color-primary-five;
+  padding: 50px 0;
+  text-align: center;
+
+  h3 {
+    text-transform: none;
+  }
+
+  p.confirmation-email {
+    @include body-primary-text();
+    width: 175px;
+    margin: 8px auto 35px;
+    text-transform: none;
+  }
+
+  p.confirmation-item {
+    @include body-primary-text();
+    width: 80px;
+    margin-left: 14px;
+    display: inline-block;
+    text-align: center;
+
+    &:last-of-type {
+      border-left: 1px solid $color-primary-one;
+      width: 125px;
+      padding-left: 18px;
+      margin-left: 28px;
+      margin-right: 0;
+    }
+
+    strong {
+      @include subheading-primary-text();
+      color: $color-primary-one;
+    }
+  }
+*/
+  /* Order sumary section ONLY under Confirmation section, in Confirmation page
+  + .order-summary {
+    padding-top: 50px;
+    margin-bottom: 22px;
+ */
+    /* Create account section ONLY under Order Sumary section, in Confirmation page
+    + .create-account {
+      border-bottom: 0;
+      border-top: 10px solid $color-global-white;
+    }
+
+    ol {
+      margin-top: 21px;
+    }
+  }
+}
+*/
+
+/* Banner of confirmation page */
+.confirmation-banner {
+  color: $color-global-white;
+  text-align: center;
+  position: relative;
+  margin-top: 40px;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.confirmation-section,
+.confirmation {
+  .checkout-order-summary {
+    width: calc(100% + 32px);
+    margin: 0px -16px;
+  }
+}

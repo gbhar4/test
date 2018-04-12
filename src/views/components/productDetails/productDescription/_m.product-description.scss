@@ -1,0 +1,46 @@
+/**
+* PDP - Product Description (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/border-radius";
+
+.product-description-list {
+  @include heading-level-4();
+  @include font-global-regular();
+
+  .introduction-text {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .description-item {
+    padding: 7px 0px;
+    padding-left: 35px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      background: $color-primary-one;
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      left: 10px;
+      top: 13px;
+      @include border-radius(50%);
+    }
+  }
+
+  .product-id {
+    @include font-global-black();
+    margin: 20px 0;
+    display: inline-block;
+  }
+
+  .claim-message {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,291 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.rewards-legacy {
+  width: 1047px;
+  margin: 0 auto 60px auto;
+}
+
+.rewards-legacy-intro {
+  padding-top: 25px;
+
+  img {
+    width: 166px;
+    margin-right: 35px;
+    display: block;
+    float: left;
+  }
+
+  .rewards-legacy-intro-text {
+    display: block;
+    width: 74%;
+    float: left;
+    padding-top: 30px
+  }
+
+  p {
+    @include notification-primary-text();
+    padding-bottom: 20px;
+  }
+}
+
+.form-contact-info {
+  h3 {
+    margin-bottom: 35px;
+  }
+
+  label {
+    margin: 0;
+  	display: inline-block;
+  	text-transform: none;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  .input-checkbox input{
+    margin: 0;
+  }
+
+  .inputs-contact-info-block {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+
+    &:first-of-type{
+      margin-right: 40px;
+    }
+  }
+
+  .inputs-contact-info {
+    h2 {
+      margin-bottom: 28px;
+    }
+  }
+
+  .input-first-name,
+  .input-last-name {
+    width: 194px;
+  }
+
+  .input-mi-name {
+    width: 64px;
+    margin: 0 20px;
+  }
+
+  .input-city {
+    width: 208px;
+    float: none;
+  }
+
+  .select-state {
+    width: 120px;
+    float: none;
+    margin: 0 20px;
+    vertical-align: inherit;
+  }
+
+  .input-zip-code {
+    width: 124px;
+    float: none;
+  }
+
+  .inputs-personal-info {
+    padding-top: 0;
+    margin-bottom: 24px;
+
+    > h2 {
+      margin-bottom: 30px;
+    }
+
+    .select-day {
+      width: 81px;
+      margin-right: 10px;
+    }
+
+    .select-month,
+    .select-year {
+      width: 79px;
+      margin-right: 10px;
+    }
+
+    .select-year {
+      margin-right: 41px;
+    }
+
+    .input-social-security {
+      width: 170px;
+      vertical-align: top;
+    }
+
+    select + span.selection {
+      display: box;
+      display: -webkit-box;
+    }
+  }
+
+  .contact-info-message-text {
+    @include notification-primary-text();
+    margin: 20px 0 29px 0;
+    display: block;
+  }
+
+  .contact-info-message-container {
+    margin-bottom: 34px;
+  }
+
+  .contact-info-message-content {
+    background-color: $color-primary-five;
+    padding: 23px 20px;
+
+    p {
+      @include description-primary-text();
+      padding-bottom: 24px;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .scrollable-apr-module {
+    background-color: $color-primary-one;
+    height: 496px;
+    margin-bottom: 40px;
+  }
+
+  .terms-and-conditions  {
+    margin-bottom: 40px;
+  }
+
+  .button-create-account {
+    width: 348px;
+    margin: 0 auto 16px auto;
+    display: block;
+  }
+
+  .link-no-thanks {
+    display: block;
+    width: 100%;
+    text-align: center;
+    @include description-primary-text();
+    text-decoration: underline;
+  }
+}
+
+.rewards-legacy-message {
+  width: 833px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+  padding-top: 27px;
+
+  img {
+    width: 425px;
+    margin: 0 auto 25px auto;
+  }
+
+  .congratulatios-message-text {
+    @include body-primary-text ();
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  .credit-limit {
+    @include heading-level-4();
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .arrive-message {
+    @include description-primary-text();
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .add-credit-card-message {
+    @include subheading-secondary-text();
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .button-add-card {
+    width: 257px;
+    margin: 0 auto 60px auto;
+  }
+
+  .rewards-box {
+    border-top: 3px solid $color-primary-one-opacity;
+    border-bottom: 3px solid $color-primary-one-opacity;
+    padding: 32px 0;
+    width: 833px;
+    margin: 0 auto;
+
+    .rewards-image {
+      width: 50%;
+      display: inline-block;
+
+      img {
+        width: 177px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      span{
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: $color-primary-three;
+        @include button-primary-text();
+        text-transform: none;
+        margin: 10px 0;
+      }
+    }
+
+    .rewards-value {
+      width: 50%;
+      display: inline-block;
+      position: relative;
+      top: -16px;
+
+      strong{
+        @include font-global-black();
+        font-size: 80px;
+        position: relative;
+        line-height: 84px;
+
+        &:before {
+          content: "=";
+          @include font-global-black();
+          font-size: 80px;
+          position: absolute;
+          left: -106px;
+        }
+      }
+
+      span{
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: $color-primary-three;
+        @include button-primary-text();
+        text-transform: none;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .container-buttons {
+    margin-top: 40px;
+    display: block;
+
+    button {
+      width: 349px;
+      margin-bottom: 48px;
+
+      &:first-of-type {
+        margin-right: 20px;
+      }
+    }
+  }
+}

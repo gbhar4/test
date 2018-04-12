@@ -1,0 +1,205 @@
+@import "./_m.overlay.scss";
+@import "compass/css3/transform";
+
+.ReactModal__Body--open {
+  position: static;
+  height: auto;
+  width: auto;
+}
+
+/* Overlay General */
+.react-overlay {
+  /* Background */
+  &:before {
+    content: "";
+    @include single-transition(opacity .15s linear);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.54);
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    opacity: 0.8;
+  }
+
+  .overlay-container {
+    min-height: auto;
+  }
+
+  .overlay-content {
+    padding: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    height: calc(100vh - 40px);
+  }
+
+  .button-overlay-close {
+    @include common-button-remove();
+    position: absolute;
+    right: 0;
+    margin: 25px;
+    z-index: 9;
+    top: 0px;
+
+    &:before {
+      width: 16px;
+      top: 7px;
+      background-color: $color-primary-one;
+    }
+
+    &:after {
+      height: 16px;
+      background-color: $color-primary-one;
+    }
+  }
+}
+
+/* NOTE: CENTER MODAL */
+.overlay-center {
+  .overlay-container {
+    width: 520px;
+    min-height: auto;
+    max-height: 90vh;
+    background-color: $color-global-white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%,-50%));
+    @include single-transition(transform .3s ease-out);
+    padding: 0px;
+    overflow: hidden;
+  }
+}
+
+/* NOTE: RIGHT */
+.overlay-right {
+  .overlay-container {
+    overflow: hidden;
+    width: 534px;
+    height: 100vh;
+    padding: 0px;
+    left: 50%;
+    margin-left: 185px;
+
+    @media (max-width: 1440px) {
+      left: inherit;
+      right: 0;
+      margin: 0;
+      float: right;
+    }
+  }
+}
+
+.header-global-banner + .header-global {
+  .overlay-content {
+    height: calc(100vh - 140px);
+  }
+}
+
+/* NOTE: Border decoration */
+.overlay-border-decoration {
+  .overlay-container {
+    background: transparent url("/wcsstore/static/images/pt-blue-stripes.png") repeat 0 0;
+    padding: 10px;
+  }
+}
+
+/* NOTE: Custom Right Overlays */
+.desktop-tabed-drawers-container {
+  /* Global header for Tabed Drawers (Only desktop) */
+  .overlay-header-desktop {
+    @include header(40px);
+    padding: 0 65px;
+    border: 0;
+    background-color: $color-global-white;
+    text-align: right;
+
+    &:after {
+      content: '';
+      width: 100%;
+      left: 0;
+      bottom: 0px;
+      height: 1px;
+      background-color: $color-primary-four;
+      display: inline-block;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+  .welcome-message,
+  .access-acount,
+  .my-place-rewards,
+  .wishlist-header,
+  .minicart-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 14px;
+  }
+
+  .center-name {
+    float: left;
+    left: 50%;
+    @include transform(translateX(-50%));
+  }
+
+  .welcome-name {
+    @include ellipsis();
+    width: auto;
+    max-width: 90px;
+    height: 18px;
+    line-height: 18px;
+    position: relative;
+    vertical-align: middle;
+
+    margin-right: 5px;
+  }
+
+  .access-acount {
+    margin-right: 15px;
+
+    &.create-account-container {
+      margin-right: 0px;
+    }
+  }
+
+  .my-place-rewards {
+    margin-right: 12px;
+  }
+
+  .minicart-container {
+    margin-right: 0px;
+  }
+
+  h1 {
+    line-height: 46px;
+    font-weight: 600;
+    text-transform: none;
+  }
+
+  h3 {
+    line-height: 46px;
+    @include font-global-medium();
+  }
+
+  .button-overlay-close {
+    top: -10px;
+    right: inherit;
+    left: 12px;
+    margin: 20px -3px 0 0;
+
+    /* Icono armado manualmente con Before y After */
+    &:after {
+      background-color: $color-primary-two;
+      width: 2px;
+    }
+
+    &:before {
+      background-color: $color-primary-two;
+      height: 2px;
+    }
+  }
+}

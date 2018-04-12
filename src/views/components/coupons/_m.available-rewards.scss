@@ -1,0 +1,315 @@
+/**
+  Contenedor of Coupons and Rewards
+*/
+@import "compass/css3/opacity";
+@import "compass/css3/transform";
+@import "_mixins.scss";
+@import "_variables.scss";
+
+
+/* Solo para el listado de Rewards */
+.reward {
+  /* Notificaciones de error */
+  .reward-notification-error-message {
+    .notification-inline {
+      color: $color-alert-two;
+    }
+  }
+}
+
+/* Inline error message */
+.coupon-inline-notification {
+	@include notification-primary-text($color-alert-one);
+	@include font-global-regular();
+	margin-top: 10px;
+	width: 100%;
+}
+
+/* Listado de Rewards y Coupons */
+.list-coupons {
+  .coupon,
+  .reward {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .reward-content,
+  .coupon-content {
+    background: $color-primary-five;
+    padding: 15px;
+    display: block;
+
+    // FIXME: add me a new class name.
+    > div {
+      width: 100%;
+      display: inline-block;
+      position: relative;
+    }
+
+    + .coupon-alert-notification {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+
+  /** imagen -mensaje - boton */
+  .image-coupon,
+  .information-coupon,
+  .apply-coupons-button {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /** Tamaño de la imagen */
+  .image-coupon {
+    margin-right: 10px;
+    width: 63px;
+    height: auto;
+  }
+
+  /** Botones del cupon */
+  .apply-rewards-button,
+  .apply-coupons-button {
+    @include button-quaternary($button-color: secondary);
+    display: block;
+    margin-top: 14px;
+    margin-top: 0px;
+    width: 75px;
+    padding: 0;
+    float: right;
+  }
+
+  .link-to-details,
+  .expire-information {
+    @include notification-secondary-text();
+  }
+
+  .link-to-details {
+    text-decoration: underline;
+  }
+}
+
+.expire-information + .link-to-details {
+  margin-left: 20px;
+}
+
+.global-my-bag {
+  .expire-information + .link-to-details {
+    margin-left: 10px;
+  }
+
+  .coupon-place-cash {
+    .expire-information + .link-to-details {
+      text-transform: capitalize;
+      margin-left: 0px;
+      display: block;
+    }
+  }
+}
+
+/* Account Drawer for Mobile version */
+.my-account-content-overlay {
+  .remembered-logout {
+    top: 27px;
+  }
+
+  .information-coupon {
+    width: calc(100% - 73px);
+  }
+
+  .apply-coupons-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.reward-value,
+.coupon-value {
+  @include subheading-secondary-text();
+  text-align: left;
+  display: block;
+}
+
+/* Contenedor de Notificacion de "Coupon Ineligible" */
+.notification.container-reward-notification {
+  height: auto;
+}
+
+/* Mensaje de "Coupon Ineligible" */
+.container-reward-notification {
+  margin-top: 8px;
+  margin-bottom: 15px;
+  display: inline-block;
+  width: 100%;
+
+  .notification-inline {
+    @include notification-primary-text($color-primary-one);
+    display: inline;
+    width: auto;
+    float: left;
+  }
+
+  /* link More details */
+  .link-coupon-ineligible-more-details {
+    @include notification-primary-text($color-primary-one);
+    text-decoration: underline;
+    position: relative;
+  }
+}
+
+/* Color solo para el boton More details en Notificaciones de Rewards */
+.reward {
+  /* link More details */
+  .link-coupon-ineligible-more-details {
+    color: $color-alert-two;
+    display: block;
+  }
+}
+
+/* Notificación Inline con el límite de fecha de uso para el Reward */
+.expiration-limit {
+  .coupon-content {
+    @include box-shadow(inset 0px 0px 0px 2px $color-primary-three);
+  }
+
+  .limited-message {
+    @include subheading-primary-text($color-global-white);
+    @include font-global-heavy();
+    line-height: 14px;
+    background: $color-primary-three;
+    text-indent: -10px;
+    text-align: center;
+
+    line-height: 15px;
+    display: block;
+    padding-top: 4px;
+    width: 100%;
+
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Overlay de More Details */
+.reward-more-details {
+  /* Mensaje de More Details */
+  .reward-more-details-message {
+    @include notification-primary-text();
+    padding: 70px 53px;
+  }
+}
+
+/* Available Offers to My Account Overlay */
+.my-account {
+  .available-rewards {
+    margin-top: 27px;
+    padding: 0px 30px;
+
+    h3 {
+      text-transform: uppercase;
+    }
+
+    .quantity-available-rewards {
+      display: inline-block;
+    }
+  }
+
+  .information-reward {
+    max-width: 146px;
+  }
+
+  .image-reward {
+    width: 91px;
+  }
+
+  .link-to-details {
+    margin-left: 8px;
+  }
+
+  .reward-value {
+    font-size: 33px; /* Not mixin for this */
+    line-height: 35px;
+    display: inline-block;
+  }
+
+  .apply-rewards-button {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+  }
+}
+
+/* Available Offers to checkout-container - My bag - Checkout */
+.checkout-container {
+  .coupon-content {
+    background-color: $color-global-white;
+  }
+
+  .coupon-inline-notification {
+    padding-left: 76px;
+  }
+
+  .available-rewards {
+    margin-top: 10px;
+
+    h3 {
+      @include subheading-tertiary-text($color-primary-one);
+      text-transform: none;
+      margin-bottom: 15px;
+    }
+
+    /* Cantidad de Available Rewards */
+    .quantity-available-rewards {
+      display: none;
+    }
+  }
+
+  .list-coupons {
+
+    .information-reward,
+    .information-coupon {
+      max-width: 150px;
+    }
+  }
+
+  .list-coupons {
+    margin-bottom: 11px;
+  }
+
+  .expiration-limit + .link-to-details {
+    margin-left: 6px;
+  }
+}
+
+.overlay-coupon-alert-message,
+.overlay-coupon-detail {
+  .overlay-content {
+    padding-top: 60px;
+    @include notification-primary-text();
+    @include font-global-regular();
+  }
+}
+
+/* "Need Help?" Modal */
+.overlay-coupon-information {
+	.overlay-content {
+		padding-top: 65px;
+		padding-bottom: 20px;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+
+/** Global My Bag */
+/** Solo estilos que afectan a la seccion de my bag */
+.global-my-bag {
+  .reward-content,
+  .coupon-content {
+    background: $color-global-white;
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "global_store_espot1": {
+      "nameOnServer": "Global_Store_Top",
+      "guest": "1",
+      "registered": "1"
+  },
+  "<country>_Country_Store_Top": {
+      "nameOnServer": "<country>_Country_Store_Top",
+      "guest": "1",
+      "registered": "1"
+  },
+  "<STATE>_Store_espot1": {
+      "nameOnServer": "<STATE_CODE_US_CANADA>_Store_Top",
+      "guest": "1",
+      "registered": "1"
+  },
+  "<StoreLocatorId>_LOCAL_espot1": {
+      "nameOnServer": "<StoreLocatorId>_Store_Top",
+      "guest": "1",
+      "registered": "1"
+  },
+
+  "global_store_espot2": {
+      "nameOnServer": "Global_Store_MidRight",
+      "guest": "1",
+      "registered": "1"
+  },
+  "<country>_Country_Store_MidRight": {
+      "nameOnServer": "<country>_Country_Store_MidRight",
+      "guest": "1",
+      "registered": "1"
+  },
+  "<STATE>_Store_espot2": {
+      "nameOnServer": "<STATE_CODE_US_CANADA>_Store_MidRight",
+      "guest": "1",
+      "registered": "1"
+  },
+  "<StoreLocatorId>_LOCAL_espot2": {
+      "nameOnServer": "<StoreLocatorId>_Store_MidRight",
+      "guest": "1",
+      "registered": "1"
+  },
+
+  "global_store_espot3": {
+      "nameOnServer": "Global_Store_MidLeft",
+      "guest": "1",
+      "registered": "1"
+  },
+  "<country>_Country_Store_MidLeft": {
+      "nameOnServer": "<country>_Country_Store_MidLeft",
+      "guest": "1",
+      "registered": "1"
+  },
+  "<STATE>_Store_espot3": {
+      "nameOnServer": "<STATE_CODE_US_CANADA>_Store_MidLeft",
+      "guest": "1",
+      "registered": "1"
+  },
+  "<StoreLocatorId>_LOCAL_espot3": {
+      "nameOnServer": "<StoreLocatorId>_Store_MidLeft",
+      "guest": "1",
+      "registered": "1"
+  },
+
+  "global_store_espot4": {
+      "nameOnServer": "Global_Store_Bottom",
+      "guest": "1",
+      "registered": "1"
+  },
+  "<country>_Country_Store_Bottom": {
+      "nameOnServer": "<country>_Country_Store_Bottom",
+      "guest": "1",
+      "registered": "1"
+  },
+  "<STATE>_Store_espot4": {
+      "nameOnServer": "<STATE_CODE_US_CANADA>_Store_Bottom",
+      "guest": "1",
+      "registered": "1"
+  },
+  "<StoreLocatorId>_LOCAL_espot4": {
+      "nameOnServer": "<StoreLocatorId>_Store_Bottom",
+      "guest": "1",
+      "registered": "1"
+  }
+}

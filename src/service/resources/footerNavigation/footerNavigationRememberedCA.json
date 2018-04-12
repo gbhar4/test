@@ -1,0 +1,88 @@
+[{
+    "activeNavigation": true,
+    "titleList": "AIR MILES",
+    "image":  "/wcsstore/static/images/footer-airmiles.png",
+    "imghref": "/ca/content/air-miles?ecid=airm_mktg_learn_glft_022817",
+    "links": [{
+        "title": "Learn More",
+        "href": "/ca/content/air-miles?ecid=airm_mktg_learntxt_glft_022817"
+    }, {
+        "title": "Join Now",
+        "href": "/ca/content/air-miles?ecid=airm_mktg_join_glft_022817"
+    }, {
+        "title": "Redeem Miles",
+        "href": "https://www.airmiles.ca/arrow/Home?changeLocale=en_CA"
+    }]
+  }, {
+    "activeNavigation": true,
+    "titleList": "Help Center",
+    "links": [{
+        "title": "FAQs",
+        "href": "/ca/help-center/#faq"
+    }, {
+        "title": "Order Status",
+        "href": "/us/account/orders",
+        "classAttr": "track-order"
+    }, {
+        "title": "Return Policy",
+        "href": "/ca/help-center/#returnExchangePolicyli"
+    }, {
+        "title": "Shipping Options",
+        "href": "/ca/help-center/#shippingMethodsli"
+    }, {
+        "title": "Gift Card Balance",
+        "href": "/ca/content/gift-cards-canada"
+    }, {
+        "title": "Privacy Policy",
+        "href": "/ca/help-center/#privacyPolicySectionli"
+    }, {
+        "title": "Terms and Conditions",
+        "href": "/ca/help-center/#termsAndConditionsli"
+    }]
+}, {
+    "activeNavigation": false,
+    "titleList": "Shopping",
+    "links": [{
+        "title": "My Account",
+        "href": "/shop/LogonForm?catalogId=10552&myAcctMain=1&langId=-1&storeId=10152",
+        "classAttr": "my-account"
+    }, {
+        "title": "Store Locator",
+        "href": "/ca/store-locator"
+    }, {
+        "title": "Size Chart",
+        "href": "/ca/content/size-chart"
+    }, {
+        "title": "Gift Cards",
+        "href": "/ca/content/gift-cards-canada"
+    }, {
+        "title":  "Favorites",
+        "href":  "/ca/favorites",
+        "classAttr": "wishlist"
+    }, {
+        "title":  "Seasonal Lookbooks",
+        "href":  "/ca/content/lookbook"
+    }]
+}, {
+    "activeNavigation": false,
+    "titleList": "About Us",
+    "links": [{
+        "title": "Public Relations",
+        "href": "/ca/help-center/#contactus"
+    }, {
+        "title": "Investor Relations",
+        "href": "http://phx.corporate-ir.net/phoenix.zhtml?c=120577&p=irol-irhome"
+    }, {
+        "title": "Careers",
+        "href": "/ca/content/careers-ca"
+    }, {
+        "title": "Responsible Sourcing",
+        "href": "/ca/content/social-responsibility"
+    }, {
+        "title": "International Opportunities",
+        "href": "/ca/content/international-opportunities"
+    }, {
+        "title": "Recall Information",
+        "href": "/ca/content/recall-information"
+    }]
+}]

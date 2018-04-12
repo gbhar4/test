@@ -1,0 +1,101 @@
+/**
+* Pickup Review Section
+**/
+
+@import "compass/utilities/general/clearfix";
+@import "compass/functions";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.pick-up-alternate-form {
+  margin-top: 20px;
+}
+
+.alternate-form-title {
+  @include subheading-secondary-text();
+  margin-bottom: 15px;
+  display: inline-block;
+
+  display: none;
+}
+
+.checkout-review-pickup-note {
+  // margin-top: 15px;
+  @include notification-secondary-text();
+  @include font-global-regular();
+}
+
+// label + .checkout-review-pickup-note {
+//   margin-top: 10px;
+// }
+
+.input-and-message-container,
+.first-name-container,
+.last-name-container {
+  .checkout-review-pickup-note {
+    margin-top: 10px;
+  }
+}
+
+// en pickup display esta el borde para edit flotante a la izquierda, en review no esta
+.checkout-review-pickup {
+  .checkout-review-pickup-person {
+    padding-top: 0px;
+    border: none;
+  }
+
+  .checkout-review-pickup-alternate {
+    margin-top: 15px;
+  }
+
+  .pick-up-contact {
+   position: relative;
+   right: 0;
+   top: auto;
+   @include transform(translateY(0));
+  }
+
+  .address-container  {
+    .address-additional {
+      position: relative;
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* Is Pick Up Section? */
+.summary-title-pick-up {
+  display: none;
+}
+
+
+.checkout-pickup-container {
+  .pick-up-alternate-form {
+    margin-bottom: 20px;
+  }
+}
+
+/* Is Express Checkout Section? */
+.checkout-express-section,
+.express {
+  // .alternate-pickup {
+  //   margin-bottom: 25px;
+  // }
+
+  .email-address,
+  .email,
+  .phone-number {
+    margin-top: 25px;
+  }
+
+  .email-address,
+  .email {
+    margin-bottom: 25px;
+  }
+
+  .pick-up-note {
+    @include description-secondary-text();
+    margin-top: 3px;
+  }
+}

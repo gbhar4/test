@@ -1,0 +1,101 @@
+/*
+* Address Form Section (Desktop)
+*/
+
+@import "_m.address-form-section.scss";
+
+.fieldset-address-editable {
+  .input-city,
+	.select-state {
+		width: 25%;
+	}
+
+	.select-state {
+		padding-left: 0;
+		padding-right: 21px;
+	}
+
+	.input-zip-code {
+		padding-left: 21px;
+		width: 25%;
+	}
+
+	.select-country {
+		width: 25%;
+		padding-left: 21px;
+	}
+}
+
+/* Is Billing Section? */
+.checkout-billing-section {
+  .fieldset-address-editable {
+    .input-first-name {
+      width: 47%;
+      vertical-align: top;
+      margin-right: 6%;
+    }
+
+    .input-last-name {
+      width: 47%;
+      vertical-align: top;
+    }
+
+    .input-address-line1,
+    .select-country {
+      @extend .input-first-name;
+      padding: 0px;
+    }
+
+    .input-city {
+      @extend .input-first-name;
+    }
+
+    .input-address-line2 {
+      @extend .input-last-name;
+    }
+
+    .select-state {
+      margin-right: 0px;
+      width: calc(25% - 20px);
+      vertical-align: top;
+      padding: 0px;
+      vertical-align: top;
+    }
+
+    .input-zip-code {
+      @extend .select-state;
+    }
+  }
+}
+
+
+// Button internationally shiping form
+.button-shipping-internationally {
+  @include description-secondary-text();
+  text-decoration: underline;
+  // float: right;
+  position: absolute;
+  margin-top: 10px;
+  // margin-top: 75px;
+  // margin-left: -120px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Is My Account Section? */
+.address-book-section {
+  .box-ghost {
+    width: 48%;
+  }
+
+  .button-select-shipping-address {
+    width: 38%;
+
+    &.cancel {
+      width: 38%;
+      margin-left: 4%;
+      margin-top: 25px;
+      margin-bottom: 0px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "search_result_with_result": {
+    "nameOnServer": "DTSearchResults",
+    "guest": "1",
+    "registered": "1"
+    },
+  "search_result_no_items": {
+    "nameOnServer": "DTNoSearchResults",
+    "guest": "1",
+    "registered": "1"
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "account_header_rewards_banner": {
+    "nameOnServer": "MyAcctHeaderBannerSignedIn_Espot1",
+    "guest": "2",
+    "registered": "1"
+  },
+  "account_overview_bottom_banner": {
+    "nameOnServer": "MyAcctOverviewBottom_Espot1",
+    "guest": "2",
+    "registered": "1"
+  },
+  "account_payment_top_banner": {
+    "nameOnServer": "MyAcctPaymentTop_Espot1",
+    "guest": "2",
+    "registered": "1"
+  }
+}

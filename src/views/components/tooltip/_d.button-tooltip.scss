@@ -1,0 +1,19 @@
+/**
+* Button Tooltip Desktop
+**/
+
+@import "./_m.button-tooltip.scss";
+
+.tooltip-container {
+  width: 300px;
+}
+
+.arrow-direction-bottom,
+.arrow-direction-top {
+  right: calc(50% - 145px);
+
+  &:before,
+  &:after {
+    left: 52.3%;
+  }
+}

@@ -1,0 +1,68 @@
+@import "./_m.credit-card-fieldset.scss";
+
+/**
+* Credit Card Fieldset
+**/
+
+.container-credit-card-fieldset {
+  /* Reset Styles */
+  .input-cc,
+  .select-exp-mm,
+  .input-cvv,
+  .select-exp-yy {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .input-cc {
+    width: 50%;
+    padding-right: 20px;
+    vertical-align: top;
+  }
+
+  .select-exp-mm {
+    width: 16.6%;
+    padding-right: 20px;
+    vertical-align: top;
+  }
+
+  .input-cvv,
+  .select-exp-yy {
+    width: 16.6%;
+    padding-right: 10px;
+    vertical-align: top;
+
+  }
+
+  .input-cvv {
+    padding-right: 0px;
+    padding-left: 10px;
+  }
+
+  .input-cvv {
+    .inline-error-message {
+      white-space: normal;
+    }
+  }
+}
+
+.new-credit-card-container {
+  .save-to-account,
+  .set-as-default {
+    margin-bottom: 0px;
+  }
+}
+
+/* Is Billing Section? */
+.fieldset-creditcard-editable {
+  margin-bottom: 0;
+
+  .input-cc {
+    margin-bottom: 0;
+  }
+
+  @extend .container-credit-card-fieldset;
+}

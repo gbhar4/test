@@ -1,0 +1,153 @@
+/*
+* Plcc Landing Page
+*/
+
+@import '_m.landing-plcc.scss';
+
+.landing-plcc-container {
+  width: 850px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 43px;
+
+  /* NOTE: Main image of landing page. DT-31042 Enhancement */
+  .landing-plcc-content-slot {
+    margin-bottom: 20px;
+  }
+
+  // /* Images */
+  // .img-double-points {
+  //   width: 415px;
+  // }
+
+  // .img-face {
+  //   width: 670px;
+  //   display: block;
+  //   margin: 10px auto;
+  // }
+
+  .img-rewards-info {
+    width: 493px;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .img-info-points {
+    width: 650px;
+    margin-top: 0px;
+  }
+
+  .img-place-cc {
+    width: 170px;
+  }
+
+  /* Buttons */
+  .button-apply {
+    // width: 180px;
+    width: 250px;
+    display: inline-block;
+  }
+
+  .button-manage {
+    @include button-quaternary();
+    // width: 350px;
+    width: 300px;
+    display: inline-block;
+    background-color: $color-primary-five;
+    color: $color-primary-one;
+    margin-left: 20px;
+
+    &:active,
+    &:focus {
+      background-color: $color-primary-one;
+      color: $color-global-white;
+    }
+  }
+
+  /* Info rewards */
+  .info-rewards {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 77%;
+    top: 22px;
+
+    .number {
+      height: 60px;
+      font-size: 80px;
+      line-height: 78px;
+    }
+
+    .word {
+      font-size: 31px;
+      text-transform: uppercase;
+    }
+  }
+
+  .rewards-benefits-summary {
+    .item-benefits-container {
+      box-shadow: none;
+      margin-right: 0;
+    }
+  }
+
+  .item-benefits-container {
+    border: 1px solid $color-primary-four;
+    border-right: none;
+    padding: 20px 28px;
+    display: inline-block;
+    vertical-align: top;
+    height: 215px;
+    position: relative;
+
+    &:last-child {
+      border-right: 1px solid $color-primary-four;
+    }
+
+    &:nth-child(1) {
+      width: 170px;
+    }
+
+    &:nth-child(2) {
+      width: 205px;
+      padding: 20px 0;
+    }
+
+    &:nth-child(3) {
+      width: 184px;
+      padding: 20px 0;
+    }
+
+    &:nth-child(4) {
+      width: 170px
+    }
+  }
+
+  .container-links {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .rewards-terms {
+    @include body-primary-text();
+
+    h3 {
+      @include heading-level-3();
+      @include font-global-heavy();
+    }
+  }
+
+  /* items */
+  .item-benefits-container {
+    padding: 20px 0;
+
+    .content-img {
+      margin-bottom: 15px;
+    }
+  }
+
+  .separator {
+    width: 89%;
+    margin: 0 auto 30px;
+  }
+}

@@ -1,0 +1,23 @@
+/*
+ * Favorites Section (Desktop)
+ */
+
+@import '_m.favorites-section.scss';
+@import "compass/css3/transform";
+@import "compass/css3/flexbox";
+
+.wishlist-section-container {
+  padding: initial;
+
+  .product-recomendation-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.wishlist-list-container {
+  margin-left: -0.5%;
+  margin-right: -0.5%;
+  @include display-flex;
+  @include flex-wrap(wrap);
+}

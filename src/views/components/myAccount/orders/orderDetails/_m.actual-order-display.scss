@@ -1,0 +1,281 @@
+/**
+*  Actual Order Display (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+// Order container
+.actual-order-display {
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+
+  .order-display,
+  .shipping-section,
+  .billing-section {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+  }
+
+  .title-description,
+  .address-title,
+  .title-gift-card-applied {
+    @include subheading-primary-text();
+    @include font-global-heavy();
+    text-transform: none;
+    color: $color-primary-two;
+  }
+
+  .gift-cards-container {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .title-description,
+  .address-title,
+  .title-gift-card-applied {
+    width: 35%;
+    display: inline-block;
+    text-align: right;
+    padding-right: 20px;
+    vertical-align: top;
+
+    &.title-order-summary {
+      width: 100%;
+      padding: 0px;
+      float: none;
+      text-align: left;
+      margin-top: 20px;
+    }
+  }
+
+  .address-additional,
+  .store-info-data,
+  .checkout-review-shipping-address,
+  .giftcard-list-display,
+  .order-number,
+  .order-date,
+  .button-tracking-number,
+  .card-info {
+    width: 65%;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    text-align: left;
+
+    .store-name,
+    .person-name {
+      text-transform: capitalize;
+    }
+  }
+
+  .card-type {
+    @include font-global-black();
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .card-suffix {
+    @include subheading-primary-text();
+    @include font-global-regular();
+    text-transform: none;
+  }
+
+  .person-name,
+  .address-details,
+  .address-additional,
+  .giftcard-list-display,
+  .store-info-data {
+    @include subheading-primary-text();
+    @include font-global-regular();
+    text-transform: none;
+  }
+
+  .button-tracking-number {
+    @include subheading-primary-text();
+    @include font-global-black();
+    text-decoration: underline;
+  }
+
+  /* Pickup / Store information */
+  .store-info-data {
+
+  }
+
+  .store-address {
+    @include font-global-black();
+    margin-bottom: 5px;
+    text-transform: capitalize;
+  }
+
+  .distance-and-open-information {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .calculate-distance-button {
+    @include subheading-primary-text();
+    @include font-global-regular();
+    text-transform: none;
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .today-schedule {
+
+  }
+
+  .buttons-actions {
+    margin-top: 5px;
+  }
+
+  .button-get-directions {
+    @extend .calculate-distance-button;
+    margin-bottom: 0px;
+  }
+
+  .button-see-store-details {
+    @extend .button-get-directions;
+  }
+}
+
+///////////////////////////////////////
+// Reset styles
+///////////////////////////////////////
+
+.order-details-section {
+
+  /* Shipping */
+  .shipping-section {
+    .address-container > .address-title {
+      display: none;
+    }
+
+    .pickup-person-container,
+    .address-container {
+      border: 0px;
+      padding: 0px;
+      float: none;
+      margin: 0px;
+      display: inline-block;
+      width: 65%;
+    }
+
+    .pickup-information {
+      margin-top: 10px;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .pickup-alternate {
+      clear: both;
+      margin-top: 10px;
+      display: inline-block;
+      float: none;
+      width: 100%;
+
+      .person-name {
+        vertical-align: top;
+      }
+    }
+  }
+
+  /* Shipping */
+  .checkout-review-shipping-address {
+    span,
+    .address-additional {
+      line-height: 1.5;
+    }
+
+    .user-name {
+      display: block;
+    }
+  }
+
+  /* Billing */
+  .billing-section {
+    .title-payment-method,
+    img {
+      display: none;
+    }
+
+    .card-info-figure-and-title {
+      @include subheading-secondary-text();
+      display: block;
+      text-transform: capitalize;
+    }
+
+    .card-info {
+      margin-bottom: 0;
+    }
+
+    .address-container {
+      width: 65%;
+      float: right;
+      margin: 5px 0 10px;
+    }
+  }
+
+  /* Order Summary */
+  .order-summary {
+    margin-top: 10px;
+    width: 75%;
+
+    li,
+    li strong,
+    li span,
+    .estimated-total strong {
+      @include subheading-primary-text();
+      @include font-global-regular();
+      text-transform: none;
+      line-height: 1.5;
+    }
+
+    .container-items .container-items-with-tax {
+      border: none;
+      margin: 0;
+    }
+
+    .container-tax {
+      margin: 0;
+      padding: 0;
+      border: none;
+
+      li {
+        line-height: 31px;
+      }
+    }
+
+    .container-total-amounts .estimated-total {
+      span {
+        @include subheading-primary-text();
+        @include font-global-black();
+        text-transform: none;
+      }
+
+      strong {
+        @include subheading-primary-text();
+        @include font-global-black();
+        text-transform: none;
+        line-height: 1.5;
+        margin-top: 8px;
+      }
+    }
+
+    .container-total-shipping li:last-of-type {
+      padding-bottom: 0;
+    }
+
+    .container-items {
+      &.container-items-with-tax {
+        border-bottom: 0px;
+        margin-bottom: 0;
+        padding: 0;
+      }
+    }
+  }
+}

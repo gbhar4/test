@@ -1,0 +1,63 @@
+/**
+* Fit Chips Selector (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.size-and-fit-detail-container {
+  .size-and-fit-detail-title,
+  .selected-option {
+    @include heading-level-4();
+  }
+}
+
+.size-and-fit-detail-items-list {
+  width: calc(100% + 10px);
+  position: relative;
+  left: -5px;
+}
+
+/* Radio Button for size */
+.size-and-fit-detail-item {
+  padding: 0px;
+  margin: 5px;
+  cursor: pointer;
+
+  .input-radio-title {
+    @include notification-secondary-text();
+    padding: 5px 10px 2px;
+    border: solid 1px $color-primary-four;
+    display: inline-block;
+    text-transform: capitalize;
+  }
+
+  &.item-disabled-option .input-radio-title {
+    color: $color-primary-four;
+    cursor: initial;
+  }
+
+  .input-radio-icon-unchecked,
+  .input-radio-icon-checked {
+    width: auto;
+    height: auto;
+    top: auto;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  .input-radio-icon-checked {
+    + .input-radio-title {
+      background: $color-primary-one;
+      color: $color-global-white;
+      border: solid 1px $color-primary-one;
+    }
+  }
+
+  &.item-selected-option {
+
+  }
+}

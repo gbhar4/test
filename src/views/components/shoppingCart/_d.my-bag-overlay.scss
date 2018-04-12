@@ -1,0 +1,288 @@
+/* Overlay: My Bag */
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.overlay-my-bag {
+  /* Notification of updated product */
+  .generic-sticky-notification {
+    position: relative;
+    margin: 0px;
+    background: $color-primary-one;
+    border-top: solid 1px $color-primary-one-opacity;
+
+    .notification-inline {
+      background: transparent;
+      @include box-shadow(none);
+      line-height: normal;
+      text-align: center;
+      position: relative;
+      vertical-align: top;
+      top: 50%;
+      @include transform(translateY(-50%));
+      color: $color-global-white;
+    }
+  }
+
+  /* Unavailable product notification */
+  .oss-notification-from-bag {
+    margin: 0px;
+    border-top: solid 1px $color-primary-four;
+
+    &.notification {
+      min-height: 40px;
+      height: auto;
+
+      .notification-text {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        padding: 8px 0px;
+        vertical-align: initial;
+        top: 0;
+        transform: none;
+      }
+    }
+
+    /* Reset styles */
+    .notification-text p {
+      margin: 0px;
+    }
+
+    .button-remove-all {
+      text-decoration: underline;
+    }
+  }
+
+  /* Contenedor de Listado de productos en Overlay */
+  .container-list-shopping-cart {
+    overflow-y: auto;
+    height: calc(100vh - 195px);
+    text-align: left;
+
+    /* Container de notificaciones Inline */
+    .notification {
+      display: inline-block;
+      height: auto;
+      width: calc(100% - 50px);
+      left: 0;
+    }
+  }
+
+  /* items (products) */
+  .item-shopping-cart {
+    .item-product {
+      padding: 17px 23px 27px;
+      min-height: 140px;
+      position: relative;
+    }
+
+    .button-remove {
+      top: -6px;
+    }
+
+    .custom-loading-icon {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  /* Contenedor de Listado de productos en Overlay cuando se muestra el componente de Rewards Slot */
+  .summary-message + .container-list-shopping-cart {
+    height: calc(100vh - 400px);
+
+    /* With Register Promo */
+    &.cart-item-list-with-register-promo {
+      height: calc(100vh - 352px);
+
+      /* With Register Promo and user has PLCC saved on their account */
+      &.cart-item-list-without-plcc-card {
+        height: calc(100vh - 400px);
+
+        /* Unavailable or Oss notification */
+        &.unavailable-or-oss-notification {
+          height: calc(100vh - 400px - 40px);
+
+          /* AND Moved to favorite, updated or deleted item. NOTE: two notification at same time. */
+          &.updated-or-moved-notification {
+            height: calc(100vh - 400px - 40px);
+          }
+        }
+
+        /* Moved to favorite, updated or deleted item */
+        &.updated-or-moved-notification {
+          height: calc(100vh - 392px - 40px);
+        }
+      }
+
+      /* Unavailable or Oss notification */
+      &.unavailable-or-oss-notification {
+        height: calc(100vh - 400px);
+
+        /* AND Moved to favorite, updated or deleted item. NOTE: two notification at same time. */
+        &.updated-or-moved-notification {
+          height: calc(100vh - 400px - 40px);
+        }
+      }
+
+      /* Moved to favorite, updated or deleted item */
+      &.updated-or-moved-notification {
+        height: calc(100vh - 392px);
+      }
+    }
+
+    /* With Guest Promo */
+    &.cart-item-list-with-guest-promo {
+      height: calc(100vh - 361px);
+
+      /* Unavailable or Oss notification */
+      &.unavailable-or-oss-notification {
+        height: calc(100vh - 409px);
+
+        /* AND Moved to favorite, updated or deleted item. NOTE: showing two notification at same time. */
+        &.updated-or-moved-notification {
+          height: calc(100vh - 409px - 40px);
+        }
+      }
+
+      /* Moved to favorite, updated or deleted item */
+      &.updated-or-moved-notification {
+        height: calc(100vh - 402px);
+      }
+    }
+  }
+
+  /* Contenedor de Listado de productos en Overlay cuando se muestra el componente de Rewards Slot */
+  .airmiles-form + .container-list-shopping-cart {
+    height: calc(100vh - 518px);
+  }
+
+  /* Contenedor de totales en Order summary (Solo overlay) */
+  .container-total-amounts {
+    border-top: 0;
+  }
+
+  /* Título del overlay (View bag (5)) */
+  h2 {
+    @include subheading-tertiary-text();
+    text-align: center;
+    text-decoration: underline;
+    padding: 12px 0;
+    background-color: $color-primary-five;
+    @include box-shadow (inset 0px -1px 0px 0px $color-primary-five);
+
+    > a {
+      color: $color-primary-one;
+    }
+  }
+
+  /* Contenedor de botones de checkout en My Bag */
+  .container-button-mybag {
+    position: relative;
+  }
+
+  /* espacio en el boton de checkout */
+  .button-space {
+    background-color: $color-primary-five;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .button-primary.button-checkout {
+      width: 230px;
+    }
+    .paypal-button-container {
+      width: 230px;
+      margin-right: 20px;
+      
+      .button-secondary{
+        &:focus, &:active {
+          background-color: #ffffff;
+        }
+        &:disabled{
+          background-color: #eeeeee;
+        }
+      }
+    }
+  }
+
+  /* My Bag Empty en overlay */
+  .empty {
+    text-align: center;
+    border: 0;
+    height: calc(100vh - 418px);
+
+    .continue-shopping {
+      @include description-primary-text($color-primary-one);
+      text-transform: uppercase;
+      text-decoration: underline;
+      margin-bottom: 25px;
+    }
+
+    > h1 {
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0;
+      margin: 18px 0 17px;
+      @include heading-level-1();
+      @include font-global-black();
+      text-transform: none;
+    }
+
+    &.empty-bag-with-promo {
+      height: calc(100vh - 313px);
+    }
+  }
+
+  .empty-guest {
+    height: calc(100vh - 169px);
+  }
+
+  // ** Slop promocional despues del boton de create account
+  .slot-drawer-bag {
+    margin:  0 -79px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// .empty-bag-with-login,
+.empty {
+  .new-account {
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: relative;
+  }
+}
+
+// ** Cuando aun no se ha iniciado sesion
+
+.empty-bag-with-login {
+  margin: 0 auto;
+  width: 90%;
+  padding: 0 79px;
+  position: relative;
+
+  .new-account {
+    margin-top: 20px;
+    padding-top: 20px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: calc(100% + 155px);
+      height: 1px;
+      background-color: $color-primary-four;
+      position: absolute;
+      top: 0;
+      left: -24%;
+    }
+  }
+}
+
+.container-buttom-mybag {
+  position: relative;
+}

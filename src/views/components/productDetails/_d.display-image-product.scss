@@ -1,0 +1,180 @@
+/**
+* PDP - Display Image Product (Desktop)
+**/
+
+@import "_m.display-image-product.scss";
+@import "compass/css3/flexbox";
+@import "compass/css3/transform";
+
+/* Slider and Images */
+.product-images-container {
+  width: 60%;
+  display: inline-block;
+}
+
+.giftcard-images-container,
+.giftcard-details-content,
+.product-images-container {
+  border: solid 1px $color-primary-four;
+  background-color: $color-primary-five;
+  padding: 20px;
+}
+
+.preview-and-slider-section-container {
+  width: 100%;
+  @include display-flex;
+}
+
+.preview-and-social-media-icons {
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 30px;
+
+  img {
+    width: 100%;
+  }
+
+  .social-networks {
+    margin-bottom: 0px;
+
+    .icon-twitter,
+    .icon-fcbk,
+    .icon-pinterest,
+    .icon-instagram {
+      margin: 0px;
+      display: block;
+      position: relative;
+      left: 50%;
+      @include transform(translateX(-50%));
+      margin-bottom: 10px;
+    }
+
+    a:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.preview-image-list {
+  height: calc(580px - 128px);
+}
+
+.preview-image-item {
+  margin-bottom: 20px;
+  display: inline-block;
+
+  &.preview-image-item-selected {
+    img {
+      border: solid 2px $color-primary-four;
+    }
+  }
+}
+
+.main-image-container {
+  width: calc(100% - 110px);
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  float: right;
+}
+
+.principal-preview-image-container {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+
+  .button-resize {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+  }
+}
+
+.principal-preview-image-content {
+  width: 100%;
+}
+
+.principal-preview-image-element {
+  z-index: 100;
+}
+
+.product-images-container {
+  position: relative;
+
+  .principal-preview-image > div {
+    margin-right: 0px;
+  }
+
+  /* List of Images */
+  .preview-image-list,
+  .principal-preview-image {
+    margin: initial;
+    white-space: normal;
+    overflow-x: visible;
+  }
+}
+
+.main-image-container {
+  .product-images-ctas-container {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+
+  .button-prev,
+  .button-next {
+    position: relative;
+    top: auto;
+    @include transform(translateY(0px));
+    overflow: hidden;
+  }
+
+  /* Buttons prev and next */
+  .button-prev {
+    margin-left: 20px;
+    display: inline-block;
+  }
+
+  .button-next {
+    left: auto;
+    margin-right: 20px;
+    display: inline-block;
+    float: right;
+  }
+
+  .button-resize {
+    bottom: 20px;
+    position: absolute;
+    right: 20px;
+  }
+}
+
+/*
+ * Giftcard's Section
+ */
+.giftcard-details-container {
+  .principal-preview-image-container {
+    width: 100%;
+
+    img {
+      padding: 0% 10%;
+    }
+  }
+
+  .product-images-container {
+    /* Buttons prev and next */
+    .button-prev {
+      left: 30px;
+    }
+
+    .button-next {
+      left: auto;
+      right: 30px;
+    }
+  }
+}

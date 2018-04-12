@@ -1,0 +1,74 @@
+/**
+ * Navigation Confirmation (Mobile)
+ **/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.navigation-confirmation {
+/*  display: none;*/
+
+  &.expanded {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    margin-top: 10px;
+    z-index: 2;
+    border: 1px solid $color-primary-three;
+    background: $color-global-white;
+    padding: 10px;
+    text-align: center;
+    @include box-shadow(0px 0px 23px 1px rgba(0,0,0,0.37));
+    top: 0px;
+    width: 80%;
+    margin-left: 15px;
+    max-height: 160px;
+  }
+
+  .icon-arrow {
+    position: absolute;
+    top: -8px;
+    left: 0;
+
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      background: $color-primary-one;
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      width: 9px;
+      height: 1px;
+    }
+
+    &:before {
+      width: 1px;
+      height: 9px;
+      top: 0;
+      left: 10px;
+    }
+  }
+
+  span {
+    @include body-secondary-text();
+    text-align: center;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  button {
+    width: 80%;
+    margin: 5px 0px;
+
+    &.button-stay {
+      @include button-quaternary(secondary);
+      width: 80%;
+    }
+  }
+}

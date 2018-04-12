@@ -1,0 +1,129 @@
+/* ==========================================================================
+	Login and Create Account
+   ========================================================================== */
+
+@import "_mixins.scss";
+
+.account-and-login {
+  .access-acount,
+  .welcome-message,
+  /* Slash separator of Create Account and Log In */
+  .access-acount + span {
+    float: left;
+  }
+}
+
+.create-account-container {
+  &:after {
+    content: "/";
+    position: relative;
+    margin-left: 1px;
+  }
+}
+
+.access-acount,
+.welcome-message {
+  display: inline-block;
+  vertical-align: top;
+
+  strong {
+    @include font-global-heavy();
+  }
+
+  .form-login,
+  .inputs-create-account {
+    a,
+    span {
+      float: left;
+
+      &:hover {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+
+    .reset-password-text {
+      text-align: left;
+
+      a {
+        margin-right: 8px;
+        text-decoration: underline;
+        @include font-global-regular();
+      }
+
+      &:first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    .link-forgot {
+      float: right;
+    }
+  }
+
+  .new-account {
+    > span {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .create-account-link {
+    margin-right: 5px;
+  }
+
+  .login-link {
+    margin-left: 5px;
+  }
+}
+
+.welcome {
+  width: auto;
+  text-align: right;
+  display: inline-block;
+}
+
+.welcome-message button,
+.welcome-message,
+.login-link {
+  @include notification-primary-text();
+  position: relative;
+  line-height: 39px;
+  height: 39px;
+  display: inline-block;
+
+  &.active,
+  &:hover {
+    &:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      display: inline-block;
+      position: absolute;
+      background: $color-primary-one;
+      left: 0;
+      bottom: 0px;
+      z-index: 2;
+    }
+  }
+}
+
+.create-account-link {
+  @extend .login-link;
+
+  span {
+    display: inline-block;
+  }
+}
+
+.welcome-message {
+  a {
+    text-decoration: none;
+    color: $color-primary-one;
+  }
+
+  .reward-details-container {
+    @include font-global-medium();
+    color: $color-primary-two;
+  }
+}

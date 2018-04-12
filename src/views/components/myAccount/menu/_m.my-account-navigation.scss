@@ -1,0 +1,55 @@
+/**
+* My Account Navigation (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* My Account Navigation container (<ul>) */
+.my-account-navigation-container {
+  position: relative;
+}
+
+/* My Account Navigation Item (<li>) */
+.my-account-navigation-item {
+  position: relative;
+  border-bottom: solid 1px $color-primary-four;
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+/* My Account Navigation Link (<a>) */
+.navigation-item-link {
+  @include heading-level-4($color-primary-three);
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0px;
+  cursor: pointer;
+
+  &.navigation-item-link-selected,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-primary-one;
+    outline: none;
+  }
+}
+
+/* FPO name of class */
+.navigation-item-link-mobile {
+  padding: 20px 0px;
+
+  @include icon-tcp-chevron();
+  &:before {
+    @include transform(rotate(90deg));
+    width: 13px;
+    height: 8px;
+    font-size: 7px;
+    position: absolute;
+    right: 0px;
+    top: 30px;
+  }
+
+}

@@ -1,0 +1,161 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "compass/css3/box-shadow";
+
+.display-search-suggested-keywords,
+.display-search-suggested-keywords-closed {
+  input[type="text"] {
+    &.display-search-suggested-keywords-input {
+      @include input-placeholder {
+        color: $color-primary-two;
+
+        &.focused,
+        &:focus {
+          border-bottom: 0px;
+        }
+      }
+
+      &.focused,
+      &:focus {
+        border-bottom: 0px;
+      }
+
+      &.disabled,
+      &:disabled {
+        border-bottom: 0px;
+
+        @include input-placeholder {
+          color: $input-color-border-focused;
+        }
+      }
+    }
+  }
+}
+
+.header-global .typeahead {
+  .button-search {
+    position: absolute;
+    margin: 0;
+    float: none;
+    right: 12px;
+    top: calc(50% - 10px);
+    @include icon-tcp-search();
+  }
+
+  input[type="text"] + button.disabled,
+  input[type="text"] + button:disabled {
+    background: transparent;
+    border: 0;
+    color: transparent;
+    @include box-shadow(none);
+  }
+}
+
+/** type ahead **/
+.typeahead {
+  top: 12px;
+  float: right;
+  max-width: 16.7%;
+  min-width: 210px;
+  display: inline-block;
+  position: relative;
+  padding-right: 0;
+  margin-right: 6px;
+
+  .display-search-suggested-keywords-item {
+    &.item-common {
+      white-space: normal;
+    }
+  }
+
+  .display-search-suggested-keywords-items-list {
+    .display-search-suggested-keywords-item,
+    .display-search-suggested-keywords-item a {
+      margin: 0 -11px;
+      padding: 4px 11px;
+
+      &.display-search-suggested-keywords-highlighted,
+      &:hover {
+        background: $color-accent-one;
+        color: $color-global-white;
+        cursor: pointer;
+      }
+    }
+
+    .display-search-suggested-keywords-disabledOption {
+      &:hover {
+        background: none;
+
+        h4 {
+          cursor: default;
+        }
+      }
+
+      a {
+        &:hover {
+          background: $color-accent-one;
+          color: $color-global-white;
+        }
+      }
+    }
+  }
+
+  .display-search-suggested-keywords-items-list {}
+
+  .input-common {
+    margin-bottom: 0;
+  }
+
+  input {
+    height: 40px;
+    margin: 0;
+    padding: 11px 40px 11px 12px;
+    background: $color-primary-five;
+    border: none;
+    @include font-global-regular();
+
+    &:focus {
+      border: none;
+    }
+  }
+
+  .display-search-suggested-keywords .typeahead-content {
+    @include box-shadow(0 0 0 1px $color-primary-four);
+    text-align: left;
+    position: relative;
+  }
+
+  ul {
+    @include box-shadow(0 0 0 1px $color-primary-four);
+    text-align: left;
+    background: $color-primary-background;
+    padding: 0 10px 10px;
+    max-height: 350px;
+    width: 100%;
+    // los iconos de wishlist tienen z-index de 101
+    z-index: 102;
+    overflow-x: hidden;
+
+    li {
+      a {
+        @include font-global-black();
+        color: $color-primary-one;
+        font-size: 13px; //please, recheck this font-size and use mixin
+        text-decoration: none;
+        margin: 4px 0;
+        padding: 0;
+        display: block;
+
+        span {
+          @include font-global-regular();
+        }
+      }
+    }
+  }
+
+  h4 {
+    margin-top: 19px;
+    color: $color-primary-two;
+    @include font-global-heavy();
+  }
+}

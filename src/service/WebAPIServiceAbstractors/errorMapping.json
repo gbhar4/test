@@ -1,0 +1,388 @@
+{
+  "2270": {
+    "errorMessage": "Password must include at least 1 uppercase character(s).",
+    "formFieldName": "password"
+  },
+  "2080": {
+    "errorMessage": "Password must include at least 1 special character(s).",
+    "formFieldName": "password"
+  },
+  ".2030": {
+    "errorMessage": "Oops! The email or password you’ve entered is incorrect. Password must be at least 8 characters long and have at least 1 uppercase, 1 number and 1 special character.",
+    "formFieldName": ""
+  },
+  "2030": {
+    "errorMessage": {
+      "errorCode": 10001
+    },
+    "formFieldName": ""
+  },
+  "_ERR_LOGONID_ALREDY_EXIST": {
+    "errorMessage": "The email address you entered matches an existing account.",
+    "formFieldName": ""
+  },
+  ".2110": {
+    "errorMessage": {
+      "errorCode": 10002
+    },
+    "formFieldName": ""
+  },
+  "1005": {
+    "errorMessage": "You have entered an invalid card number.",
+    "formFieldName": ""
+  },
+  ".2010": {
+    "errorMessage": "Oops! The email or password you’ve entered is incorrect. Password must be at least 8 characters long and have at least 1 uppercase, 1 number and 1 special character.",
+    "formFieldName": ""
+  },
+  ".2210": {
+    "errorMessage": "Please review the password requirements and try again",
+    "formFieldName": "password"
+  },
+  "ERR_ORDER_NOT_FOUND": {
+    "errorMessage": "Sorry, that order was not found. Please try again.",
+    "formFieldName": ""
+  },
+  "TCPGC06": {
+    "errorMessage": "Please try again.",
+    "formFieldName": ""
+  },
+  "_ERR_DUPLICATE_GIFT_CARD": {
+    "errorMessage": "That gift card number has already been applied to your order. Please enter a different gift card number.",
+    "formFieldName": ""
+  },
+  "_ERR_DUPLICATE_CARD": {
+    "errorMessage": "Please check if the card is already in use.",
+    "formFieldName": ""
+  },
+  "_ERR_PAY_CARD_NUMBER_INVALID": {
+    "errorMessage": "The credit card number is not valid. Type the number of the credit card in the Credit card number field and try again.",
+    "formFieldName": ""
+  },
+  "500": {
+    "errorMessage": "Uh oh... System error. Please try again.",
+    "formFieldName": ""
+  },
+  "_API_CANT_RESOLVE_FFMCENTER": {
+    "errorMessage": "Your request cannot be completed, as one or more of the products you wish to purchase are not available in the quantity you requested.",
+    "formFieldName": ""
+  },
+  "ERR_PROMOTION_CODE_INVALID": {
+    "errorMessage": "Sorry, this code is invalid. Please verify it and try again.",
+    "formFieldName": ""
+  },
+  "_ERR_MISSING_CMD_PARAMETER": {
+    "errorMessage": "My Place Rewards cannot be applied when you're shopping as a guest. Please log in.",
+    "formFieldName": ""
+  },
+  "_TCP_PROMOTION_LOYALTY_COUPON_NOT_IN_WALLET": {
+    "errorMessage": "The code you used is not applicable. Note: My Place Rewards are not transferable between accounts. Please verify your code and try again.",
+    "formFieldName": ""
+  },
+  "_TCP_PROMOTION_LOYALTY_AVAILABE_ONLY_FOR_REGISTERED_USER": {
+    "errorMessage": "My Place Rewards cannot be applied when you're shopping as a guest. Please log in",
+    "formFieldName": ""
+  },
+  "_ERR_USER_AUTHORITY": {
+    "errorMessage": "The user does not have the authority to run this command.",
+    "formFieldName": ""
+  },
+  "PAYPAL_CC_ERROR_CODE_US_CROSS_SITE_ADDRESS_NOT_SUPPORTED": {
+    "errorMessage": "You cannot use a United States based Paypal account when shipping to Canada, and conversely you cannot use a Canadian based Paypal account when shipping to the United States.",
+    "formFieldName": ""
+  },
+  "PAYPAL_CC_ERROR_CODE_CANADA_CROSS_SITE_ADDRESS_NOT_SUPPORTED": {
+    "errorMessage": "You cannot use a United States based Paypal account when shipping to Canada, and conversely you cannot use a Canadian based Paypal account when shipping to the United States.",
+    "formFieldName": ""
+  },
+  "PAYPAL_CC_ERROR_CODE_SHIPPING_LASTNAME_OR_FIRSTNAME_NOT_AVAILABLE_IN_PAYPAL_ACCOUNT": {
+    "errorMessage": "Please update the shipping information on your Pay-Pal account, including first and last name.",
+    "formFieldName": ""
+  },
+  "PAYPAL_CC_ERROR_CODE_BILLING_LASTNAME_OR_FIRSTNAME_NOT_AVAILABLE_IN_PAYPAL_ACCOUNT": {
+    "errorMessage": "Please update the billing information on your Pay-Pal account, including first and last name.",
+    "formFieldName": ""
+  },
+  "TCP02": {
+    "errorMessage": "Oops... The card and/or pin number you entered is incorrect. Please try again.",
+    "formFieldName": ""
+  },
+  "SVS20": {
+    "errorMessage": "Giftcard authorization declined.",
+    "formFieldName": ""
+  },
+  "_ERR_INVALID_PIN_CARD": {
+    "errorMessage": "Oops... The card and/or pin number you entered is incorrect. Please try again.",
+    "formFieldName": ""
+  },
+  "CMN0409E": {
+    "errorMessage": "Oops... The card and/or pin number you entered is incorrect. Please try again.",
+    "formFieldName": ""
+  },
+  "_ERR_GIFTCARD_SVS15": {
+    "errorMessage": "Oops... The card and/or pin number you entered is incorrect. Please try again.",
+    "formFieldName": ""
+  },
+  "SVS15": {
+    "errorMessage": "Oops... The card and/or pin number you entered is incorrect. Please try again",
+    "formFieldName": ""
+  },
+  "GIFT_CARD_RECAPTCHA_FAILED": {
+    "errorMessage": "Please try again",
+    "formFieldName": ""
+  },
+  "TCPGC06": {
+    "errorMessage": "Please try again",
+    "formFieldName": ""
+  },
+  "_ERR_DUPLICATE_GIFT_CARD": {
+    "errorMessage": "That gift card number has already been applied to your order. Please enter a different gift card number",
+    "formFieldName": ""
+  },
+  "_ERR_GIFTCARD_SVS20": {
+    "errorMessage": "Giftcard authorization declined.",
+    "formFieldName": ""
+  },
+  "_ERR_MORE_THAN_15_ITEM_IN_CART_ERROR": {
+    "errorMessage": "Sorry, you have reached the quantity limit for this item. Please select another color or size.",
+    "formFieldName": ""
+  },
+  "500": {
+    "errorMessage": "Uh oh... System error. Please try again.",
+    "formFieldName": ""
+  },
+  "PAYPAL_CC_ERROR_CODE_CANADA_CROSS_SITE_ADDRESS_NOT_SUPPORTED ": {
+    "errorMessage": "You cannot use a United States based Paypal account when shipping to Canada, and conversely you cannot use a Canadian based Paypal account when shipping to the United States.",
+    "formFieldName": ""
+  },
+  "PAYPAL_CC_ERROR_CODE_AUTHENTICATION_USER_CANCELED": {
+    "errorMessage": "User canceled session when logged in to PayPal.",
+    "formFieldName": ""
+  },
+  "PAYPAL_CC_ERROR_CODE_GENERIC_ERROR": {
+    "errorMessage": "Oops... there was an issue with your PayPal payment. Please try again.",
+    "formFieldName": ""
+  },
+  "PAYPAL_CC_ERROR_CODE_FAILED_UPDATE_PAYPAL_TRANS_TABLE": {
+    "errorMessage": "Oops... there was an issue with your PayPal payment. Please try again.",
+    "formFieldName": ""
+  },
+  "PAYPAL_CC_ERROR_CODE_CARDINAL_COMMERCE_ERROR": {
+    "errorMessage": "Oops... Your city, state, and zip code do not match. Please update your address on the shipping step.",
+    "formFieldName": ""
+  },
+  "TCP_MIX_ORDER_NOT_ACCEPTED_NOW": {
+    "errorMessage": "System does not accept MIX orders now.",
+    "formFieldName": ""
+  },
+  "TCP_BOPIS_ORDER_NOT_ACCEPTED_NOW": {
+    "errorMessage": "System does not accept BOPIS orders now. User needs to remove BOPIS items from cart.",
+    "formFieldName": ""
+  },
+  "INVALID_PARAM": {
+    "errorMessage": "element will have name of parameter having problem.",
+    "formFieldName": ""
+  },
+  "MANDATORY_PARAM_NOT_PASSED": {
+    "errorMessage": "one of the mandatory parameters not passed.",
+    "formFieldName": ""
+  },
+  "_ERR_BAD_PARMS": {
+    "errorMessage": "Sorry, we couldn't find an account associated with that email address. Please try again.",
+    "formFieldName": ""
+  },
+  "OOS_OR_UNAVAILABLE": {
+    "errorMessage": "Some of the item(s) in your bag are either sold out or need updating. Continuing with checkout will remove them from your bag.",
+    "formFieldName": ""
+  },
+  "SVS07": {
+    "errorMessage": "Sorry, the gift card entered does not have an available balance. Please enter a new gift card or select a new payment type.",
+    "formFieldName": ""
+  },
+  "SVS08": {
+    "errorMessage": "Giftcard authorization declined.",
+    "formFieldName": ""
+  },
+  "TCP_ERROR_CODE_CARD_DECLINED": {
+    "errorMessage": "Giftcard authorization declined.",
+    "formFieldName": ""
+  },
+  "DEFAULT": {
+    "errorMessage": "Oops... an error occured",
+    "formFieldName": ""
+  },
+  "_TCP_PAYMENT_PROCESSING_ERR": {
+    "errorMessage": "We are sorry, however we are unable to obtain authorization to charge this credit card. Please try again with an another form of payment.",
+    "formFieldName": ""
+  },
+  "_DBG_API_DO_PAYMENT_BAD_XDATE": {
+    "errorMessage": "Uh oh... It looks like the credit card has expired. Please update or add a new card.",
+    "formFieldName": ""
+  },
+  "ERR_TAXWARE_UTL_GENERAL_CC": {
+    "errorMessage": "Sorry, we are having difficulty calculating the tax. This may be a system error or an issue with the address provided. Please confirm and try again.",
+    "formFieldName": ""
+  },
+  "_CODE_NOT_APPLICABLE": {
+    "errorMessage": "Coupon is not applicable. Note: If you are applying a My Place Rewards Credit card coupon, coupon will not apply until your card has been entered at checkout.",
+    "formFieldName": ""
+  },
+  "OOB_ERROR": {
+    "errorMessage": "Sorry, the item(s) you tried to add to your shopping bag may either be out of stock or not available in the quantity you requested at the selected store.",
+    "formFieldName": ""
+  },
+  "_ERR_US_ZIPCODE_INVALID": {
+    "errorMessage": "Please enter a valid zipcode",
+    "formFieldName": ""
+  },
+  "ERR_TAXWARE_UTL_RC": {
+    "errorMessage": "Sorry, we are having difficulty calculating the tax. This may be a system error or an issue with the address provided. Please confirm and try again.",
+    "formFieldName": ""
+  },
+  "TCP06": {
+    "errorMessage": "Please enter a gift card in US Dollars or use another form of payment.",
+    "formFieldName": ""
+  },
+  "TCP07": {
+    "errorMessage": "Please enter a gift card in Canadian Dollars or use another form of payment.",
+    "formFieldName": ""
+  },
+  "INTERNAL_SERVER_ERROR": {
+      "errorMessage": "Oops... There was an issue, please try again.",
+      "formFieldName": ""
+  },
+  "ERR_INTERNAL_SERVER_ERROR": {
+      "errorMessage": "There was a problem logging out. Please try again.",
+      "formFieldName": ""
+  },
+  "CWXFR0230E": {
+      "errorMessage": "There was a problem logging out. Please try again.",
+      "formFieldName": ""
+  },
+  "DOM_HISTORY_ERROR_DETECTED": {
+      "errorMessage": "We are sorry, your order history is not available at this time. Please try again later.",
+      "formFieldName": ""
+  },
+  "_ERR_RDN_ALREADY_EXIST": {
+      "errorMessage": "The email address you provided matches an existing account. Please try another email address.",
+      "formFieldName": ""
+  },
+  "ASSOCIATE_ID_NOT_EXIST": {
+      "errorMessage": "The employee id you entered does not exist. Type a different employee id and try again.",
+      "formFieldName": ""
+  },
+  "ASSOCIATE_ID_DOES_NOT_EXIST": {
+      "errorMessage": "The Associate ID you entered does not exist. Please try again.",
+      "formFieldName": ""
+  },
+  "ASSOCIATE_ID_NOT_VALID": {
+      "errorMessage": "The Associate ID you entered doesn't match the name in our records. Please try again.",
+      "formFieldName": ""
+  },
+  "ASSOCIATE_ID_NOT_EXIST_FOR_THE_USER": {
+      "errorMessage": "The Associate ID you entered does not exist. Please try again.",
+      "formFieldName": ""
+  },
+  "INVALID_CURRENT_PASSWORD": {
+      "errorMessage": "Your current password is incorrect. Please try again.",
+      "formFieldName": ""
+  },
+  "_ERR_MAX_LIMIT_REACHED": {
+      "errorMessage": "A maximum of five payment methods may be saved to your account.",
+      "formFieldName": ""
+  },
+  "INVALID_PRESCREEN_CODE": {
+    "errorMessage": "INVALID_PRESCREEN_CODE",
+    "formFieldName": ""
+  },
+  "13007": {
+    "errorMessage": "INVALID_PRESCREEN_CODE",
+    "formFieldName": ""
+  },
+  "MY_ACCOUNT_POINTS_CLAIM_2": {
+    "errorMessage": "Names do not match Credit Card.",
+    "formFieldName": ""
+  },
+  "MY_ACCOUNT_POINTS_CLAIM_3": {
+    "errorMessage": "No Transaction Found.",
+    "formFieldName": ""
+  },
+  "MY_ACCOUNT_POINTS_CLAIM_4": {
+    "errorMessage": "Transaction already assigned a MyplaceID.",
+    "formFieldName": ""
+  },
+  "ERR_DUPLICATE_CARD": {
+    "errorMessage": "Please check if the card is already in use.",
+    "formFieldName": ""
+  },
+  "ERR_SYSTEM_NOT_AVAILABLE": {
+    "errorMessage": "We are unable to process your request. Please try again later.",
+    "formFieldName": ""
+  },
+  "ERR_ORD_EMAIL_MISMATCH": {
+    "errorMessage": "Sorry, that order was not found. Please try again.",
+    "formFieldName": ""
+  },
+  "TCPBPO01": {
+    "errorMessage": "Sorry... Pickup in store is not currently available in Canada.",
+    "formFieldName": ""
+  },
+  "BOPIS_NOT_AVAILABLE": {
+    "errorMessage": "Sorry... Pickup in store is not currently available in Canada.",
+    "formFieldName": ""
+  },
+  "NO_STORES_FOUND": {
+    "errorMessage": "Sorry... We couldn't find a store within your search parameters.",
+    "formFieldName": ""
+  },
+  "ERR_SOMETHING_WRONG": {
+    "errorMessage": "Something went wrong. Please check your details and try again.",
+    "formFieldName": ""
+  },
+  "_ERROR_OCCURED": {
+    "errorMessage": "Cannot share for more than 5 users.",
+    "formFieldName": ""
+  },
+  "_ERR_GIFTLIST_NAME_TOO_LONG": {
+    "errorMessage": "Favorites List titles cannot be over 68 characters. Please rename.",
+    "formFieldName": ""
+  },
+  "_ERR_GIFTLIST_ITEM_CATALOGENTRY_NOT_FOUND": {
+    "errorMessage": "Sorry, we are unable to add this item to your favorites.",
+    "formFieldName": ""
+  },
+  "OOB_ERROR": {
+    "errorMessage": "We're sorry, you have reached the 15 quantity limit for this item. Please select another colour or size.",
+    "formFieldName": ""
+  },
+  "_TCP_COUPON_USED_ALREADY": {
+    "errorMessage": "One or more of your coupons have already been redeemed. Please remove the coupon(s) and try again.",
+    "formFieldName": ""
+  },
+  "_WIC_RTPS_COUPON_NOT_APPLIED": {
+    "errorMessage": "We attempted to apply your offer, but, it does not combine with offers already applied to your order. We’ve saved your coupon to your My Place Rewards account",
+    "formFieldName": ""
+  },
+  "CMN1019E": {
+    "errorMessage": {
+      "errorCode": 10003
+    },
+    "formFieldName": ""
+  },
+  "_ERR_PASSWORD_FAILED ": {
+    "errorMessage": {
+      "errorCode": 10003
+    },
+    "formFieldName": ""
+  },
+  "_TCP_RESET_PASSWORD_LINK_EXPIRED": {
+    "errorMessage": {
+      "errorCode": 10003
+    },
+    "formFieldName": ""
+  },
+  "_RTPS_INACTIVE_PAYMENT": {
+    "errorMessage": "Sorry, there was an issue with your payment. Please re-enter your payment information and try again.",
+    "formFieldName": ""
+  }
+}

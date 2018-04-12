@@ -1,0 +1,60 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/* Add or edit address Form */
+.fieldset-address-editable {
+  padding: 0px;
+
+  .label-error {
+    .inline-error-message {
+      white-space: initial;
+    }
+  }
+}
+
+.shipping-form-container {
+  .container-shipping-section-title {
+    margin-bottom: 20px;
+  }
+}
+
+// .input-first-name {
+//   margin-top: 20px;
+// }
+
+.input-phone,
+.input-email {
+  margin-bottom: 25px;
+}
+
+.checkbox-get-email {
+  margin-bottom: 10px;
+}
+
+.address-shipping-container {
+  .term-and-conditions-message {
+    @include description-secondary-text();
+    display: block;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $color-primary-four;
+  }
+
+  a {
+    @include description-secondary-text($color-primary-one);
+    text-decoration: underline;
+  }
+}
+
+/* Link Shipping Internationally */
+.button-shipping-internationally {
+  @include notification-primary-text($color-primary-two);
+  display: inline-block;
+  text-decoration: underline;
+  margin-bottom: 21px;
+}
+
+.overlay-container {
+  .checkout-section-title {
+    display: none;
+  }
+}

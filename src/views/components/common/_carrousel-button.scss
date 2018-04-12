@@ -1,0 +1,105 @@
+/*
+* Prev & Next Buttons (Carrousel)
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/border-radius";
+
+.button-prev {
+  @include button-prev();
+  left: 10px;
+  height: 34px;
+  width: 17px;
+
+  &:before {
+    top: 0;
+    right: -6px;
+  }
+}
+
+.button-next {
+  @include button-next();
+  right: 10px;
+  height: 34px;
+  width: 17px;
+
+  &:before {
+    top: -1px;
+    right: 16px;
+  }
+}
+
+.item-container {
+  .product-image-container {
+    /* Buttons Arrows */
+    .button-prev {
+      left: -10px;
+    }
+
+    .button-next {
+      right: -10px;
+    }
+  }
+
+  // NOTE: ProductColorChips Component
+  .color-chips-container {
+    .button-prev {
+      top: 11px;
+      left: 5px;
+      display: block;
+    }
+
+    .button-next {
+      top: 11px;
+      right: 5px;
+      display: block;
+    }
+  }
+}
+
+// Carrousel of coupons
+/**********************************************************************************/
+/* Button of Slider */
+// .uncondense-coupons-container {
+//   position: relative;
+//
+//   .button-prev {
+//     position: absolute;
+//     left: 0;
+//     z-index: 1;
+//     top: calc(50% - 20px);
+//     @include transform(translateY(-50%));
+//     height: 40px;
+//     width: 30px;
+//     overflow: hidden;
+//     font-size: 0;
+//
+//     &:before {
+//       content: '';
+//       @include transform(rotate(-45deg));
+//       display: inline-block;
+//       border-left: solid 2px $color-primary-one;
+//       border-top: solid 2px $color-primary-one;
+//       opacity: 0.3;
+//       height: 24px;
+//       width: 24px;
+//       position: relative;
+//       @include border-radius(2px);
+//       top: 1px;
+//       right: -7px;
+//     }
+//   }
+//
+//   .button-next {
+//     @extend .button-prev;
+//     left: auto;
+//     right: 0;
+//
+//     &:before {
+//       @include transform(rotate(135deg));
+//       top: 2px;
+//       right: 7px;
+//     }
+//   }
+// }

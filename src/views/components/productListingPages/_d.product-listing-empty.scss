@@ -1,0 +1,32 @@
+/**
+* Search Result Empty (Desktop)
+**/
+
+@import "_m.product-listing-empty.scss";
+
+.search-result-empty-container {
+  .typeahead {
+    /* Reset Styles */
+    top: auto;
+    float: none;
+    max-width: 630px;
+    min-width: 300px;
+    width: 100%;
+  }
+}
+
+.empty-search-result-title {
+  width: 80%;
+  max-width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+
+  br {
+    display: none;
+  }
+}
+
+/* NOTE: Marketing espot DT-31231 */
+.empty-search-result-slot {
+  max-width: 1400px;
+}

@@ -1,0 +1,29 @@
+/**
+* Checkout Header (Desktop)
+**/
+
+@import "./_m.checkout-header.scss";
+
+.header-title-checkout {
+  line-height: 70px;
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 131px);
+  text-indent: -110px;
+  text-align: center;
+}
+
+.return-to-bag-link {
+  @include description-primary-text();
+  text-decoration: underline;
+  color: $color-primary-two;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  @include transform(translateY(-50%));
+
+}
+
+.checkout-header {
+  position: relative;
+}

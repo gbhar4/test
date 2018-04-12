@@ -1,0 +1,31 @@
+@import "compass/css3/transition";
+@import "_mixins.scss";
+@import "_mixins.scss";
+
+@import "_m.miniCartLink.scss";
+
+.minicart-container {
+  transform: none;
+  float: none;
+  top: 0px;
+  line-height: 39px;
+  height: 39px;
+
+  .button-cart {
+    line-height: 39px;
+    height: 39px;
+    overflow: hidden;
+    padding-top: 0px;
+
+    @include icon-tcp-bag();
+    &:before {
+      position: absolute;
+      top: -2px;
+      top: auto;
+      left: 0px;
+      width: 34px;
+      bottom: 10px;
+      line-height: normal;
+    }
+  }
+}

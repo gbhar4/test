@@ -1,0 +1,233 @@
+/**
+* Guest Rewards Promo (Espot)
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Componente Summary Message en checkout */
+.summary-message {
+  text-align: center;
+  padding: 20px 0;
+  color: $color-primary-one;
+
+  .summary-message-title {
+    @include body-secondary-text();
+
+    span {
+      font-weight: 900;
+    }
+  }
+
+  .points-and-rewards-information {
+    @include body-primary-text();
+    display: block;
+    margin: 0 auto;
+    @include font-global-black();
+    text-transform: uppercase;
+  }
+
+  a {
+    text-decoration: underline;
+    @include description-primary-text();
+    color: $color-primary-four;
+    margin-top: 5px;
+    display: block;
+  }
+
+  p {
+    @include navigation-level-1();
+    color: $color-primary-four;
+    text-transform: uppercase;
+  }
+
+  &.summary-message-rewards {
+    padding: 10px;
+    height: auto;
+
+    h3 {
+      margin-top: 8px;
+      margin-bottom: -4px;
+    }
+
+    a {
+      @include notification-secondary-text($color-global-white);
+      margin-top: 0;
+      text-decoration: underline;
+    }
+  }
+
+  /**end of nested parent code- */
+  p {
+    @include navigation-level-1();
+    color: $color-primary-four;
+    text-transform: uppercase;
+  }
+}
+
+/* Guest */
+.guest-rewards-promo-container {
+  background: transparent url("/wcsstore/static/images/pt-orange-stripes.png") repeat 0 0;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.guest-rewards-promo {
+  background: $color-global-white;
+  padding: 20px;
+}
+
+.figure-stars-espot {
+  width: 120px;
+  display: block;
+  margin: 3px auto 8px;
+  position: relative;
+}
+
+.button-register-condense,
+.button-login-condense {
+  @include subheading-primary-text();
+  text-decoration: underline;
+  margin: 10px 10px 0px;
+  text-align: center;
+}
+
+.button-login-uncondense,
+.button-register-uncondense {
+  font-size: 10px;
+  text-decoration: underline;
+  margin-right: 15px;
+}
+
+/* Componente Summary Message en overlay */
+.overlay-my-bag {
+  .summary-message {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+  }
+}
+
+
+/*Air Miles*/
+.airmiles-form {
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+
+  label {
+    text-align: left;
+  }
+
+  input {
+    text-transform: uppercase;
+  }
+
+  .input-title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .second-title {
+    position: absolute;
+    top: 12px;
+  }
+
+  sup {
+    top: 0;
+    font-size: .7em;
+  }
+
+  .title-airmiles {
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  img {
+    margin-bottom: 5px;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .airmiles-number {
+    width: 65%;
+    display: inline-block;
+    position: relative;
+
+    button {
+      color: $color-primary-two;
+    }
+
+    .airmiles-collector-number {
+      width: 100%;
+      display: inline-block;
+      text-align: left;
+      @include label-common-text();
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    p {
+      font-size: 22px;
+      color: $color-primary-one;
+      height: 45px;
+      line-height: 45px;
+      vertical-align: middle;
+      margin-top: 5px;
+      text-align: left;
+      padding-left: 35px;
+    }
+
+    .airmiles-collector-button-container {
+      padding: 0px;
+      margin-top: 0px;
+    }
+
+    .air-miles-button-edit {
+      text-decoration: underline;
+      font-size: 16px;
+      margin-left: 10px;
+      text-transform: capitalize;
+      display: inline-block;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .airmiles-number-help {
+    margin-left: 10px;
+  }
+
+  .airmiles-id {
+    width: 30%;
+    float: right;
+    display: inline-block;
+  }
+
+  .airmiles-id-information {
+    .tooltip-container {
+      right: calc(50% - 10px);
+
+      &:after,
+      &:before {
+        left: 97%;
+      }
+    }
+  }
+
+  .text-under {
+    @include notification-secondary-text($color-primary-three);
+    margin-top: 8px;
+    text-transform: none;
+    display: block;
+  }
+}
+
+.overlay-my-bag {
+  .airmiles-form {
+    padding: 20px;
+  }
+}

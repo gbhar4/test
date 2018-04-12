@@ -1,0 +1,95 @@
+/**
+ * Progress Indicators
+ */
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "compass/css3/border-radius";
+
+.checkout-progress-indicator {
+  padding: 10px 0px;
+  overflow: hidden;
+}
+
+.checkout-progress-bar {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 117%;
+  left: -8%;
+  position: relative;
+  padding-top: 6px;
+
+  &.pickup-shipping {
+    padding: 0px 24px;
+
+    li {
+      width: 25%;
+    }
+  }
+
+  li {
+    list-style-type: none;
+    width: 33.3%;
+    float: left;
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    color: $color-primary-three;
+
+    &:before {
+      width: 11px;
+      height: 11px;
+      content: "";
+      background-color: $color-primary-three;
+      display: block;
+      text-align: center;
+      margin: 0 auto 7px;
+      @include border-radius(50%);
+    }
+
+    &:after {
+      width: 100%;
+      height: 2px;
+      content: '';
+      position: absolute;
+      background-color: $color-primary-three;
+      top: 5px;
+      left: -50%;
+      z-index: -1;
+    }
+
+    &:first-child:after {
+      content: none;
+    }
+
+    button,
+    span {
+      @include subheading-secondary-text($color-primary-three);
+      text-transform: none;
+    }
+
+    button {
+      color: $color-primary-one;
+    }
+
+
+
+    &.completed,
+    &.active {
+      &:after,
+      &:before {
+        background-color: $color-primary-one;
+      }
+
+      span {
+        color: $color-primary-one;
+      }
+    }
+  }
+}
+
+.checkout-progress-indicator-title {
+  @include body-primary-text();
+  text-transform: uppercase;
+  text-align: center;
+}

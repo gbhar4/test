@@ -1,0 +1,77 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+@import "compass/functions";
+@import "compass/css3/transform";
+@import "compass/css3/opacity";
+@import "compass/utilities/general/clearfix";
+
+.item-shopping-cart {
+  /* Descripción de producto: Color, talle y cantidad elegida */
+  /* Contenedor de los items de la descripción (en estado no editable) */
+  .container-description-view {
+    margin-bottom: 12px;
+    @include notification-primary-text();
+
+    span {
+      @include notification-primary-text();
+      display: block;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+
+    /* Button Edit */
+    .button-edit-product {
+      @include notification-primary-text($color-primary-two);
+      text-decoration: underline;
+      margin-top: 11px;
+      display: block;
+    }
+
+    .text-color {
+      img {
+        display: none;
+      }
+    }
+
+    /* Contenedor de los inputs select */
+    .container-selects {
+      width: calc(100% - 47px);
+      display: inline-block;
+      text-align: left;
+    }
+
+    .select-fit,
+    .select-size {
+      width: calc(24% - 6px);
+      margin-right: 6px;
+      margin-bottom: 0px;
+    }
+
+    .select-quantity {
+      width: calc(16% - 6px);
+      margin-bottom: 0px;
+    }
+
+    .container-price {
+      @include subheading-tertiary-text();
+      text-align: left;
+    }
+
+    /* text for previous price */
+    .product-list-price {
+      margin-right: 15px;
+      color: $color-primary-three;
+      text-decoration: line-through;
+      letter-spacing: 0;
+    }
+  }
+
+
+}

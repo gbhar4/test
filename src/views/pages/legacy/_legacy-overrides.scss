@@ -1,0 +1,21 @@
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.sk_tcpHelpCenterFrom .login input,
+.create-account input,
+.add-address input,
+.add-credit input {
+  height: inherit;
+}
+
+@media screen and (min-width: 1400px) {
+  .content-reposition {
+    overflow-x: hidden;
+  }
+
+  #site-wrapper,
+  #header-wrapper {
+    overflow-x: hidden;
+  }
+}

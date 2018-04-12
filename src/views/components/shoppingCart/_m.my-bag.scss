@@ -1,0 +1,196 @@
+@import "compass/functions";
+@import "compass/css3/transform";
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.container-global-my-bag {
+  background: $color-primary-five;
+  display: block;
+  width: 100%;
+  padding: 0px 16px;
+
+  .fpo-banner-rewards-slot {
+    padding-top: 100px;
+
+    /* Banner */
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.my-bag {
+  padding-bottom: 80px;
+
+  .notification {
+    height: auto;
+
+    &.oss-notification-from-bag {
+      // width: calc(100% + (16px * 2));
+      // left: -16px;
+      background: $color-primary-two;
+      border-top: solid 1px $color-primary-one-opacity;
+      position: relative;
+      top: 18px;
+
+      p {
+        @include notification-secondary-text($color-global-white);
+        @include font-global-regular();
+        padding: 10px 20px;
+      }
+
+      .notification-inline {
+        text-align: center;
+        position: relative;
+        color: $color-global-white;
+
+        a,
+        button {
+          color: $color-global-white;
+        }
+
+      }
+    }
+
+    .button-close-text {
+      color: $color-global-white;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .subheading-button-continue-shopping{
+    float: right;
+    right: 5px;
+    color: #707070;
+    padding: 11px;
+    font-size: 12px;
+    padding-right: 16px;
+  }
+
+  /* Titulo de la sección My Bag */
+  .subheading-my-bag {
+    background: $color-global-white;
+    padding: 14px 0px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    // width: calc(100% + 32px);
+    // left: -16px;
+
+
+    .subheading-my-bag-title {
+      @include heading-level-3();
+      text-transform: uppercase;
+      position: relative;
+      padding: 0px 16px;
+
+      span {
+        float: right;
+        font-size: 14px;
+        margin-top: 4px;
+        text-transform: capitalize;
+        color: #707070;
+        font-weight: bold;
+      }
+    }
+
+    // @media screen and (max-width: 800px){
+    //   .subheading-my-bag-title {
+    //     @include heading-level-3();
+    //     text-transform: uppercase;
+    //     position: relative;
+    //   }
+    // }
+
+    /* Link Continue Shopping */
+    .button-continue-shopping {
+      @include notification-primary-text($color-primary-two);
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      @include transform(translateY(-50%));
+    }
+  }
+
+  /* My bag empty / vista */
+  .empty {
+    text-align: center;
+
+    h1 {
+      @include heading-level-4();
+      @include font-global-regular();
+      text-transform: none;
+      padding-top: 86px;
+      height: auto;
+    }
+
+    .button-go-shopping {
+      width: 74%;
+      margin: 10px auto 0;
+    }
+
+    .container-slot {
+      display: block;
+      margin-top: 86px;
+
+      .fpo-banner-rewards-slot {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* My bag */
+div.overlay-form-login.overlay-center,
+section.overlay-form-login.overlay-center {
+  .overlay-content {
+    height: auto;
+    overflow: initial;
+  }
+
+  .login-banner,
+  .reset-password-text {
+    display: none;
+  }
+
+  .login-banner,
+  .new-account,
+  .reset-password-text {
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
+div.overlay-reset-password.overlay-center,
+section.overlay-reset-password.overlay-center {
+  /* Botón Login en overlay centrado */
+  .message {
+    text-align: left;
+
+    button {
+      top: auto;
+      position: relative;
+      display: block;
+      margin-bottom: 50px;
+      left: 0;
+    }
+
+    h3,
+    p {
+      text-align: center;
+    }
+  }
+
+  .overlay-content {
+    height: auto;
+    overflow: initial;
+  }
+
+  .resetPassword-banner {
+    display: none;
+  }
+}

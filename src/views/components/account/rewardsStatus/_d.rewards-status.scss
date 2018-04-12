@@ -1,0 +1,62 @@
+/*
+* Rewards Status (Desktop)
+*/
+
+@import "_m.rewards-status";
+
+.rewards-status {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-bottom: 0px;
+
+  .rewards-bar:after {
+    content: '';
+    width: 1px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    background-color: $color-primary-four;
+    right: -1px;
+    top: -15px;
+  }
+}
+
+.my-account-content-overlay {
+  padding: 0px;
+
+  .rewards-status {
+    padding: 15px;
+    width: 65%;
+
+    .title {
+      text-transform: uppercase;
+
+      strong {
+        color: $color-primary-one;
+      }
+    }
+
+    .rewards-bar {
+      margin-top: 20px;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .rewards-points {
+      vertical-align: top;
+      margin-top: 0px;
+
+      span {
+        color: $color-primary-one;
+      }
+    }
+  }
+}
+
+.order-status-notification-container {
+  > div:first-of-type {
+    border-top: 0px;
+  }
+}

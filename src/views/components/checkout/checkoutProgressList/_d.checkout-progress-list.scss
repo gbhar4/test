@@ -1,0 +1,73 @@
+@import "_m.checkout-progress-list.scss";
+@import "compass/css3/border-radius";
+
+.checkout-progress-list {
+  display: block;
+  margin-bottom: 40px;
+
+  li {
+    position: relative;
+    margin-top: 8px;
+
+    &:first-of-type {
+      margin-top: 0px;
+    }
+
+    &:before {
+      position: absolute;
+      top: 5px;
+      left: -40px;
+    }
+  }
+
+  h2,
+  button {
+    @include heading-level-4();
+    line-height: 32px;
+
+    &:after {
+      content: '';
+      height: 1px;
+      width: 100%;
+      background-color: $color-primary-one;
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+    }
+  }
+
+  .active:before {
+    content: '';
+    color: $color-global-white;
+    @include border-radius(50%);
+    background-color: $color-primary-one;
+    width: 22px;
+    height: 20px;
+    padding: 4px 2px 2px;
+    text-align: center;
+  }
+
+  .stage1:before {
+    content: '1';
+  }
+
+  .stage2:before {
+    content: '2';
+  }
+
+  .stage3:before {
+    content: '3';
+  }
+
+  .stage4:before {
+    content: '4';
+  }
+
+  .completed {
+    @include icon-tcp-success();
+
+    &:before {
+      font-size: 26px;
+    }
+  }
+}

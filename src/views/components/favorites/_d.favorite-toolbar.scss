@@ -1,0 +1,69 @@
+/*
+ * Favorite Toolbar (Desktop)
+ */
+
+@import '_m.favorite-toolbar.scss';
+@import "compass/css3/transform";
+
+.favorite-toolbar-container {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  padding: 0px;
+
+  .toolbar-header-container {
+    &.shared-toolbar-header-container {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.favorite-social-container {
+  width: auto;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  margin-top: 0px;
+}
+
+.favorite-list {
+  &.custom-select-common {
+    width: 292px;
+    text-align: center;
+  }
+
+  .custom-select-button {
+    margin-top: 0px;
+  }
+}
+
+.dropdown-share-options {
+  width: 132px;
+}
+
+.favorite-toolbar-share-container {
+  position: relative;
+}
+
+.favorite-active-list-container {
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.favorite-social-container {
+  width: auto;
+  vertical-align: middle;
+  float: none;
+  top: auto;
+}
+
+.share-list {
+  .custom-select-button {
+    margin-top: 0px;
+  }
+}
+
+.setting-edit-section {
+  vertical-align: top;
+}

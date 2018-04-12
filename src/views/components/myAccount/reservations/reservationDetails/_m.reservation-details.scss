@@ -1,0 +1,91 @@
+/**
+*  Reservation Details (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.reservation-details-section {
+  &.my-account-section-content {
+    padding-bottom: 0px;
+  }
+
+  .accordion-element {
+    margin-top: 0px;
+  }
+}
+
+.reservation-display {
+  margin-bottom: 20px;
+
+  .item-information {
+    margin: 6px 0px;
+  }
+
+  .title-description {
+    width: 30%;
+    margin-bottom: 10px;
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+
+    @include subheading-primary-text($color-primary-two);
+    @include font-global-heavy();
+    text-transform: none;
+  }
+
+  .reservation-item,
+  .button-get-direction {
+    margin-bottom: 10px;
+  }
+
+  .reservation-item,
+  .pickup-information-container {
+    width: 70%;
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px;
+    vertical-align: top;
+
+    @include subheading-primary-text();
+    @include font-global-heavy();
+    text-transform: none;
+  }
+
+  .name-store {
+    @include subheading-primary-text();
+    @include font-global-heavy();
+    text-transform: none;
+    text-decoration: underline;
+  }
+
+  .name-store,
+  .address-store,
+  .schedule-store,
+  .phone-store,
+  .button-get-direction {
+    display: block;
+  }
+
+  .button-get-direction {
+    @include subheading-primary-text();
+    @include font-global-regular();
+    text-transform: none;
+    text-decoration: underline;
+  }
+
+  .date-info,
+  .expiration-info,
+  .schedule-store,
+  .phone-store {
+    @include font-global-regular();
+  }
+
+  .schedule-store {
+    margin-top: 3px;
+  }
+
+  .phone-store {
+    margin-bottom: 3px;
+  }
+}

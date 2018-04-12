@@ -1,0 +1,249 @@
+/**
+* Rewards from My Account (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/flexbox";
+
+/* Rewards Section of Global My Account Header */
+.my-account-rewards-section {
+  display: inline-block;
+  width: 100%;
+  @include display-flex;
+  @include justify-content(space-between);
+}
+
+/* Reward status container of Global My Account */
+.rewards-status-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background: $color-global-white;
+  padding: 10px 16px;
+
+  /* Title of big component of Reward Status in Global My Account */
+  .point-earned-title {
+    @include description-secondary-text();
+    @include font-global-medium();
+    top: -1px;
+    position: relative;
+    opacity: .88;
+  }
+
+  /* Container of total points and available rewards in Global My Account */
+  .rewards-summary {
+    @include subheading-secondary-text();
+    width: calc(100% - 25px);
+    line-height: 17px;
+    position: relative;
+    top: -2px;
+    letter-spacing: 0.1px;
+  }
+
+  /* Total points item */
+  .total-points {
+    position: relative;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 12px;
+      position: relative;
+      margin: 0px 6px;
+      top: -1px;
+      background: $color-primary-one;
+      vertical-align: middle;
+    }
+  }
+
+  /* Button for open accordion (Mobile only) */
+  .button-open-reward-status {
+    cursor: pointer;
+    z-index: 1;
+    @include more-and-less-icon();
+    position: absolute;
+    right: 15px;
+    top: 25px;
+
+    &:focus {
+      outline: 0px;
+    }
+
+    &:before {
+      width: 14px;
+      background: $color-accent-three;
+    }
+
+    &:after {
+      visibility: visible;
+      height: 14px;
+      top: -3px;
+      background: $color-accent-three;
+    }
+
+    &.expanded {
+      &:after {
+        visibility: hidden;
+      }
+    }
+  }
+
+  .pending-rewards-tooltip-container {
+    position: relative;
+    margin-left: 5px;
+    top: -1px;
+
+    .tooltip-container {
+      // right: 0px;
+      left: 50%;
+      @include transform(translateX(-50%));
+
+      &:before {
+        left: 50%;
+        @include transform(translateX(-50%));
+        // left: calc(100% - 19px);
+      }
+
+      &:after {
+        left: 50%;
+        @include transform(translateX(calc(-50% + 8px)));
+        // left: calc(100% - 9px);
+      }
+    }
+
+    .button-close {
+      font-size: 0px;
+      @include common-button-remove();
+      position: absolute;
+      right: 13px;
+      top: 19px;
+
+      &:after {
+        height: 14px;
+        width: 2px;
+        top: 0px;
+      }
+
+      &:before {
+        width: 14px;
+        height: 2px;
+        top: 8px;
+      }
+    }
+  }
+}
+
+/* Reward earned container of Global My Account */
+.reward-earned-container {
+  text-align: center;
+  padding: 10px 30px;
+  display: inline-block;
+  width: 100%;
+  background: $color-global-white;
+
+  /* Title of Rewards earned */
+  .reward-earned-title {
+    @include heading-level-4();
+  }
+
+  /* Subtitle or message of rewards earned */
+  .reward-accreditation-message {
+    @include notification-primary-text();
+    @include font-global-regular();
+  }
+
+  /* Button of View all rewards */
+  .button-view-all-rewards {
+    @include button-quaternary(secondary);
+    display: inline-block;
+    margin-top: 10px;
+    width: 160px;
+  }
+}
+
+/* Resets
+   ========================================================================== */
+
+.rewards-status-container {
+  // Reset some styles of My Account Drawer
+  .rewards-status {
+    margin-top: 10px;
+    padding: 0px;
+    width: 100%;
+
+    /* Check level of sass */
+    .rewards-bar {
+      width: 100%;
+      padding: 0px;
+      margin-top: 10px;
+
+      &:after {
+        display: none;
+      }
+    }
+  } // End of reset some styles of My Account Drawer
+
+// // Reset for progress container
+//   .progress-container {
+//     height: 7px;
+//   }
+
+  .tooltip-container {
+    &:before {
+      left: 49%;
+    }
+  }
+
+  .reward-image {
+    width: 70%;
+    display: block;
+    margin: 0 auto 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .reward-title-tooltip {
+    @include heading-level-3();
+    @include font-global-black();
+    text-transform: uppercase;
+  }
+
+  .reward-message-tooltip {
+
+  }
+}
+
+/* Espot from Account Header */
+.account-header-reward-espot {
+  text-align: left;
+  position: relative;
+
+  .image-container {
+    > div {
+      max-height: 100px;
+      overflow-y: hidden;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .espot-plcc-message-container {
+    @include notification-secondary-text();
+    @include font-global-black();
+  }
+
+  .espot-plcc-message {
+    @include font-global-regular();
+  }
+
+  .plcc-link {
+    text-decoration: underline;
+    color: $color-primary-one;
+  }
+}

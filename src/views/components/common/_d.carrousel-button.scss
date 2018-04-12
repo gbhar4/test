@@ -1,0 +1,72 @@
+/*
+* Prev & Next Buttons (Carrousel Desktop)
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/border-radius";
+
+.item-container {
+  /* Image section */
+  .product-image-container {
+    /* Buttons Arrows */
+    .button-prev {
+      left: 0px;
+    }
+
+    .button-next {
+      right: 0px;
+    }
+  }
+
+  // NOTE: ProductColorChips Component
+  .color-chips-container {
+    /* Color section */
+    .button-prev {
+      left: 18px;
+      display: none;
+    }
+
+    /* Color section */
+    .button-next {
+      right: 18px;
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  // Ipad and Tablet devices
+  .products-listing-grid {
+    // NOTE: ProductColorChips Component
+    .color-chips-container {
+      .button-prev,
+      .button-next {
+        &:before {
+          height: 20px;
+          width: 20px;
+        }
+      }
+
+      .button-prev {
+        &:before {
+          left: 10px;
+        }
+      }
+
+      /* Color section */
+      .button-prev {
+        // left: -12px;
+        left: 0px;
+        top: 13px;
+      }
+
+      /* Color section */
+      .button-next {
+        // right: -12px;
+        right: 0px;
+        top: 13px;
+      }
+    }
+  }
+}

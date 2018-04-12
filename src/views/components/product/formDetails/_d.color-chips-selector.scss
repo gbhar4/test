@@ -1,0 +1,34 @@
+/**
+* Color Chips Selector (Desktop)
+**/
+
+@import "_m.color-chips-selector.scss";
+
+
+.giftcard-details-container {
+  /* When the input is checked, the image color has black border (selected) */
+  .input-radio-icon-checked + .input-radio-title {
+    .color-image {
+      width: 100%;
+    }
+  }
+
+  .color-chips-selector-item {
+    width: calc(25% - 13.25px);
+    margin: 0 15px 15px 0;
+
+    //* Pisar estilos de mobile */
+    &:nth-child(2n) {
+      margin-right: 15px;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  /* Image color of item */
+  .color-image {
+    width: 100%;
+  }
+}

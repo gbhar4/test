@@ -1,0 +1,430 @@
+/**
+* Filters Section (Desktop)
+**/
+
+@import "_m.filter-section.scss";
+
+.plp-section-container {
+  &.search-from-navigation {
+    /* Reset styles for search from keywords (typeahead) */
+    .breadcrum-container {
+      display: block;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+
+      &:after {
+        content: '';
+        width: 173px; /* width: 183px, but margin-rigth needs 20px */
+        height: 1px;
+        display: inline-block;
+        background: $color-primary-one-opacity;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+      }
+    }
+
+    .grid-container {
+    // .products-grid-container {
+      margin-top: -53px;
+    }
+  }
+
+  .search-by-keywords-container {
+    width: 100%;
+  }
+
+  .items-count-content {
+    max-width: 100%;
+  }
+}
+
+.filter-and-sort-form-container {
+  margin-bottom: 0px;
+
+  .loading-more-product {
+    margin-top: 20px;
+  }
+}
+
+/* Item's count */
+.items-count-container {
+  width: 100%;
+  display: inline-block;
+
+  .items-count-content {
+    @include heading-level-4();
+    text-align: right;
+    display: block;
+  }
+
+  .show-all-button {
+    @include notification-secondary-text($color-primary-three);
+    text-decoration: underline;
+    float: right;
+  }
+}
+
+/* Filters and sorting section, container of available filters and added filters item */
+.available-filters-sorting-container {
+  border-top: 0px;
+  width: 100%;
+  left: auto;
+  padding: 0px;
+  position: relative;
+  margin-top: 0px;
+  // padding: 10px 0px 20px;
+  padding: 10px 0px 0px;
+
+  /* Availables filter's title */
+  .filter-title,
+  .sorter-filter > span {
+    @include subheading-primary-text($color-primary-three);
+    text-transform: none;
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+
+  .filtering-title {
+    @extend .filter-title;
+    width: 70px;
+    margin-top: 7px;
+  }
+}
+
+/* Only available filters */
+.filters-sorting-container {
+  width: 100%;
+  padding: 20px 0px;
+  border-top: solid 1px $color-primary-four;
+  border-bottom: solid 1px $color-primary-four;
+  margin-bottom: 0px;
+
+  /* Size dropdown filter */
+  .size-detail {
+    vertical-align: middle;
+    width: auto;
+    margin-right: 20px;
+
+    /* Button */
+    .custom-select-button {
+      width: 70px;
+    }
+
+    &.categories-detail {
+      /* Button */
+      .custom-select-button {
+        width: 100px;
+        margin-right: 0px;
+      }
+    }
+
+    .item-common {
+      padding: 5px;
+    }
+
+    /* Reset Styles */
+    .item-highlighted {
+      background: transparent;
+
+      .size-title {
+        color: $color-primary-one;
+      }
+    }
+
+    .item-highlighted {
+      &.item-selected {
+        background: $color-primary-one;
+
+        .size-title {
+          color: $color-global-white;
+        }
+      }
+    }
+
+    .item-selected {
+      background: $color-primary-one;
+
+      .size-title {
+        color: $color-global-white;
+      }
+    }
+  }
+
+  /* Color multi-dropdown filter */
+  .color-detail {
+    vertical-align: middle;
+    width: auto;
+
+    .list-container {
+      width: 500%;
+
+      .item-list-common {
+        overflow: visible;
+      }
+    }
+
+    /* Button */
+    .custom-select-button {
+      width: 70px;
+    }
+
+    .item-common {
+      padding: 0px;
+    }
+
+    li {
+      padding-right: 30px;
+      width: auto;
+
+      &:last-of-type {
+        padding-right: 10px;
+      }
+    }
+  }
+
+  /* Reset Custom Select's styles */
+  .color-detail-item {
+    &.item-common {
+      overflow: visible;
+    }
+  }
+
+  /* Color Chip and name as tooltip, item of color's dropdown */
+  .color-detail-item {
+  }
+
+  /* Color Chip */
+  .color-chip {
+    width: 30px;
+    height: 30px;
+    @include border-radius(50%);
+    display: inline-block;
+    position: relative;
+  }
+
+  .color-name {
+    display: none;
+    background: $color-global-white;
+    padding: 3px 5px;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    @include transform(translateX(-50%));
+    bottom: -15px;
+    z-index: 2;
+    color: $color-primary-two;
+
+    &:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: $color-global-white;
+      position: absolute;
+      top: -5px;
+      display: inline-block;
+      @include transform(rotate(-45deg));
+      left: calc(50% - 5px);
+      right: calc(50% - 5px);
+      z-index: -1;
+    }
+  }
+
+  /* Selected item */
+  .color-detail-selected {
+    background: none;
+
+    /* Color selected */
+    .color-chip {
+      border: solid 2px $color-primary-one;
+    }
+
+    /* Name as tooltip */
+    .color-name {
+      display: block;
+    }
+  }
+
+  /* NOTE: Both filters */
+  .size-detail,
+  .color-detail {
+    /* Reset Styles */
+    .item-highlighted {
+      background: transparent;
+      color: inherit;
+    }
+
+    /* NOTE: I'll enhance this */
+    &.categories-detail {
+      /* Dropdown */
+      .list-container {
+        .item-list-common {
+          margin-bottom: 0px;
+        }
+
+        li {
+          &:last-of-type {
+            float: left;
+            position: relative;
+            right: auto;
+            bottom: auto;
+            z-index: 3;
+
+            .item-common {
+              padding: 5px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    /* Dropdown */
+    .list-container {
+      max-width: none;
+      border: 0px;
+      border-top: solid 1px $color-primary-one;
+      @include box-shadow(inset 0px 0px 0px 2px $color-accent-one);
+      padding: 10px;
+      margin-top: -1px;
+
+      .item-list-common {
+        width: 100%;
+        margin-bottom: 45px;
+        display: inline-block;
+        position: static;
+      }
+
+      li {
+        float: left;
+
+        &:last-of-type {
+          float: none;
+          position: absolute;
+          right: 0px;
+          bottom: 10px;
+          z-index: 3;
+
+          .item-common {
+            padding: 0px;
+            display: block;
+          }
+        }
+      }
+
+      .item-common {
+        display: inline-block;
+        width: auto;
+        line-height: normal;
+        display: block;
+      }
+    }
+  }
+
+  .size-detail {
+    /* NOTE: I'll enhance this */
+    &.categories-detail {
+      .list-container {
+        width: 500%;
+      }
+    }
+
+    .list-container {
+      width: 700%;
+      padding-bottom: 5px;
+
+      .item-list-common {
+        display: block;
+      }
+
+      .item-common {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-bottom: 5px;
+      }
+
+      li {
+        width: 25%;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  /* Sorter dropdown filter */
+  .sorter-filter {
+    vertical-align: middle;
+    width: auto;
+    float: right;
+    @include display-flex;
+    position: relative;
+
+    /* Specific "Sort by" title */
+    > span {
+      display: inline-block;
+      width: auto;
+      @include align-self(center);
+    }
+
+    /* Button */
+    .custom-select-button {
+      width: 111px;
+    }
+
+    .sort-item-selected {
+      @include ellipsis();
+      padding-right: 17px;
+    }
+
+    /* Dropdown list */
+    .list-container {
+      top: 30px;
+      right: 0px;
+      border: 0px;
+      border-top: solid 1px $color-primary-one;
+      @include box-shadow(inset 0px 0px 0px 2px $color-accent-one);
+      padding: 2px; // to fix box-shadow
+      margin-top: -1px;
+    }
+  }
+
+  /* Department filter, when user search from keywords */
+  .department-detail-container {
+    width: auto;
+    max-width: 50%;
+    display: inline-block;
+    vertical-align: top;
+
+    .label-radio {
+      padding: 0px;
+    }
+
+    .department-detail-item {
+      cursor: pointer;
+      margin-right: 20px;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .department-filter-title {
+      @include heading-level-4();
+      @include font-global-heavy();
+      text-transform: capitalize;
+    }
+
+    /* Reset Styles */
+    .input-radio-icon-unchecked,
+    .input-radio-icon-checked {
+      display: none;
+    }
+
+    /* Reset Styles */
+    .input-radio-title {
+      line-height: normal;
+      display: block;
+    }
+  }
+
+}

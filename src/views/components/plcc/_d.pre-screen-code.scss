@@ -1,0 +1,75 @@
+/*
+* Pree Screen Code Entry Desktop
+*/
+
+@import '_m.pre-screen-code.scss';
+
+.overlay-pre-screen-code {
+  .overlay-container {
+    width: 800px;
+  }
+}
+
+.overlay-pre-screen-code {
+  .title {
+    @include heading-level-2();
+    @include font-global-regular();
+  }
+
+  .button-continue,
+  .button-return,
+  .input-pre-screen {
+    width: 350px;
+    display: block;
+    margin: 0 auto 22px;
+  } // these are valid?
+}
+
+.pre-screen-code-container {
+  height: auto;
+  padding-top: 9px;
+
+  .title {
+    margin: 34px 0 22px;
+  }
+
+  .button-modal-close {
+    right: 10px;
+    top: 10px;
+  }
+
+  .input-pre-screen,
+  .button-continue,
+  .button-return {
+    width: 350px;
+    display: block;
+    margin: 0 auto 22px;
+  }
+
+  .input-pre-screen {
+    margin-bottom: 30px;
+    width: 350px;
+
+    div:first-child {
+      padding-bottom: 10px;
+    }
+
+     /* NOTE: DT-25656 */
+    div:first-child,
+    /* NOTE: DT-25656 (reopen) */
+    input {
+      @include heading-level-3();
+    }
+  }
+
+  .error-box {
+    width: 350px;
+    margin-bottom: 20px;
+  }
+
+  .message {
+    width: 80%;
+    display: block;
+    margin: 0 auto 35px;
+  }
+}

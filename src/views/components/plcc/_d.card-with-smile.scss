@@ -1,0 +1,61 @@
+/*
+* card with smile Desktop
+*/
+
+@import '_m.card-with-smile.scss';
+
+.card-with-smile-container {
+  width: 210px;
+
+  .img-smile {
+    width: 100%;
+    position: relative;
+  }
+}
+
+/* Approved State */
+.approved-plcc-container {
+  .card-with-smile-container {
+    width: 235px;
+    margin-top: 63px;
+  }
+
+  .img-smile {
+    left: -15px;
+  }
+}
+
+/* Review/Pending State */
+.under-review-container {
+  .card-with-smile-container {
+    width: 235px;
+    margin-top: 39px;
+  }
+}
+
+/* Existing Card State */
+.card-existing-container {
+  .card-with-smile-container {
+    width: 235px;
+    margin-top: 59px;
+  }
+}
+
+/* Modals */
+.overlay-form-plcc {
+  .approved-plcc-container,
+  .card-with-smile-container,
+  .under-review-container {
+    .card-with-smile-container {
+      margin-top: 0px;
+    }
+  }
+}
+
+.overlay-form-plcc {
+  .card-existing-container {
+    .card-with-smile-container {
+      margin-top: 11px;
+    }
+  }
+}

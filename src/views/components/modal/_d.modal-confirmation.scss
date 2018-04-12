@@ -1,0 +1,67 @@
+/**
+* Modal Confirmation Cart
+**/
+
+@import "_m.modal-confirmation.scss";
+
+.message-cart-alert {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.overlay-confirmation {
+  .title-confirmation {
+    text-align: center;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    @include font-global-black();
+  }
+
+  .overlay-button-container {
+    margin-top: 25px;
+  }
+
+  .button-cancel {
+    width: 48%;
+    margin-top: 20px;
+    vertical-align: top;
+  }
+
+  .button-confirm {
+    width: 48%;
+    margin-left: 4%;
+    margin-top: 20px;
+    vertical-align: top;
+  }
+
+  .container-confirmation {
+    padding: 50px 40px;
+    margin-top: auto;
+  }
+}
+
+/*
+ * Payment Section
+ */
+.payment-method-confirm-card-delete {
+  .address-container {
+    margin-bottom: 0px;
+  }
+}
+
+/*
+ * Cart Page
+ */
+.message-cart-alert-container {
+  &.overlay-confirmation {
+    .button-cancel {
+      width: 42%;
+    }
+
+    .button-confirm {
+      width: 54%;
+    }
+  }
+}

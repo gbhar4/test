@@ -1,0 +1,72 @@
+@import "_page-global";
+
+.comps {
+	margin-top: 20px;
+}
+
+section.container-dashboard {
+	.title-primary {
+		display: block;
+		background: #15819a;
+		color: white;
+		padding: 12px;
+		font-weight: lighter;
+		text-decoration: none;
+		cursor: default;
+	}
+
+	ol {
+		li {
+			ul {
+				.title-primary {
+					background: #ccc;
+					color: #000;
+					text-decoration: none;
+				}
+				li {
+					font-size: 10px;
+					text-transform: uppercase;
+					padding: 5px 10px;
+					border-top: 1px solid black;
+					vertical-align: top;
+
+					a {
+						padding-left: 20px;
+						color: #15819a;
+						font-weight: lighter;
+						font-size: 12px;
+						text-transform: capitalize;
+						display: inline-block;
+						max-width: calc(100% - 120px);
+						vertical-align: top;
+						float: right;
+						margin: 0 5px 0 5px;
+					}
+
+					&.wip a:first-of-type {
+						font-size: 0;
+						&:before {
+							content: "WIP";
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.ready a {
+	color: green !important;
+}
+
+.ready strong {
+	font-weight:900;
+	display: inline-block;
+	max-width: calc(100% - 190px);
+}
+
+.wip a { color: #00dddd !important; }
+.comps li { list-style: decimal inside; padding-left: 20px; }
+section.container-dashboard ol li ul li a { padding-left: 0; }
+section.container-dashboard ol li ul li span { float: right; }

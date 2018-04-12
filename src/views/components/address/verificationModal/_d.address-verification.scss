@@ -1,0 +1,49 @@
+/**
+ * Address Verification Desktop
+ **/
+
+@import "compass/functions";
+@import "./_m.address-verification.scss";
+@import "compass/css3/border-radius";
+@import "_m.address-verification.scss";
+
+.address-verification-container {
+  padding: 0;
+  height: auto;
+  min-height: auto;
+}
+
+.address-verification {
+
+  .verify-notification,
+  .address-you-entered,
+  .address-you-entered,
+  .address-we-suggest,
+  .group-button,
+  .address-entered-only {
+    margin: 0;
+    padding: 25px 90px;
+  }
+
+  .address-you-entered {
+    padding-top: 0;
+  }
+
+  .verify-notification {
+    text-align: center;
+
+    h3 {
+      display: block;
+      padding-bottom: 6px;
+    }
+  }
+
+  .verify-notification,
+  .address-you-entered,
+  .address-we-suggest {
+    &:after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}

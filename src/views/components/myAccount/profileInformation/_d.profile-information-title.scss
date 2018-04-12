@@ -1,0 +1,55 @@
+/**
+* Profile Information Title (Desktop)
+*/
+
+@import "_m.profile-information-title.scss";
+
+.profile-information-container {
+  border-bottom: 1px solid $color-primary-four;
+  margin-bottom: 30px;
+
+  .address-additional {
+    margin-top: 0;
+  }
+}
+
+.profile-information-header {
+  .profile-information-title {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .button-edit,
+  .button-container {
+    float: none;
+    display: inline-block;
+
+    position: relative;
+    right: auto;
+    top: auto;
+  }
+}
+
+/* Is Personal Information? */
+.personal-information-container {
+  .button-edit {
+    padding-left: 20px;
+
+    &:before {
+      content: '';
+      background: $color-primary-one;
+      height: 15px;
+      width: 1px;
+      display: inline-block;
+      position: absolute;
+      left: 0px;
+      top: 4px;
+    }
+  }
+
+  .button-cancel-information,
+  .button-save {
+    width: 290px;
+    margin: 0 30px 0 0;
+  }
+}

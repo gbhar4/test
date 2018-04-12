@@ -1,0 +1,59 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/functions";
+@import "compass/css3/transform";
+
+/**
+ * Address Edit (Modal) for mobile
+ **/
+
+/* Solo overlay/modal fullscreen Address Edit */
+.react-overlay {
+  .overlay-container.overlay-address-edit-container {
+    padding-top: 20px;
+  }
+  .overlay-container.overlay-bopis-content {
+      width: 800px;
+  }
+}
+
+
+.overlay-address-edit-container {
+  /* Contenedor de los Inputs y Selects de formulario */
+  .fieldset-address-editable {
+    padding: 0px;
+  }
+
+  /* Botón para seleccionar la Dirección de envío que se está agregando */
+  .button-select-this-address {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  /* Campos de inputs y select del formulario de Address Fieldset */
+  .input-common,
+  .select-common {
+    margin-bottom: 21px;
+
+    &.select-country {
+      margin-bottom: 10px;
+    }
+  }
+
+  /* Checkbox */
+  .label-checkbox {
+    display: block;
+    height: 23px;
+    margin-bottom: 15px;
+
+    &.checkbox-set-as-default {
+      margin-bottom: 0px
+    }
+
+    /* Checkbox de Get Email */
+    &.checkbox-get-email {
+      display: none;
+    }
+  }
+
+}

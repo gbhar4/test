@@ -1,0 +1,61 @@
+/**
+*  Reservation List (Desktop)
+**/
+
+@import "_m.reservation-list.scss";
+
+// .table-reservation {
+//   width: 100%;
+//   display: inline-block;
+//   margin: 0px;
+//   // border-bottom: solid 1px $color-primary-one-opacity;
+//   padding-bottom: 20px;
+//   margin-bottom: 20px;
+//
+//   thead {
+//     padding-bottom: 11px;
+//   }
+//
+//   tr {
+//     display: inline-block;
+//     width: 100%;
+//
+//     &.table-reservation-title {
+//       display: inline-block;
+//       width: 100%;
+//       @include notification-secondary-text();
+//     }
+//   }
+//
+//   th {
+//     width: calc(80% / 4);
+//     display: inline-block;
+//   }
+//
+//   .reservation-item {
+//     border: 0px;
+//
+//     &:last-of-type {
+//       border: 0px;
+//     }
+//   }
+//
+//   td {
+//     width: calc(80% / 4);
+//     display: inline-block;
+//
+//     &.expiration-date-item {
+//       width: calc(80% / 4);
+//     }
+//   }
+//
+//   .status-reservation {
+//     text-align: left;
+//   }
+// }
+
+.reservation-list-container {
+  .order-or-reservation-list {
+    width: 90%;
+  }
+}

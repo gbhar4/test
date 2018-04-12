@@ -1,0 +1,151 @@
+/* Todos los Inputs */
+@import "compass/functions";
+@import "compass/css3/border-radius";
+@import "_mixins.scss";
+
+input {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	@include border-radius(0%);
+
+	/* Solo Inputs de tipo text, tel, number y password */
+	&[type=text],
+  &[type=email],
+	&[type=tel],
+	&[type=number],
+	&[type=password] {
+		@include input-common-text();
+	}
+
+	&[disabled] {
+		opacity: .4;
+	}
+}
+
+/* Clase para Labels contenedores de Inputs Zip Code y Cvv respectivamente */
+.input-zip-code,
+.input-cvv,
+.select-common.select-state {
+	width: 121px;
+	margin-top: 0;
+	margin-right: 20px;
+	display: inline-block;
+}
+
+/* Labels container of Zio Code and Country input (short and left aligned) */
+.input-zip-code,
+.input-country {
+	float: right;
+	width: calc(100% - 121px - 20px); /* 121px: ancho de input-zip-code e input-state - 20px: margen derecho de input-zip-code e input-state */
+	margin-right: 0;
+}
+
+/* Cualquier Input de tipo text que tenga un botón a continuación para aplicar cupones. */
+input[type="text"] + button {
+	@include button-tertiary();
+	float: right;
+	top: -40px;
+	right: 7px;
+}
+
+/* Boton que valida que el campo de Newsletter
+está completo con la casilla
+de correo del usuario (en footer) */
+input[type="text"]	+ button.email-newsletter-complete {
+	width: 68.8px;
+
+	/* Icono check del botón */
+	&:after {
+		content: '';
+		border: inset 2.5px $color-primary-one;
+		width: 6px;
+		height: 11px;
+		float: left;
+		border-left: none;
+		border-top: none;
+		top: 10px;
+		left: 29px;
+		position: absolute;
+		@include transform(rotate(45deg));
+	}
+}
+
+/* Cualquier Input de tipo password que tenga un botón a continuación para mostrar los caracteres. */
+.input-with-button {
+	position: relative;
+
+	input {
+		padding-right: 53px;
+	}
+
+	.button-show-password {
+		@include button-common-show-password();
+		left: auto;
+		bottom: 10px;
+		right: 0px;
+		width: auto;
+		height: 13px;
+		top: 24px;
+		line-height: 1;
+	}
+
+	.button-apply-coupons {
+		@include button-tertiary();
+		position: absolute;
+		right: 0px;
+	}
+}
+
+/* Clase para el Label (contenedor de Inputs en estado "Error") */
+.label-error {
+	/* Input de todos los tipos con Alertas de tipo Error  */
+	input {
+		@include input-error($color-alert-one);
+	}
+
+	/* Mensaje de error debajo del Input con su respectivo ícono */
+	.inline-error-message {
+		@include input-common-error-message($color-alert-one);
+    white-space: nowrap;
+    width: auto;
+	}
+
+	.error-icon {
+		font-size: 0px;
+		width: auto;
+		display: inline-block;
+		margin-right: 7px;
+
+		@include icon-tcp-error();
+		&:before {
+			font-size: 15px;
+			color: $color-alert-one;
+		}
+	}
+}
+
+/* Clase para el Label (contenedor de Inputs en estado "Warning") */
+.label-warning {
+	/* Input de todos los tipos con Alertas de tipo Warning */
+	input {
+		@include input-error($color-alert-two);
+	}
+
+	.inline-warning-message  {
+		@include input-common-error-message($color-alert-two);
+		@include icon-tcp-warning();
+		text-transform: none;
+
+		&:before {
+			font-size: 16px;
+			margin-right: 10px;
+			color: $color-alert-two;
+		}
+	}
+}
+
+/* Ghost container for all errors, even when error are not showing  */
+.ghost-error-container {
+	position: relative;
+}

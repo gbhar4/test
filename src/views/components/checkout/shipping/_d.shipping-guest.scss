@@ -1,0 +1,87 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/* Shipping Section */
+.checkout-shipping-container {
+  .label-error {
+    &.inline-error-message {
+      white-space: nowrap;
+    }
+  }
+}
+
+.address-shipping-container {
+  .input-zip-code {
+    float: none;
+  }
+
+  .select-state {
+    margin-right: 0;
+  }
+
+  .input-city {
+    padding-right: 21px;
+  }
+
+  .input-city,
+  .select-state,
+  .input-zip-code,
+  .select-country {
+    vertical-align: top;
+  }
+
+  .input-first-name,
+  .input-last-name,
+  .input-address-line1,
+  .input-address-line2,
+  .input-phone,
+  .input-email {
+    width: 47%;
+    display: inline-block;
+    margin-right: 0;
+  }
+
+  .input-first-name,
+  .input-address-line1,
+  .input-phone {
+    vertical-align: top;
+  }
+
+  .input-last-name,
+  .input-address-line2,
+  .input-email {
+    margin-left: 6%;
+  }
+
+  /* Add or edit address Form */
+  .fieldset-address-editable {
+    padding: 0px;
+
+    .label-error {
+      .inline-error-message {
+        white-space: initial;
+      }
+    }
+  }
+
+  .checkbox-get-email {
+    margin-top: 30px;
+  }
+
+  .term-and-conditions-message {
+    @include description-secondary-text();
+    margin-top: 20px;
+
+    a {
+      @include description-secondary-text($color-primary-two);
+      text-decoration: underline;
+    }
+  }
+
+  .shipping-form-container {
+    padding-bottom: 30px;
+    border-bottom: 1px solid $color-primary-four;
+    margin-bottom: 10px;
+
+  }
+}

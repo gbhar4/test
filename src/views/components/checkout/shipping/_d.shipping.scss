@@ -1,0 +1,180 @@
+/**
+ * Shipping
+ **/
+@import "compass/functions";
+@import "./_m.shipping.scss";
+
+.container-checkout {
+  padding: 0px 16px;
+
+	.checkout-summary {
+		margin-top: 40px;
+	}
+}
+
+.checkout-content {
+	> h2 {
+		margin-top: 40px;
+	}
+
+  .progress-list {
+    display: block;
+  }
+}
+
+.checkout-shipping-container {
+  .checkout-progress-list + .error-box {
+    margin-bottom: 20px;
+  }
+}
+
+.checkout-shipping-section {
+  position: relative;
+
+  .checkout-button-container {
+    position: absolute;
+    right: 0px;
+    bottom: 42px;
+  }
+}
+
+/* Contenedor de inputs del formulario Shipping */
+.address-shipping {
+  display: inline-block;
+  width: 100%;
+
+  .container-shipping-section-title {
+    display: inline-block;
+    width: 100%;
+  }
+
+	h3 {
+		@include heading-level-3($color-primary-one);
+		display: inline-block;
+		width: auto;
+    margin: 0px;
+	}
+
+  .default-address-inline {
+    h3 {
+      .button-edit-address-default {
+        top: auto;
+        @include transform(translateY(0));
+
+        &:before {
+          content: '';
+          background: $color-primary-three;
+          position: absolute;
+          display: inline-block;
+          width: 1px;
+          height: 15px;
+          top: 3px;
+          left: -9px;
+        }
+      }
+    }
+  }
+
+// .button-cancel-address,
+	.button-edit-address-default {
+		@include heading-level-4($color-primary-one);
+		display: inline-block;
+		margin-left: 14px;
+    position: relative;
+    right: auto;
+	}
+
+  // .button-save-address {
+  //   @extend .button-edit-address-default;
+  //   margin-left: 0px;
+  // }
+  //
+	// .button-cancel-address {
+	// 	@include body-secondary-text($color-primary-one);
+	// }
+
+	.select-address-book {
+		@include select-common-text();
+		margin-top: 22px;
+		margin-bottom: 11px;
+    display: block;
+
+		 span {
+			@include button-secondary-text();
+			margin-bottom: 30px;
+
+      &.selection {
+        text-transform: none;
+      }
+		}
+	}
+
+	/* Label de Checkbox Newsletter */
+	.checkbox-newsletter {
+		width: 100%;
+	    margin-bottom: 14px;
+	}
+
+	/* Aclaración legal del input Checkbox newsletter */
+	.note {
+		@include notification-secondary-text($color-primary-two);
+	}
+
+	/* Labels de Input City y Country en formulario */
+	.input-city,
+	.input-country {
+		float: left;
+	}
+
+  /* Container de la información de Address Default (solo texto, no inputs) */
+  .container-information-address-default {
+    margin-top: 7px;
+    width: 100%;
+
+    &:before {
+      width: 0px;
+      height: 0px;
+    }
+  }
+}
+
+.address-shipping + .address-shipping-view,
+.address-shipping + .address-shipping,
+.container-form-add-new-address {
+  margin-top: 25px;
+}
+
+.checkbox-set-default {
+  margin-top: 20px;
+  margin-right: 30%;
+}
+
+.default-address-inline {
+	p {
+		@include body-secondary-text();
+	}
+
+	.label-checkbox {
+		margin-top: 30px;
+	}
+}
+
+.checkbox-group {
+	span {
+		@include description-secondary-text();
+	}
+
+	.checkbox-get-email {
+		margin-bottom: 10px;
+	}
+}
+
+/* Leyenda del mensaje de Gift Wrapping */
+.gift-wrapping-container > h3 {
+  display: block;
+}
+
+.save-set-address {
+  width: 40%;
+  display: block;
+}

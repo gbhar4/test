@@ -1,0 +1,53 @@
+/*
+** Footer Mobile
+*/
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.social-networks,
+.country-selector {
+  > h3 {
+    @include subheading-tertiary-text();
+    display: inline-block;
+  }
+}
+
+.list-navigation,
+.sign-in-to-newsletter {
+  > h4 {
+    @include subheading-tertiary-text();
+    display: inline-block;
+  }
+}
+
+/* Country selector and Social Networks */
+.country-select-and-social-networks {
+  padding: 0px 15px;
+  line-height: 65px;
+  height: 60px;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    background-color: $color-primary-one-opacity;
+    left: 0;
+  }
+
+  &:before {
+    margin-top: -1px;
+  }
+
+  &:after {
+    margin-top: 60px;
+  }
+}
+
+@import "footer/_m.country-selector.scss";
+@import "footer/_m.social-networks.scss";
+@import "footer/_m.footer-navigation.scss";
+@import "footer/_m.sign-in-to-newsletter.scss";
+@import "footer/_m.legal-information.scss";

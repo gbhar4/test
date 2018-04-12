@@ -1,0 +1,155 @@
+@import "compass/css3/transform";
+
+/* input type checkbox only */
+[type=checkbox] {
+  outline: 0;
+  border: 0;
+  display: inline-block;
+  background-color: transparent;
+  position: absolute;
+  @include appearance(none);
+  height: 23px;
+  width: 23px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input-checkbox-icon-unchecked {
+  display: inline-block;
+  height: 23px;
+  width: 23px;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+
+  /* Caja contenedora del check */
+  &:before {
+    content: '';
+    font-size: 20px;
+    position: absolute;
+    height: 23px;
+    width: 23px;
+    left: 0;
+    @include box-shadow(inset 0px 0px 0px 1px $border-container-normal);
+  }
+
+  /* Checked state in origin version from checkbox-button */
+  &:checked {
+  }
+
+  /* Focused or pressed state in unchecked checkbox-button */
+  &.focused,
+  &:focus,
+  &.pressed,
+  &:active {
+    /* Box Container */
+    &:before {
+      @include box-shadow(inset 0px 0px 0px 1px $border-container-focused);
+      background-color: $background-container-focused;
+    }
+
+    /* Checked state in Focused or pressed checkbox-button */
+    &:checked {
+      /* Box Container */
+      &:before {
+        @include box-shadow(inset 0px 0px 0px 1px $border-container-check-focused);
+      }
+    }
+  }
+
+  /* Disabled state in unchecked checkbox-button */
+  &.disabled,
+  &:disabled {
+    opacity: .6;
+
+    /* Box Container */
+    &:before {
+      @include box-shadow(inset 0px 0px 0px 1px $border-container-normal);
+    }
+
+    /*  Checked state in disabled checkbox-button  */
+    &:checked {
+      /* Box Container */
+      &:before {
+        @include box-shadow(inset 0px 0px 0px 1px $border-container-normal);
+      }
+
+      /* Check */
+      &:after {
+        border-color: $border-container-normal;
+      }
+    }
+  }
+
+  /* Error or warning message */
+  .inline-error-message,
+  .inline-warning-message {
+    float: left;
+    text-indent: 17px;
+  }
+}
+
+.input-checkbox-icon-checked {
+  @extend .input-checkbox-icon-unchecked;
+
+  /* Box Container */
+  &:before {
+    @include box-shadow(inset 0px 0px 0px 1px $border-container-check-normal);
+  }
+
+  /* Check */
+  &:after {
+    content: '';
+    border: inset 2px $color-content-check-normal;
+    font-size: 12px;
+    width: 5px;
+    height: 10px;
+    @include transform(rotate(225deg));
+    float: left;
+    border-right: none;
+    border-bottom: none;
+    left: 8px;
+    top: 4px;
+    position: absolute;
+  }
+}
+
+.input-checkbox-focused {
+  /* Box Container */
+  &:before {
+    @include box-shadow(inset 0px 0px 0px 1px $border-container-focused);
+    background-color: $background-container-focused;
+  }
+
+  /* Checked state in Focused or pressed checkbox-button */
+  &:checked {
+    /* Box Container */
+    &:before {
+      @include box-shadow(inset 0px 0px 0px 1px $border-container-check-focused);
+    }
+  }
+}
+
+/* Disabled-focused state in unchecked checkbox-button */
+.disabled-focused {
+  opacity: .6;
+
+  /* Box Container */
+  &:before {
+    @include box-shadow(inset 0px 0px 0px 1px $border-container-normal);
+    background-color: $background-container-focused;
+  }
+
+  /* Checked state in Disabled-focused checkbox-button */
+  &:checked {
+    /* Box Container */
+    &:before {
+      @include box-shadow(inset 0px 0px 0px 1px $border-container-normal);
+    }
+
+    /* Check */
+    &:after {
+      border-color: $border-container-normal;
+    }
+  }
+}

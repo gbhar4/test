@@ -1,0 +1,58 @@
+/**
+*  Order Display (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.actual-order-display {
+  .order-number,
+  .order-date,
+  .order-hour,
+  .store-name {
+    @include subheading-primary-text();
+    @include font-global-heavy();
+    text-transform: none;
+  }
+
+  .order-date {
+    @include font-global-heavy();
+  }
+
+  .order-hour,
+  .address-information,
+  .card-info,
+  .giftcard-list-display,
+  .container-items,
+  .address-details,
+  .address-additional {
+    @include font-global-regular();
+  }
+
+  .address-details,
+  .address-information {
+    @include font-global-black();
+  }
+
+  .address-details {
+    span {
+      @include font-global-regular();
+    }
+  }
+
+  .card-info {
+    @include subheading-primary-text();
+    @include font-global-regular();
+    text-transform: none;
+    line-height: 10px;
+    margin-bottom: 20px;
+  }
+
+  .balance {
+    @include subheading-primary-text();
+    @include font-global-regular();
+    text-transform: none;
+    line-height: 1.5;
+  }
+
+}

@@ -1,0 +1,94 @@
+/**
+* Search Result Empty (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/box-shadow";
+
+.search-result-empty-container {
+  padding: 22px 16px 0px;
+  text-align: center;
+
+  /* Typeahead in this section */
+  .typeahead {
+    display: block;
+    margin: 40px auto;
+    position: relative;
+    @include box-shadow(0 0 0 1px $color-primary-four);
+
+    input {
+      background: $color-global-white;
+      height: 45px;
+      padding-left: 10px;
+    }
+
+    .button-search {
+      left: auto;
+      top: 50%;
+      @include transform(translateY(-50%));
+      right: 20px;
+    }
+  }
+
+  .re-search-button {
+    @include button-secondary();
+    margin: 40px 0px;
+    width: 60%;
+  }
+
+  /* Suggested categories */
+  .product-recomendation {
+    background: $color-primary-five;
+    padding: 0px 16px;
+    margin: 0px -16px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+  }
+}
+
+/* NOTE: Marketing espot DT-31231, no details to Mobile version */
+.empty-search-result-slot {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.empty-search-result-title {
+  @include heading-level-2();
+  margin: 34px 0px 14px; // REVIEW
+}
+
+.empty-search-result-subtitle {
+  @include heading-level-4();
+  @include font-global-regular();
+  color: $color-primary-three;
+}
+
+.search-tips-items {
+  @include font-global-regular();
+  color: $color-primary-three;
+  margin: 8px 0px 15px;
+}
+
+/*
+ * Empty state with suggestions
+ */
+
+.inline-suggested-categories {
+  margin: 60px 0px;
+}
+
+.category-item {
+  @include heading-level-2();
+  @include font-global-regular();
+  margin: 10px 0px;
+
+  a {
+    text-decoration: underline;
+    color: $color-primary-three;
+    display: inline-block;
+    width: 100%;
+  }
+}

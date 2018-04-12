@@ -1,0 +1,165 @@
+/**
+ * The Children Place
+ * Mobile UI Style Guide
+ * SASS variables
+ * Use descriptive names for variables
+ * $grey-6 Is NOT a good name, $primary-color Is good name
+ */
+
+/**
+**  Styleguides
+**/
+
+/*****************************************/
+
+/* Primary colors */
+$color-primary-one: #333333;
+$color-primary-two: #666666;
+$color-primary-three: #999999;
+$color-primary-four: #e3e3e3;
+$color-primary-five: #f7f7f7;
+
+/* Accent colors */
+$color-accent-one: #4873bb;
+$color-accent-two: #ca0088;
+$color-accent-three: #f56319;
+
+/* Newly added Accent color */
+$color-accent-four: #5da4e3; // Peticion del Chore DT-22736
+
+// As per requirement of DT-22738, this variable was added to the WIC section as the primary color button.
+$wic-button-color: $color-accent-two;
+
+/* Alert colors */
+$color-alert-one: #c60808; /* Red */
+$color-alert-two: #cc3300; /* Orange -> only specify for Input Warning */
+$color-alert-three: #417505; /* Green */
+
+/* Global White */
+$color-global-white: #ffffff;
+$color-global-black: #000000;
+$color-primary-background: $color-global-white;
+
+/*****************************************/
+
+/**
+** Icons (Social Networks in footer)
+**/
+
+$icon-social-network-color: $color-primary-one;
+$icon-social-network-background: $color-primary-four;
+
+/*****************************************/
+
+/**
+** Alias and Variables for Button Colors
+**/
+
+$button-color-text-white: $color-global-white;
+$button-color-text-black: $color-primary-one;
+
+$button-color-primary-active: $color-accent-one;
+$button-color-secondary-active: $color-primary-one;
+$button-color-tertiary-active: $color-primary-four;
+$button-color-quaternary-primary-active: $color-accent-two;
+$button-color-quaternary-secondary-active: $color-primary-one;
+
+$button-color-primary-focused: $color-accent-one;
+$button-color-secondary-focused: $color-primary-one;
+$button-color-tertiary-focused: $color-global-white;
+$button-color-quaternary-primary-focused: $color-accent-two;
+$button-color-quaternary-secondary-focused: $color-primary-one;
+
+$button-color-primary-pressed: $color-accent-one;
+$button-color-secondary-pressed: $button-color-secondary-active;
+$button-color-tertiary-pressed: $color-primary-four;
+$button-color-quaternary-primary-pressed: $color-accent-two;
+$button-color-quaternary-secondary-pressed: $color-accent-one;
+
+$button-color-primary-disabled: $color-primary-three;
+$button-color-secondary-disabled: $button-color-primary-disabled;
+$button-color-tertiary-disabled: $button-color-primary-disabled;
+$button-color-quaternary-primary-disabled: $button-color-primary-disabled;
+$button-color-quaternary-secondary-disabled: $color-primary-three;
+
+/**
+** Alias for Inputs Colors
+**/
+
+$input-color-border: $color-primary-four;
+$input-color-background: $color-global-white; // white
+$input-color-font-placeholder: $color-primary-three;
+$input-color-font-value: $color-primary-one; // #333
+
+/* Inputs focus */
+$input-color-border-focused: $color-primary-one;
+
+/* Disabled */
+$input-color-border-disabled: $color-primary-three;
+$input-color-font-disabled: rgba(0, 0, 0, .4);
+
+/**
+** Alias for Border in Header and Footer
+**/
+
+$border-color-global-elements: $color-primary-four;
+
+/*****************************************/
+
+/**
+** Alias for Radio Buttons and Check Buttons
+**/
+
+/* ON -> check | OFF -> unchecked */
+$color-label-font: #000000;
+
+/* Normal ON -> checked */
+$border-container-check-normal: $color-primary-one; /* Border */
+$background-container-normal: $color-global-white; /* Background */
+$color-content-check-normal: $color-primary-one; /* Icon Check */
+
+/* Normal OFF */
+$border-container-normal: $color-primary-three; /* Border */
+
+
+/* Focus ON -> checked */
+$border-container-check-focused: $color-primary-one; /* Border */
+$background-container-focused: rgba(194, 194, 194, .6); /* Background */
+$color-content-check-focused: $color-primary-one; /* Icon Check */
+
+/* Focus OFF */
+$border-container-focused: $color-primary-one; /* Border */
+
+
+/**
+** Colors with opacity (in rgba)
+**/
+
+$color-primary-one-opacity: rgba(51, 51, 51, .11);
+$color-primary-five-opacity: rgba(247, 247, 247, .7);
+
+/**
+** Peticion del ticket DT-17985
+**/
+
+$color-size-indicator: #353535;
+
+/**
+** Color requested in ticket DT-27673  #990000
+**/
+
+$color-actual-price: #990000;
+
+/**
+** Badges
+**/
+
+$color-badge-typo: #00a6e2;
+
+/**
+** Global Coupons
+**/
+
+$place-cash-coupon-background: #71d64c; // NOTE: green
+$reward-coupon-background: #ff681d; // NOTE: orange
+$saving-coupon-background: #ee40aa; // NOTE: rose

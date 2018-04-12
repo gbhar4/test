@@ -1,0 +1,834 @@
+{
+  "navigation": {
+    "menusList": [{
+      "categoryId": "1",
+      "title": "Girl",
+      "url": "http://www.google.com",
+      "description": "4-16",
+      "selected": false,
+      "primaryContentSlotName": "<img src='/images/img-menu-girl.png' alt='Girl' />",
+      "iconUrl": "",
+      "secondaryContentSlotName": "<p>New! We now carry <strong>size 16</strong> online and in stores! <a href=''>Take a look.</a></p>",
+      "menuItems": [
+        [{
+            "categoryId": "1",
+            "name": "Outfits",
+            "url": "#outfit",
+            "menuItems": [
+              {
+                "categoryId": "11",
+                "name": "Outfits L3 #1",
+                "url": "#outfit1"
+              },
+              {
+                "categoryId": "12",
+                "name": "Outfits L3 #2",
+                "url": "#outfit2"
+              },
+              {
+                "categoryId": "13",
+                "name": "Outfits L3 #3",
+                "url": "#outfit3"
+              }
+            ]
+          },
+          {
+            "categoryId": "2",
+            "name": "New Arrivals",
+            "url": "#",
+            "menuItems": [
+              {
+                "categoryId": "14",
+                "name": "New Arrivals",
+                "url": "#newarrivals"
+              }
+            ]
+          },
+          {
+            "categoryId": "3",
+            "name": "New! Size 16",
+            "url": "#",
+            "menuItems": []
+          },
+          {
+            "categoryId": "4",
+            "name": "Online Only",
+            "url": "#",
+            "menuItems": []
+          },
+          {
+            "categoryId": "5",
+            "name": "Clearance",
+            "url": "#",
+            "menuItems": []
+          }
+        ],
+
+        [{
+            "categoryId": "6",
+            "name": "Holiday Dress Up",
+            "url": "#",
+            "menuItems": []
+          },
+          {
+            "categoryId": "7",
+            "name": "Dresses",
+            "url": "#",
+            "menuItems": []
+          },
+          {
+            "categoryId": "8",
+            "name": "Graphic Tees",
+            "url": "#",
+            "menuItems": []
+          },
+          {
+            "categoryId": "9",
+            "name": "Denim",
+            "url": "#",
+            "menuItems": []
+          },
+          {
+            "categoryId": "10",
+            "name": "Tops",
+            "url": "#",
+            "menuItems": []
+          },
+          {
+            "categoryId": "11",
+            "name": "bottoms",
+            "url": "#",
+            "menuItems": []
+          },
+          {
+            "categoryId": "12",
+            "name": "Cold Weather Shop",
+            "url": "#",
+            "menuItems": []
+          }
+        ],
+
+        [{
+            "categoryId": "13",
+            "name": "Outerwears",
+            "url": "#"
+          },
+          {
+            "categoryId": "14",
+            "name": "Glacier Fleece",
+            "url": "#"
+          },
+          {
+            "categoryId": "15",
+            "name": "School Uniforms",
+            "url": "#"
+          },
+          {
+            "categoryId": "16",
+            "name": "Extended Sizes",
+            "url": "#"
+          },
+          {
+            "categoryId": "17",
+            "name": "Sleepwear",
+            "url": "#"
+          },
+          {
+            "categoryId": "18",
+            "name": "Accessories",
+            "url": "#"
+          },
+          {
+            "categoryId": "19",
+            "name": "Shoes",
+            "url": "#"
+          }
+        ]
+      ]
+    }, {
+      "categoryId": "2",
+      "title": "Toddler Girl",
+      "url": "#",
+      "description": "4-16",
+      "selected": false,
+      "primaryContentSlotName": "<img src='/images/img-menu-toddler-girl.png' alt='Toddler Girl' />",
+      "iconUrl": "",
+      "secondaryContentSlotName": "",
+      "menuItems": [
+        [{
+            "categoryId": "1",
+            "name": "Outfits",
+            "url": "#"
+          },
+          {
+            "categoryId": "2",
+            "name": "New Arrivals",
+            "url": "#"
+          },
+          {
+            "categoryId": "4",
+            "name": "Online Only",
+            "url": "#"
+          },
+          {
+            "categoryId": "5",
+            "name": "Clearance",
+            "url": "#"
+          }
+        ],
+
+        [{
+            "categoryId": "6",
+            "name": "Holiday Dress Up",
+            "url": "#"
+          },
+          {
+            "categoryId": "7",
+            "name": "Dresses",
+            "url": "#"
+          },
+          {
+            "categoryId": "8",
+            "name": "Graphic Tees",
+            "url": "#"
+          },
+          {
+            "categoryId": "9",
+            "name": "Denim",
+            "url": "#"
+          },
+          {
+            "categoryId": "10",
+            "name": "Tops",
+            "url": "#"
+          },
+          {
+            "categoryId": "11",
+            "name": "bottoms",
+            "url": "#"
+          },
+          {
+            "categoryId": "12",
+            "name": "Cold Weather Shop",
+            "url": "#"
+          }
+        ],
+
+        [{
+            "categoryId": "13",
+            "name": "Outerwears",
+            "url": "#"
+          },
+          {
+            "categoryId": "14",
+            "name": "Glacier Fleece",
+            "url": "#"
+          },
+          {
+            "categoryId": "15",
+            "name": "School Uniforms",
+            "url": "#"
+          },
+          {
+            "categoryId": "16",
+            "name": "Extended Sizes",
+            "url": "#"
+          },
+          {
+            "categoryId": "17",
+            "name": "Sleepwear",
+            "url": "#"
+          },
+          {
+            "categoryId": "18",
+            "name": "Accessories",
+            "url": "#"
+          },
+          {
+            "categoryId": "19",
+            "name": "Shoes",
+            "url": "#"
+          }
+        ]
+      ]
+    }, {
+      "categoryId": "3",
+      "title": "Boy",
+      "url": "#",
+      "description": "4-16",
+      "selected": false,
+      "primaryContentSlotName": "<img src='/images/img-menu-boy.png' alt='Boy' />",
+      "iconUrl": "",
+      "secondaryContentSlotName": "",
+      "menuItems": [
+        [{
+            "categoryId": "1",
+            "name": "Outfits",
+            "url": "#"
+          },
+          {
+            "categoryId": "2",
+            "name": "New Arrivals",
+            "url": "#"
+          },
+          {
+            "categoryId": "3",
+            "name": "New! Size 16!",
+            "url": "#"
+          },
+          {
+            "categoryId": "36",
+            "name": "New! Size 18!",
+            "url": "#"
+          },
+          {
+            "categoryId": "4",
+            "name": "Online Only",
+            "url": "#"
+          },
+          {
+            "categoryId": "5",
+            "name": "Clearance",
+            "url": "#"
+          }
+        ],
+
+        [{
+            "categoryId": "6",
+            "name": "Holiday Dress Up",
+            "url": "#"
+          },
+          {
+            "categoryId": "7",
+            "name": "Dresses",
+            "url": "#"
+          },
+          {
+            "categoryId": "8",
+            "name": "Graphic Tees",
+            "url": "#"
+          },
+          {
+            "categoryId": "9",
+            "name": "Denim",
+            "url": "#"
+          },
+          {
+            "categoryId": "10",
+            "name": "Tops",
+            "url": "#"
+          },
+          {
+            "categoryId": "11",
+            "name": "bottoms",
+            "url": "#"
+          },
+          {
+            "categoryId": "12",
+            "name": "Cold Weather Shop",
+            "url": "#"
+          }
+        ],
+
+        [{
+            "categoryId": "13",
+            "name": "Outerwears",
+            "url": "#"
+          },
+          {
+            "categoryId": "14",
+            "name": "Glacier Fleece",
+            "url": "#"
+          },
+          {
+            "categoryId": "15",
+            "name": "School Uniforms",
+            "url": "#"
+          },
+          {
+            "categoryId": "16",
+            "name": "Extended Sizes",
+            "url": "#"
+          },
+          {
+            "categoryId": "17",
+            "name": "Sleepwear",
+            "url": "#"
+          },
+          {
+            "categoryId": "18",
+            "name": "Accessories",
+            "url": "#"
+          },
+          {
+            "categoryId": "19",
+            "name": "Shoes",
+            "url": "#"
+          }
+        ]
+      ]
+    }, {
+      "categoryId": "4",
+      "title": "Toddler Boy",
+      "url": "#",
+      "description": "4-16",
+      "selected": false,
+      "primaryContentSlotName": "<img src='/images/img-menu-toddler-boy.png' alt='Toddler Boy' />",
+      "iconUrl": "",
+      "secondaryContentSlotName": "",
+      "menuItems": [
+        [{
+            "categoryId": "1",
+            "name": "Outfits",
+            "url": "#"
+          },
+          {
+            "categoryId": "2",
+            "name": "New Arrivals",
+            "url": "#"
+          },
+          {
+            "categoryId": "4",
+            "name": "Online Only",
+            "url": "#"
+          },
+          {
+            "categoryId": "5",
+            "name": "Clearance",
+            "url": "#"
+          }
+        ],
+
+        [{
+            "categoryId": "6",
+            "name": "Holiday Dress Up",
+            "url": "#"
+          },
+          {
+            "categoryId": "7",
+            "name": "Dresses",
+            "url": "#"
+          },
+          {
+            "categoryId": "8",
+            "name": "Graphic Tees",
+            "url": "#"
+          },
+          {
+            "categoryId": "9",
+            "name": "Denim",
+            "url": "#"
+          },
+          {
+            "categoryId": "10",
+            "name": "Tops",
+            "url": "#"
+          },
+          {
+            "categoryId": "11",
+            "name": "bottoms",
+            "url": "#"
+          },
+          {
+            "categoryId": "12",
+            "name": "Cold Weather Shop",
+            "url": "#"
+          }
+        ],
+
+        [{
+            "categoryId": "13",
+            "name": "Outerwears",
+            "url": "#"
+          },
+          {
+            "categoryId": "14",
+            "name": "Glacier Fleece",
+            "url": "#"
+          },
+          {
+            "categoryId": "15",
+            "name": "School Uniforms",
+            "url": "#"
+          },
+          {
+            "categoryId": "16",
+            "name": "Extended Sizes",
+            "url": "#"
+          },
+          {
+            "categoryId": "17",
+            "name": "Sleepwear",
+            "url": "#"
+          },
+          {
+            "categoryId": "18",
+            "name": "Accessories",
+            "url": "#"
+          },
+          {
+            "categoryId": "19",
+            "name": "Shoes",
+            "url": "#"
+          }
+        ]
+      ]
+    }, {
+      "categoryId": "5",
+      "title": "Baby",
+      "url": "#",
+      "description": "4-16",
+      "selected": false,
+      "primaryContentSlotName": "<img src='/images/img-menu-baby.png' alt='Baby' />",
+      "iconUrl": "",
+      "secondaryContentSlotName": "<p>Entire site <strong>40-60% OFF</strong> + Free Shipping</p>",
+      "menuItems": [
+        [{
+            "categoryId": "1",
+            "name": "Outfits",
+            "url": "#"
+          },
+          {
+            "categoryId": "2",
+            "name": "New Arrivals",
+            "url": "#"
+          },
+          {
+            "categoryId": "4",
+            "name": "Online Only",
+            "url": "#"
+          },
+          {
+            "categoryId": "5",
+            "name": "Clearance",
+            "url": "#"
+          }
+        ],
+
+        [{
+            "categoryId": "6",
+            "name": "Holiday Dress Up",
+            "url": "#"
+          },
+          {
+            "categoryId": "7",
+            "name": "Sleepwear",
+            "url": "#"
+          },
+          {
+            "categoryId": "8",
+            "name": "Girl",
+            "url": "#"
+          },
+          {
+            "categoryId": "9",
+            "name": "Boy",
+            "url": "#"
+          },
+          {
+            "categoryId": "10",
+            "name": "Unisex",
+            "url": "#"
+          }
+        ]
+      ]
+    }, {
+      "categoryId": "7",
+      "title": "Shoes",
+      "url": "#",
+      "description": "",
+      "selected": false,
+      "primaryContentSlotName": "<img src='/images/img-menu-shoes.png' alt='Baby' />",
+      "iconUrl": "",
+      "secondaryContentSlotName": "",
+      "menuItems": [
+        [{
+            "categoryId": "1",
+            "name": "Girl",
+            "url": "#"
+          },
+          {
+            "categoryId": "2",
+            "name": "Toddler Girl",
+            "url": "#"
+          },
+          {
+            "categoryId": "3",
+            "name": "Boy",
+            "url": "#"
+          },
+          {
+            "categoryId": "4",
+            "name": "Toddler Boy",
+            "url": "#"
+          },
+          {
+            "categoryId": "5",
+            "name": "Baby Girls",
+            "url": "#"
+          },
+          {
+            "categoryId": "6",
+            "name": "Baby Boys",
+            "url": "#"
+          }
+        ]
+      ]
+    }, {
+      "categoryId": "8",
+      "title": "Accessories",
+      "url": "#",
+      "description": "",
+      "selected": false,
+      "primaryContentSlotName": "<img src='/images/img-menu-girl.png' alt='Accessories' />",
+      "iconUrl": "",
+      "secondaryContentSlotName": "",
+      "menuItems": [
+        [{
+            "categoryId": "1",
+            "name": "Girl",
+            "url": "#"
+          },
+          {
+            "categoryId": "2",
+            "name": "Toddler Girl",
+            "url": "#"
+          },
+          {
+            "categoryId": "3",
+            "name": "Boy",
+            "url": "#"
+          },
+          {
+            "categoryId": "4",
+            "name": "Toddler Boy",
+            "url": "#"
+          },
+          {
+            "categoryId": "5",
+            "name": "Baby Girls",
+            "url": "#"
+          },
+          {
+            "categoryId": "6",
+            "name": "Baby Boys",
+            "url": "#"
+          }
+        ]
+      ]
+    }, {
+      "categoryId": "9",
+      "title": "Clearance",
+      "url": "#",
+      "description": "",
+      "selected": false,
+      "primaryContentSlotName": "<img src='/images/img-menu-clearance.png' alt='Clearance' />",
+      "iconUrl": "",
+      "secondaryContentSlotName": "",
+      "menuItems": [
+        [{
+            "categoryId": "1",
+            "name": "Girl",
+            "url": "#"
+          },
+          {
+            "categoryId": "2",
+            "name": "Toddler Girl",
+            "url": "#"
+          },
+          {
+            "categoryId": "3",
+            "name": "Boy",
+            "url": "#"
+          },
+          {
+            "categoryId": "4",
+            "name": "Toddler Boy",
+            "url": "#"
+          },
+          {
+            "categoryId": "5",
+            "name": "Baby",
+            "url": "#"
+          }
+        ]
+      ]
+    }],
+
+    "countriesMap": [{
+      "id": "us",
+      "displayName": "United States",
+      "siteId": "us_site",
+      "currencyId": "usd",
+      "disallowOtherCurrencies": true
+    }, {
+      "id": "can",
+      "displayName": "Canada",
+      "siteId": "can_site",
+      "currencyId": "cad",
+      "disallowOtherCurrencies": true
+    }, {
+      "id": "ar",
+      "displayName": "Argentina",
+      "siteId": "us_site",
+      "currencyId": "ars"
+    }, {
+      "id": "co",
+      "displayName": "Colombia",
+      "siteId": "us_site",
+      "currencyId": "cop"
+    }],
+
+    "sitesTable": {
+      "us_site": {
+        "languages": [{
+          "displayName": "English",
+          "id": "en"
+        }, {
+          "displayName": "Spanish",
+          "id": "es"
+        }]
+      },
+      "can_site": {
+        "languages": [{
+          "displayName": "English",
+          "id": "en"
+        }, {
+          "displayName": "French",
+          "id": "fr"
+        }]
+      }
+    },
+
+    "currenciesMap": [{
+      "id": "usd",
+      "displayName": "Dollars"
+    }, {
+      "id": "cad",
+      "displayName": "Canada Dollar"
+    }, {
+      "id": "eur",
+      "displayName": "Euros"
+    }, {
+      "id": "ars",
+      "displayName": "Argentina Peso"
+    }, {
+      "id": "cop",
+      "displayName": "Colombia Peso"
+    }],
+
+    "currentGlobalizationSettings": {
+      "country": "us",
+      "site": "us_site",
+      "language": "en",
+      "currency": "usd"
+    },
+
+    "footerNavigation": [{
+      "activeNavigation": true,
+      "titleList": "My Place Rewards",
+      "image": "/images/my-place-rewards.png",
+      "links": [{
+        "id": "create-account",
+        "title": "Create Account",
+        "href": "create-account"
+      }, {
+        "title": "Member Benefits",
+        "href": "member-benefits"
+      }, {
+        "title": "Check Points Balance",
+        "href": "check-points-balance"
+      }, {
+        "title": "Redeem Rewards",
+        "href": "redeem-rewards"
+      }]
+    }, {
+      "activeNavigation": false,
+      "titleList": "My Place Rewards Credit Card",
+      "image": "/images/place.png",
+      "links": [{
+        "title": "Pay Your Bill",
+        "href": "pay-your-bill"
+      }, {
+        "title": "Manage Your Account",
+        "href": "manage-your-account"
+      }, {
+        "title": "Apply Now",
+        "href": "apply-now"
+      }]
+    }, {
+      "activeNavigation": true,
+      "titleList": "Help Center",
+      "links": [{
+        "title": "FAQs",
+        "href": "faqs"
+      }, {
+        "title": "Return Policy",
+        "href": "return-policy"
+      }, {
+        "title": "Track Order",
+        "href": "track-order",
+        "id": "track-order"
+      }, {
+        "title": "Reservations",
+        "href": "reservations"
+      }, {
+        "title": "Gift Card Balance",
+        "href": "gift-card-balance"
+      }, {
+        "title": "Shipping",
+        "href": "shipping"
+      }]
+    }, {
+      "activeNavigation": false,
+      "titleList": "Shopping",
+      "links": [{
+        "title": "Coupons",
+        "href": "coupons"
+      }, {
+        "title": "Store Locator",
+        "href": "store-locator"
+      }, {
+        "title": "Size Chart",
+        "href": "size-chart"
+      }, {
+        "title": "Gift Cards",
+        "href": "gift-cards"
+      }, {
+        "title": "Gifting Options",
+        "href": "gifting-options"
+      }, {
+        "title": "Wishlist",
+        "href": "wishlist"
+      }, {
+        "title": "Seasonal Look Books",
+        "href": "seasonal-look-books"
+      }]
+    }, {
+      "activeNavigation": false,
+      "titleList": "About Us",
+      "links": [{
+        "title": "Investor Relations",
+        "href": "investor-relations"
+      }, {
+        "title": "Careers",
+        "href": "careers"
+      }, {
+        "title": "Social Responsability",
+        "href": "social-responsability"
+      }, {
+        "title": "International Opportunities",
+        "href": "international-opportunities"
+      }, {
+        "title": "Become an Affiliate",
+        "href": "become-an-affiliate"
+      }, {
+        "title": "Recall Information",
+        "href": "recall-information"
+      }, {
+        "title": "The Moms Space",
+        "href": "the-moms-space"
+      }]
+    }]
+  }
+}

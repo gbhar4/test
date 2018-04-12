@@ -1,0 +1,185 @@
+/**
+* My Account Section: My Rewards (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+$receipt-sample-border-color: #ff6719;
+
+.my-rewards-section {
+  .uncondense-coupon-ineligible .uncondense-image-coupon {
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $color-primary-one;
+      opacity: .7;
+      left: 0px;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      z-index: 1;
+    }
+
+    &:after {
+      content: 'Pending';
+      color: $color-global-white;
+      top: 50%;
+      @include transform(translateY(-50%));
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      z-index: 2;
+    }
+  }
+
+  .uncondense-coupons-container {
+    margin: 30px 0px;
+    position: relative;
+  }
+
+  .information-container {
+    margin: 20px 0px 40px;
+  }
+
+  .account-information {
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .account-information-title,
+  .account-information-content {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+
+  .account-information-content {
+    @include font-global-regular();
+  }
+
+  .account-information-content {
+    padding-left: 15px;
+    text-transform: capitalize;
+
+    span,
+    strong {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    strong {
+      text-transform: lowercase;
+    }
+  }
+
+  .button-cancel {
+    @include button-primary();
+  }
+
+  .button-submit-request {
+    @include button-secondary();
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .success-box {
+    margin-top: 10px;
+  }
+
+  .no-rewards-message {
+    @include body-primary-text();
+  }
+}
+
+/* Section of Points Claim */
+.points-claim-container {
+  .points-claim-form-title {
+    margin: 20px auto 10px;
+  }
+
+  .merge-accounts-request-text {
+    @include subheading-primary-text($color-primary-two);
+    @include font-global-regular();
+    text-transform: none;
+  }
+
+  .input-store-number,
+  .input-register-number,
+  .input-transaction-date,
+  .input-transaction-number,
+  .input-order-number,
+  .input-order-date {
+    margin-bottom: 25px;
+  }
+
+  .custom-select-common {
+    margin-top: 20px;
+  }
+
+  .receipt-sample {
+    margin-top: 20px;
+    width: 70%;
+    border: solid $receipt-sample-border-color 2px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .receipt-sample-title {
+    background-color: $receipt-sample-border-color;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    padding-left: 10px;
+  }
+}
+
+/* Section of Merge Accounts Request */
+.merge-accounts-request-container {
+  .account-information {
+    margin: 20px 0px;
+  }
+
+  .merge-accounts-request-text {
+    @include subheading-primary-text($color-primary-two);
+    @include font-global-regular();
+    text-transform: none;
+  }
+
+  .merge-accounts-request-aclaration {
+    color: $color-primary-two;
+    margin: 20px 0px;
+  }
+
+  .mobile-phone-number-note {
+    margin-top: 7px;
+  }
+
+  /* Reset style */
+  .input-first-name {
+    margin-top: 0px;
+  }
+
+  .input-alternate-email,
+  .input-alternate-phone-number,
+  .textarea-comments {
+    margin-bottom: 25px;
+  }
+
+  .textarea-comments {
+    display: block;
+  }
+}

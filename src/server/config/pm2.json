@@ -1,0 +1,16 @@
+{
+    "name": "dtx-webserver",
+    "cwd": ".",
+    "script": "server.js",
+    "env": {
+        "NODE_PATH": "/usr/nodeapp/dtx-webserver",
+        "NODE_ENV": "production"
+    },
+    "exec_mode": "cluster",
+    "instances": "max",
+    "watch": false,
+    "error_file": "/usr/nodeapp/dtx-webserver/logs/errors.log",
+    "out_file": "/usr/nodeapp/dtx-webserver/logs/debug.log",
+    "log_date_format": "YYYY-MM-DD HH:mm Z",
+    "merge_logs": true
+}

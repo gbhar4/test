@@ -1,0 +1,114 @@
+/**
+*  Orders / Order List
+**/
+
+@import "_m.order-list.scss";
+
+.orders-section {
+  .my-account-title-section {
+    margin-bottom: 30px;
+  }
+}
+
+.orders-products-list {
+  margin-bottom: 40px;
+}
+
+// .table-orders {
+//   margin: 0px;
+//   padding-bottom: 20px;
+//   margin-bottom: 20px;
+//
+//   .table-orders-title {
+//     padding: 0px 0px 8px;
+//     display: inline-block;
+//     width: 100%;
+//   }
+//
+//   /* Head and items of table */
+//   tr {
+//     border: 0px;
+//     padding: 15px 0px;
+//
+//     /* First item of list */
+//     &:nth-child(2) {
+//       border-top: 0px;
+//     }
+//   }
+//
+//   td {
+//     width: calc(100% / 5 + 8px);
+//     padding: 6px 0px;
+//
+//     /* Price item (3) | Points item (6)  */
+//     &:nth-child(3) {
+//       text-align: left;
+//     }
+//
+//     /* Price item (3) | Points item (6)  */
+//     &:nth-child(5) {
+//       text-align: right;
+//
+//     }
+//
+//     /* Price item | Points item */
+//     &.total-container,
+//     &.order-points-container {
+//       text-align: right;
+//       width: calc(100% / 5 + 25px);
+//         &:nth-child(5) {
+//           text-align: right;
+//            width: 70px;
+//         }
+//     }
+//
+//     /* Order Number / Status */
+//     &.order-number-container,
+//     &.status-container {
+//       width: calc(100% / 5 + 25px);
+//     }
+//   }
+//
+//   .table-orders-title th {
+//     display: inline-block;
+//     width: calc(100% / 5 + 16px);
+//
+//     /* Price item (3) | Points item (6)  */
+//     &:nth-child(5) {
+//       text-align: right;
+//       width: 70px;
+//     }
+//   }
+// }
+
+.order-list-container {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  min-height: 340px;
+}
+
+.order-or-reservation-list {
+  width: 100%;
+
+  a {
+    @include notification-primary-text();
+    text-decoration: underline;
+  }
+
+  thead th {
+    padding-bottom: 18px;
+
+    &.order-or-reservation-total {
+      text-align: right;
+    }
+  }
+
+  tbody tr td {
+    padding: 14px 0px 20px;
+    text-transform: capitalize;
+
+    &.order-or-reservation-total {
+      text-align: right;
+    }
+  }
+}

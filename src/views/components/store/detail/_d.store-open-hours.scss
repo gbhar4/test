@@ -1,0 +1,47 @@
+/**
+* General Store Open Hours (Destop)
+**/
+
+@import "_m.store-open-hours.scss";
+
+/** Container date and hour of store */
+.store-day-and-time {
+  .hours-range-container,
+  .closed-notification,
+  .day-and-date-container {
+    width: 100%;
+  }
+
+  .hours-range-container {
+    text-align: left;
+  }
+
+  .hours-range-container,
+  .closed-notification {
+    text-align: right;
+  }
+
+  &.from-store-item {
+    .day-and-date-container {
+      width: 40%;
+    }
+
+    .hours-range-container,
+    .closed-notification {
+      width: 60%;
+    }
+  }
+
+  @media (min-width: 1250px) {
+    .day-and-date-container {
+      display: inline-block;
+      width: 40%;
+    }
+
+    .hours-range-container,
+    .closed-notification {
+      display: inline-block;
+      width: 60%;
+    }
+  }
+}

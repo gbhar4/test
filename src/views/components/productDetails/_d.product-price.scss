@@ -1,0 +1,64 @@
+/**
+* PDP - Product Price (Desktop)
+**/
+
+@import "_m.product-price.scss";
+
+.product-details-container,
+.outfiting-section-container {
+  /* Product Price */
+  .product-price-container {
+    margin: 10px 0px 20px;
+  }
+
+  .product-details-header-container + .product-details-header-promo-text-area {
+    margin-bottom: 20px;
+  }
+}
+
+.product-details-container {
+  /* Product Price */
+  .product-price-container {
+    .number-item {
+      top: 0px;
+    }
+  }
+}
+
+.outfiting-section-container {
+  /* Product Price */
+  .product-price-container {
+    border-top: solid 1px $color-primary-one-opacity;
+    border-bottom: solid 1px $color-primary-one-opacity;
+    padding: 10px 0px 6px;
+    // margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+
+    .number-item {
+      float: right;
+      position: relative;
+      top: 0px;
+      @include heading-level-4();
+      @include font-global-regular();
+      color: $color-primary-two;
+    }
+  }
+
+  .actual-price {
+    @include heading-level-2();
+    vertical-align: middle;
+    /* Color requested in ticket DT-27673  #990000 */
+    color: $color-actual-price;
+    display: inline-block;
+  }
+
+  .original-price {
+    @include heading-level-4();
+    @include font-global-regular();
+    display: inline-block;
+    color: $color-primary-two;
+    vertical-align: middle;
+    margin-left: 25px;
+  }
+}

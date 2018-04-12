@@ -1,0 +1,185 @@
+/*
+* Plcc Form Desktop
+*/
+
+@import '_m.plcc-form';
+
+.overlay-form-plcc {
+  .overlay-container {
+    width: 800px;
+    overflow: auto;
+  }
+
+  .modal-header {
+    .button-modal-close {
+      right: 10px;
+      top: 10px;
+    }
+  }
+}
+
+.plcc-form {
+  padding: 43px 20px 20px;
+  width: 780px;
+  display: block;
+  margin: 0 auto;
+  background: none;
+  background-color: $color-global-white;
+
+  .title-first {
+    display: none;
+  }
+
+  .plcc-terms-notice-container {
+    padding-top: 0px;
+  }
+
+  .card-with-smile-container {
+    display: inline-block;
+    width: 230px;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 28px;
+    padding-left: 10px;
+    padding-right: 17px;
+    vertical-align: top;
+  }
+
+  .plcc-terms-notice-content {
+    width: calc(100% - 230px);
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 20px;
+  }
+
+  .message {
+    margin-bottom: 30px;
+  }
+
+  .message-review {
+    margin-top: 10px;
+    // padding-right: 20px;
+
+    /* Inline Pre-screen code (Input) NOTE: enhancement DT-27573 */
+    + .inline-pre-screen-code-container {
+      margin-top: 0px;
+    }
+
+    + .input-pre-screen-code-container {
+      margin-top: 0px;
+    }
+  }
+
+  .inline-pre-screen-code-container {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+
+    .message {
+      margin-bottom: 0px;
+    }
+  }
+
+  .message-review {
+    margin-left: 250px;
+  }
+
+  .title-contact {
+    margin-bottom: 30px;
+  }
+
+  .input-common {
+    width: calc(50% - 20px);
+    vertical-align: top;
+  }
+
+  .input-first-name {
+    width: 37%;
+    margin-right: 20px
+  }
+
+  .input-m-i {
+    width: 8%;
+  }
+
+  .input-m-i,
+  .input-address-one,
+  .input-city,
+  .input-phone-number {
+    margin-right: 35px;
+  }
+
+  .input-zip-code {
+    float: none;
+    width: 22.3%;
+  }
+
+  .input-alt-phone-number {
+    margin-bottom: 0;
+  }
+
+  .select-state {
+    width: 22.3%;
+    margin-right: 20px;
+  }
+
+  .select-day,
+  .select-month,
+  .select-year {
+    width: 15%;
+    vertical-align: top;
+
+    .inline-error-message {
+      white-space: normal;
+    }
+  }
+
+  .input-digits-ssn {
+    width: 36%;
+    position: relative;
+    top: -19px;
+    margin-left: 30px;
+  }
+
+  .title {
+    margin-bottom: 30px;
+  }
+
+  .checkbox-term-and-conditions {
+    width: 100%;
+    margin: 10px 0;
+
+    /* @FIXME: DT-2276 Validar este cambio*/
+    .input-checkbox-title {
+      @include body-secondary-text($color-primary-two);
+    }
+  }
+
+  .message-information {
+    margin: 0 0 30px;
+  }
+
+  .button-submit {
+    width: 350px;
+    margin: 20px auto;
+    display: block;
+    letter-spacing: 1px;
+  }
+
+  .open-an-account-spinner-container {
+    @extend .button-submit;
+  }
+
+  .button-disagree {
+    margin: 13px auto 0;
+  }
+
+  .financial-tems-container {
+    height: 470px;
+  }
+
+  .plcc-agreements-container {
+    .title {
+      margin-bottom: 1px;
+    }
+  }
+}

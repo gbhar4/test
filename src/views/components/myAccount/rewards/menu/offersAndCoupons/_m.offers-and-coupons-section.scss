@@ -1,0 +1,18 @@
+/**
+* Offers and Coupons Section (Desktop)
+**/
+
+.my-rewards-navigation-container + .offers-and-coupons-section {
+  margin-top: 20px;
+}
+
+.offers-and-coupons-section {
+  .welcome-message-text {
+    text-align: center;
+    padding: 20px 0px 40% 0px;
+  }
+
+  .uncondense-coupons-container {
+    position: relative;
+  }
+}

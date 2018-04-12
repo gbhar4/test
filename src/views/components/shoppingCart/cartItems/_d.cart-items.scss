@@ -1,0 +1,233 @@
+@import "_m.cart-items.scss";
+
+/* Contenedor de Productos de Shopping Cart / My Bag / View Bag (listado) */
+.item-shopping-cart {
+  /* Item de Producto dentro del <li> */
+  .item-product {
+    padding: 20px 0 12px;
+  }
+
+  .error-box {
+    margin-bottom: 20px;
+  }
+
+  /* Contenedor de título de producto (nombre de producto y numero UPC) */
+  .product-title {
+    width: calc(100% - 132px);
+    padding-right: 30px;
+    display: inline-block;
+    float: right;
+  }
+
+  .upc-number {
+    .overlay-container & {
+      display: none;
+    }
+  }
+
+  .department-name {
+    @include subheading-secondary-text();
+    width: calc(100% - 30px);
+    margin-top: 3px;
+    line-height: 19px;
+  }
+
+  .container-image {
+    float: left;
+  }
+
+  /* remove product's button X" */
+  .button-remove {
+    position: absolute;
+    top: -8px;
+  }
+
+  /* Contenedor de precios de producto (actual y con descuento) */
+  .container-price {
+    margin: 6px 0 0px;
+  }
+}
+
+/* Sección My Bag (no Overlay) Desktop */
+.global-my-bag {
+  margin: 17px auto 0;
+  width: 100%;
+
+  /* Contenedor de la lista de productos */
+  .container-list-shopping-cart {
+    width: calc(100% - 410px);
+    margin-bottom: 60px;
+    margin-top: 1px;
+    padding-right: 50px;
+    display: inline-block;
+    float: left;
+  }
+
+  .item-shopping-cart {
+    padding: 0px;
+
+    &.wishlist-new-item,
+    &.deleted-item {
+      border-bottom: none;
+    }
+
+    fieldset {
+      margin-top: 13px;
+      margin-bottom: 0;
+    }
+
+    /* Imagen de producto */
+    .container-image {
+      margin-top: 0;
+      vertical-align: initial;
+      float: left;
+    }
+
+    /* Contenedor de la descripción del producto */
+    .product-description,
+    .product-title {
+      width: calc(100% - 63px - 90px);
+      margin-left: 37px;
+      margin-bottom: 10px;
+    }
+
+    .product-description {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      .notification {
+        width: calc(100% - 35px);
+        left: auto;
+        @include notification-secondary-text($color-primary-two);
+      }
+
+      .error-box,
+      .warning-box {
+        margin-top: 5px;
+        max-width: 247px; /* DT-31297: max-width required to prevent form alignment bug  */
+        display: inline-block;
+        width: auto;
+      }
+
+      .fit-dropdown-visible .error-box {
+        max-width: 330px; /* DT-31297: max-width required to prevent form alignment bug  */
+      }
+    }
+
+    /* Nombre del producto (titulo) */
+    .department-name {
+      left: auto;
+      margin-top: 0;
+    }
+
+    /* Número UPC de cada producto */
+    .upc-number {
+      left: auto;
+      margin-top: 2px;
+      margin-bottom: 0;
+    }
+
+    /* Contenedor de precios de producto (actual y con descuento) */
+    .container-price {
+      margin: 15px 0 19px;
+    }
+
+    /* Contenedor de radio Buttons (Ship it or Pick up in store) */
+    .radio-button-container {
+      margin: 0 0 5px;
+      width: 60%;
+      left: -3px;
+
+      label {
+        margin-bottom: 16px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .ship-it {
+      margin-right: 50%;
+    }
+
+    /* Botón de Wishlist */
+    .button-add-to-wishlist {
+      top: auto;
+      font-size: 25px;
+      bottom: 4px;
+      right: -2px;
+      margin-bottom: 0;
+    }
+
+    /* Contenedor para nombre del Store + botón "Change" Store en Radio Button (Global My Bag) */
+    .container-information-pick-up-in-store {
+      vertical-align: initial;
+
+      /* Estado de "pick up in store not available" */
+      &.notAvailable {
+        margin-left: 10px;
+      }
+    }
+
+    /* Descripción de producto: Color, talle y cantidad elegida */
+    .container-description-view {
+      /* Contenedor de los inputs select */
+      .container-selects {
+        width: calc(100% - 47px);
+      }
+
+      .button-change-store {
+        display: inline-block;
+        margin-left: 30px;
+        left: auto;
+      }
+    }
+
+    /* Botón de cambio de tienda */
+    .button-change-store {
+      display: inline-block;
+      left: auto;
+      margin-left: 20px;
+      white-space: nowrap;
+    }
+  }
+
+  /* En estado editable: Contenedor de Botones */
+  .buttons-editables {
+    margin-top: 13px;
+    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: bottom;
+
+    @media screen and (max-width: 1200px) {
+      width: auto;
+      float: right;
+
+      .button-cancel,
+      .button-global-update {
+        float: none;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .button-cancel {
+        margin-top: 10px;
+      }
+    }
+    @media screen and (max-width: 1100px) {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+
+      .button-cancel,
+      .button-global-update {
+        display: inline-block;
+      }
+
+      .button-cancel {
+        margin-left: 50px;
+      }
+    }
+  }
+}

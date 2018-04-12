@@ -1,0 +1,146 @@
+/**
+* Outfit Section (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.outfiting-section-container {
+  /* Reset Style */
+  fieldset {
+    padding: 0px;
+  }
+
+  .outfit-unavailable-notification {
+    color: $color-primary-three;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+  }
+}
+
+.outfiting-figure-container {
+  width: calc(100% + 32px);
+  position: relative;
+  left: -16px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.outfiting-basic-information {
+  padding: 20px 0px;
+
+  .outfiting-name {
+    @include heading-level-2();
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+
+  .outfiting-description {
+    @include body-primary-text();
+    @include font-global-regular();
+  }
+}
+
+.outfit-item-figure-container {
+  width: 116px;
+  float: left;
+
+  img {
+    width: 100%;
+  }
+}
+
+.outfit-item-link {
+  display: inline-block;
+}
+
+.outfit-item-details-link {
+  @include notification-secondary-text();
+  @include font-global-regular();
+  text-decoration: underline;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+.outfiting-product-item {
+  position: relative;
+  padding: 25px 0px;
+  border-bottom: solid 1px $color-primary-one-opacity;
+
+  &:first-of-type {
+    border-top: solid 1px $color-primary-one-opacity;
+  }
+
+  .product-details-form-container {
+    /* Reset Style */
+    margin-bottom: 0px;
+
+    padding-top: 30px;
+    border-top: solid 1px $color-primary-one-opacity;
+    margin-top: 20px;
+  }
+
+  /* Reset Style */
+  .product-details-form-content {
+    fieldset {
+      padding: 0px;
+    }
+  }
+
+  .product-details-header-container {
+    margin-top: 0px;
+    padding-left: 20px;
+    float: right;
+    clear: right;
+    width: calc(100% - 116px);
+
+    .information-container {
+      width: 100%;
+    }
+
+    .product-title {
+      @include body-primary-text();
+      text-transform: capitalize;
+    }
+  }
+
+  .wishlist-icon-container {
+    margin-top: 20px;
+    // position: absolute;
+    // top: 116px;
+    // right: 0px;
+  }
+
+  .select-fit {
+    width: calc(35% - 20px);
+    margin: 0px;
+    margin-right: 20px;
+    vertical-align: top;
+  }
+
+  .select-size {
+    @extend .select-fit;
+  }
+
+  .select-qty {
+    width: 30%;
+    margin: 0px;
+    margin-right: 0px;
+    vertical-align: top;
+  }
+
+  .size-chart-form-container {
+    display: block;
+    margin: 20px 0px;
+  }
+
+  .button-add-to-bag {
+    @include button-quaternary();
+    margin: 0px;
+    bottom: initial;
+    position: relative;
+  }
+}

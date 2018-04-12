@@ -1,0 +1,19 @@
+/*
+* Card with smile
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.card-with-smile-container {
+  position: relative;
+  text-align: center;
+  width: 170px;
+  margin: 13px auto;
+
+  .img-smile {
+    width: 100%;
+    position: relative;
+    left: -6%;
+  }
+}

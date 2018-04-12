@@ -1,0 +1,312 @@
+/**
+* Gift Cards
+**/
+
+@import "compass/css3/transform";
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* GiftCard Section */
+.gift-cards-section {
+  margin-bottom: 10px;
+
+  .gift-cards-section-title {
+    margin-bottom: 10px;
+  }
+
+  .checkout-section-note {
+    margin-top: 5px;
+  }
+}
+
+/* Title of Card Applied */
+.title-gift-card-applied {
+  @include subheading-secondary-text();
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+/* Summary Giftcard Applied */
+.giftcard-aplied-summary {
+  position: relative;
+  padding: 14px 21px;
+  margin-bottom: 10px;
+  background-color: $color-primary-four;
+
+  /* Amount Information */
+  .amount {
+    @include body-primary-text();
+    width: calc(100% - 85px);
+  }
+
+  /* Balance Information */
+  .balance {
+    @include description-secondary-text();
+    width: calc(100% - 85px);
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    @include transform(translate(0,-50%));
+  }
+}
+
+/**
+* Applied Giftcards container + gift cards apply
+**/
+
+.gift-cards-applied-container {
+  + .gift-cards-apply-container {
+    margin-top: 20px;
+  }
+
+  /* No giftcards applied message */
+  .nothing-applied {
+    margin-bottom: 10px;
+  }
+
+  .notice-gift-card-applied {
+    margin-top: 20px;
+
+    strong {
+      font-weight: 900;
+    }
+  }
+}
+
+/**
+* Apply Giftcards container
+**/
+.gift-cards-apply-container {
+  /* Empty state */
+  &:empty {
+    display: none;
+  }
+
+  /* Amount and Balance Information only in Gift Cards Apply */
+  .amount,
+  .balance {
+    width: calc(100% - 85px);
+  }
+
+  /* Button of Apply */
+  .button-giftcard-apply,
+  .button-giftcard-remove {
+    right: 21px;
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+}
+
+/* Title of Card Apply */
+.title-gift-card-apply {
+  @extend .title-gift-card-applied;
+}
+
+/* Summary Giftcard Apply */
+.giftcard-apply-summary {
+  @extend .giftcard-aplied-summary;
+
+  .error-box {
+    margin-right: 80px;
+
+    &:before {
+      .checkout-container & { // FIXME: not pretty
+        background-color: $color-primary-four;
+      }
+    }
+  }
+}
+
+/* When error message is display, the container of form has margin top */
+.error-box + .gift-card-add-fields {
+  margin-top: 20px;
+}
+
+/* Container of fieldset */
+.gift-card-add-fieldset {
+  padding: 0px;
+
+  .error-box {
+    margin-bottom: 25px;
+    margin-top: 15px;
+  }
+
+  /* Container of button when there is an error message */
+  .label-error + .gift-card-add-submit {
+    margin-top: 20px;
+  }
+}
+
+/* Add Gift Card title */
+.title-gift-card-add {
+  @extend .title-gift-card-applied;
+  display: none;
+}
+
+/* Toggle button of New Gift Card */
+.gift-card-toggle {
+  @include button-quaternary(secondary);
+  width: 50%;
+}
+
+/* Fieldset of Add Giftcard (Container of inputs and buttons) */
+.gift-card-add-fields {
+  display: inline-block;
+  width: 100%;
+
+  .gift-card-cancel {
+    @include button-quaternary();
+    width: 47%;
+  }
+
+  /* Apply Button */
+  .gift-card-apply {
+    @include button-quaternary(secondary);
+    width: 47%;
+    float: right;
+  }
+  /* Card Number Input */
+  .gift-card-number {
+    margin-bottom: 15px;
+  }
+
+  /* Captcha box */
+  .recaptcha {
+    text-align: center;
+    margin: 20px 0 0px;
+  }
+
+  /* Checbox Save Giftcard balance to My Account */
+  .save-giftcard-balance-checkbox {
+    margin: 15px 0px 20px;
+  }
+}
+
+.hidden-recaptcha-input {
+  label{
+    display: none;
+  }
+  .inline-error-message{
+    margin:9px 0px 8px;
+  }
+}
+
+/**
+* Applied Giftcards container, Apply Giftcards container
+**/
+
+.gift-cards-applied-container,
+.gift-cards-apply-container {
+  /* Last item of giftcard list */
+  ul > li {
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+
+  + .gift-card-add-form {
+    margin-top: 20px;
+  }
+}
+
+/* Is Review Section? */
+.checkout-container .checkout-review-section {
+  /* Title and subtitle of section */
+  .checkout-section-title {
+    display: none;
+  }
+}
+
+/* Is My Account Section? */
+/* Is Payment & Gift Cards Section in My Account? */
+.add-giftcard-or-merchandise-container {
+  position: relative;
+
+  .gift-card-add-form {
+    border: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      margin: 20px 0;
+      position: relative;
+
+      .button-cancel {
+        @include button-secondary();
+      }
+
+      .button-save {
+        @include button-primary();
+      }
+
+      .button-cancel,
+      .button-save {
+        width: 100%;
+        margin: 10px 30px 0 0;
+        height: 42px;
+        line-height: 46px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .gift-card-add-fields {
+    width: 100%;
+
+    .recaptcha {
+      margin: 0px;
+    }
+  }
+
+  .gift-card-number {
+    width: calc(50% - 10px);
+    vertical-align: top;
+  }
+
+  .gift-card-pin {
+    width: calc(50% - 10px);
+    float: right;
+    vertical-align: top;
+  }
+
+  .add-giftcard-message-container {
+    background-color: $color-primary-five;
+    padding: 20px;
+    margin: 20px 0px;
+  }
+
+  .add-giftcard-message {
+    @include body-secondary-text();
+  }
+
+  .add-giftcard-message-title {
+    display: block;
+    @include heading-level-3();
+    margin-bottom: 5px;
+  }
+}
+
+.gift-card-add-submit {
+  position: relative;
+
+  .general-loading {
+    position: absolute;
+    width: 100%;
+    min-width: auto;
+    min-height: auto;
+    padding: 0;
+    border: 0;
+
+    .custom-loading-icon {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}

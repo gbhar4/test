@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Location</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Location">
+            <g id="Group-3" transform="translate(3.000000, 3.000000)">
+                <g id="Icon-/-Location">
+                    <circle id="Oval-5" stroke="#666666" stroke-width="2" cx="12" cy="12" r="6"></circle>
+                    <g id="Group-2" stroke-width="1" fill-rule="evenodd" transform="translate(11.000000, 3.000000)" fill="#666666">
+                        <rect id="Rectangle-10" x="0" y="0" width="2" height="6"></rect>
+                        <rect id="Rectangle-10-Copy" x="0" y="12" width="2" height="6"></rect>
+                    </g>
+                    <g id="Group-2" stroke-width="1" fill-rule="evenodd" transform="translate(12.000000, 12.000000) rotate(90.000000) translate(-12.000000, -12.000000) translate(11.000000, 3.000000)" fill="#666666">
+                        <rect id="Rectangle-10" x="0" y="0" width="2" height="6"></rect>
+                        <rect id="Rectangle-10-Copy" x="-9.59232693e-14" y="12" width="2" height="6"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

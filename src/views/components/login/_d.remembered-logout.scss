@@ -1,0 +1,21 @@
+@import "_mixins.scss";
+
+.remembered-logout {
+  position: absolute;
+  right: 27px;
+  top: 12px;
+
+  .button-logout {
+    @include navigation-level-2-standard();
+    text-transform: uppercase;
+    text-decoration: underline;
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+
+.login-button {
+  + .remembered-logout {
+    margin-top: 20px;
+  }
+}

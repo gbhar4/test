@@ -1,0 +1,128 @@
+/*
+ * Store Search (Mobile)
+ */
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/flexbox";
+@import "compass/css3/border-radius";
+@import "compass/css3/transform";
+
+.store-search-container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.store-search-section {
+  position: relative;
+
+  /** Container of button - only from mobile */
+  .container-button {
+    background-color: $color-primary-five;
+    padding: 15px;
+  }
+
+  /** Button return */
+  .button-return {
+    @include subheading-secondary-text();
+    @include icon-tcp-chevron();
+
+    &:before {
+      font-size: 6px;
+      font-weight: 900;
+      margin-right: 5px;
+      transform: rotate(270deg);
+    }
+  }
+
+  /** Title header */
+  .store-search-title {
+    padding: 30px 40px;
+    text-align: center;
+  }
+
+  .country-or-state-list-container {
+    padding: 0 0 0 15px;
+    margin-right: 20px;
+    width: calc(100% - 50px);
+  }
+
+  .country-or-state-list {
+    border-bottom: solid 1px $color-primary-four;
+    margin: 0;
+    padding: 20px 0;
+    width: auto;
+
+    &:first-child {
+      border-top: solid 1px $color-primary-four;
+    }
+
+    .accordion-toggle {
+      @include icon-tcp-plus();
+
+      &:before {
+        border: none;
+        font-size: 16px;
+        @include transform(rotate(90deg));
+      }
+    }
+
+    &.accordion-expanded {
+      .accordion-toggle {
+        @include icon-tcp-minus();
+      }
+    }
+
+  }
+
+  .select-store {
+    width: 100%;
+    display: block;
+  }
+
+  /** Store list from state or contry */
+  .store-list {
+    margin-bottom: 20px;
+  }
+
+  .store-info-data-condensed {
+    margin-bottom: 30px;
+  }
+
+  .store-name {
+    @include heading-level-4();
+    margin-bottom: 5px;
+
+    a {
+      color: $color-primary-one;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+  }
+
+  .store-address,
+  .store-phone-number {
+    @include notification-primary-text();
+    text-transform: capitalize;
+  }
+}
+
+.list-alphabet {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 120px;
+  right: 0;
+  width: 30px;
+  padding-bottom: 20px;
+
+  .letter {
+    @include notification-secondary-text();
+    padding-bottom: 4px;
+  }
+
+  button {
+    display: block;
+    margin: 0;
+  }
+}

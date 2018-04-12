@@ -1,0 +1,43 @@
+/**
+* Modal Header (Desktop)
+**/
+
+@import "./_m.modal-header-display.scss";
+
+.modal-header {
+  width: 100%;
+  text-align: center;
+
+  .modal-only-title {
+    line-height: normal;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .modal-subtitle {
+    padding: 0px;
+    padding-bottom: 50px;
+  }
+
+  .button-modal-close {
+    @include common-button-remove();
+    position: absolute;
+    margin: 10px;
+    right: 0px;
+    top: 0px;
+    z-index: 9;
+
+    &:before {
+      width: 16px;
+      top: 7px;
+      background-color: $color-primary-one;
+    }
+
+    &:after {
+      height: 16px;
+      background-color: $color-primary-one;
+    }
+  }
+}

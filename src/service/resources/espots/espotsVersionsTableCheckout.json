@@ -1,0 +1,22 @@
+{
+  "gift_services_espot": {
+    "nameOnServer": "gift_services_espot",
+    "guest": "1",
+    "registered": "1"
+  },
+  "checkout_confirmation_banner": {
+    "nameOnServer": "CheckoutConfirmationBanner",
+    "guest": "1",
+    "registered": "1"
+  },
+  "checkout_confirmation_MPR_promo": {
+    "nameOnServer": "CheckoutConfirmationMPRPromo",
+    "guest": "1",
+    "registered": "1"
+  },
+  "bag_n_checkout_coupon_help": {
+    "nameOnServer": "coupon_help",
+    "guest": "1",
+    "registered": "1"
+  }
+}

@@ -1,0 +1,229 @@
+/****
+  * @DESKTOP Store Locator
+  * https://app.zeplin.io/project.html#pid=57a0be025af0d88f2ff277e7&sid=5849c6ac18900024554655c3
+  *
+****/
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/border-radius";
+@import "_m.store-locator.scss";
+
+.store-information-container {
+  position: initial;
+  display: initial;
+
+  .button-back-to-account {
+    @include icon-tcp-chevron();
+  }
+}
+
+.store-locators {
+  padding: 15px 10px;
+
+  .back-to-account-container {
+    margin-bottom: 20px;
+  }
+
+  /** Container of store information  search and list stores */
+  .store-information {
+    display: inline-block;
+    width: 50%;
+    padding-right: 2%;
+  }
+
+  .stores-info {
+    width: 100%;
+    max-height: 750px;
+    overflow-y: scroll;
+    display: inline-block;
+  }
+
+  .content-store-info {
+    &.selected-item {
+      border: solid 2px $color-primary-two;
+    }
+  }
+
+  .international-stores-link {
+    padding-left: 22px;
+    width: 50%;
+    padding: 0px;
+    padding-right: 2%;
+    display: inline-block;
+
+    a {
+      @include body-secondary-text($color-primary-one);
+      text-decoration: underline;
+    }
+  }
+}
+
+/** content store info data */
+.store-info-data-detailed-list-item {
+  margin-top: 0;
+  padding: 18px 20px;
+  margin-bottom: 10px;
+  position: relative;
+
+  .content-direction {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 5px;
+  }
+
+  .content-store-detail {
+    width: 24%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    padding-right: 5px;
+  }
+
+  span {
+    @include subheading-primary-text();
+    text-transform: none;
+  }
+
+  .calculate-distance-button {
+    @include subheading-primary-text();
+    text-transform: none;
+    text-decoration: underline;
+  }
+
+  .store-address {
+    margin-top: 29px;
+
+    br {
+      display: inline-block;
+    }
+  }
+
+  /** Span real store option store */
+  .retail-store,
+  .store-store {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: -9px;
+    @include icon-tcp-pin();
+
+    &:before {
+      font-size: 28px;
+      position: relative;
+      top: 8px;
+      left: 0;
+      color: $color-accent-two;
+    }
+  }
+
+  /** Span outlet store option store */
+  .outlet-store {
+    &:before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      float: left;
+      position: relative;
+      background: $color-accent-two;
+      border-radius: 50%;
+      border: none;
+      color: $color-accent-two;
+      margin-right: 10px;
+      left: 0;
+    }
+  }
+
+  /** hiperlink get directions and See store details */
+  .button-directions {
+    @include description-primary-text();
+    text-decoration: underline;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .button-see-store-details {
+    @extend .button-directions;
+    margin-top: 31px;
+  }
+
+  /** Container of features store */
+  .features-store {
+    position: absolute;
+    top: 0;
+  }
+
+  /** Button favorite store */
+  .favorite-store-indicator,
+  .button-set-as-favorite {
+    @include notification-secondary-text();
+    margin: 0;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+
+  .button-set-as-favorite {
+    text-decoration: underline;
+  }
+
+  /** content store phone number*/
+  .store-phone-number {
+    margin-top: 50px;
+  }
+
+  /** Content time schedules */
+  .time-schedules {
+    @include subheading-primary-text($color: $color-primary-one);
+    width: 46%;
+
+    /** Title with interaction of store hours */
+    .store-schedule-title {
+      cursor: pointer;
+      margin-bottom: 20px;
+      @include icon-tcp-chevron();
+      text-transform: none;
+
+      &:before {
+        float: right;
+        font-size: 6px;
+        margin-right: 6px;
+        margin-top: 8px;
+        font-weight: 900;
+        transform: rotate(180deg);
+      }
+
+      &.expanded {
+        &:before {
+          transform: rotate(1deg);
+        }
+      }
+    }
+
+    /* List hours of store */
+    .store-day-and-time {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1250px) {
+    .content-direction {
+      width: 33%;
+      padding-right: 15px;
+    }
+
+    .content-store-detail {
+      width: 29%;
+      padding-right: 15px;
+    }
+
+    /* Content time schedules */
+    .time-schedules {
+      width: 38%;
+    }
+  }
+}
+
+/* NOTE: To fixed float of google map container */
+.store-locators + .footer-global {
+  clear: both;
+}

@@ -1,0 +1,39 @@
+/**
+* My Rewards Navigation (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/flexbox";
+
+.my-rewards-navigation-container {
+  @include display-flex;
+  @include justify-content(space-between);
+  padding-top: 2px;
+  border-bottom: solid 1px $color-primary-four;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.rewards-navigation-item-link {
+  @include subheading-secondary-text($color-primary-three);
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+  z-index: 2;
+
+  &.rewards-navigation-item-link-selected {
+    color: $color-primary-one;
+
+    &:after {
+      content: '';
+      background: $color-primary-one;
+      height: 2px;
+      width: 100%;
+      display: inline-block;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+    }
+  }
+}

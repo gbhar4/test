@@ -1,0 +1,93 @@
+/**
+* Modal: Print And View (Rewards) (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/flexbox";
+
+.overlay-coupon-printable {
+  .coupon-item {
+    margin-top: 20px;
+    border: solid 1px $color-primary-one;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logo-image-coupon {
+    width: 100px;
+    display: block;
+    margin: 0px auto 25px;
+  }
+
+  .reward-value {
+    @include font-global-heavy();
+    font-size: 32px;
+    line-height: 32px;
+    display: block;
+    position: relative;
+    vertical-align: top;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .barcode-vector {
+    overflow-x: auto;
+
+    svg {
+      max-width: 100%;
+    }
+
+    text {
+      display: none;
+    }
+  }
+
+  .web-code-container {
+    @include heading-level-3();
+    display: block;
+    position: relative;
+    font-size: 14px;
+    top: -0.7em;
+  }
+
+  .claim-text {
+    text-align: left;
+    font-size: 9px; /* not mixin for this */
+    margin-top: 10px;
+  }
+
+  .button-coupon-print {
+    @include button-primary();
+    margin-top: 20px;
+  }
+
+  .button-coupon-cancel {
+    @include button-secondary();
+    margin-top: 20px;
+  }
+}
+
+@media print {
+  html, body {
+    width: 500px;
+  }
+
+  .overlay-coupon-printable {
+    max-height: none;
+    height: auto;
+    overflow: visible;
+
+    .coupon-item {
+      border: 0;
+    }
+
+    .barcode-vector {
+      overflow-x: visible;
+    }
+  }
+
+  #sk_tcp_mobileFooter {
+    display: none;
+  }
+}

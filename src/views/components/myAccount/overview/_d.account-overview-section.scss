@@ -1,0 +1,35 @@
+/**
+* My Account Section: Account Overview (Desktop)
+**/
+
+@import "_m.account-overview-section.scss";
+
+.default-shipping-address-container,
+.default-payment-method-container,
+.default-store-container {
+  // width: 28%;
+  width: 30%;
+
+  .name {
+    @include heading-level-4();
+  }
+}
+
+.default-payment-method-container,
+.default-shipping-address-container,
+.default-store-container {
+  min-height: 195px;
+}
+
+/* Title of empty method default */
+.empty-shipping-address-title {
+  width: auto;
+  left: auto;
+}
+
+/* Account Overview Section */
+.my-account-overview-section {
+  .uncondense-coupons-container {
+    margin-top: 20px;
+  }
+}

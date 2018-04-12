@@ -1,0 +1,212 @@
+/**
+* Mobile Store Locator
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/box-shadow";
+
+/** Container store locators*/
+.store-information-container {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.store-locators {
+  padding: 15px;
+}
+
+.back-to-account-container {
+  border-bottom: 1px solid $color-primary-four;
+}
+
+.button-back-to-account {
+  @include subheading-secondary-text();
+  @include icon-tcp-chevron();
+  line-height: 45px;
+  padding-left: 6px;
+
+  &:before {
+    font-size: 6px;
+    font-weight: 900;
+    margin-right: 5px;
+    transform: rotate(270deg);
+  }
+}
+
+/** content store info data */
+.store-info-data-detailed-list-item {
+  background: $color-primary-five;
+  margin-top: 20px;
+  padding: 10px;
+
+  &.selected {
+    @include box-shadow(inset 0 0 0 2px $color-primary-one);
+  }
+
+  .store-name {
+    margin-bottom: 8px;
+    width: 60%;
+    display: block;
+    vertical-align: top;
+    text-transform: capitalize;
+  }
+
+  span {
+    @include subheading-primary-text();
+    text-transform: none;
+    display: block;
+  }
+
+  /** Options of store */
+  .retail-store,
+  .store-store {
+    @include icon-tcp-pin();
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: -9px;
+
+    &:before {
+      font-size: 28px;
+      position: relative;
+      top: 8px;
+      left: 0px;
+      color: $color-accent-two;
+      display: inline-block;
+    }
+  }
+
+  /** Options of store */
+  .outlet-store {
+    // @include icon-tcp-success();
+
+    &:before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: $color-accent-two;
+      border-radius: 50%;
+      margin-right: 10px;
+      display: inline-block;
+    }
+  }
+
+  /** Options of store */
+  .in-store-pick-up-availability {
+    @include icon-tcp-success();
+
+    &:before {
+      margin-right: 10px;
+      display: inline-block;
+    }
+  }
+
+  /** Span container of distance */
+  .calculate-distance-button {
+    @include description-secondary-text();
+    text-decoration: underline;
+  }
+
+  /** Container address store */
+  .store-address,
+  .store-phone-number {
+    @include description-primary-text();
+    text-transform: none;
+    margin-top: 9px;
+    text-transform: capitalize;
+
+    br {
+      display: none;
+    }
+  }
+
+  /** Title of hours */
+  .store-schedule-title {
+    @include subheading-secondary-text();
+    margin: 11px 0 8px;
+  }
+
+  /** Container of hours list */
+  .time-schedules {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .store-day-and-time {
+    margin-bottom: 20px;
+
+    &.from-store-item {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .button-directions {
+    @include description-primary-text();
+    display: block;
+    margin: 15px 0 5px;
+    text-decoration: underline;
+  }
+
+  /** Container more details */
+  .container-more-details {
+    vertical-align: top;
+    margin-top: 20px;
+
+    .store-phone-number,
+    .button-see-store-details {
+      @include description-primary-text();
+      display: inline-block;
+      width: 50%;
+    }
+
+    .button-see-store-details {
+      text-decoration: underline;
+      text-align: right;
+    }
+  }
+
+  /** Span favorite store */
+  .favorite-store-indicator {
+    margin: 15px 0;
+  }
+
+  /** Button select store */
+  .button-set-as-favorite {
+    margin: 15px 0;
+  }
+
+  /** button view details */
+  .button-expanded-details {
+    @include notification-secondary-text();
+    margin: 10px auto 0;
+    display: block;
+    @include icon-tcp-chevron(after);
+
+    &:after {
+      font-size: 6px;
+      font-weight: 900;
+      margin-right: 6px;
+      margin-top: 8px;
+      transform: rotate(180deg);
+      position: relative;
+      top: -1px;
+      right: -20px;
+    }
+
+    &.expanded {
+      &:after {
+        transform: rotate(1deg);
+      }
+    }
+  }
+}
+
+.international-stores-link {
+  margin: 20px 0;
+
+  a {
+    color: $color-primary-one;
+  }
+}

@@ -1,0 +1,140 @@
+/**
+* Outfit Section (Desktop)
+**/
+
+@import "_m.outfiting-section.scss";
+@import "compass/css3/flexbox";
+
+.outfiting-section-container {
+  .product-price-container {
+    margin-bottom: 30px;
+    border-top: 0px;
+  }
+
+  .outfit-unavailable-notification {
+    text-align: left;
+    padding: 0px;
+    padding-left: 26px;
+    margin: 20px 0px;
+  }
+}
+
+/* Section Container */
+.outfiting-section-content {
+  border: solid 1px $color-primary-one-opacity;
+  padding: 10px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 22px;
+  width: 100%;
+  @include display-flex;
+}
+
+.outfiting-basic-information {
+  padding: 20px;
+}
+
+.outfiting-figure-container {
+  width: 100%;
+  left: auto;
+}
+
+/* Main Image of outfit */
+.outfiting-information {
+  max-width: 460px;
+  width: 40%;
+}
+
+/* List and Notification Container */
+.list-and-notification-container {
+  border-left: solid 1px $color-primary-one-opacity;
+  width: 60%;
+
+  &.enabled-notifications {
+    .outfiting-list-container {
+      border-bottom: solid 1px $color-primary-one-opacity;
+    }
+  }
+}
+
+/* Outfit details container: list */
+.outfiting-list-container {
+  width: 100%;
+}
+
+.outfit-item-figure-container {
+  width: 200px;
+  height: auto;
+  vertical-align: top;
+}
+
+.outfiting-product-item {
+  padding: 15px 0px 0px 26px; // REVIEW
+
+  &:first-of-type {
+    border-top: 0px;
+  }
+
+  &:last-of-type {
+    border-bottom: 0px;
+  }
+
+  .outfit-item-link {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .outfit-item-image {
+    width: 100%;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  .outfit-item-details-link {
+    @include notification-primary-text();
+    @include font-global-regular();
+    text-decoration: underline;
+    display: inline-block;
+  }
+
+  .wishlist-icon-container {
+    position: relative;
+    top: auto;
+    margin-top: 0px;
+  }
+
+  .product-details-header-container {
+    width: calc(100% - 200px);
+
+    .information-container {
+      width: calc(100% - 35px);
+      padding-right: 30px;
+    }
+
+    .product-title {
+      @include heading-level-2();
+      @include font-global-medium();
+      text-transform: capitalize;
+    }
+  }
+
+  .product-details-form-container {
+    /* Reset Styles */
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    width: calc(100% - 200px);
+    padding-left: 20px;
+  }
+
+  .product-details-form-content {
+    width: calc(100% - 140px);
+  }
+
+  .button-add-to-bag {
+    width: 120px;
+    position: absolute;
+    bottom: 80px;
+  }
+}

@@ -1,0 +1,69 @@
+@import "_variables.scss";
+@import "./_m.header-global.scss";
+
+.button-menu {
+  display: none;
+}
+
+.header-sticky {
+  position: fixed;
+  top: 0;
+  z-index: 111;
+  left: 50%;
+  @include transform(translatex(-50%));
+  background: $color-global-white;
+  width: 100%;
+}
+
+.header-ghost-element {
+  height: 106px;
+}
+
+.container-global-navigation {
+  min-height: 65px;
+}
+
+.header-global {
+  height: auto;
+  clear: both;
+  padding: 0;
+  border-bottom: 0;
+  display: block;
+  z-index: 1002; // NOTE: We would not have to use higth z-index.
+
+  .logo {
+    position: relative;
+    top: 0;
+    padding: 0px;
+    float: left;
+    margin-left: 6px;
+    margin-top: 14px;
+    z-index: 3;
+    vertical-align: middle;
+
+    img {
+      height: 44px;
+    }
+  }
+
+  .button-search {
+    margin-top: -51px;
+    margin-right: 10px;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      color: $color-primary-one;
+      font-size: 27px;
+    }
+  }
+}
+
+.header-global-banner {
+  width: 100%;
+  height: auto;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@import "./header/_d.header-global-messages.scss";

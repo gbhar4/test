@@ -1,0 +1,85 @@
+/*
+* Time Out Modal (Desktop)
+*/
+
+@import '_m.timeout-modal-plcc.scss';
+
+.overlay-timeout-plcc {
+  .overlay-container {
+    width: 800px;
+  }
+}
+
+.timeout-modal-container {
+  height: initial;
+  overflow-y: auto;
+
+  .first-alert,
+  .second-alert {
+    top: auto;
+    @include transform(translateY(0));
+    position: relative;
+    width: auto;
+    padding: initial;
+  }
+
+  img {
+    width: 240px;
+  }
+
+  .title-promo {
+    @include heading-level-1();
+    @include font-global-regular();
+    text-transform: none;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+
+    br {
+      display: none;
+    }
+
+    &.current-time {
+      white-space: nowrap;
+    }
+  }
+
+  .text-promo {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button-continue-acceptance,
+  .button-restart,
+  .button-return {
+    // width: calc(100% - 60px);
+
+    // max-width: 450px;
+    width: calc(100% - 370px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Both modals */
+  .button-close {
+    @include common-button-remove();
+    font-size: 0px;
+    position: absolute;
+    margin: 10px;
+    right: -10px;
+    top: -25px;
+    z-index: 9;
+
+    &:before {
+      width: 16px;
+      top: 7px;
+      background-color: $color-primary-one;
+    }
+
+    &:after {
+      height: 16px;
+      background-color: $color-primary-one;
+    }
+  }
+}

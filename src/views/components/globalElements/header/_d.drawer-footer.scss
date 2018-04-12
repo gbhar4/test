@@ -1,0 +1,20 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "_m.drawer-footer.scss";
+
+.new-account {
+  padding: 23px 0 30px;
+  background-color: $color-primary-background;
+  text-align: center;
+
+  .button-create-account {
+      width: 284px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .no-margin {
+      margin: 0px;
+      width: auto;
+    }
+}

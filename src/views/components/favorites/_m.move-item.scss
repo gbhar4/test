@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Move Item  - Mobile // section footer hover of product
+   ========================================================================== */
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/flexbox";
+
+.move-item-content {
+  position: absolute;
+  border: 1px solid $color-primary-four;
+  width: 290px;
+  padding: 15px 10px;
+  z-index: 10;
+  background-color: $color-global-white;
+  text-align: left;
+
+  .favorite-list {
+    padding: 10px 0px;
+    @include notification-primary-text($color-primary-two);
+    @include display-flex;
+    @include justify-content(space-between);
+  }
+
+  .favorite-item-title {
+    vertical-align: top;
+    width: 70%;
+    cursor: pointer;
+
+    &.favorite-item-title-one-word {
+      word-break: break-all;
+    }
+  }
+
+  .favorite-item-detail {
+    vertical-align: top;
+    text-align: right;
+    width: 30%;
+  }
+
+  .title-move {
+    @include notification-secondary-text($color-primary-three);
+    text-transform: uppercase;
+    display: block;
+  }
+
+  /* Modificate heart-default */
+  .default-favorite-list {
+    color: $color-primary-one;
+    @include font-global-black();
+    position: relative;
+
+    .heart-icon-container {
+      &:before {
+        font-size: 15px;
+        color: $color-primary-one;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+/*
+ * Wishlist Item (Desktop)
+ */
+
+@import '_m.wishlist-item.scss';
+
+// ** Favorites section Only ** //
+.wishlist-list-container {
+  .button-prev {
+    left: 0;
+  }
+
+  .button-next {
+    right: 0;
+  }
+
+  .item-container {
+    .button-edit {
+      @include opacity(0);
+    }
+
+    &:hover{
+      .button-edit{
+        @include opacity(1.0);
+      }
+    }
+  }
+}

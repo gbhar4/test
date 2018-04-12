@@ -1,0 +1,39 @@
+/**
+* My Account Section: Profile Information (Mobile)
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.favorite-store-container,
+.change-password-container {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $color-primary-four;
+  &.no-favorite-store-showed {
+    border-bottom: none;
+  }
+}
+
+.button-information {
+  @include button-secondary();
+  @include notification-secondary-text($color-global-white);
+  margin-top: 16px;
+  width: 200px;
+  height: 35px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.profile-information-container {
+  border-bottom: 1px solid $color-primary-four;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  .air-miles-message,
+  .rewards-message {
+    @include body-secondary-text();
+    @include font-global-regular();
+  }
+}

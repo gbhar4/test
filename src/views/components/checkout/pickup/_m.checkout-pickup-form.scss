@@ -1,0 +1,191 @@
+/**
+* Pickup Review Section Form Mobile
+**/
+
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/transform";
+@import "compass/functions";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.checkout-container {
+  .checkout-pickup-container .checkout-section-title {
+    display: none;
+  }
+
+  .checkout-pickup-container {
+    .checkout-review-section {
+      .error-box {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.pick-up-form,
+.pick-up-alternate-input,
+.checkout-review-pickup {
+  .pick-up-form-title {
+    display: inline-block;
+    margin-right: 30px;
+  }
+
+  /* Edit, cancel or save button */
+  .checkout-summary-edit {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+
+  .button-cancel-address {
+    @include body-secondary-text();
+    display: inline-block;
+    margin-left: 14px;
+    position: relative;
+    right: auto;
+  }
+
+  .button-save-address {
+    @extend .button-cancel-address;
+    @include font-global-black();
+    margin-left: 0px;
+  }
+
+  .input-and-message-container {
+    margin-bottom: 25px;
+  }
+
+  .phone-number {
+    margin-top: 25px;
+  }
+
+  .last-name + .phone-number {
+    margin-top: 0px;
+  }
+
+  .pick-up-note,
+  .email-signup-note {
+    @include description-secondary-text();
+    margin-top: 3px;
+
+    // a {
+    // }
+  }
+
+  // .email-signup-note {
+  //   margin-top: 20px;
+  //   a {
+  //     text-decoration: underline;
+  //   }
+  // }
+
+  .pick-up-alternate-input {
+    margin-top: 20px;
+  }
+}
+
+.email-signup-container {
+  .email-signup-note {
+    @include description-secondary-text();
+    margin-top: 10px;
+  }
+
+  a {
+    @include description-secondary-text($color-primary-one);
+    text-decoration: underline;
+  }
+}
+
+.pick-up-form {
+  background: $color-primary-five;
+  position: relative;
+  margin-bottom: 20px;
+
+  .first-name {
+    .pick-up-note {
+      margin-top: 10px;
+    }
+  }
+
+  .email-signup-note {
+    @include description-secondary-text();
+    margin: 10px 0px 35px;
+  }
+}
+
+.pick-up-alternate-fieldset {
+  padding: 0px;
+}
+
+/* Form of Pick Up Contact (Guest) */
+.pick-up-input {
+}
+
+/* Form of Pick Up Contact Alternate (Guest) */
+.pick-up-alternate-input {
+  .label-error {
+    .inline-error-message {
+      white-space: normal;
+    }
+  }
+}
+
+.alternate-pickup {
+  .pick-up-note {
+    @include description-secondary-text();
+    margin-top: 8px;
+
+    > br {
+      display: none;
+    }
+  }
+}
+
+/* In the Pick Up form, input checkbox */
+.send-sms {
+  margin-top: 25px;
+}
+
+/* In the Pick Up form, input checkbox */
+.email-signup {
+  @extend .send-sms;
+}
+
+.pick-up-edit-overlay {
+  .modal-only-title {
+    text-align: center;
+  }
+
+  .button-modal-close {
+    display: none;
+  }
+
+  .button-back {
+    @include description-primary-text();
+    position: absolute;
+    left: 17px;
+    top: 25px;
+    z-index: 2;
+
+    @include icon-tcp-chevron();
+    &:before {
+      @include transform(rotate(-90deg));
+      text-align: left;
+      font-size: 14px;
+      width: 26px;
+    }
+  }
+
+  label,
+  .button-save-pickup {
+    margin-top: 20px;
+  }
+}
+
+.pick-up-alternate-form {
+  // .first-name-container,
+  // .last-name {
+  //   margin-bottom: 25px;
+  // }
+}

@@ -1,0 +1,55 @@
+/**
+ * Shipping Review Section
+ **/
+
+@import "./_m.shipping-review-section.scss";
+
+.checkout-review-shipping-method {
+  margin-top: 2px;
+}
+
+.checkout-review-pickup + .checkout-review-shipping {
+  margin-top: 40px;
+}
+
+.checkout-review-gift-wrapping {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.shipping-methods {
+  label {
+    margin-bottom: 20px;
+    margin-right: 30%;
+  }
+}
+
+/* Is Express Checkout? */
+.express {
+  /* Button Edit in Shipping section */
+  .checkout-review-shipping {
+    .checkout-summary-edit {
+      top: auto;
+    }
+  }
+
+  .checkout-review-shipping-address {
+    width: calc(50% - 30px);
+    margin-right: 60px;
+
+    /* Right Line */
+    &:before {
+      content: '';
+      display: none;
+    }
+  }
+
+  .shipping-methods {
+    padding-left: 0px;
+  }
+
+  .checkout-review-gift-wrapping-form {
+    width: calc(50% - 30px);
+    float: right;
+  }
+}

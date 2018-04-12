@@ -1,0 +1,129 @@
+/*
+ * Favorite Active List (Mobile)
+ */
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.favorite-list {
+  &.custom-select-common {
+    width: 100%;
+    text-align: left;
+  }
+
+  .custom-select-button {
+    padding: 0px;
+    height: 33px;
+}
+
+  .list-container {
+    text-align: left;
+    background: $color-global-white;
+    border: 1px solid $color-primary-four;
+    margin-top: 5px;
+  }
+
+  /* Title's list */
+  .favorite-active-list-title {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    padding-top: 19px;
+    padding-bottom: 5px;
+  }
+
+  .favorite-list-name {
+    @include heading-level-1();
+    text-transform: none;
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 50px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    .heart-icon-container {
+      top: auto;
+    }
+  }
+
+  /* Add new Favorite List (button), last item's list */
+  .add-new-favorite-list-button {
+    margin: 15px 0px;
+  }
+
+  /* Default Item */
+  .default-favorite-list-container {
+    .favorite-list-title,
+    .item-list {
+      @include font-global-black();
+    }
+
+    .heart-icon-container {
+      &:before {
+        font-size: 15px;
+        color: $color-primary-one;
+      }
+    }
+  }
+
+  /* Each item's list (li) */
+  .favorite-list-item {
+    padding: 0px 13px;
+  }
+
+  /* Each item's list (content) */
+  .favorite-list-item-dropdown {
+    padding: 13px 0px 9px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .favorite-list-title {
+    display: inline-block;
+    width: 75%;
+    vertical-align: top;
+    white-space: normal;
+    padding-right: 10px;
+    @include heading-level-4();
+    @include font-global-regular();
+
+    &.favorite-item-title-one-word {
+      word-break: break-all;
+    }
+  }
+
+  /* Icon to default favourite's item */
+  .heart-icon-container {
+    font-size: 0px;
+    position: relative;
+    width: 15px;
+    height: 14px;
+    display: inline-block;
+    top: 2px;
+
+    @include icon-tcp-heart();
+    &:before {
+      font-size: 20px;
+      color: $color-primary-one;
+    }
+  }
+
+  .item-list {
+    width: 25%;
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 4px;
+    @include notification-secondary-text();
+    @include font-global-regular();
+  }
+
+  .item-highlighted {
+    background: $color-global-white;
+
+    .item-list {
+      color: $color-primary-one;
+    }
+  }
+}

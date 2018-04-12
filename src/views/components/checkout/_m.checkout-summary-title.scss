@@ -1,0 +1,39 @@
+/**
+* Checkout Summary Title Mobile
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.checkout-summary-title {
+  //margin-bottom: 0px;
+
+  // revisar si no afecta en otros sitios en tal caso agregar sobre la clase .checkout-review-section y descomentar la linea 9
+  margin-bottom: 15px;
+
+  h3 {
+    @include heading-level-2();
+    display: inline-block;
+  }
+}
+
+.checkout-summary-edit {
+  @include body-secondary-text();
+  text-decoration: underline;
+  float: right;
+  top: 4px;
+  position: relative;
+}
+
+/* Is Express Checkout? */
+// .checkout-pickup-container,
+.express {
+  .checkout-summary-title {
+    position: relative;
+  }
+
+  .checkout-summary-edit {
+    position: absolute;
+    right: 5px;
+  }
+}

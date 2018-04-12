@@ -1,0 +1,118 @@
+/**
+* Gift Cards
+**/
+
+@import "_m.giftcards.scss";
+
+/* Summary Giftcard Apply */
+.giftcard-apply-summary {
+  .error-box {
+    margin-bottom: 15px;
+  }
+}
+
+/* Toggle button of New Gift Card */
+.gift-card-toggle {
+  width: auto;
+
+  @media (min-width: 1300px) {
+    width: 23%;
+  }
+}
+
+.giftcard-aplied-summary {
+  width: 50%;
+
+  .balance {
+    @include description-primary-text();
+  }
+}
+
+.gift-card-add-fields {
+  width: 50%;
+}
+
+/* Container of fieldset */
+.gift-card-add-fieldset {
+  .error-box {
+    margin: 0px;
+    margin-bottom: 0px;
+    margin-top: 25px;
+    width: 50%;
+  }
+
+  .title-gift-card-add {
+    + .error-box {
+      margin-top: 10px;
+    }
+  }
+
+  /* Container of button when there is an error message */
+  .label-error + .gift-card-add-submit {
+    margin-top: 30px;
+  }
+}
+
+.checkout-review-section {
+  .giftcard-aplied-summary {
+    width: 100%;
+  }
+
+  .gift-card-toggle {
+    width: 100%;
+  }
+
+  .balance {
+    @include description-secondary-text();
+  }
+}
+
+/* Is express checkout? */
+.express {
+  .gift-card-add-fields {
+    width: 100%;
+  }
+
+  .gift-card-add-fieldset {
+    .error-box {
+      margin-top: 25px;
+      width: 100%;
+    }
+
+    .title-gift-card-add {
+      + .error-box {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .checkout-review-section {
+    .gift-card-toggle {
+      width: auto;
+
+      @media (min-width: 1300px) {
+        width: 50%;
+      }
+    }
+  }
+}
+
+/* Is My Account Section? */
+/* Is Payment & Gift Cards Section in My Account? */
+.add-giftcard-or-merchandise-container {
+  .add-giftcard-message-container {
+    margin: 0px 0px;
+  }
+
+  .gift-card-add-form {
+    .button-container {
+      flex-direction: row;
+            
+      .button-cancel,
+      .button-save {
+        width: 290px;
+        margin: 0 30px 0 0;
+      }
+    }
+  }
+}

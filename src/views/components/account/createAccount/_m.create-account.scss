@@ -1,0 +1,105 @@
+/**
+* Modal Create Account
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.form-create-account {
+  padding-top: 20px;
+
+  .input-common,
+  .label-checkbox {
+    margin-bottom: 20px;
+  }
+
+  label {
+    a {
+      color: inherit;
+    }
+
+    .input-title {
+      line-height: 21px;
+    }
+
+  }
+
+  .message {
+    p {
+      @include description-primary-text();
+      margin-top: 5px;
+    }
+
+    button {
+      @include description-primary-text();
+
+      &.button-click-reset-password {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .message-container {
+    margin-bottom: 15px;
+  }
+
+  .remember-me {
+    .input-title {
+      @include body-primary-text();
+    }
+
+    .input-subtitle {
+      margin-top: -2px;
+    }
+  }
+
+  .button-create-account {
+    margin: 40px 0 20px;
+  }
+}
+
+.create-account-banner {
+  width: 100%;
+
+  &:empty {
+    display: none;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.closeness-link-create-account {
+  display: block;
+  color: $color-primary-one;
+}
+
+
+.overlay-login-and-reset-form {
+  .form-create-account {
+    padding-top: 60px;
+  }
+
+  .button-click-reset-password {
+    text-decoration: underline;
+  }
+
+  .input-country,
+  .input-zip-code {
+    float: none;
+    width: 100%;
+  }
+
+  .input-subtitle {
+    @include notification-primary-text();
+    @include font-global-regular();
+    text-transform: none;
+  }
+
+  .back-to-login-button {
+    @include description-primary-text();
+    position: absolute;
+    top: 26px;
+  }
+}

@@ -1,0 +1,191 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+@import "compass/functions";
+@import "compass/css3/transform";
+@import "compass/css3/border-radius";
+@import "compass/css3/opacity";
+@import "compass/utilities/general/clearfix";
+
+/* Contenedor de los select del producto en estado editable */
+.container-selects {
+  width: 66.5%;
+  margin-bottom: 3px;
+
+  /* Span que simula ser el Input Select */
+  select + span.selection {
+    margin-top: 0;
+  }
+}
+
+.select-fit,
+.select-quantity,
+.select-size {
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+.my-bag {
+  /* Select de edición de producto */
+  .mini-dropdown select + span.selection {
+    @include description-secondary-text();
+    height: 35px;
+    line-height: 37px;
+    padding: 0 20px 0 10px;
+    text-align: left;
+    min-width: 100%;
+    text-overflow: ellipsis;
+
+    &:after,
+    &:before {
+      width: 7px;
+      bottom: 17px;
+      right: 5px;
+    }
+
+    &:after {
+      right: 0.5px;
+    }
+
+  }
+
+  .mini-dropdown > span,
+  .bag-item-color-select-closed > span,
+  .bag-item-color-select > span {
+    &.selection {
+      display: block;
+    }
+  }
+}
+
+.item-shopping-cart {
+  /* En estado editable: Contenedor de Botones */
+  .buttons-editables {
+    margin-bottom: 18px;
+    bottom: 0;
+    position: relative;
+    display: block;
+
+    /* Boton Update en Overlay -> Reveer por qué está acá */
+    .button-update {
+      margin-bottom: 0;
+    }
+
+    /* Botón Update y Cancelar en My Bag Global */
+    .button-cancel,
+    .button-global-update {
+      display: inline-block;
+    }
+
+    /* Botón Update en My Bag Global */
+    .button-global-update {
+      @include button-quaternary($button-color: secondary);
+      padding: 0 15px;
+      width: auto;
+    }
+
+    /* Botón Cancelar en My Bag Global */
+    .button-cancel {
+      @include notification-primary-text($color-primary-two);
+      text-decoration: underline;
+      margin-left: 19px;
+      position: relative;
+    }
+  }
+}
+
+/**
+* CustomSelect
+**/
+
+/* Custom select Button: Open or Close state */
+.bag-item-color-select-closed,
+.bag-item-color-select {
+  margin-bottom: 7px;
+  display: block;
+
+  .item-list-common {
+    max-height: 150px;
+  }
+}
+
+.bag-item-color-select-button,
+.bag-item-color-select-button-closed {
+  margin-top: 0px;
+  background-color: $color-primary-five;
+  height: 35px;
+  padding: 0px;
+  overflow: visible;
+  @include description-secondary-text();
+
+  /* Icono chevron para Dropdown */
+  &:after,
+  &:before {
+    width: 7px;
+    bottom: 12px;
+    right: 5px;
+  }
+
+  &:after {
+    right: 0.5px;
+  }
+
+  span {
+    line-height: 35px;
+    display: block;
+    //padding: 0px 10px;
+    padding: 1px 20px 0 25px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  img {
+    width: 12px;
+    height: 12px;
+    @include border-radius(50%);
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+    //right: 30px;
+    left: 8px;
+  }
+}
+
+/* Item List */
+.bag-item-color-select-items-list {
+  // background-color: $color-primary-five;
+
+  img {
+    width: 12px;
+    @include border-radius(50%);
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+    //right: 30px;
+    left: 8px;
+  }
+}
+
+/* Item */
+.bag-item-color-select-item {
+  @include notification-secondary-text($color: $color-primary-one);
+  line-height: 35px;
+  text-transform: none;
+  padding: 0px 10px;
+  padding: 0 8px 0 25px;
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+  }
+}
+
+/* Selected item
+.bag-item-color-select-highlighted {
+  background: $color-accent-one;
+  color: $color-global-white;
+}
+*/

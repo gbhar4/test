@@ -1,0 +1,59 @@
+/**
+* Payment Method  (Desktop)
+**/
+
+@import "_m.payment-method.scss";
+
+/* Payment Method Section */
+.checkout-review-payment-method {
+  width: 100%;
+  .title-payment-method {
+    margin-bottom: 8px;
+  }
+}
+
+/* Cvv Section */
+.express-cvv-container {
+  width: 50%;
+  padding-left: 60px;
+
+  // .button-tooltip-container {
+  //   right: 0px;
+  // }
+}
+
+/* Is Express Checkout? */
+.express {
+  .express-cvv-container {
+    width: 50%;
+    float: right;
+    padding: 0px;
+    padding-left: 60px;
+
+    /* Right Line */
+    &:before {
+      content: '';
+      display: none;
+    }
+  }
+}
+
+// Billing section
+.checkout-billing-container {
+  .card-container {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .card-container {
+      width: 100%;
+    }
+
+    .express-cvv-container {
+      position: absolute;
+      right: -60px;
+      width: 85px;
+      padding: 0;
+    }
+  }
+}

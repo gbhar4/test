@@ -1,0 +1,182 @@
+/**
+* PDP - Display Image Product (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/border-radius";
+@import "compass/css3/transform";
+
+.product-images-container {
+  /* List of Images */
+  .preview-image-list,
+  .principal-preview-image {
+    margin: 10px auto;
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+
+  .principal-preview-image {
+    // FIXME: was need it.
+    > div {
+      width: 100%;
+      white-space: normal;
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      margin-right: 15px;
+
+      img {
+        width: 100%;
+        display: block;
+        position: relative;
+      }
+    }
+
+    > button {
+      width: 100%;
+      padding: 0px 20px;
+      white-space: normal;
+      text-align: center;
+      position: relative;
+      display: inline-block;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  /* Image Item */
+  .preview-image-item {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+
+    img {
+      width: 100%;
+      display: block;
+      position: relative;
+    }
+  }
+}
+
+.overlay-image-details,
+.product-images-container {
+  position: relative;
+
+  /* Buttons prev and next */
+  .button-prev {
+    font-size: 0px;
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+    top: calc(50% - 40px);
+    @include transform(translateY(-50%));
+    height: 40px;
+    width: 30px;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      @include transform(rotate(-45deg));
+      display: inline-block;
+      border-left: solid 2px $color-primary-one;
+      border-top: solid 2px $color-primary-one;
+      opacity: .3;
+      height: 24px;
+      width: 24px;
+      position: relative;
+      @include border-radius(2px);
+      top: 1px;
+      right: -7px;
+    }
+  }
+
+  .button-next {
+    @extend .button-prev;
+    left: auto;
+    right: 0px;
+
+    &:before {
+      @include transform(rotate(135deg));
+      top: 2px;
+      right: 7px;
+    }
+  }
+}
+
+/* Social Networks */
+.product-details-container {
+  /* Social Networks */
+  .social-networks {
+    margin: 15px 0px;
+    width: 100%;
+    float: none;
+    text-align: center;
+    left: auto;
+
+    &.social-networks-align-right {
+      text-align: right;
+    }
+
+    a:first-of-type {
+      margin-left: 0px;
+    }
+
+    a:last-of-type {
+      margin-right: 0px;
+    }
+  }
+
+  .icon-twitter,
+  .icon-fcbk,
+  .icon-pinterest,
+  .icon-instagram {
+    font-size: 0px;
+    top: auto;
+    color: $color-primary-one;
+    margin-left: 20px;
+
+    &:before {
+      top: auto;
+    }
+
+    &:after {
+      background-color: $color-global-white;
+    }
+  }
+}
+
+.overlay-image-details {
+  .overlay-content {
+    overflow: auto;
+  }
+
+  .product-images-container {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+
+/*
+ * Giftcard's Section
+ */
+.giftcard-details-container {
+  .product-images-container {
+    .principal-preview-image {
+      > img {
+        padding: 0px 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,211 @@
+/*
+* Store Locator (Desktop)
+*/
+
+@import "./_m.store-details.scss";
+
+.store-location {
+  p,
+  address {
+    line-height: 25px;
+  }
+
+  .button-directions {
+    @include button-quaternary(secondary);
+    background-color: $color-accent-one;
+
+    // NOTE DT-22509: Harcode font-size. I have to ask to be added to the style guidelines or ask to change the requirement.
+    font-size: 15px;
+    @include font-global-medium();
+    height: 36px;
+    line-height: 40px;
+
+    width: auto;
+    padding: 0px 20px;
+    margin-top: 10px;
+  }
+
+  .retail-store,
+  .store-store,
+  .outlet-store {
+    width: 50%;
+    display: inline-block;
+    margin-top: 0px;
+  }
+
+  .in-store-pick-up-availability {
+    width: 50%;
+    display: inline-block;
+  }
+
+  .store-schedule-title {
+    text-decoration: underline;
+
+    &:before {
+      width: 7px;
+      height: 7px;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+    }
+  }
+
+  .store-day-and-time {
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  /** Content of store */
+  .store-info-content {
+    width: calc(30% + 40px);
+    padding-right: 40px;
+    display: inline-block;
+    float: left;
+  }
+
+  // NOTE: DT-26768
+  .store-info-data-detailed-single {
+    .store-name {
+      text-transform: capitalize;
+    }
+  }
+
+  /** Store open Hours */
+  .store-day-and-time {
+    .hours-range-container,
+    .closed-notification {
+      width: 45%;
+    }
+  }
+
+  .day-and-date-container {
+    width: 55%;
+  }
+}
+
+/** Container of map and slot */
+.container-map-slot {
+  width: calc(70% - 40px);
+  display: inline-block;
+
+  .google-map {
+    height: 364px;
+    margin: 0;
+  }
+
+  .bottom-map {
+    height: 317px;
+    background: #c6e4c8;
+    margin-top: 22px;
+  }
+}
+
+.container-store-info {
+  .google-map {
+    width: 100%;
+  }
+
+  .day-name-container {
+    max-width: 152px;
+    @include ellipsis();
+    width: auto;
+  }
+
+  .hours-range-container {
+    width: auto;
+  }
+}
+
+.nearest-stores-from-selected-store {
+  clear: both;
+  margin-top: 60px;
+  display: inline-block;
+  width: 100%;
+  padding-top: auto;
+  border: none;
+
+  .store-info-data-condensed {
+    width: 25%;
+    display: inline-block;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .near-stores-title {
+    @include heading-level-3();
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .store-name {
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    a {
+      @include heading-level-4();
+      text-transform: uppercase;
+    }
+  }
+
+  .distance-and-open-information {
+    margin-top: 8px;
+  }
+
+  .stores-info {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .store-info-data-detailed-single {
+    width: calc(100% / 3);
+    padding-right: 20px;
+    display: inline-block;
+  }
+
+  .button-see-store-details {
+    @include button-quaternary(secondary);
+    width: auto;
+    padding: 0px 20px;
+    margin-top: 15px;
+  }
+
+  .bottom-map {
+    width: 48%;
+    display: inline-block;
+    margin-right: 4%;
+
+    &.main-map {
+      width: 100%;
+    }
+  }
+}
+
+/* Google Map container */
+.google-map {
+  width: 50%;
+  display: inline-block;
+  min-height: 600px;
+  vertical-align: top;
+  margin-top: 0px;
+}
+
+/** Content slots 1 and 2 */
+.map-middle {
+  width: 48%;
+  height: 182px;
+
+  &:nth-child(2) {
+    margin-left: 4%;
+  }
+}
+
+/** Content slots 3 */
+.main-map {
+  height: 265px;
+  margin-top: 40px;
+}

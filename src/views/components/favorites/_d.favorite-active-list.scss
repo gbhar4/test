@@ -1,0 +1,18 @@
+/*
+ * Favorite Active List (Desktop)
+ */
+
+ @import "_m.favorite-active-list.scss";
+
+ .favorite-list {
+   .list-container {
+     text-align: left;
+     background: $color-global-white;
+     border: 1px solid $color-primary-four;
+     z-index: 10;
+   }
+
+   .item-highlighted {
+     background: $color-global-white;
+   }
+ }

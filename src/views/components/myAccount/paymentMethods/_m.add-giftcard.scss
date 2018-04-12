@@ -1,0 +1,45 @@
+/**
+* My Account Section: Add Gift Card (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.add-giftcard-or-merchandise-container {
+  // .gift-card-add-fields {
+  //   margin-top: 40px;
+  // }
+
+  .gift-card-number,
+  .gift-card-pin {
+    width: 100%;
+    float: none;
+  }
+
+  .gift-card-pin {
+    margin-bottom: 20px;
+  }
+
+  .recaptcha {
+    display: block;
+    margin-bottom: 0px;
+  }
+
+  .add-giftcard-message-container {
+    margin: 0px;
+  }
+
+  .gift-card-add-submit {
+    width: 100%;
+  }
+
+  .gift-card-balance {
+    @include button-primary();
+    margin-top: 20px;
+  }
+
+  .gift-card-save {
+    @include button-secondary();
+    margin-top: 15px;
+  }
+}

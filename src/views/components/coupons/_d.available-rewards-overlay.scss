@@ -1,0 +1,132 @@
+@import "compass/css3/transform";
+@import "_mixins";
+
+/* Estilos para overlay */
+/* Solo para My Account */
+.my-account-content-overlay {
+  .list-coupons {
+    margin-top: 0px;
+    text-align: left;
+  }
+
+  .available-rewards {
+    padding: 15px;
+    border-bottom: 0px;
+
+    .coupon-list-container {
+      margin-bottom: 10px;
+
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+    }
+
+    /**en caso de no haber cupones reduzco el padding bottom*/
+    &.no-coupon {
+      padding-bottom: 0px;
+    }
+
+    /* Título del componente: My Rewards and offers */
+    h3 {
+      @include subheading-primary-text($color-primary-one);
+      @include font-global-black();
+      text-transform: capitalize;
+      line-height: 28px;
+      margin-bottom: 5px;
+    }
+
+    /* Cantidad de Available Rewards */
+    .quantity-available-rewards {
+      display: inline-block;
+    }
+
+    .apply-rewards-button {
+      margin-top: 12px;
+      width: 126px;
+    }
+  } /* End available-rewards */
+
+  /* When RewardsStatus and Coupons container are both (in case of account drawer for US, for example) */
+  .rewards-status + .available-rewards {
+    margin-top: 0px;
+    border-bottom: 0px;
+    border-top: solid 1px $color-primary-four;
+  }
+
+  .button-view-all {
+    @include button-quaternary();
+
+    u {
+      text-decoration: none;
+    }
+  }
+
+  .information-reward,
+  .information-coupon {
+    max-width: 190px;
+  }
+
+  .reward-content,
+  .coupon-content {
+    .apply-coupons-button {
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+      right: 16px;
+
+      .link-to-details {
+        vertical-align: top;
+        margin-top: 1px;
+      }
+    }
+  }
+
+  .image-reward,
+  .image-coupon {
+    margin-right: 30px;
+  }
+
+  &.rewards-button-area {
+    padding: 0;
+  }
+
+  .information-reward {
+    max-width: 190px;
+    margin-top: -7px;
+  }
+
+  .reward-value {
+    @include font-global-black();
+    font-size: 32px;
+    margin-top: 13px;
+    margin-bottom: 6px;
+    display: block;
+    line-height: 23px;
+  }
+
+  /* Imagen de Reward para overlay */
+  .image-reward {
+    margin-right: 33px;
+    width: 90px;
+    height: 50px;
+  }
+
+  /* BOX de mensaje de Reward aplicado */
+  .applied-reward-message {
+    z-index: 999;
+    /* Texto */
+    p {
+      width: 200px;
+    }
+  }
+
+  .apply-rewards-button {
+    margin-top: 8px;
+  }
+
+  .empty-rewards {
+    h3 {
+      margin: 0;
+    }
+  }
+} /* End my-account */

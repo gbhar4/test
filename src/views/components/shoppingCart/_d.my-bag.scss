@@ -1,0 +1,99 @@
+@import "_m.my-bag.scss";
+
+.my-bag {
+  // margin-top: -32px;
+  padding-bottom: 0px;
+
+  /* Titulo de la sección My Bag */
+  .subheading-my-bag {
+    padding: 19px 0;
+    margin: 0;
+    display: block;
+    left: 0;
+    width: 100%;
+  }
+
+  .subheading-my-bag-title {
+    padding: 0 16px;
+  }
+
+  .button-close-text {
+    display: inline-block;
+    margin: initial;
+    margin-right: 10px;
+  }
+
+  /* Unavailable product notification */
+  .oss-notification-from-bag {
+    &.notification {
+      width: 100%;
+      left: auto;
+      position: relative;
+      top: 18px;
+    }
+
+    p {
+      @include description-primary-text($color-global-white);
+    }
+
+    .button-remove-all {
+      text-decoration: underline;
+    }
+  }
+
+
+
+  .empty {
+    margin-top: -100px;
+
+    h1 {
+      @include heading-level-1();
+      @include font-global-medium();
+      margin: 150px auto 120px;
+      text-transform: lowercase;
+
+      &:first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    .container-slot {
+      margin-top: 0;
+    }
+  }
+}
+
+/**
+* CustomSelect
+**/
+
+/* Custom select container of Title and DropdownList */
+.bag-item-color-select-closed,
+.bag-item-color-select {
+  margin-bottom: 0px;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+.bag-item-color-select-closed {
+  width: 120px;
+  margin-right: 6px;
+  margin-bottom: 0px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* Custom select container of Title and DropdownList: Open state */
+.bag-item-color-select {
+  @extend .bag-item-color-select-closed;
+}
+
+/* Custom select Button: Close state */
+.bag-item-color-select-button-closed {
+  overflow: visible;
+}
+
+/* Custom select container: Open state */
+.bag-item-color-select-button {
+  @extend .bag-item-color-select-button-closed;
+}

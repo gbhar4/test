@@ -1,0 +1,63 @@
+/**
+** Legal Information
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.copyright-and-legal-information {
+  border-bottom: 0;
+}
+
+.legal-information {
+  padding-bottom: 30px;
+  margin-top: -4px;
+
+  .logo-tcp-children-footer {
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    margin-right: 28px;
+    left: -1px;
+  }
+
+  /* Items de navegación dentro de esta sección */
+  .item-navigation-link {
+    text-align: left;
+    padding: 0px;
+    margin-right: 18px;
+    margin-top: 0;
+  }
+
+  .copyright-and-navigation,
+  .item-navigation {
+    display: inline-block;
+    left: 3px;
+    border: 0;
+  }
+
+  .copyright-and-navigation {
+    width: 100%;
+    left: -3px;
+  }
+
+  .copyright-information {
+    display: inline-block;
+    text-align: left;
+    width: auto;
+    padding: 0;
+  }
+
+  .item-navigation {
+    float: right;
+    width: auto;
+    padding: 0px;
+
+    .item-navigation-link {
+      margin-right: 0px;
+      margin-left: 18px;
+      display: inline-block;
+      padding: 0px;
+    }
+  }
+}

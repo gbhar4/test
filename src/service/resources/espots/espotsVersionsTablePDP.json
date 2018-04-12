@@ -1,0 +1,27 @@
+{
+  "pdp_global_promo_header": {
+      "nameOnServer": "DTPDPGlobalPromoHeader",
+      "guest": "1",
+      "registered": "1"
+  },
+  "pdp_global_promo_pricing": {
+    "nameOnServer": "DTPDPGlobalPromoPricing",
+    "guest": "1",
+    "registered": "1"
+  },
+  "pdp_global_promo_add_to_bag": {
+    "nameOnServer": "DTPDPGlobalPromoAddtoBag",
+    "guest": "1",
+    "registered": "1"
+  },
+  "pdp_size_chart": {
+    "nameOnServer": "DTSizeChart",
+    "guest": "1",
+    "registered": "1"
+  },
+  "pdp_bopis_promo": {
+    "nameOnServer": "DTPDPBOPIS",
+    "guest": "1",
+    "registered": "1"
+  }
+}

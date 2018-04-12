@@ -1,0 +1,63 @@
+/**
+* Profile Information / Birthdays Information
+*/
+
+@import "_m.birthday-savings.scss";
+
+/* Add or delete Birthday */
+/* Birthday section */
+.birthday-savings-container,
+.birthday-information-container {
+  .birthdays-list-container {
+    width: 100%;
+  }
+
+  .birthdays-container {
+  }
+
+  .birthday-item,
+  .birthday-unused-item {
+    width: 47%;
+    display: inline-block;
+    vertical-align: top;
+
+    &:nth-child(even) {
+      margin-left: 6%;
+    }
+  }
+
+  .buttons-container {
+    margin: 0px;
+    width: 47%;
+    vertical-align: top;
+    display: inline-block;
+  }
+
+  .birthdays-container {
+    margin-right: 6%;
+  }
+
+  .button-add-new-child {
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+.message-deleted-birthday {
+  margin-top: 30px;
+
+  .subheading-deleted-birthday {
+    margin-bottom: 20px;
+  }
+
+  .button-cancel-process {
+    width: 47%;
+    vertical-align: top;
+    margin-right: 6%;
+  }
+
+  .button-remove {
+    @extend .button-cancel-process;
+    margin: 0px;
+  }
+}

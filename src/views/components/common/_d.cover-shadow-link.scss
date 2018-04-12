@@ -1,0 +1,49 @@
+/**
+* Cover Shadow Link (Desktop)
+**/
+
+@import "_m.cover-shadow-link.scss";
+
+
+.cover-shadow-link {
+  display: none;
+}
+
+.outfit-container,
+.outfit-rec-list-item,
+.product-rec-list-item {
+  &:hover {
+    .cover-shadow-link {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cover-shadow-link {
+    display: block;
+    text-decoration: none;
+    background: transparent;
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: auto;
+    left: 0px;
+
+    width: 100%;
+    bottom: -35px;
+    cursor: pointer;
+    z-index: 2;
+
+
+    &.cover-invisible {
+      opacity: initial;
+    }
+
+    .cover-shadow-content {
+      position: relative;
+      top: auto;
+      @include transform(translateY(0));
+    }
+  }
+}

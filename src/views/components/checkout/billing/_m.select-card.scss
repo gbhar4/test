@@ -1,0 +1,151 @@
+/**
+ * Modal Select Card
+ **/
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.react-overlay {
+  /* Modal: Select Card */
+  .overlay-select-card-container {
+    padding-top: 22px;
+
+    /* Card Item */
+    .available-cards-list > li {
+      margin-bottom: 21px;
+
+      /* Border bottom */
+      &:before {
+        content: '';
+        width: calc(100% + (27px * 2));
+        height: 1px;
+        position: absolute;
+        left: -27px;
+        bottom: 0px;
+        display: inline-block;
+        background: $color-primary-one-opacity;
+      }
+
+      &:last-of-type {
+        margin: 0px;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    /* Card Item */
+    .available-cards {
+      padding-bottom: 21px;
+      position: relative;
+    }
+
+    /* Información de tarjeta */
+    .available-cards-info {
+      width: 64%;
+      display: inline-block;
+    }
+
+    /* Contenedor de la información del Usuario: Nombre del titular, imagen de tarjeta y últimos 4 números */
+    .credit-card-info {
+      margin-top: 3px;
+
+      /* Imagen de tarjeta a seleccionar */
+      img {
+        width: 51px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+    }
+
+    /* Tarjeta expirada */
+    .expired-card {
+      @include subheading-primary-text($color-primary-three);
+      @include font-global-regular();
+      text-transform: none;
+    }
+
+    /* Contenedor de botones Select this / Edit / Delete card */
+    .container-button {
+      width: 36%;
+      display: inline-block;
+      vertical-align: top;
+
+      /* Botón "Select This" */
+      .button-select-this {
+        @include button-quaternary();
+        @include notification-secondary-text($color-global-white);
+        @include font-global-heavy();
+        text-transform: uppercase;
+      }
+
+      /* Botón "Delete Card" */
+      .button-delete-this {
+        @include button-quaternary(secondary);
+        @include notification-secondary-text($color-global-white);
+        @include font-global-heavy();
+        text-transform: uppercase;
+      }
+
+      /* Botón "Edit" */
+      .button-edit {
+        display: block;
+        margin: 0 auto;
+        margin-top: 12px;
+        color: $color-primary-two;
+        text-decoration: underline;
+      }
+    }
+
+    /* Acordeón estilo "Checkbox" */
+    .add-new-card {
+      margin-left: -27px;
+      margin-right: -27px;
+      padding-left: 27px;
+      padding-right: 27px;
+      border-top: solid 1px $color-primary-one-opacity;
+      border-bottom: solid 1px $color-primary-one-opacity;
+    }
+  }
+
+  /* Modal: Edit Card Details */
+  .overlay-edit-card-details-container {
+    .address-billing {
+      margin-top: 30px;
+      padding-top: 30px;
+      position: relative;
+
+      &:after {
+        content: '';
+        background: $color-primary-one-opacity;
+        width: calc(100% + (27px * 2));
+        height: 1px;
+        position: absolute;
+        left: -27px;
+        top: 0px;
+      }
+    }
+
+    .default-address-inline {
+      /* Título del componente */
+      > h3,
+      .button-edit-address-default {
+        display: none;
+      }
+
+      .container-information-address-default {
+        margin-top: 20px;
+
+        > p {
+          @include body-secondary-text();
+          @include font-global-regular();
+        }
+
+        > .label-checkbox {
+          display: none;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

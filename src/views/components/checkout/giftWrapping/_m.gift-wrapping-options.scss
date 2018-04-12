@@ -1,0 +1,108 @@
+@import "compass/css3/box-shadow";
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Gift Wrapping Section */
+.gift-wrapping-container {
+  white-space: normal;
+  width: calc(100% - 40px);
+
+  /* Title of section */
+  > h3 {
+    @include subheading-secondary-text();
+    margin-bottom: 5px;
+    display: none;
+  }
+
+  .gift-wapping-details {
+    width: 100%;
+  }
+}
+
+/* Input Container */
+.gift-wrapping-fields {
+  margin-top: 30px;
+
+  &:empty {
+    display: none;
+  }
+
+	/* Message box */
+	.textarea-box {
+    margin-top: 10px;
+    margin-bottom: 0px;
+		display: block;
+		width: 100%;
+		min-height: 124px;
+		text-transform: uppercase;
+
+		textarea {
+			@include body-primary-text();
+			padding: 12px 14px;
+			margin: 0;
+		}
+	}
+
+	.textarea-subtitle {
+		@include notification-secondary-text();
+		width: auto;
+		float: right;
+		position: relative;
+		top: 7px;
+		text-transform: capitalize;
+	}
+}
+
+.dropdown-gift-wrapping {
+  .custom-select-button {
+    white-space: initial;
+  }
+}
+
+.gift-wapping-details {
+  @include body-primary-text();
+  width: calc(100% - 40px);
+  position: relative;
+}
+
+.gift-wrapping-name {
+  width: calc(100vw - 170px);
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.gift-wrapping-price {
+  position: absolute;
+  text-align: right;
+  display: inline-block;
+  width: 55px;
+  right: 0px;
+}
+
+.dropdown-gift-wrapping-items-list {
+  .gift-wapping-details {
+    width: 100%;
+    overflow: initial;
+  }
+
+  .gift-wrapping-name {
+    white-space: initial;
+  }
+
+  .dropdown-gift-wrapping-item {
+    border-bottom: solid 1px $color-primary-one-opacity;
+  }
+}
+
+.checkout-review-gift-wrapping {
+  .gift-wrapping-container {
+    width: 100%;
+  }
+
+  .gift-wrapping-title {
+    display: none;
+  }
+}

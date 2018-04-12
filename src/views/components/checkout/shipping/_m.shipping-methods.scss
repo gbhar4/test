@@ -1,0 +1,44 @@
+/**
+* Shipping Methods (Mobile)
+**/
+
+@import "compass/utilities/general/clearfix";
+@import "compass/functions";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.shipping-methods {
+  margin-top: 18px;
+
+  .shipping-method-title {
+    @include subheading-secondary-text();
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &.shipping-methods-input-box {
+    @include radio-button-for-checkout(3);
+    margin-bottom: 11px;
+    margin-top: 27px;
+  }
+
+  .estimated-shipping-rate {
+    display: block;
+    text-align: center;
+    margin: 7px 0 0;
+    @include subheading-primary-text();
+    @include font-global-black();
+    text-transform: none;
+  }
+}
+
+.radio-method {
+  padding-left: 0;
+}
+
+//section shipping
+.shipping-methods-input-box {
+  fieldset {
+    padding: 0;
+  }
+}

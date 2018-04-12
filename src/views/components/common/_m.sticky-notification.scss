@@ -1,0 +1,49 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.generic-sticky-notification {
+    position: absolute;
+    width: 100%;
+    padding: 0 15px;
+    left: 0;
+    text-align: center;
+    z-index: 20;
+    margin-top: -28px;
+
+    &.notification-fixed {
+        position: fixed;
+    }
+
+    .notification-inline {
+        background: $color-primary-one;
+        padding: 11px 20px;
+        @include box-shadow(1px 1px 2px 2px rgba(51, 51, 51, 0.3));
+        @include heading-level-4($color-global-white);
+        @include font-global-regular();
+        width: 100%;
+        display: inline-block;
+        position: relative;
+
+        .button-notification-close{
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            position: absolute;
+            right: 7px;
+            top: 5px;
+        }
+
+        /* Resolver con clases para sacar las dependencias de tags */
+        > p {
+            width: auto;
+            @include description-secondary-text($color-global-white);
+
+            > a {
+                position: relative;
+                text-decoration: underline;
+                @include  description-secondary-text($color-global-white);
+                float: right;
+                top: 3px;
+            }
+        }
+    }
+}

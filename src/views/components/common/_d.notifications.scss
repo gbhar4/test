@@ -1,0 +1,275 @@
+@import "compass/css3/box-shadow";
+@import "compass/css3/transform";
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.notification {
+	height: 40px;
+	display: block;
+	position: relative;
+	text-align: left;
+}
+
+.button-close-text {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+/* Notificación inline */
+.notification-inline {
+	width: 100%;
+	display: inline-block;
+	text-align: left;
+	@include notification-secondary-text($color-primary-two);
+
+	button, a {
+		@include notification-secondary-text($color-primary-two);
+		text-decoration: underline;
+	}
+}
+
+/* Contenido de la notificación */
+.notification-text {
+	text-align: center;
+	padding: 0 15px;
+	position: absolute;
+	vertical-align: middle;
+	display: block;
+	width: 100%;
+	top: 50%;
+	@include transform(translateY(-50%));
+
+  p {
+		padding: 0px 35px 0 20px;
+    margin-bottom: 10px;
+	}
+}
+
+/* Tipo de notificación Global: Primary */
+.notification-primary {
+	background-color: $color-primary-five;
+	@include notification-secondary-text($color-primary-one);
+	@include box-shadow(inset 0px -1px 0px 0px $color-primary-four);
+
+	.button-close-text {
+		color: $color-primary-three;
+		text-decoration: underline;
+	}
+
+	a {
+		@include notification-secondary-text($color-primary-one);
+		text-decoration: underline;
+	}
+}
+
+/* Tipo de notificación Global: Secondary */
+.notification-secondary {
+	background-color: $color-primary-two;
+	@include notification-secondary-text($color: $color-primary-four);
+
+	.button-close-text {
+		color: $color-primary-four;
+		text-decoration: underline;
+	}
+
+	a {
+		@include notification-secondary-text($color-primary-four);
+		text-decoration: underline;
+	}
+}
+
+/* Tipo de notificación Global: Secondary */
+.notification-tertiary {
+	background-color: $color-primary-four;
+	@include notification-secondary-text($color-primary-one);
+
+	.button-close-text {
+		color: $color-primary-three;
+		text-decoration: underline;
+	}
+
+	a {
+		@include notification-secondary-text($color-primary-one);
+		text-decoration: underline;
+	}
+}
+
+/* Tipo de notificación Inline: Unavailable */
+.notification-unavailable p {
+	background-color: $color-primary-four;
+	display: inline;
+}
+
+/* order summary notification */
+.notification-summary {
+	text-align: center;
+	background-color: $color-primary-one;
+	line-height: 45px;
+
+	span {
+		@include notification-primary-text();
+		color: $color-primary-four;
+	}
+}
+
+/* bopis // ship to home notification */
+.notification-ship-to-home {
+	line-height: 22px;
+	height: auto;
+	padding: 21px;
+	text-align: left;
+
+	.order-status {
+		p {
+			@include notification-primary-text();
+			color: $color-primary-five;
+
+			a {
+				margin-left: 16px;
+        text-decoration: underline;
+			}
+		}
+
+		span {
+			margin-right: 20px;
+			@include font-global-regular();
+			@include description-secondary-text($color: $color-primary-four);
+		}
+
+		a {
+			@include description-secondary-text($color: $color-primary-four);
+		}
+	}
+
+  /* class Icon X */
+  .close-notification {
+    @include common-button-exit-modal();
+    width: 17px;
+    height: 17px;
+    right: 30px;
+    top: 40%;
+    z-index: 1;
+    font-size: 0;
+
+    /* Icon X */
+    &:after {
+      background: $color-global-white;
+      top: -1px;
+      height: 14px;
+    }
+
+    &:before {
+      background: $color-global-white;
+      width: 14px;
+    }
+  }
+}
+
+.my-account-content-overlay .notification-ship-to-home {
+	  padding: 0px;
+}
+/*****************
+ * Error box
+*****************/
+
+.error-box {
+	@include notification-secondary-text($color-alert-one);
+	border: 1px solid $color-alert-one;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	padding: 14px 30px;
+	position: relative;
+	margin-bottom: 6px;
+
+	.error-icon {
+		font-size: 0px;
+		position: absolute;
+		top: -12px;
+		left: calc(50% - 11px);
+		background: $color-global-white;
+		padding: 3px;
+		display: inline-block;
+		width: auto;
+
+		@include icon-tcp-error();
+		&:before {
+			font-size: 15px;
+		}
+	}
+
+	// FIXME: .error-box is repeated everywhere. there should be a single declaration based of style guidelines
+	button {
+		color: inherit;
+		text-decoration: underline;
+	}
+
+	&:before {
+		font-size: 15px;
+		position: absolute;
+		top: -12px;
+		left: calc(50% - 11px);
+		background: $color-global-white;
+		padding: 3px;
+	}
+}
+
+.warning-box {
+  @extend .error-box;
+  @include icon-tcp-warning();
+  color: $color-alert-two;
+  border: 1px solid $color-alert-two;
+
+  button {
+    color: $color-alert-two;
+  }
+}
+
+.success-box {
+	@include notification-secondary-text($color-alert-three);
+	border: 1px solid $color-alert-three;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	padding: 14px 25px;
+	position: relative;
+	margin-bottom: 6px;
+
+	.success-icon {
+		font-size: 0px;
+		display: inline-block;
+		width: auto;
+		left: calc(50% - 11px);
+		padding: 3px;
+		top: -12px;
+		position: absolute;
+		background: $color-global-white;
+
+		@include icon-tcp-success();
+		&:before {
+			font-size: 15px;
+		}
+	}
+
+	&.inline-success-message {
+		@include input-common-error-message($color-alert-three);
+		margin: 0px;
+    padding: 0px;
+    border: 0px;
+		text-align: left;
+		margin-top: 8px;
+		letter-spacing: 0.25px;
+    line-height: 18px;
+
+		.success-icon {
+			font-size: 0px;
+			position: relative;
+			left: 0px;
+			padding: 0px;
+			top: auto;
+			margin-right: 7px;
+		}
+	}
+}

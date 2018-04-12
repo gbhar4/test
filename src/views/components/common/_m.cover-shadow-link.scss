@@ -1,0 +1,47 @@
+/**
+* Cover Shadow Link (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/border-radius";
+
+.regular-item-link {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  bottom: -35px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.cover-shadow-link {
+  display: block;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.5); // REVIEW color
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  &.cover-invisible {
+    opacity: 0;
+  }
+
+  .cover-shadow-content {
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+}
+
+.cover-shadow-content {
+  // REVIEW: font-size
+  label {
+    color: $color-primary-one;
+    @include font-global-black();
+    font-size: 15px;
+    cursor: pointer;
+  }
+}

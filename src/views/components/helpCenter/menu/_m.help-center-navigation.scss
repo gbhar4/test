@@ -1,0 +1,45 @@
+// ** Help Center Navigation
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.help-center-item {
+  position: relative;
+  padding-left: 16px;
+  padding-right: 26px;
+  border-bottom: 1px solid $color-primary-four;
+}
+
+/* My Account Navigation Link (<a>) */
+.hc-link {
+  @include heading-level-4($color-primary-three);
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+  cursor: pointer;
+  position: relative;
+
+  &.navigation-item-link-selected,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-primary-one;
+    outline: none;
+  }
+}
+
+/* FPO name of class */
+.hc-link-mobile {
+  padding: 20px 0px;
+  color: $color-primary-one;
+
+  @include icon-tcp-chevron();
+  &:before {
+    @include transform(rotate(90deg));
+    width: 13px;
+    height: 8px;
+    font-size: 7px;
+    position: absolute;
+    right: 0px;
+    top: 27px;
+  }
+}

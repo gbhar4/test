@@ -1,0 +1,65 @@
+/**
+* Image Details Modal (Desktop)
+**/
+
+@import "_m.image-details-modal.scss";
+@import "compass/css3/transform";
+
+.overlay-image-details {
+  &.overlay-container {
+    min-width: 1024px;
+    width: 85%;
+    max-height: 93vh;
+    top: 53%;
+  }
+
+  .modal-header {
+    position: relative;
+
+    .button-modal-close {
+      top: 50%;
+      @include transform(translateY(-50%));
+      margin: 0px 28px;
+
+      &:before {
+        width: 22px;
+        top: 10px;
+      }
+
+      &:after {
+        height: 22px;
+      }
+    }
+  }
+
+  .modal-title {
+    padding: 30px 50px;
+    text-align: left;
+    border-bottom: solid 1px $color-primary-one-opacity;
+  }
+
+  .overlay-content {
+    padding: 50px;
+    padding-top: 30px;
+    max-height: calc(100vh - 100px);
+  }
+
+  .product-images-container {
+    border: 0px;
+    background: transparent;
+    padding: 0px;
+    margin-top: 28px;
+  }
+
+  .preview-and-social-media-icons {
+    width: 125px;
+  }
+
+  .main-image-container {
+    width: calc(100% - 160px);
+  }
+
+  .preview-and-slider-section-container {
+    margin-bottom: 15%;
+  }
+}

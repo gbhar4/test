@@ -1,0 +1,20 @@
+/**
+* Skip to Content (Desktop & Mobile)
+**/
+
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "compass/functions";
+@import "compass/css3/transform";
+
+.skip-content-button {
+  left: -90px;
+  position: absolute;
+  line-height: 39px;
+  height: 39px;
+  font-size: 0px;
+
+  &:focus {
+    @include notification-primary-text($color-primary-one);
+  }
+}

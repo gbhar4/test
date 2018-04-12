@@ -1,0 +1,39 @@
+/**
+* Hello Message from My Account (Desktop)
+**/
+
+@import "_m.hello-message.scss";
+
+/* Hello Message Section */
+.hello-message-container {
+  width: 13.33%;
+  border-right: solid 1px $color-primary-four;
+  padding-left: 9px;
+  padding-top: 23px;
+  padding-bottom: 27px;
+  min-width: 254px;
+  position: relative;
+  background: $color-primary-five;
+}
+
+.hello-title {
+  position: absolute;
+}
+
+.hello-message-for-no-rewards {
+  width: 20%;
+  padding: 0px;
+  padding-left: 9px;
+  padding-right: 20px;
+  position: relative;
+  float: left;
+
+  .hello-title {
+    position: relative;
+  }
+
+  + .my-account-navigation-container {
+    float: left;
+    clear: left;
+  }
+}

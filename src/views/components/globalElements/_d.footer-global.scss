@@ -1,0 +1,17 @@
+@import "./_m.footer-global.scss";
+
+/*
+** Footer Desktop
+*/
+
+/* Global containers on Footer*/
+.country-select-and-social-networks {
+	padding: 0;
+	height: auto;
+}
+
+@import "footer/_d.country-selector.scss";
+@import "footer/_d.social-networks.scss";
+@import "footer/_d.footer-navigation.scss";
+@import "footer/_d.sign-in-to-newsletter.scss";
+@import "footer/_d.legal-information.scss";

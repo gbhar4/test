@@ -1,0 +1,169 @@
+/*
+ * Header Wishlist (Desktop)
+ */
+
+@import '_m.header-wishlist.scss';
+@import "compass/css3/transform";
+
+/* Filter section from Wishlist page */
+.favorite-filter-container {
+  border-top: 0px;
+  border-bottom: solid 1px $color-primary-four;
+  width: 100%;
+  // padding: 40px 0px 30px;
+  padding: 0px 0px 30px;
+  margin: 0px;
+}
+
+/* Display Filter container (as a LabeledRadioButtonGroup) */
+.display-filter-container {
+  width: 400px;
+  display: inline-block;
+  vertical-align: middle;
+
+  // FIXME
+  .selected-option {
+    display: none;
+  }
+
+  .item-disabled-option {
+    opacity: .5;
+    cursor: default;
+  }
+
+  .display-filter-title {
+    @include subheading-primary-text($color-primary-three);
+    @include font-global-heavy();
+    text-transform: none;
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+    top: 3px;
+    position: relative;
+  }
+
+  .display-filter-items-list {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /* Item's name when is unselected */
+  .input-radio-title > span {
+    @include subheading-secondary-text($color-primary-three);
+    text-transform: none;
+  }
+
+  /* Item's name when is selected */
+  .item-selected-option {
+    .input-radio-title > span {
+      @include subheading-secondary-text($color-primary-one);
+      text-transform: none;
+    }
+  }
+
+  /* Input content */
+  .label-radio {
+    margin-left: 15px;
+    padding-left: 15px;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      width: 1px;
+      height: 15px;
+      position: absolute;
+      display: inline-block;
+      background: $color-primary-three;
+      top: 50%;
+      @include transform(translateY(-50%));
+      left: 0px;
+    }
+
+    /* First item of filter's list */
+    &:first-of-type {
+      margin: 0px;
+      padding: 0px;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .input-radio-icon-checked,
+  .input-radio-icon-unchecked {
+    width: auto;
+    height: auto;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.favorite-results-count {
+  top: auto;
+  @include subheading-secondary-text();
+
+  left: auto;
+  display: inline-block;
+  width: 33%;
+  position: relative;
+  text-align: center;
+}
+
+.sort-by {
+  max-width: 225px;
+  float: right;
+  position: absolute;
+  right: 0px;
+
+  span:first-child { // FIXME: add className to main component
+    display: inline-block;
+    max-width: 42px;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+
+  .selection {
+    text-align: left;
+    float: right;
+    vertical-align: middle;
+    max-width: 100%;
+    width: calc(100% - 62px);
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+/*
+ * Shared Favorite's List
+ */
+
+.item-read-only-container {
+  .favorite-filter-container {
+    margin-top: 0px;
+  }
+
+  .favorite-toolbar-container {
+    padding-bottom: 0px;
+  }
+
+  .favorite-results-count {
+    position: relative;
+    left: 0;
+    top: 0;
+    text-align: center;
+
+    display: inline-block;
+    vertical-align: middle;
+    top: auto;
+  }
+
+  .sort-by {
+    max-width: 250px;
+  }
+}

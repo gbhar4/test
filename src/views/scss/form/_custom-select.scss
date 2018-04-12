@@ -1,0 +1,54 @@
+/**
+ * Custom Select
+ **/
+
+.custom-select-common {
+  @include subheading-primary-text();
+  @include font-global-regular();
+  letter-spacing: 0;
+  text-transform: none;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  > span {
+    @include subheading-primary-text($color-primary-two);
+  	@include font-global-regular();
+  	letter-spacing: 0;
+  	text-transform: none;
+  	position: relative;
+  	display: inline-block;
+  	width: 100%;
+  }
+
+  .inline-error-message {
+		@include input-common-error-message($color-alert-one);
+    white-space: nowrap;
+    width: auto;
+
+		// @include icon-tcp-error();
+		// &:before {
+		// 	font-size: 15px;
+		// 	margin-right: 7px;
+		// 	color: $color-alert-one;
+		// }
+	}
+}
+
+.custom-select-button {
+  @include input-common-text();
+  cursor: pointer;
+  position: relative;
+  display: block;
+  line-height: 1.25;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  /* Icono chevron para Dropdown */
+  @include icon-manual-chevron();
+
+  &.custom-select-button-placeholder {
+    color: $input-color-font-placeholder;
+  }
+}

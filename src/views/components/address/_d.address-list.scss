@@ -1,0 +1,75 @@
+/**
+* My Account Section: Payment & Gift Card (Mobile) AddressBook
+*
+**/
+
+@import "_m.address-list.scss";
+
+.address-book-section {
+  .button-container {
+    @include display-flex;
+    @include flex-direction(row-reverse);
+    margin-top: 30px;
+
+    .button-select-shipping-address {
+      &.select,
+      &.cancel {
+        margin-top: 0px;
+        width: 23%;
+      }
+
+      &.cancel {
+        margin-right: 1%;
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .box-ghost {
+    float: right;
+    margin-top: -70px;
+  }
+
+  .address-items {
+    @include display-flex;
+    @include flex-wrap(wrap);
+  }
+}
+
+.overlay-confirmation {
+  .address-book-confirm-address-delete {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    + .overlay-button-container {
+      padding-left: 40px;
+      padding-right: 40px;
+
+      .button-cancel,
+      .button-confirm {
+        width: 100%;
+      }
+
+      .button-confirm {
+        margin-left: 0%;
+        margin-top: 10px;
+      }
+    }
+
+    .address-container {
+      width: calc(100% + 160px);
+      position: relative;
+      left: -80px;
+      padding: 20px;
+      text-align: center;
+      background: $color-primary-five;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      display: inline-block;
+
+      .name {
+        @include font-global-black();
+      }
+    }
+  }
+}

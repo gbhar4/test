@@ -1,0 +1,72 @@
+/**
+* Registered Rewards Promo (Espot)
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Both Registered user WITH PLCC Card and with NO PLCC Card */
+.registered-rewards-promo {
+  background: $color-global-white;
+  padding: 20px;
+
+  .summary-message-title {
+    strong {
+      @include font-global-black();
+    }
+  }
+}
+
+/*
+* WITH PLCC card saved to my account
+*/
+
+/* Registered User WITH PLCC card saved to my account */
+.registered-mpr-credit-card {
+  background: transparent url("/wcsstore/static/images/pt-blue-stripes.png") repeat 0 0;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+/* Only Registered User WITH PLCC Card saved on My Account */
+.message-earn-double-points {
+  @include body-primary-text();
+  @include font-global-black();
+  text-transform: uppercase;
+}
+
+
+/*
+* WITHOUT PLCC card saved to my account
+*/
+
+/* Registered USer with NO PLCC card */
+.registered-rewards-promo-container {
+  background: transparent url("/wcsstore/static/images/pt-orange-stripes.png") repeat 0 0;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+/* Only Registered User with NO PLCC Card */
+.get-double-points-title {
+  @include font-global-black();
+  text-transform: uppercase;
+}
+
+/* Only Registered User with NO PLCC Card */
+.get-double-points-subtitle {
+  display: block;
+  @include body-primary-text();
+}
+
+/* Only Registered User with NO PLCC Card */
+.summary-message-rewards .registered-rewards-promo {
+  .button-apply-now,
+  .button-learn-more {
+    @include subheading-primary-text();
+    text-decoration: underline;
+    margin: 10px 10px 0px;
+    text-align: center;
+    display: inline-block;
+  }
+}

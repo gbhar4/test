@@ -1,0 +1,90 @@
+/**
+* Pickup Review Section Form Mobile
+**/
+
+@import "./_m.checkout-pickup-form.scss";
+
+.pick-up-form,
+.pick-up-alternate-input,
+.checkout-review-pickup {
+  margin-bottom: 0px;
+
+  .pick-up-form-title {
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+
+  /* Edit, cancel or save button */
+  .checkout-summary-edit {
+    position: relative;
+    right: auto;
+    top: 0px;
+    @include transform(translateY(0));
+  }
+
+  .input-and-message-container,
+  .phone-number,
+  .email-address {
+    vertical-align: top;
+    width: 47%;
+    display: inline-block;
+  }
+
+  .input-and-message-container,
+  .email-address {
+    margin-right: 6%;
+
+    &.last-name-and-message {
+      margin-right: 0px;
+    }
+  }
+
+  .phone-number {
+    margin-top: 0px;
+  }
+}
+
+.checkout-review-section {
+  .pick-up-alternate-form {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  // alternate-pickup
+  .pick-up-alternate-input {
+    margin-top: 15px;
+  }
+
+}
+
+/* Is Express Checkout? */
+.express {
+  .pick-up-alternate-form {
+    width: calc(50% - 30px);
+    float: right;
+    vertical-align: top;
+  }
+
+  .alternate-pickup {
+    width: 100%;
+  }
+
+  .pick-up-alternate-input {
+    .last-name {
+      margin-top: 0;
+    }
+
+    .input-and-message-container,
+    .last-name {
+      margin-bottom: 0;
+    }
+
+    .email-address {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+/**
+* General Store Open Hours (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/** Container date and hour of store */
+.store-day-and-time {
+  .day-and-time-item-container {
+    @include description-primary-text();
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .day-name-container {
+    @include description-primary-text();
+    display: inline-block;
+    width: auto;
+    vertical-align: top;
+    text-transform: capitalize;
+    word-break: break-all;
+  }
+
+  .hours-range-container,
+  .closed-notification {
+    @include description-primary-text();
+    display: inline-block;
+    width: auto;
+    text-align: right;
+    vertical-align: top;
+  }
+
+  &.from-store-item {
+    .day-and-date-container {
+      width: 42%;
+      display: inline-block;
+      // padding-right: 5px;
+    }
+
+    .hours-range-container,
+    .closed-notification {
+      width: 58%;
+    }
+  }
+}

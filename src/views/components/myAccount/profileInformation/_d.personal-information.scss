@@ -1,0 +1,103 @@
+/**
+* Personal Information (Desktop)
+*/
+
+@import "_m.personal-information.scss";
+
+.personal-information-container {
+  /* Reset styles */
+  .my-account-title-section {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    margin-bottom: 20px;
+  }
+
+  /* Reset styles */
+  .profile-information-title {
+    @include heading-level-4();
+  }
+
+  .user-name {
+    @include font-global-regular();
+  }
+}
+
+.personal-information-form {
+  /* All Label */
+  .input-first-name,
+  .input-last-name,
+  .email-address,
+  .phone-number,
+  .checkbox-employee,
+  .air-miles-card,
+  .input-associated {
+  //.rewards-number-display-container {
+    margin-bottom: 25px;
+    width: 47%;
+    vertical-align: top;
+  }
+
+  .input-first-name,
+  .input-last-name {
+    margin-bottom: 30px;
+  }
+
+  .checkbox-employee {
+    width: 100%;
+  }
+
+  .input-first-name,
+  .email-address,
+  .input-associated {
+    margin-right: 6%;
+  }
+
+  // NOTE: DT-23313
+  .input-common {
+    > span,
+    .input-title {
+      @include heading-level-3();
+      @include font-global-medium();
+      font-size: 17px;
+
+      &.input-title-placeholder {
+        @include input-title();
+        @include input-common-placeholder();
+      }
+    }
+  }
+
+  .input-with-button {
+    width: 40%;
+
+    .button-show-password{
+      top: 48px;
+    }
+  }
+
+  // NOTE: DT-23313
+  .email-address,
+  .air-miles-card {
+    margin-top: -19px;
+
+    strong {
+      @include subheading-primary-text($color-primary-three);
+      text-transform: none;
+      @include font-global-regular();
+      width: 100%;
+      display: block;
+      line-height: normal;
+    }
+
+    .message-email {
+      margin-top: 8px;
+    }
+  }
+
+  .email-address {
+    .hint-text {
+      margin-top: 5px;
+    }
+  }
+}

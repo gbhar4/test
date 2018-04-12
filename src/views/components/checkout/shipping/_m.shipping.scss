@@ -1,0 +1,44 @@
+/**
+ * Shipping
+ **/
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Only for shipping section */
+.shipping-container {
+  .shipping-methods > h3 {
+    @include subheading-secondary-text();
+    margin-bottom: 11px;
+		overflow-x: hidden;
+  }
+
+  .button-next-step {
+    margin: 9px 0px 30px;
+  }
+
+  .coupon-accordion {
+    > h4 {
+      @include subheading-secondary-text();
+    }
+  }
+
+  .fieldset-address-editable {
+  }
+
+  /* Checkbox */
+  .label-checkbox {
+    display: block;
+    height: 23px;
+    margin-bottom: 15px;
+
+    &.checkbox-set-as-default {
+      margin-bottom: 0px
+    }
+
+    /* Checkbox de Get Email */
+    &.checkbox-get-email {
+      display: none;
+    }
+
+  }
+}

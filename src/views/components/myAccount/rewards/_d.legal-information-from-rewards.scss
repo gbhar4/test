@@ -1,0 +1,25 @@
+/**
+* Legal Information From Rewards (Desktop)
+**/
+
+@import "_m.legal-information-from-rewards.scss";
+
+.rewards-information-container {
+  // margin-top: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: solid 1px $color-primary-five;
+}
+
+.rewards-information-title {
+  position: relative;
+  @include heading-level-4();
+
+  .button-tooltip-container {
+    position: absolute;
+    right: auto;
+    margin-left: 10px;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+}

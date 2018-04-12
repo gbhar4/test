@@ -1,0 +1,53 @@
+/**
+ * Review
+ **/
+
+@import "_mixins.scss";
+
+/* Review Section */
+.checkout-review-section {
+  display: inline-block;
+  width: 100%;
+
+  .shipping-method-title,
+  .gift-wrapping-title {
+    display: none;
+  }
+}
+
+.checkout-review-billing,
+.gift-cards-section,
+.checkout-cart-list,
+.accordion-cart-list,
+.checkout-review-pickup + .checkout-review-shipping {
+  margin-top: 28px;
+}
+
+section:empty + .gift-cards-section {
+  margin-top: 0px;
+}
+
+/* Checkout Express Section */
+.express {
+  .checkout-review-section {
+    .shipping-method-title {
+      display: block;
+    }
+
+    .gift-wrapping-title {
+      @include subheading-secondary-text();
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .shipping-method {
+      fieldset {
+        padding: 0;
+      }
+    }
+  }
+
+  .checkout-review-gift-wrapping {
+    margin-top: 30px;
+  }
+}

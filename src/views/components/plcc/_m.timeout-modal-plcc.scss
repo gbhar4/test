@@ -1,0 +1,78 @@
+/*
+* Time Out Modal (Mobile)
+*/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.timeout-modal-container {
+  background: $color-global-white;
+  padding: 12px;
+  text-align: center;
+  position: relative;
+
+  height: calc(100vh - 20px);
+  overflow-y: auto;
+
+  .first-alert,
+  .second-alert {
+    top: 50%;
+    @include transform(translateY(-50%));
+    position: absolute;
+    width: calc(100% - 24px);
+    padding: 10px 0px;
+  }
+
+  img {
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+    left: -16px;
+    position: relative;
+    margin-top: 15px;
+  }
+
+  .title-promo {
+    margin: 25px 0px 20px;
+    @include heading-level-3();
+    @include font-global-regular();
+  }
+
+  .text-promo {
+    @include heading-level-4();
+    @include font-global-regular();
+    margin-bottom: 27px;
+    line-height: 20px;
+
+    &.current-time {
+      margin-bottom: 21px;
+    }
+
+    strong {
+      @include font-global-black();
+    }
+  }
+
+  .button-continue-acceptance {
+    @include button-default($color-accent-two);
+    width: calc(100% - 25px);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .button-restart {
+    @extend .button-continue-acceptance;
+    margin-bottom: 15px;
+  }
+
+  .button-return {
+    @include button-common();
+    color: $color-primary-one;
+    @include box-shadow(inset 0 0 0 1px $color-primary-one); /* border inside box */
+    background-color: $color-global-white;
+    width: calc(100% - 25px);
+    display: block;
+    margin: 0 auto;
+  }
+}

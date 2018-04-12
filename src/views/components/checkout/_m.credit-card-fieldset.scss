@@ -1,0 +1,137 @@
+@import "_mixins.scss";
+
+/**
+* Credit Card Fieldset
+**/
+
+.fieldset-creditcard-editable {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+  padding: 0px;
+}
+
+// Sorry for this selector, was necessary.
+.credit-card-select-form {
+  + .add-new-card-and-address-container .new-credit-card-container .fieldset-creditcard-editable {
+    margin-top: 0px;
+  }
+}
+
+.container-shipping-section-title + .fieldset-creditcard-editable {
+  margin-top: 0px;
+}
+
+.input-cc {
+  /* Credit card image */
+  .credit-card-image {
+    position: absolute;
+    right: 0px;
+    top: 8px;
+    max-width: 50px;
+  }
+}
+
+.container-credit-card-fieldset {
+  .input-cc {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .select-exp-mm,
+  .select-exp-yy {
+    width: calc(30%);
+    padding: 0px;
+    margin: 0px;
+    padding-right: 5px;
+    vertical-align: top;
+  }
+
+  .select-exp-yy {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .input-cvv {
+    width: calc(40%);
+    padding: 0px;
+    padding-left: 5px;
+    margin: 0px;
+    vertical-align: top;
+
+    input[type=text] + button {
+      background: transparent;
+      border: 0px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      height: auto;
+      line-height: normal;
+      padding: 0px;
+
+      @include icon-tcp-info-wire();
+      &:before {
+        font-size: 16px;
+      }
+    }
+
+    .inline-error-message {
+      white-space: normal;
+    }
+
+  }
+
+  .select-exp-mm.label-error ~ .select-exp-yy.label-error {
+    .inline-error-message {
+      display: none;
+    }
+  }
+
+  .select-exp-mm {
+    /* Error or warning message only for Exp date MM */
+    &.label-error,
+    &.label-warning {
+      .inline-error-message,
+      .inline-warning-message {
+        left: 24px;
+        position: relative;
+        white-space: normal;
+        width: 175px;
+        text-indent: -11.5px;
+      }
+    }
+
+  }
+
+  .select-exp-yy {
+    /* Error or warning message only for Exp date YY */
+    &.label-error,
+    &.label-warning {
+      .inline-error-message,
+      .inline-warning-message {
+        left: -86px;
+        position: relative;
+        white-space: normal;
+        width: 175px;
+        text-indent: -11.5px;
+      }
+    }
+  }
+}
+
+/* Is Billing Section? */
+.fieldset-creditcard-editable {
+  @extend .container-credit-card-fieldset;
+}
+
+/* Edit Payment Method Overlay */
+.edit-payment-method-container {
+  margin-top: 20px;
+
+  .checkout-registered-shipping-section {
+    margin-top: 20px;
+    border-top: solid 1px $color-primary-one-opacity;
+    padding-top: 20px;
+  }
+}

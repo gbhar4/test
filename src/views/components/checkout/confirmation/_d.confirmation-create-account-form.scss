@@ -1,0 +1,73 @@
+/**
+* Confirmation Create Account Form (Desktop)
+**/
+
+@import "./_m.confirmation-create-account-form.scss";
+
+.confirmation-section,
+.confirmation {
+  /* Componente de Create account (contenedor) */
+  .create-account {
+    padding: 0px;
+    display: block;
+    width: 50%;
+    margin: 57px auto 62px;
+
+    /* Subheading de Create account */
+    .get-bonus {
+      .tooltip-container {
+        width: 100%;
+        max-width: 550px;
+        left: 50%;
+        @include transform(translateX(-50%));
+      }
+    }
+
+    /* Contenedor del Título y mail del usuario no registrado */
+    .user-email {
+      margin: 38px 0 43px;
+    }
+
+    .inputs-create-account {
+      margin: 0 -7px;
+    }
+
+    .label-error .inline-error-message {
+      white-space: normal;
+      clear: both;
+      text-align: left;
+    }
+
+    .checkbox-terms-and-conditions .inline-error-message {
+      padding-left: 33px;
+      text-align: left;
+    }
+
+    .input-password,
+    .input-confirm-password {
+      margin: 15px auto auto;
+      width: 50%;
+      display: block;
+      vertical-align: top;
+    }
+
+    /* Checkbox de términos y condiciones */
+    .checkbox-terms-and-conditions {
+      width: 84%;
+
+      .input-title {
+        padding-left: 10px;
+
+        a {
+          color: $color-primary-one;
+        }
+      }
+    }
+
+    /* Botón de Create account */
+    .button-primary {
+      width: 56%;
+      left: -3px;
+    }
+  }
+}

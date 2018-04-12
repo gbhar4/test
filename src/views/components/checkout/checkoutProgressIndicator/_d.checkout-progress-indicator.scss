@@ -1,0 +1,29 @@
+/**
+ * Progress Indicators
+ */
+
+@import "./_m.checkout-progress-indicator.scss";
+
+.checkout-progress-indicator {
+  padding: 0px;
+}
+
+.checkout-progress-bar {
+  display: block;
+  margin: 0px auto;
+  width: 660px;
+  padding: 18px 0 14px;
+  left: auto;
+  position: relative;
+
+  &.pickup-shipping {
+    padding: 18px 0 14px;
+    width: 880px;
+  }
+
+  li {
+    &:before {
+      margin: 0 auto 10px;
+    }
+  }
+}

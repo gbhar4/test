@@ -1,0 +1,36 @@
+/**
+ * Pick Up Section (Mobile)
+ **/
+
+@import "_mixins.scss";
+
+/* Pick Up Section Container */
+.checkout-pickup-container {
+  .checkout-review-pickup-person {
+    .address-container {
+      width: calc(100% - 50px);
+      position: relative;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        background-color: $color-primary-one-opacity;
+        width: 1px;
+        height: 93%;
+        position: absolute;
+        top: 3px;
+        right: 0px;
+      }
+    }
+  }
+
+  .pick-up-contact {
+    .checkout-summary-edit {
+      top: 33px;
+    }
+  }
+
+  .checkout-review-pickup-alternate {
+    margin-bottom: 25px;
+  }
+}

@@ -1,0 +1,40 @@
+/**
+* Points History Section (Mobile)
+**/
+
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "compass/css3/flexbox";
+
+.points-summary-list-container {
+  .navigation-carrousel-container {
+    border: 0px;
+    margin: 20px 0px;
+  }
+}
+
+.points-summary-list-table {
+  width: 100%;
+
+  th, td {
+    @include notification-primary-text();
+    width: 33%;
+  }
+
+  th {
+    @include font-global-heavy();
+    text-transform: uppercase;
+  }
+
+  td {
+    @include font-global-regular();
+    padding: 15px 0px;
+    text-transform: capitalize;
+  }
+}
+
+.points-summary-row-title {
+  th {
+    padding-bottom: 20px;
+  }
+}

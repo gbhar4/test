@@ -1,0 +1,80 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+
+.overlay-container.overlay-plcc-container {
+  width: 840px;
+  padding: 21px;
+  text-align: center;
+  a {
+    margin: 10px 10px;
+    text-transform: uppercase;
+    @include font-global-medium;
+    text-decoration: underline;
+  }
+  .header-subtitle-plcc {
+    @include heading-level-1($color: $color-primary-one);
+    text-transform: capitalize;
+    @include font-global-medium;
+    width: 50%;
+    display: block;
+    margin: auto;
+  }
+}
+
+.plcc-content {
+
+  padding: 30px;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    text-align: left;
+  }
+}
+
+.button-manage-account {
+
+  @include button-secondary();
+  margin-left: 2%;
+  width: 44%;
+
+}
+.button-apply {
+  @include button-primary();
+  margin-left: 6%;
+  width: 44%;
+}
+.buttons-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  span {
+    text-transform: none;
+  }
+}
+.plcc-modal-rewards {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.modal-content {
+  text-align: left;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 20px;
+
+}
+.container-list-terms-and-conditions {
+  width: 100%;
+  font-size: 11px;
+  text-transform: none;
+  text-align: left;
+  padding: 0 5%;
+  margin-top: 10px;
+  li {
+    margin: 10px 0;
+  }
+}

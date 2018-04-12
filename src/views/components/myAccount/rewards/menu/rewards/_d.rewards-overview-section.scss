@@ -1,0 +1,23 @@
+/**
+* Rewards Overview Section (Desktop)
+**/
+
+@import "_m.rewards-overview-section.scss";
+
+.monthly-coupons-container {
+  .uncondense-list-coupons {
+    display: block;
+    padding: 0px;
+    margin: 16px 0px;
+    width: 100%;
+    white-space: normal;
+    overflow: hidden;
+  }
+
+  .uncondense-coupon {
+    width: 24%;
+    margin: 10px .5%;
+    position: relative;
+    left: -1%;
+  }
+}

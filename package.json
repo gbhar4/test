@@ -12,7 +12,7 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "node scripts/builds/start.client.js",
+    "start": "node scripts/builds/start.node.js",
     "static": "node scripts/builds/start.static.js",
     "node": "node scripts/builds/start.node.js",
     "watch": "node scripts/builds/watch.js",

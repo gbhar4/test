@@ -47,7 +47,7 @@
     "case-sensitive-paths-webpack-plugin": "1.1.4",
     "chai": "3.5.0",
     "chai-sinon": "2.8.1",
-    "clean-css": "3.4.21",
+    "clean-css": "4.1.11",
     "compass-mixins": "0.12.10",
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.26.0",

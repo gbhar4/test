@@ -1,8 +1,4 @@
-# dt - TCP front-end Application
 
-#### Repo: **[https://bitbucket.org/frontenddevteam/dt](https://bitbucket.org/frontenddevteam/dt)**
-
----
 
 ## Local dev environment setup
 ### Pre-requisite installs

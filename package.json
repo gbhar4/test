@@ -51,7 +51,7 @@
     "compass-mixins": "0.12.10",
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.26.0",
-    "eslint": "3.19.0",
+    "eslint": "4.18.2",
     "eslint-config-warn-standard": "file:local_node_modules/eslint-config-warn-standard",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.2.0",

@@ -71,7 +71,7 @@
     "loader-utils": "1.0.4",
     "matchdep": "1.0.1",
     "mocha": "3.5.3",
-    "node-sass": "3.11.2",
+    "node-sass": "4.13.1",
     "node-sass-asset-functions": "0.0.9",
     "nyc": "11.2.1",
     "opn": "5.1.0",

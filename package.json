@@ -94,7 +94,7 @@
   },
   "dependencies": {
     "appdynamics": "^4.3.5",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-polyfill": "6.23.0",
     "compression": "1.6.2",
     "cookie-parser": "1.4.3",
